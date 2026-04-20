@@ -928,20 +928,6 @@ De speler zelf merkt hier niets van… maar voor de rest van het dorp is hij die
   expansionKey: null
 },
 {
-  id: "de-heks",
-  name: "De Heks",
-  image: "images/De Heks.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `In dienst van het duister gebruikt de heks haar krachten tegen het dorp en ten gunste van de weerwolven.
-
-Eénmaal per nacht, tussen 20:00 en 09:00, mag zij via een persoonlijk bericht aan de GM de identiteit van één speler inzien.
-
-De heks speelt mee met de weerwolven en mag ’s nachts ook meestemmen over hun slachtoffer.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
   id: "de-jachtwolf",
   name: "De Jachtwolf",
   image: "images/De Jachtwolf.png",
@@ -950,36 +936,6 @@ De heks speelt mee met de weerwolven en mag ’s nachts ook meestemmen over hun 
   description: `Gedreven door instinct en een ontembare drang tot vergelding zwerft de Jachtwolf door het dorp. Hij wacht geduldig op zijn moment, altijd klaar om toe te slaan.
 
 Wordt hij gedood, dan laat hij het daar niet bij. In zijn laatste adem grijpt hij één levende speler en sleurt die met zich mee de dood in. Eén naam. Eén slachtoffer. Geen ontsnappen.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-kleine-wilde",
-  name: "De Kleine Wilde",
-  image: "images/De Kleine Wilde.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Onzeker"],
-  description: `Als wilde jongen van het dorp kiest de Kleine Wilde bij de opening, of tijdens de eerste dag of nacht, één groot voorbeeld.
-
-Zolang dit voorbeeld leeft, blijft hij burger, zelfs als zijn grote voorbeeld een weerwolf is. Sterft het voorbeeld, dan wordt hij direct weerwolf. Hij mag zijn grote voorbeeld wantrouwen en tijdens het burgerberaad tegen hem stemmen.
-
-De Kleine Wilde wint met de burgers zolang hij burger is, en met de weerwolven zodra hij weerwolf wordt.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-onderdrukker",
-  name: "De Onderdrukker",
-  image: "images/De Onderdrukker.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Met harde hand houdt de Onderdrukker Whatsapperdam in zijn greep. Hij staat aan de kant van de weerwolven en gebruikt zijn macht om het dorp het zwijgen op te leggen.
-
-Eens per nacht, tussen 20:00 en 09:00, kiest hij één speler die de volgende dag volledig wordt onderdrukt, maar nooit twee nachten achter elkaar dezelfde persoon.
-
-Deze speler mag in geen enkele groepsapp spreken en geen stem uitbrengen, maar mag wél zijn krachten gebruiken. Communicatie is alleen toegestaan via emoji-reacties en gebarentaal. De Onderdrukker stemt ’s nachts mee met de weerwolven over wie er wordt vermoord.
-
-De Onderdrukker mag ook zichzelf of een medewolf onderdrukken om verdenking af te wenden. Een onderdrukte speler is dus niet automatisch onschuldig.`,
   isExpansionRole: false,
   expansionKey: null
 },
@@ -1026,20 +982,6 @@ Nog niet welkom bij de roedel, maar wel al deel van hen. Te wild om stil te zitt
 Elke nacht tussen 20:00 en 09:00 kiest hij via een direct bericht aan de GM één speler… en noemt de rol die hij denkt dat diegene heeft. Heeft hij gelijk, dan slaat hij toe en wordt zijn prooi de volgende nacht dood gevonden, mits diegene thuis was en niet beschermd. Zit hij fout, dan leeft zijn doelwit nog… maar weet diegene dat er iets op hem jaagt.
 
 De Welp groeit op. Nacht 0 tot en met 3 jaagt hij elke nacht, gretig en nieuwsgierig. In nacht 4 en 5 zit hij in zijn rebelse tienerfase en doet hij ’s avonds helemaal niks. In nacht 6 is hij volgroeid en sluit hij zich aan bij de roedel als een volwaardige weerwolf.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-weerwolf",
-  name: "De Weerwolf",
-  image: "images/De Weerwolf.png",
-  alliance: "Weerwolf",
-  types: ["Basis"],
-  description: `Samen met zijn medewolven terroriseert de weerwolf het dorp Whatsapperdam.
-
-Elke avond, van 20:00 tot 09:00, bepalen zij gezamenlijk wie hun nachtelijke slachtoffer wordt. De weerwolven winnen zodra zij in de meerderheid zijn of evenveel spelers hebben als de burgers.
-
-Dit overleg vindt plaats in een aparte WhatsApp-groep, uitsluitend voor de weerwolven.`,
   isExpansionRole: false,
   expansionKey: null
 },
