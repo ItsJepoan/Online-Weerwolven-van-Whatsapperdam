@@ -258,4 +258,24 @@ body.modal-open {
     width: 40px;
     height: 40px;
   }
+
+  #roles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .role-alliance-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .role-alliance-title {
+    color: var(--primary);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+  }
 }

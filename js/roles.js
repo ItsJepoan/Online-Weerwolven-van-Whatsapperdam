@@ -13,13 +13,22 @@ const modalRoleTypes = document.getElementById("modal-role-types");
 const modalRoleDescription = document.getElementById("modal-role-description");
 
 const standardRoles = roles.filter((role) => !role.isExpansionRole);
+const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 
 function getUniqueAlliances(roleList) {
-  return [...new Set(roleList.map((role) => role.alliance))].sort();
+  return [...new Set(roleList.map((role) => role.alliance))].sort((a, b) => {
+    return allianceOrder.indexOf(a) - allianceOrder.indexOf(b);
+  });
 }
 
 function getUniqueTypes(roleList) {
-  return [...new Set(roleList.flatMap((role) => role.types))].sort();
+  return [...new Set(roleList.flatMap((role) => role.types))].sort((a, b) =>
+    a.localeCompare(b, "nl")
+  );
+}
+
+function sortRolesAlphabetically(roleList) {
+  return [...roleList].sort((a, b) => a.name.localeCompare(b.name, "nl"));
 }
 
 function populateFilters() {
@@ -57,7 +66,6 @@ function createBadges(items) {
 function openRoleModal(role) {
   modalRoleImage.src = role.image;
   modalRoleImage.alt = role.name;
-
   modalRoleName.textContent = role.name;
   modalRoleAlliance.innerHTML = `<span class="badge">${role.alliance}</span>`;
   modalRoleTypes.innerHTML = createBadges(role.types.filter((type) => type !== "Uitbreiding"));
@@ -72,6 +80,65 @@ function closeRoleModal() {
   roleModal.classList.add("hidden");
   roleModal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
+}
+
+function createRoleCard(role) {
+  const card = document.createElement("article");
+  card.className = "role-card";
+
+  card.innerHTML = `
+    <button class="role-card-button" type="button" aria-label="Bekijk uitleg van ${role.name}">
+      <img src="${role.image}" alt="${role.name}" class="role-image">
+
+      <div class="role-content">
+        <h3 class="role-name">${role.name}</h3>
+
+        <div class="role-meta">
+          <div class="meta-block">
+            <strong>Alliantie</strong>
+            <div class="badges">
+              <span class="badge">${role.alliance}</span>
+            </div>
+          </div>
+
+          <div class="meta-block">
+            <strong>Type</strong>
+            <div class="badges">
+              ${createBadges(role.types.filter((type) => type !== "Uitbreiding"))}
+            </div>
+          </div>
+        </div>
+
+        <span class="role-open-text">Klik voor uitleg</span>
+      </div>
+    </button>
+  `;
+
+  const button = card.querySelector(".role-card-button");
+  button.addEventListener("click", () => openRoleModal(role));
+
+  return card;
+}
+
+function createAllianceSection(allianceName, roleList) {
+  const section = document.createElement("section");
+  section.className = "role-alliance-section";
+
+  const title = document.createElement("h2");
+  title.className = "role-alliance-title";
+  title.textContent = allianceName;
+
+  const grid = document.createElement("div");
+  grid.className = "roles-grid";
+
+  sortRolesAlphabetically(roleList).forEach((role) => {
+    grid.appendChild(createRoleCard(role));
+  });
+
+  section.appendChild(title);
+  section.appendChild(grid);
+
+  return section;
 }
 
 function renderRoles() {
@@ -99,42 +166,12 @@ function renderRoles() {
     return;
   }
 
-  filteredRoles.forEach((role) => {
-    const card = document.createElement("article");
-    card.className = "role-card";
+  allianceOrder.forEach((alliance) => {
+    const allianceRoles = filteredRoles.filter((role) => role.alliance === alliance);
 
-    card.innerHTML = `
-      <button class="role-card-button" type="button" aria-label="Bekijk uitleg van ${role.name}">
-        <img src="${role.image}" alt="${role.name}" class="role-image">
-
-        <div class="role-content">
-          <h3 class="role-name">${role.name}</h3>
-
-          <div class="role-meta">
-            <div class="meta-block">
-              <strong>Alliantie</strong>
-              <div class="badges">
-                <span class="badge">${role.alliance}</span>
-              </div>
-            </div>
-
-            <div class="meta-block">
-              <strong>Type</strong>
-              <div class="badges">
-                ${createBadges(role.types.filter((type) => type !== "Uitbreiding"))}
-              </div>
-            </div>
-          </div>
-
-          <span class="role-open-text">Klik voor uitleg</span>
-        </div>
-      </button>
-    `;
-
-    const button = card.querySelector(".role-card-button");
-    button.addEventListener("click", () => openRoleModal(role));
-
-    rolesList.appendChild(card);
+    if (allianceRoles.length > 0) {
+      rolesList.appendChild(createAllianceSection(alliance, allianceRoles));
+    }
   });
 }
 
