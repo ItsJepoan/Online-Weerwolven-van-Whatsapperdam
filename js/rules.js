@@ -1,5 +1,43 @@
 const rulesContent = document.getElementById("rules-content");
 
+function createParagraphs(paragraphs) {
+  if (!paragraphs || paragraphs.length === 0) {
+    return "";
+  }
+
+  return paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("");
+}
+
+function createList(items) {
+  if (!items || items.length === 0) {
+    return "";
+  }
+
+  return `
+    <ul class="rules-list">
+      ${items.map((item) => `<li>${item}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function createSubSections(subSections) {
+  if (!subSections || subSections.length === 0) {
+    return "";
+  }
+
+  return subSections
+    .map((subSection) => {
+      return `
+        <div class="rules-subsection">
+          <h3>${subSection.title}</h3>
+          ${createParagraphs(subSection.content)}
+          ${createList(subSection.list)}
+        </div>
+      `;
+    })
+    .join("");
+}
+
 function renderRules() {
   rulesContent.innerHTML = "";
 
@@ -7,21 +45,14 @@ function renderRules() {
     const article = document.createElement("article");
     article.className = "rules-section";
 
-    let html = `<h2>${section.title}</h2>`;
+    article.innerHTML = `
+      <h2>${section.title}</h2>
+      ${createParagraphs(section.content)}
+      ${createList(section.list)}
+      ${createParagraphs(section.extraContent)}
+      ${createSubSections(section.subSections)}
+    `;
 
-    if (section.content && section.content.length > 0) {
-      html += section.content.map((paragraph) => `<p>${paragraph}</p>`).join("");
-    }
-
-    if (section.list && section.list.length > 0) {
-      html += `
-        <ul>
-          ${section.list.map((item) => `<li>${item}</li>`).join("")}
-        </ul>
-      `;
-    }
-
-    article.innerHTML = html;
     rulesContent.appendChild(article);
   });
 }
