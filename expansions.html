@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Uitbreidingen - Online Weerwolven van Whatsapperdam</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/expansions.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1>Uitbreidingen</h1>
-      <p class="subtitle">Extra sets en rollen</p>
+      <h1>Online Weerwolven van Whatsapperdam</h1>
+      <p class="subtitle">Uitbreidingen</p>
     </div>
   </header>
 
@@ -24,8 +26,43 @@
   </nav>
 
   <main class="container page-content">
-    <section id="expansions-list" class="expansions-layout"></section>
+    <section id="expansions-list"></section>
   </main>
+
+  <div id="role-modal" class="role-modal hidden">
+    <div class="role-modal-backdrop"></div>
+
+    <div class="role-modal-content">
+      <button id="role-modal-close" class="role-modal-close" type="button" aria-label="Sluiten">
+        &times;
+      </button>
+
+      <div class="role-modal-body">
+        <img id="modal-role-image" class="role-modal-image" alt="">
+
+        <div class="role-modal-text">
+          <h2 id="modal-role-name" class="role-modal-name"></h2>
+
+          <div class="role-modal-meta">
+            <div class="meta-block">
+              <strong>Alliantie</strong>
+              <div id="modal-role-alliance" class="badges"></div>
+            </div>
+
+            <div class="meta-block">
+              <strong>Type</strong>
+              <div id="modal-role-types" class="badges"></div>
+            </div>
+          </div>
+
+          <div class="role-modal-description">
+            <strong>Uitleg</strong>
+            <p id="modal-role-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/roles-data.js"></script>
   <script src="js/expansions-data.js"></script>
