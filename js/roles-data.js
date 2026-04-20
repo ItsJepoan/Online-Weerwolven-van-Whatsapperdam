@@ -130,5 +130,15 @@ const roles = [
     description: "De weg naar de hemel is niet voor iedereen even duidelijk, maar voor de Verloren Ziel wel. Zijn enige doel is om in de eerste nacht of de eerste dag te sterven. Lukt hem dit, dan wint hij direct het spel. Overleeft hij deze periode, dan is hij voor eeuwig verdoemd en moet hij als straf loyaal en actief met de burgers meespelen.",
     isExpansionRole: false,
     expansionKey: null
+  },
+  {
+    id: "de-burgerlijke-burger",
+    name: "De Burgerlijke Burger",
+    image: "images/De Burgerlijke Burger.png",
+    alliance: "Burger",
+    types: [],
+    description: " – Uitstralend door het dorp loopt de Burgerlijke Burger, de burgerlijkste burger van heel Whatsapperdam. Open, zichtbaar en zonder geheimen… iemand die je bijna móét vertrouwen.Aan het begin van het spel wordt aangekondigd wie de Burgerlijke Burger is. Iedereen weet dus vanaf het eerste moment wie hij is. Dat kan hem veiligheid bieden… of hem juist een makkelijk doelwit maken voor de wolven.Wat er ook gebeurt, één ding lijkt zeker: de Burgerlijke Burger is altijd te vertrouwen… toch?",
+    isExpansionRole: false,
+    expansionKey: null
   }
 ];
