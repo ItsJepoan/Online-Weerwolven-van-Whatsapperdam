@@ -137,7 +137,7 @@ const roles = [
     image: "images/De Burgerlijke Burger.png",
     alliance: "Burger",
     types: [],
-    description: " – Uitstralend door het dorp loopt de Burgerlijke Burger, de burgerlijkste burger van heel Whatsapperdam. Open, zichtbaar en zonder geheimen… iemand die je bijna móét vertrouwen.Aan het begin van het spel wordt aangekondigd wie de Burgerlijke Burger is. Iedereen weet dus vanaf het eerste moment wie hij is. Dat kan hem veiligheid bieden… of hem juist een makkelijk doelwit maken voor de wolven.Wat er ook gebeurt, één ding lijkt zeker: de Burgerlijke Burger is altijd te vertrouwen… toch?",
+    description: "Uitstralend door het dorp loopt de Burgerlijke Burger, de burgerlijkste burger van heel Whatsapperdam. Open, zichtbaar en zonder geheimen… iemand die je bijna móét vertrouwen.Aan het begin van het spel wordt aangekondigd wie de Burgerlijke Burger is. Iedereen weet dus vanaf het eerste moment wie hij is. Dat kan hem veiligheid bieden… of hem juist een makkelijk doelwit maken voor de wolven.Wat er ook gebeurt, één ding lijkt zeker: de Burgerlijke Burger is altijd te vertrouwen… toch?",
     isExpansionRole: false,
     expansionKey: null
   }
