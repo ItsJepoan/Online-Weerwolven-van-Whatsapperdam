@@ -23,6 +23,15 @@ function populateFilters() {
     allianceFilter.appendChild(option);
   });
 
+  if (types.length === 0) {
+    const option = document.createElement("option");
+    option.value = "all";
+    option.textContent = "Alle types";
+    typeFilter.innerHTML = "";
+    typeFilter.appendChild(option);
+    return;
+  }
+
   types.forEach((type) => {
     const option = document.createElement("option");
     option.value = type;
@@ -32,7 +41,21 @@ function populateFilters() {
 }
 
 function createBadges(items) {
+  if (!items || items.length === 0) {
+    return `<span class="badge">Nog geen types</span>`;
+  }
+
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
+}
+
+function closeOtherCards(cardToKeepOpen) {
+  const cards = document.querySelectorAll(".role-card");
+
+  cards.forEach((card) => {
+    if (card !== cardToKeepOpen) {
+      card.classList.remove("is-open");
+    }
+  });
 }
 
 function renderRoles() {
@@ -61,12 +84,13 @@ function renderRoles() {
   }
 
   filteredRoles.forEach((role) => {
-    const card = document.createElement("details");
+    const card = document.createElement("article");
     card.className = "role-card";
 
     card.innerHTML = `
-      <summary class="role-summary">
+      <div class="role-card-header" tabindex="0" role="button" aria-expanded="false">
         <img src="${role.image}" alt="${role.name}" class="role-image">
+
         <div class="role-content">
           <h3 class="role-name">${role.name}</h3>
 
@@ -79,19 +103,53 @@ function renderRoles() {
             </div>
 
             <div class="meta-block">
-              <strong>Types</strong>
+              <strong>Type</strong>
               <div class="badges">
                 ${createBadges(role.types.filter((type) => type !== "Uitbreiding"))}
               </div>
             </div>
           </div>
+
+          <span class="role-open-text">Klik voor uitleg</span>
         </div>
-      </summary>
+      </div>
 
       <div class="role-description">
         <p>${role.description}</p>
       </div>
     `;
+
+    const header = card.querySelector(".role-card-header");
+
+    function toggleCard() {
+      const isOpen = card.classList.contains("is-open");
+
+      closeOtherCards(card);
+
+      if (isOpen) {
+        card.classList.remove("is-open");
+        header.setAttribute("aria-expanded", "false");
+      } else {
+        card.classList.add("is-open");
+        header.setAttribute("aria-expanded", "true");
+      }
+
+      const allHeaders = document.querySelectorAll(".role-card-header");
+      allHeaders.forEach((otherHeader) => {
+        if (otherHeader !== header) {
+          otherHeader.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    header.addEventListener("click", toggleCard);
+
+    header.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleCard();
+      }
+    });
 
     rolesList.appendChild(card);
   });

@@ -11,9 +11,40 @@
   margin-bottom: 1.5rem;
 }
 
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-group label {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.filter-group select {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  font-size: 1rem;
+}
+
+.roles-overview-title {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
 .roles-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   align-items: start;
 }
@@ -24,16 +55,10 @@
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   overflow: hidden;
-  height: auto;
-}
-
-.role-card .role-toggle {
-  display: none;
 }
 
 .role-card-header {
   cursor: pointer;
-  display: block;
 }
 
 .role-image {
@@ -65,50 +90,28 @@
   color: var(--primary);
 }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.badge {
-  display: inline-block;
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.85rem;
+.role-open-text {
+  display: block;
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .role-description {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 1rem;
+  display: none;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
   color: #444;
-  transition: max-height 0.25s ease, padding 0.25s ease;
-  border-top: 1px solid transparent;
+  background: #fcfcff;
 }
 
 .role-card.is-open .role-description {
-  max-height: 500px;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
-}
-
-.role-open-text {
   display: block;
-  margin-top: 0.85rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.role-card.is-open .role-open-text {
-  color: var(--primary);
 }
 
 @media (max-width: 900px) {
   .roles-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
