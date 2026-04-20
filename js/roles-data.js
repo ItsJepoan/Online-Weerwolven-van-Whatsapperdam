@@ -885,4 +885,208 @@ Omdat weerwolven onderling hun rollen delen, zal de Witte Weerwolf vertrouwen mo
   isExpansionRole: false,
   expansionKey: null
 },
+{
+  id: "de-besmettelijke-oerwolf",
+  name: "De Besmettelijke Oerwolf",
+  image: "images/De Besmettelijke Oerwolf.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Oud, sluw en doordrenkt met een oeroude vloek beweegt deze wolf zich tussen de roedel. Voor de buitenwereld is hij gewoon een weerwolf: hij overlegt ’s nachts met de andere wolven en stemt mee over hun prooi.
+
+Pas wanneer één van zijn medewolven het lootje heeft gelegd, mag de Besmettelijke Oerwolf zijn ware kracht gebruiken. Eénmaal per spel kan hij, nadat de weerwolven een burger hebben gekozen, in het geheim besluiten dat deze speler niet sterft maar wordt besmet. Het slachtoffer ontwaakt dan als nieuwe weerwolf en sluit zich bij de roedel aan. Had deze speler een speciale nachtelijke kracht, dan behoudt hij die.
+
+De Besmettelijke Oerwolf mag onder geen enkel beding laten merken dat hij deze rol heeft of dat er een nieuwe wolf is gecreëerd. Hij houdt de aandacht liever op de andere wolven en doet er zelfs goed aan zich voor te doen als een andere wolvenrol.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-concierge",
+  name: "De Conciërge",
+  image: "images/De Conciërge.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Bloedvlekken zijn hardnekkiger dan wijnvlekken, maar daar weet de conciërge wel raad mee. Als trouwe aanhanger van de weerwolven stemt hij ’s nachts met hen mee over hun prooi.
+
+Daarnaast mag hij twee keer in het spel, tussen 20:00 en 09:00, via een direct bericht aan de GM één speler aanwijzen. Overlijdt deze speler in die nacht of de daaropvolgende dag, dan wordt diens rol niet bekendgemaakt.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-glitterende-toverwolf",
+  name: "De Glitterende Toverwolf",
+  image: "images/De Glitterende Toverwolf.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `In het donker glinstert hij. Subtiel. Bijna betoverend. Maar wat hij achterlaat… klopt niet.
+
+Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één burger uit. Diegene krijgt die nacht een vreemd geurtje… iets magisch, iets dat niet thuishoort in het dorp.
+
+Wie hem die nacht onderzoekt, ziet maar één ding: een wolf, ongeacht zijn echte rol of alliantie. Alsof de waarheid zelf vervormd wordt.
+
+De speler zelf merkt hier niets van… maar voor de rest van het dorp is hij die nacht niets anders dan een WOLF.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-heks",
+  name: "De Heks",
+  image: "images/De Heks.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `In dienst van het duister gebruikt de heks haar krachten tegen het dorp en ten gunste van de weerwolven.
+
+Eénmaal per nacht, tussen 20:00 en 09:00, mag zij via een persoonlijk bericht aan de GM de identiteit van één speler inzien.
+
+De heks speelt mee met de weerwolven en mag ’s nachts ook meestemmen over hun slachtoffer.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-jachtwolf",
+  name: "De Jachtwolf",
+  image: "images/De Jachtwolf.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Gedreven door instinct en een ontembare drang tot vergelding zwerft de Jachtwolf door het dorp. Hij wacht geduldig op zijn moment, altijd klaar om toe te slaan.
+
+Wordt hij gedood, dan laat hij het daar niet bij. In zijn laatste adem grijpt hij één levende speler en sleurt die met zich mee de dood in. Eén naam. Eén slachtoffer. Geen ontsnappen.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-kleine-wilde",
+  name: "De Kleine Wilde",
+  image: "images/De Kleine Wilde.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Onzeker"],
+  description: `Als wilde jongen van het dorp kiest de Kleine Wilde bij de opening, of tijdens de eerste dag of nacht, één groot voorbeeld.
+
+Zolang dit voorbeeld leeft, blijft hij burger, zelfs als zijn grote voorbeeld een weerwolf is. Sterft het voorbeeld, dan wordt hij direct weerwolf. Hij mag zijn grote voorbeeld wantrouwen en tijdens het burgerberaad tegen hem stemmen.
+
+De Kleine Wilde wint met de burgers zolang hij burger is, en met de weerwolven zodra hij weerwolf wordt.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-onderdrukker",
+  name: "De Onderdrukker",
+  image: "images/De Onderdrukker.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Met harde hand houdt de Onderdrukker Whatsapperdam in zijn greep. Hij staat aan de kant van de weerwolven en gebruikt zijn macht om het dorp het zwijgen op te leggen.
+
+Eens per nacht, tussen 20:00 en 09:00, kiest hij één speler die de volgende dag volledig wordt onderdrukt, maar nooit twee nachten achter elkaar dezelfde persoon.
+
+Deze speler mag in geen enkele groepsapp spreken en geen stem uitbrengen, maar mag wél zijn krachten gebruiken. Communicatie is alleen toegestaan via emoji-reacties en gebarentaal. De Onderdrukker stemt ’s nachts mee met de weerwolven over wie er wordt vermoord.
+
+De Onderdrukker mag ook zichzelf of een medewolf onderdrukken om verdenking af te wenden. Een onderdrukte speler is dus niet automatisch onschuldig.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-slager",
+  name: "De Slager",
+  image: "images/De Slager.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Een wolf met verfijnde smaak; de Slager verkiest voorbereiding boven haast.
+
+Om de nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één burger om te marineren. Blijft deze speler die nacht én de daaropvolgende dag volledig onberoerd door welk bezoek dan ook, dan is de marinade geslaagd en wordt hij de volgende nacht als extra maal opgegeten, naast de normale prooi van de weerwolven. De nacht daarna mag de Slager weer een nieuwe speler marineren.
+
+Wordt de gekozen speler in de marineringsnacht of de dag erna wél bezocht, dan mislukt de marinade. In dat geval kan de Slager de eerstvolgende nacht opnieuw iemand kiezen om te marineren.
+
+Verder stemt de Slager gewoon mee met de weerwolven en speelt hij volledig aan hun zijde.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-verdoemde",
+  name: "De Verdoemde",
+  image: "images/De Verdoemde.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Onzeker"],
+  description: `Onopvallend leeft hij tussen de burgers van Whatsapperdam, ogenschijnlijk niet anders dan de rest. Maar diep vanbinnen draagt hij een lot dat al lang geleden is bezegeld. Hij weet het zelf niet… maar iets in hem wacht.
+
+Wanneer de weerwolven hem ’s nachts bezoeken, sterft hij niet. In plaats daarvan ontwaakt zijn ware aard en sluit hij zich bij hen aan, alsof hij er altijd al bij hoorde.
+
+Wordt hij echter op een andere manier gedood, dan blijft zijn vloek ongebruikt en sterft hij zoals ieder ander.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-welp",
+  name: "De Welp",
+  image: "images/De Welp.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Jong. Onervaren. Maar hongerig.
+
+Nog niet welkom bij de roedel, maar wel al deel van hen. Te wild om stil te zitten, te ongeduldig om te wachten. De Welp jaagt alleen.
+
+Elke nacht tussen 20:00 en 09:00 kiest hij via een direct bericht aan de GM één speler… en noemt de rol die hij denkt dat diegene heeft. Heeft hij gelijk, dan slaat hij toe en wordt zijn prooi de volgende nacht dood gevonden, mits diegene thuis was en niet beschermd. Zit hij fout, dan leeft zijn doelwit nog… maar weet diegene dat er iets op hem jaagt.
+
+De Welp groeit op. Nacht 0 tot en met 3 jaagt hij elke nacht, gretig en nieuwsgierig. In nacht 4 en 5 zit hij in zijn rebelse tienerfase en doet hij ’s avonds helemaal niks. In nacht 6 is hij volgroeid en sluit hij zich aan bij de roedel als een volwaardige weerwolf.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-weerwolf",
+  name: "De Weerwolf",
+  image: "images/De Weerwolf.png",
+  alliance: "Weerwolf",
+  types: ["Basis"],
+  description: `Samen met zijn medewolven terroriseert de weerwolf het dorp Whatsapperdam.
+
+Elke avond, van 20:00 tot 09:00, bepalen zij gezamenlijk wie hun nachtelijke slachtoffer wordt. De weerwolven winnen zodra zij in de meerderheid zijn of evenveel spelers hebben als de burgers.
+
+Dit overleg vindt plaats in een aparte WhatsApp-groep, uitsluitend voor de weerwolven.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-wolf-in-schaapskleren",
+  name: "De Wolf in Schaapskleren",
+  image: "images/De Wolf in Schaapskleren.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Identiteitscrisis is geen grap, zeker niet voor deze wolf.
+
+Tussen 20:00 en 09:00 kiest hij via een persoonlijk bericht aan de GM één levende dorpsgenoot, maar nooit twee nachten achter elkaar dezelfde persoon. Voor die nacht en de volgende dag draagt hij de identiteit van zijn keuze, maar zonder diens krachten.
+
+Wordt zijn identiteit onderzocht, dan verschijnt altijd dit masker. Zelfs bij de brandstapel of een andere dood blijft het intact.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-wolf-in-winterslaap",
+  name: "De Wolf in Winterslaap",
+  image: "images/De Wolf in Winterslaap.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Diep in een verborgen grot, ver van het dorp, ligt hij. Stil. Onaangeroerd. Alsof de tijd hem vergeten is. Hij hoort bij het wolvenkamp, weet wie de andere wolven zijn en zij weten wie hij is, maar hij spreekt niet en mengt zich nergens in.
+
+Overdag dwaalt hij soms door het dorp voor camouflage, een schaduw tussen de rest. Maar zodra de avond valt, trekt hij zich terug in zijn grot en zakt hij weer weg in zijn diepe winterslaap.
+
+En wee degene die hem stoort… wordt hij ’s nachts bezocht, dan schrikt hij wakker. Verstoord. Woedend. In zijn eerste ademtocht grijpt hij één van zijn bezoekers en verslindt diegene zonder aarzeling. Vanaf dat moment is hij ontwaakt en neemt hij weer volledig deel aan het wolvenkamp, jagend en stemmend alsof hij er altijd al actief bij hoorde.
+
+Blijft hij ongestoord, dan slaapt hij door. Tot het moment komt dat hij nodig is. Wanneer alle andere wolven gestorven zijn, opent hij alsnog zijn ogen. Alleen. Hongerig. En vanaf dat moment jaagt hij verder als een normale weerwolf.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-wolvenmeester",
+  name: "De Wolvenmeester",
+  image: "images/De Wolvenmeester.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend"],
+  description: `Deze wolf is niet geboren om te volgen, maar om te leiden. Al van jongs af aan draagt hij de drang in zich om boven iedereen uit te stijgen en ooit het dorp naar zijn hand te zetten.
+
+Zijn grote droom is om burgemeester te worden, al is hij niet verplicht zichzelf kandidaat te stellen. Bereikt hij die macht eenmaal, dan zal hij die met alles wat hij heeft proberen vast te houden.
+
+Alleen wanneer de Wolvenmeester burgemeester is, kan hij niet worden verbrand. Wordt hij in die positie op de brandstapel gegooid, dan weigert het vuur hem te nemen en overleeft hij de executie.
+
+De burgers zullen dus een andere manier moeten vinden om van hem af te komen...`,
+  isExpansionRole: false,
+  expansionKey: null
+}
 ];
