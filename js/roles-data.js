@@ -786,7 +786,7 @@ De heks speelt mee met de weerwolven en mag ’s nachts ook meestemmen over hun 
     name: "De Kleine Wilde",
     image: "images/De Kleine Wilde.png",
     alliance: "Weerwolf",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Onzeker"],
     description: `Als wilde jongen van het dorp kiest de Kleine Wilde bij de opening, of tijdens de eerste dag of nacht, één groot voorbeeld.
 
 Zolang dit voorbeeld leeft, blijft hij burger, zelfs als zijn grote voorbeeld een weerwolf is. Sterft het voorbeeld, dan wordt hij direct weerwolf. Hij mag zijn grote voorbeeld wantrouwen en tijdens het burgerberaad tegen hem stemmen.
