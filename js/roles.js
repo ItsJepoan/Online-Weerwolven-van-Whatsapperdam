@@ -78,7 +78,13 @@ function renderRoles() {
 
     const title = document.createElement("h2");
     title.className = "role-alliance-title";
-    title.textContent = alliance;
+    const names = {
+      "Burger": "Burgers",
+      "Onafhankelijke": "Onafhankelijken",
+      "Weerwolf": "Weerwolven"
+    };
+
+    title.textContent = names[alliance] || alliance;
 
     const grid = document.createElement("div");
     grid.className = "roles-grid";
