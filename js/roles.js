@@ -2,6 +2,16 @@ const rolesList = document.getElementById("roles-list");
 const allianceFilter = document.getElementById("alliance-filter");
 const typeFilter = document.getElementById("type-filter");
 
+const roleModal = document.getElementById("role-modal");
+const roleModalBackdrop = document.querySelector(".role-modal-backdrop");
+const roleModalClose = document.getElementById("role-modal-close");
+
+const modalRoleImage = document.getElementById("modal-role-image");
+const modalRoleName = document.getElementById("modal-role-name");
+const modalRoleAlliance = document.getElementById("modal-role-alliance");
+const modalRoleTypes = document.getElementById("modal-role-types");
+const modalRoleDescription = document.getElementById("modal-role-description");
+
 const standardRoles = roles.filter((role) => !role.isExpansionRole);
 
 function getUniqueAlliances(roleList) {
@@ -24,11 +34,7 @@ function populateFilters() {
   });
 
   if (types.length === 0) {
-    const option = document.createElement("option");
-    option.value = "all";
-    option.textContent = "Alle types";
-    typeFilter.innerHTML = "";
-    typeFilter.appendChild(option);
+    typeFilter.innerHTML = '<option value="all">Alle types</option>';
     return;
   }
 
@@ -48,14 +54,24 @@ function createBadges(items) {
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
-function closeOtherCards(cardToKeepOpen) {
-  const cards = document.querySelectorAll(".role-card");
+function openRoleModal(role) {
+  modalRoleImage.src = role.image;
+  modalRoleImage.alt = role.name;
 
-  cards.forEach((card) => {
-    if (card !== cardToKeepOpen) {
-      card.classList.remove("is-open");
-    }
-  });
+  modalRoleName.textContent = role.name;
+  modalRoleAlliance.innerHTML = `<span class="badge">${role.alliance}</span>`;
+  modalRoleTypes.innerHTML = createBadges(role.types.filter((type) => type !== "Uitbreiding"));
+  modalRoleDescription.textContent = role.description;
+
+  roleModal.classList.remove("hidden");
+  roleModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function closeRoleModal() {
+  roleModal.classList.add("hidden");
+  roleModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
 }
 
 function renderRoles() {
@@ -88,7 +104,7 @@ function renderRoles() {
     card.className = "role-card";
 
     card.innerHTML = `
-      <div class="role-card-header" tabindex="0" role="button" aria-expanded="false">
+      <button class="role-card-button" type="button" aria-label="Bekijk uitleg van ${role.name}">
         <img src="${role.image}" alt="${role.name}" class="role-image">
 
         <div class="role-content">
@@ -112,44 +128,11 @@ function renderRoles() {
 
           <span class="role-open-text">Klik voor uitleg</span>
         </div>
-      </div>
-
-      <div class="role-description">
-        <p>${role.description}</p>
-      </div>
+      </button>
     `;
 
-    const header = card.querySelector(".role-card-header");
-
-    function toggleCard() {
-      const isOpen = card.classList.contains("is-open");
-
-      closeOtherCards(card);
-
-      if (isOpen) {
-        card.classList.remove("is-open");
-        header.setAttribute("aria-expanded", "false");
-      } else {
-        card.classList.add("is-open");
-        header.setAttribute("aria-expanded", "true");
-      }
-
-      const allHeaders = document.querySelectorAll(".role-card-header");
-      allHeaders.forEach((otherHeader) => {
-        if (otherHeader !== header) {
-          otherHeader.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-
-    header.addEventListener("click", toggleCard);
-
-    header.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        toggleCard();
-      }
-    });
+    const button = card.querySelector(".role-card-button");
+    button.addEventListener("click", () => openRoleModal(role));
 
     rolesList.appendChild(card);
   });
@@ -160,3 +143,12 @@ renderRoles();
 
 allianceFilter.addEventListener("change", renderRoles);
 typeFilter.addEventListener("change", renderRoles);
+
+roleModalClose.addEventListener("click", closeRoleModal);
+roleModalBackdrop.addEventListener("click", closeRoleModal);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !roleModal.classList.contains("hidden")) {
+    closeRoleModal();
+  }
+});

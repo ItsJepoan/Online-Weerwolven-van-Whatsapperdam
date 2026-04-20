@@ -59,6 +59,44 @@
     </section>
   </main>
 
+  <!-- MODAL -->
+  <div id="role-modal" class="role-modal hidden" aria-hidden="true">
+    <div class="role-modal-backdrop"></div>
+
+    <div class="role-modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-role-name">
+      <button id="role-modal-close" class="role-modal-close" aria-label="Sluiten">
+        &times;
+      </button>
+
+      <div class="role-modal-body">
+        <div class="role-modal-image-wrapper">
+          <img id="modal-role-image" src="" alt="" class="role-modal-image">
+        </div>
+
+        <div class="role-modal-text">
+          <h2 id="modal-role-name" class="role-modal-name"></h2>
+
+          <div class="role-modal-meta">
+            <div class="meta-block">
+              <strong>Alliantie</strong>
+              <div id="modal-role-alliance" class="badges"></div>
+            </div>
+
+            <div class="meta-block">
+              <strong>Type</strong>
+              <div id="modal-role-types" class="badges"></div>
+            </div>
+          </div>
+
+          <div class="role-modal-description">
+            <strong>Uitleg</strong>
+            <p id="modal-role-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/roles-data.js"></script>
   <script src="js/roles.js"></script>
 </body>
