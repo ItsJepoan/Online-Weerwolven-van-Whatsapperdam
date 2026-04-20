@@ -92,8 +92,21 @@ function renderRoles() {
           <img src="${role.image}" class="role-image">
           <div class="role-content">
             <h3 class="role-name">${role.name}</h3>
-            <div class="badges"><span class="badge">${role.alliance}</span></div>
-            <div class="badges">${createBadges(role.types)}</div>
+            <div class="role-meta">
+              <div class="meta-block">
+                <strong>Alliantie</strong>
+                <div class="badges">
+                  <span class="badge">${role.alliance}</span>
+                </div>
+              </div>
+
+              <div class="meta-block">
+                <strong>Type</strong>
+                <div class="badges">
+                  ${createBadges(role.types)}
+                </div>
+              </div>
+            </div>
             <span class="role-open-text">Klik voor uitleg</span>
           </div>
         </button>
