@@ -27,6 +27,7 @@ function populateFilters() {
     const option = document.createElement("option");
     option.value = "empty";
     option.textContent = "Nog geen types toegevoegd";
+    option.disabled = true;
     typeFilter.appendChild(option);
     return;
   }
@@ -43,7 +44,18 @@ function createBadges(items, emptyText) {
   if (!items || items.length === 0) {
     return `<span class="badge">${emptyText}</span>`;
   }
+
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
+}
+
+function closeAllCardsExcept(cardToKeepOpen = null) {
+  const cards = document.querySelectorAll(".role-card");
+
+  cards.forEach((card) => {
+    if (card !== cardToKeepOpen) {
+      card.classList.remove("is-open");
+    }
+  });
 }
 
 function renderRoles() {
@@ -51,59 +63,91 @@ function renderRoles() {
   const selectedType = typeFilter.value;
 
   const filteredRoles = standardRoles.filter((role) => {
-    const allianceMatches = selectedAlliance === "all" || role.alliance === selectedAlliance;
+    const allianceMatches =
+      selectedAlliance === "all" || role.alliance === selectedAlliance;
+
     const typeMatches =
       selectedType === "all" ||
       selectedType === "empty" ||
       role.types.includes(selectedType);
+
     return allianceMatches && typeMatches;
   });
 
   rolesList.innerHTML = "";
 
   if (filteredRoles.length === 0) {
-    rolesList.innerHTML = `<div class="empty-message">Geen rollen gevonden met deze filters.</div>`;
+    rolesList.innerHTML = `
+      <div class="empty-message">
+        Geen rollen gevonden met deze filters.
+      </div>
+    `;
     return;
   }
 
   filteredRoles.forEach((role) => {
     const card = document.createElement("article");
     card.className = "role-card";
-    card.setAttribute("tabindex", "0");
-    card.setAttribute("role", "button");
-    card.setAttribute("aria-label", `Bekijk uitleg over ${role.name}`);
 
     card.innerHTML = `
-      <img src="${role.image}" alt="${role.name}" class="role-image">
-      <div class="role-content">
-        <h3 class="role-name">${role.name}</h3>
-        <div class="role-meta">
-          <div class="meta-block">
-            <strong>Alliantie</strong>
-            <div class="badges">
-              <span class="badge">${role.alliance}</span>
+      <div class="role-card-header" tabindex="0" role="button" aria-expanded="false">
+        <img src="${role.image}" alt="${role.name}" class="role-image">
+        <div class="role-content">
+          <h3 class="role-name">${role.name}</h3>
+
+          <div class="role-meta">
+            <div class="meta-block">
+              <strong>Alliantie</strong>
+              <div class="badges">
+                <span class="badge">${role.alliance}</span>
+              </div>
+            </div>
+
+            <div class="meta-block">
+              <strong>Types</strong>
+              <div class="badges">
+                ${createBadges(role.types, "Nog geen types")}
+              </div>
             </div>
           </div>
-          <div class="meta-block">
-            <strong>Type</strong>
-            <div class="badges">
-              ${createBadges(role.types, "Geen type")}
-            </div>
-          </div>
+
+          <span class="role-open-text">Klik om uitleg te tonen</span>
         </div>
-        <span class="role-open-text">Klik voor uitleg</span>
+      </div>
+
+      <div class="role-description">
+        <p>${role.description}</p>
       </div>
     `;
 
-    function openRole() {
-      window.location.href = `role.html?id=${role.id}`;
+    const header = card.querySelector(".role-card-header");
+
+    function toggleCard() {
+      const isOpen = card.classList.contains("is-open");
+
+      closeAllCardsExcept(card);
+
+      if (isOpen) {
+        card.classList.remove("is-open");
+        header.setAttribute("aria-expanded", "false");
+      } else {
+        card.classList.add("is-open");
+        header.setAttribute("aria-expanded", "true");
+      }
+
+      document.querySelectorAll(".role-card .role-card-header").forEach((otherHeader) => {
+        if (otherHeader !== header) {
+          otherHeader.setAttribute("aria-expanded", "false");
+        }
+      });
     }
 
-    card.addEventListener("click", openRole);
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        openRole();
+    header.addEventListener("click", toggleCard);
+
+    header.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleCard();
       }
     });
 
