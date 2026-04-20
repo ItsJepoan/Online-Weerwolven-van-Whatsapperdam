@@ -826,5 +826,63 @@ Elke avond, van 20:00 tot 09:00, bepalen zij gezamenlijk wie hun nachtelijke sla
 Dit overleg vindt plaats in een aparte WhatsApp-groep, uitsluitend voor de weerwolven.`,
     isExpansionRole: false,
     expansionKey: null
-  }
+  },
+  {
+  id: "de-besmettelijke-raaf",
+  name: "De Besmettelijke Raaf",
+  image: "images/De Besmettelijke Raaf.png",
+  alliance: "Onafhankelijke",
+  types: [],
+  description: `Als een schaduw verspreidt de raaf zijn plaag door Whatsapperdam.
+
+Elke nacht, tussen 20:00 en 09:00, kiest hij via de GM één speler om te besmetten.
+
+Iedere besmette speler die iemand bezoekt, besmet die persoon ook. Daarnaast wordt iedereen die de Besmettelijke Raaf zelf bezoekt die nacht ook besmet. Spelers die door de Raaf besmet raken, kunnen pas vanaf de volgende nacht anderen besmetten wanneer zij iemand bezoeken.
+
+De raaf kan zelf proberen bij te houden wie er allemaal besmet zijn, al is dat bijna ondoenlijk. Zodra het hele dorp besmet is, krijgt hij dit ’s nachts van de GM te horen. Vanaf dat moment mag hij elke nacht één speler naar keuze doden totdat niemand meer leeft. Dan wint hij het spel.
+
+Na de dood van de Besmettelijke Raaf stopt de verspreiding niet; de besmetting blijft actief en kan zich verder verspreiden zoals voorheen.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-twee-gescheiden-gezusters",
+  name: "De Twee Gescheiden Gezusters",
+  image: "images/De Twee Gescheiden Gezusters.png",
+  alliance: "Onafhankelijke",
+  types: [],
+  description: `Er gaan al jaren verhalen rond in Whatsapperdam over twee zussen die ooit uit elkaar zijn gehaald. Nu bewegen zij zich weer in hetzelfde dorp, zonder te weten dat de ander er ook is.
+
+Twee spelers ontvangen deze rol, maar kennen elkaars identiteit niet.
+
+Elke nacht tussen 20:00 en 09:00 kiezen zij via een direct bericht aan de GM één speler. Kiezen zij in dezelfde nacht dezelfde speler, dan wordt dit slachtoffer de volgende ochtend dood aangetroffen.
+
+De Gezusters mogen onder geen enkel beding duidelijk maken dat zij deze rol hebben. Zij moeten er altijd vanuit gaan dat zij een andere rol zijn en mogen daar net als iedereen naar bluffen.
+
+Wanneer één van de Gezusters ’s nachts per toeval de ander bij naam kiest, krijgt alleen zij van de GM te horen dat zij haar zus heeft gevonden. De andere zus weet dit nog niet. Vanaf dat moment mag zij proberen subtiel te seinen dat zij haar heeft ontdekt, maar wees voorzichtig: als het dorp het eerder doorheeft dan haar zus, kan dat hun einde betekenen. De gebruikelijke regels over wat je wel en niet mag zeggen blijven gelden.
+
+Ook nadat één van de twee haar zus heeft gevonden, blijven beide Gezusters elke nacht een speler kiezen zoals normaal. Dit betekent dat zij nog steeds kunnen proberen dezelfde speler te kiezen om zo samen een slachtoffer te maken.
+
+De Twee Gescheiden Gezusters winnen wanneer zij elkaar hebben gevonden en beiden nog in leven zijn wanneer het spel eindigt.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-witte-weerwolf",
+  name: "De Witte Weerwolf",
+  image: "images/De Witte Weerwolf.png",
+  alliance: "Onafhankelijke",
+  types: [],
+  description: `Tussen de roedel schuilt iets dat zelfs de wolven vrezen. De Witte Weerwolf is geen bondgenoot, maar een roofdier in wolfskleren. Hij hoort bij de weerwolven en neemt de plaats in van één van hen, maar speelt in werkelijkheid zijn eigen spel.
+
+De Witte Weerwolf wordt niet bovenop het aantal weerwolven toegevoegd, maar vervangt één van de toegevoegde wolven in het spel. Hierdoor kan hij zich geloofwaardig voordoen als een andere weerwolfrol.
+
+Elke tweede nacht, tussen 20:00 en 09:00, mag hij ontwaken en in het geheim één andere weerwolf doden. Hij mag ervoor kiezen deze actie één keer uit te stellen, maar daarna moet hij bij de volgende mogelijkheid wel toeslaan. Geen stemming, geen overleg — puur verraad in het donker.
+
+Blijft de Witte Weerwolf als enige over, dan wint hij het spel alleen. Hij is een onafhankelijke rol en heeft geen enkele loyaliteit aan de roedel.
+
+Omdat weerwolven onderling hun rollen delen, zal de Witte Weerwolf vertrouwen moeten winnen, informatie delen en meespelen alsof hij loyaal is — terwijl hij in werkelijkheid wacht op het juiste moment om toe te slaan.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
 ];
