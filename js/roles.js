@@ -15,24 +15,54 @@ const modalDescription = document.getElementById("modal-role-description");
 const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 
 function populateFilters() {
-  const alliances = [...new Set(roles.map(r => r.alliance))];
+  const alliances = [...new Set(roles.map((role) => role.alliance))];
+  const allTypes = [...new Set(roles.flatMap((role) => role.types))];
 
-  alliances.forEach(a => {
-    const opt = document.createElement("option");
-    opt.value = a;
-    opt.textContent = a;
-    allianceFilter.appendChild(opt);
-  });
+  alliances
+    .sort((a, b) => allianceOrder.indexOf(a) - allianceOrder.indexOf(b))
+    .forEach((alliance) => {
+      const opt = document.createElement("option");
+      opt.value = alliance;
+      opt.textContent = alliance;
+      allianceFilter.appendChild(opt);
+    });
+
+  allTypes
+    .filter((type) => type !== "Uitbreiding")
+    .sort((a, b) => {
+      const typeOrder = ["Basis", "Toevoegend"];
+      const indexA = typeOrder.indexOf(a);
+      const indexB = typeOrder.indexOf(b);
+
+      if (indexA !== -1 && indexB !== -1) {
+        return indexA - indexB;
+      }
+
+      if (indexA !== -1) return -1;
+      if (indexB !== -1) return 1;
+
+      return a.localeCompare(b, "nl");
+    })
+    .forEach((type) => {
+      const opt = document.createElement("option");
+      opt.value = type;
+      opt.textContent = type;
+      typeFilter.appendChild(opt);
+    });
 }
 
 function createBadges(items) {
-  if (!items.length) return `<span class="badge">Geen</span>`;
-  return items.map(t => `<span class="badge">${t}</span>`).join("");
+  if (!items.length) {
+    return `<span class="badge">Geen</span>`;
+  }
+
+  return items.map((type) => `<span class="badge">${type}</span>`).join("");
 }
 
 function openModal(role) {
   modalName.textContent = role.name;
   modalImage.src = role.image;
+  modalImage.alt = role.name;
   modalAlliance.innerHTML = `<span class="badge">${role.alliance}</span>`;
   modalTypes.innerHTML = createBadges(role.types);
   modalDescription.textContent = role.description;
@@ -46,11 +76,34 @@ function closeModal() {
   document.body.classList.remove("modal-open");
 }
 
-modalClose.onclick = closeModal;
-modalBackdrop.onclick = closeModal;
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeModal();
-});
+function getAllianceTitle(alliance) {
+  const names = {
+    Burger: "Burgers",
+    Onafhankelijke: "Onafhankelijken",
+    Weerwolf: "Weerwolven"
+  };
+
+  return names[alliance] || alliance;
+}
+
+function getRolePriority(role) {
+  if (role.types.includes("Basis")) return 0;
+  if (role.types.includes("Toevoegend")) return 1;
+  return 2;
+}
+
+function sortRoles(group) {
+  return [...group].sort((a, b) => {
+    const priorityA = getRolePriority(a);
+    const priorityB = getRolePriority(b);
+
+    if (priorityA !== priorityB) {
+      return priorityA - priorityB;
+    }
+
+    return a.name.localeCompare(b.name, "nl");
+  });
+}
 
 function renderRoles() {
   const selectedAlliance = allianceFilter.value;
@@ -58,46 +111,41 @@ function renderRoles() {
 
   rolesList.innerHTML = "";
 
-  allianceOrder.forEach(alliance => {
-    let group = roles.filter(r => r.alliance === alliance);
+  allianceOrder.forEach((alliance) => {
+    let group = roles.filter((role) => role.alliance === alliance);
 
     if (selectedAlliance !== "all") {
-      group = group.filter(r => r.alliance === selectedAlliance);
+      group = group.filter((role) => role.alliance === selectedAlliance);
     }
 
     if (selectedType !== "all") {
-      group = group.filter(r => r.types.includes(selectedType));
+      group = group.filter((role) => role.types.includes(selectedType));
     }
 
     if (!group.length) return;
 
-    group.sort((a,b) => a.name.localeCompare(b.name, "nl"));
+    group = sortRoles(group);
 
     const section = document.createElement("div");
     section.className = "role-alliance-section";
 
     const title = document.createElement("h2");
     title.className = "role-alliance-title";
-    const names = {
-      "Burger": "Burgers",
-      "Onafhankelijke": "Onafhankelijken",
-      "Weerwolf": "Weerwolven"
-    };
-
-    title.textContent = names[alliance] || alliance;
+    title.textContent = getAllianceTitle(alliance);
 
     const grid = document.createElement("div");
     grid.className = "roles-grid";
 
-    group.forEach(role => {
+    group.forEach((role) => {
       const card = document.createElement("div");
       card.className = "role-card";
 
       card.innerHTML = `
-        <button class="role-card-button">
-          <img src="${role.image}" class="role-image">
+        <button class="role-card-button" type="button" aria-label="Bekijk uitleg van ${role.name}">
+          <img src="${role.image}" class="role-image" alt="${role.name}">
           <div class="role-content">
             <h3 class="role-name">${role.name}</h3>
+
             <div class="role-meta">
               <div class="meta-block">
                 <strong>Alliantie</strong>
@@ -113,6 +161,7 @@ function renderRoles() {
                 </div>
               </div>
             </div>
+
             <span class="role-open-text">Klik voor uitleg</span>
           </div>
         </button>
@@ -126,6 +175,14 @@ function renderRoles() {
     section.appendChild(grid);
     rolesList.appendChild(section);
   });
+
+  if (!rolesList.children.length) {
+    rolesList.innerHTML = `
+      <div class="empty-message">
+        Geen rollen gevonden met deze filters.
+      </div>
+    `;
+  }
 }
 
 populateFilters();
@@ -133,3 +190,11 @@ renderRoles();
 
 allianceFilter.onchange = renderRoles;
 typeFilter.onchange = renderRoles;
+modalClose.onclick = closeModal;
+modalBackdrop.onclick = closeModal;
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
