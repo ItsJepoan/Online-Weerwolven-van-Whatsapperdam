@@ -42,16 +42,13 @@
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   overflow: hidden;
-}
-
-.role-card-header {
   cursor: pointer;
-  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.role-card-header:focus-visible {
-  outline: 2px solid var(--primary-light);
-  outline-offset: -2px;
+.role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.13);
 }
 
 .role-image {
@@ -103,42 +100,11 @@
 }
 
 .role-open-text {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  display: block;
   margin-top: 0.9rem;
   color: var(--primary-light);
   font-size: 0.88rem;
   font-weight: bold;
-}
-
-.role-open-text::after {
-  content: "▾";
-  display: inline-block;
-  transition: transform 0.25s ease;
-  font-size: 1rem;
-}
-
-.role-card.is-open .role-open-text::after {
-  transform: rotate(180deg);
-}
-
-.role-description {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.25s ease;
-  padding: 0 1rem;
-  border-top: 0px solid var(--border);
-  color: #444;
-  background: #fcfcff;
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-
-.role-card.is-open .role-description {
-  max-height: 600px;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
 }
 
 .empty-message {

@@ -46,15 +46,6 @@ function createBadges(items, emptyText) {
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
-function closeOtherCards(cardToKeepOpen) {
-  document.querySelectorAll(".role-card").forEach((card) => {
-    if (card !== cardToKeepOpen) {
-      card.classList.remove("is-open");
-      card.querySelector(".role-card-header").setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
 function renderRoles() {
   const selectedAlliance = allianceFilter.value;
   const selectedType = typeFilter.value;
@@ -78,54 +69,41 @@ function renderRoles() {
   filteredRoles.forEach((role) => {
     const card = document.createElement("article");
     card.className = "role-card";
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `Bekijk uitleg over ${role.name}`);
 
     card.innerHTML = `
-      <div class="role-card-header" tabindex="0" role="button" aria-expanded="false">
-        <img src="${role.image}" alt="${role.name}" class="role-image">
-        <div class="role-content">
-          <h3 class="role-name">${role.name}</h3>
-          <div class="role-meta">
-            <div class="meta-block">
-              <strong>Alliantie</strong>
-              <div class="badges">
-                <span class="badge">${role.alliance}</span>
-              </div>
-            </div>
-            <div class="meta-block">
-              <strong>Type</strong>
-              <div class="badges">
-                ${createBadges(role.types, "Geen type")}
-              </div>
+      <img src="${role.image}" alt="${role.name}" class="role-image">
+      <div class="role-content">
+        <h3 class="role-name">${role.name}</h3>
+        <div class="role-meta">
+          <div class="meta-block">
+            <strong>Alliantie</strong>
+            <div class="badges">
+              <span class="badge">${role.alliance}</span>
             </div>
           </div>
-          <span class="role-open-text">Klik voor uitleg</span>
+          <div class="meta-block">
+            <strong>Type</strong>
+            <div class="badges">
+              ${createBadges(role.types, "Geen type")}
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="role-description">
-        <p>${role.description}</p>
+        <span class="role-open-text">Klik voor uitleg</span>
       </div>
     `;
 
-    const header = card.querySelector(".role-card-header");
-
-    function toggleCard() {
-      const isOpen = card.classList.contains("is-open");
-      closeOtherCards(card);
-
-      if (isOpen) {
-        card.classList.remove("is-open");
-        header.setAttribute("aria-expanded", "false");
-      } else {
-        card.classList.add("is-open");
-        header.setAttribute("aria-expanded", "true");
-      }
+    function openRole() {
+      window.location.href = `role.html?id=${role.id}`;
     }
 
-    header.addEventListener("click", toggleCard);
-    header.addEventListener("keydown", (e) => {
+    card.addEventListener("click", openRole);
+    card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        toggleCard();
+        openRole();
       }
     });
 
