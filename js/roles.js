@@ -27,7 +27,6 @@ function populateFilters() {
     const option = document.createElement("option");
     option.value = "empty";
     option.textContent = "Nog geen types toegevoegd";
-    option.disabled = true;
     typeFilter.appendChild(option);
     return;
   }
@@ -48,7 +47,7 @@ function createBadges(items, emptyText) {
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
-function closeAllCardsExcept(cardToKeepOpen = null) {
+function closeOtherCards(cardToKeepOpen) {
   const cards = document.querySelectorAll(".role-card");
 
   cards.forEach((card) => {
@@ -92,6 +91,7 @@ function renderRoles() {
     card.innerHTML = `
       <div class="role-card-header" tabindex="0" role="button" aria-expanded="false">
         <img src="${role.image}" alt="${role.name}" class="role-image">
+
         <div class="role-content">
           <h3 class="role-name">${role.name}</h3>
 
@@ -104,14 +104,14 @@ function renderRoles() {
             </div>
 
             <div class="meta-block">
-              <strong>Types</strong>
+              <strong>Type</strong>
               <div class="badges">
                 ${createBadges(role.types, "Nog geen types")}
               </div>
             </div>
           </div>
 
-          <span class="role-open-text">Klik om uitleg te tonen</span>
+          <span class="role-open-text">Klik voor uitleg</span>
         </div>
       </div>
 
@@ -125,7 +125,7 @@ function renderRoles() {
     function toggleCard() {
       const isOpen = card.classList.contains("is-open");
 
-      closeAllCardsExcept(card);
+      closeOtherCards(card);
 
       if (isOpen) {
         card.classList.remove("is-open");
@@ -135,7 +135,8 @@ function renderRoles() {
         header.setAttribute("aria-expanded", "true");
       }
 
-      document.querySelectorAll(".role-card .role-card-header").forEach((otherHeader) => {
+      const allHeaders = document.querySelectorAll(".role-card-header");
+      allHeaders.forEach((otherHeader) => {
         if (otherHeader !== header) {
           otherHeader.setAttribute("aria-expanded", "false");
         }
