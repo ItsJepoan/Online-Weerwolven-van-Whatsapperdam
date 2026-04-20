@@ -184,3 +184,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+#modal-role-description {
+  white-space: pre-line;
+}
