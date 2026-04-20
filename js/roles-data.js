@@ -56,7 +56,7 @@ Gaat de Bom af en leeft de Bommenwerper nog, dan mag hij in de eerstvolgende nac
     name: "De Burger",
     image: "images/De Burger.png",
     alliance: "Burger",
-    types: ["Basis"],
+    types: ["Basis", "Dubbel"],
     description: `Een gewone dorpsbewoner zonder verborgen krachten, maar niet zonder invloed.
 
 Met scherpe observaties en zijn stem in het burgerberaad probeert hij overdag het kwaad te ontmaskeren en ’s nachts te overleven.`,
@@ -234,7 +234,7 @@ Elke nacht krijgt hij te horen wie hem heeft bezocht. Zo weet hij precies welke 
     name: "De Jager",
     image: "images/De Jager.png",
     alliance: "Burger",
-    types: ["Basis"],
+    types: ["Basis", "Dubbel"],
     description: `Patrouillerend door het dorp doet de jager er alles aan om de burgers te beschermen tegen de weerwolven. Met slechts één kogel in zijn geweer blijft hij vastberaden.
 
 Komt de jager om het leven—door weerwolven, de brandstapel of zelfs liefdesverdriet—dan mag hij nog één keer toeslaan en een willekeurige, levende dorpsgenoot aanwijzen die zijn laatste kogel ontvangt.`,
@@ -620,7 +620,7 @@ Sommige rollen zijn niet aan te nemen door de Wethouder. Deze zijn te vinden in 
     name: "De Ziener",
     image: "images/De Ziener.png",
     alliance: "Burger",
-    types: ["Basis"],
+    types: ["Basis", "Dubbel"],
     description: `Gezegend met heldere dromen en fluisterende visioenen draagt de ziener de zware last van kennis.
 
 Eens per nacht, tussen 20:00 en 09:00, richt zij haar spirituele krachten op één dorpsgenoot. Door de GM persoonlijk een bericht te sturen, onthult zich diens ware identiteit. Met deze waarheid in handen moet zij bepalen wie zij kan vertrouwen… en wie het dorp in het duister wil storten.`,
