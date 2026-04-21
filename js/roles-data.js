@@ -1079,7 +1079,7 @@ Eénmaal per spel mag de Waarzegster, in de ochtend nadat zij dit visioen heeft 
   id: "oma",
   name: "Oma",
   image: "images/Oma.png",
-  alliance: "Onafhankelijke",
+  alliance: "Titaan",
   types: ["Uitbreiding"],
   description: `Oma leeft al sinds het begin der tijden. Een reus, groter dan het dorp zelf, maar soms loopt ze er gewoon tussen. Klein. Onopvallend. Kijkend.
 Oma heeft één doel: De Grote Boze Wolf verslaan.
@@ -1096,7 +1096,7 @@ Oma weet wie De Grote Boze Wolf is.`,
   id: "de-grote-boze-wolf",
   name: "De Grote Boze Wolf",
   image: "images/De Grote Boze Wolf.png",
-  alliance: "Onafhankelijke",
+  alliance: "Titaan",
   types: ["Uitbreiding"],
   description: `Ouder dan het bos en groter dan alles wat het dorp kent. Ver boven de gewone weerwolven. Hij jaagt alleen.
 Zijn enige doel: Oma verslinden.
@@ -1113,7 +1113,7 @@ De Grote Boze Wolf weet wie Oma is.`,
   id: "roodkapje",
   name: "Roodkapje",
   image: "images/Roodkapje.png",
-  alliance: "Onafhankelijke",
+  alliance: "Onduidelijk",
   types: ["Uitbreiding"],
   description: `Eén speler in het dorp is Roodkapje. Geen aparte rol, maar een extra laag bovenop wat diegene al is. Roodkapje kan dus een burger, wolf of onafhankelijke zijn.
 Niemand weet wie Roodkapje is. Alleen Oma en De Grote Boze Wolf kunnen haar vinden.
