@@ -9,11 +9,24 @@
 
 .rules-layout {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
+}
+
+.rules-section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
 }
 
 .rules-section h2 {
+  color: var(--primary);
   margin-bottom: 0.9rem;
+  line-height: 1.2;
+}
+
+.rules-section p {
+  color: var(--text);
 }
 
 .rules-section p + p {
@@ -23,6 +36,10 @@
 .rules-list {
   margin-top: 1rem;
   padding-left: 1.4rem;
+}
+
+.rules-list li {
+  line-height: 1.6;
 }
 
 .rules-list li + li {
@@ -38,4 +55,9 @@
 .rules-subsection h3 {
   margin-bottom: 0.6rem;
   color: var(--primary);
+  line-height: 1.2;
+}
+
+.rules-subsection p + p {
+  margin-top: 0.8rem;
 }
