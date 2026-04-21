@@ -1208,4 +1208,39 @@ Zijn doel is simpel: het dorp uitroeien. Of dat nu gebeurt door zijn eigen hand�
   isExpansionRole: false,
   expansionKey: null
 },
+{
+  id: "het-wolfsspook",
+  name: "Het Wolfsspook",
+  image: "images/Het Wolfsspook.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `Het Wolfsspook – Een spook van zijn eigen leven. Bij leven is hij een normale weerwolf, deel van de roedel zoals ieder ander.
+
+Maar wanneer het Wolfsspook sterft… verdwijnt hij niet. Ongezien blijft hij aanwezig in het spel. Hij telt niet meer mee in het aantal spelers of wolven, maar zijn invloed blijft.
+
+Hij mag nog steeds stemmen door zijn stem via een direct bericht aan de GM door te geven.
+
+Ook in de nacht blijft hij bij de wolven. Hij kan nog steeds met hen communiceren en meedenken, alsof hij nooit gestorven is.
+
+Doden is dus niet het einde.
+Pas op met wat je zegt… sommige stemmen komen van verder dan het graf.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-wolfsoudste",
+  name: "De Wolfsoudste",
+  image: "images/De Wolfsoudste.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Wolfsoudste – Oud bloed. Oude littekens. Waar anderen vallen, blijft hij staan.
+
+De Wolfsoudste is een normale weerwolf en jaagt en stemt mee met de roedel.
+
+Eénmaal in het spel weigert hij te sterven. Of het nu de brandstapel is of een andere vorm van geweld… hij overleeft.
+
+Hij heeft dit al eerder meegemaakt. En hij komt er altijd weer doorheen.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
 ];
