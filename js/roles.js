@@ -14,17 +14,32 @@ const modalDescription = document.getElementById("modal-role-description");
 
 const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 
-/* BELANGRIJK: filter uitbreidingsrollen eruit */
 const standardRoles = roles.filter(
   (role) => !role.types.includes("Uitbreiding")
 );
 
 function getUniqueAlliances(roleList) {
-  return [...new Set(roleList.map((role) => role.alliance))].sort();
+  return [...new Set(roleList.map((role) => role.alliance))].sort((a, b) => {
+    return allianceOrder.indexOf(a) - allianceOrder.indexOf(b);
+  });
 }
 
 function getUniqueTypes(roleList) {
-  return [...new Set(roleList.flatMap((role) => role.types))].sort();
+  return [...new Set(roleList.flatMap((role) => role.types))].sort((a, b) => {
+    const typeOrder = ["Basis", "Toevoegend", "Onzeker", "Verdoemde"];
+
+    const indexA = typeOrder.indexOf(a);
+    const indexB = typeOrder.indexOf(b);
+
+    if (indexA !== -1 && indexB !== -1) {
+      return indexA - indexB;
+    }
+
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+
+    return a.localeCompare(b, "nl");
+  });
 }
 
 function populateFilters() {
@@ -47,7 +62,10 @@ function populateFilters() {
 }
 
 function createBadges(items) {
-  if (!items.length) return `<span class="badge">Geen</span>`;
+  if (!items.length) {
+    return `<span class="badge">Geen</span>`;
+  }
+
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
@@ -73,15 +91,26 @@ function sortRoles(roleList) {
     const allianceCompare =
       allianceOrder.indexOf(a.alliance) - allianceOrder.indexOf(b.alliance);
 
-    if (allianceCompare !== 0) return allianceCompare;
+    if (allianceCompare !== 0) {
+      return allianceCompare;
+    }
 
     const aIsBasis = a.types.includes("Basis");
     const bIsBasis = b.types.includes("Basis");
 
-    if (aIsBasis !== bIsBasis) return aIsBasis ? -1 : 1;
+    if (aIsBasis !== bIsBasis) {
+      return aIsBasis ? -1 : 1;
+    }
 
     return a.name.localeCompare(b.name, "nl");
   });
+}
+
+function getAllianceTitle(alliance) {
+  if (alliance === "Burger") return "Burgers";
+  if (alliance === "Onafhankelijke") return "Onafhankelijken";
+  if (alliance === "Weerwolf") return "Weerwolven";
+  return alliance;
 }
 
 function createRoleCard(role) {
@@ -148,23 +177,16 @@ function renderRoles() {
   const sorted = sortRoles(filteredRoles);
 
   allianceOrder.forEach((alliance) => {
-    const rolesPerAlliance = sorted.filter(
-      (role) => role.alliance === alliance
-    );
+    const rolesPerAlliance = sorted.filter((role) => role.alliance === alliance);
 
     if (!rolesPerAlliance.length) return;
 
     const section = document.createElement("section");
+    section.className = "role-alliance-section";
 
     const title = document.createElement("h2");
-    title.textContent =
-      alliance === "Burger"
-        ? "Burgers"
-        : alliance === "Weerwolf"
-        ? "Weerwolven"
-        : "Onafhankelijken";
-
-    title.className = "roles-group-title";
+    title.textContent = getAllianceTitle(alliance);
+    title.className = "role-alliance-title";
 
     const grid = document.createElement("div");
     grid.className = "roles-grid";
@@ -190,5 +212,7 @@ modalClose.onclick = closeModal;
 modalBackdrop.onclick = closeModal;
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeModal();
+  if (event.key === "Escape") {
+    closeModal();
+  }
 });
