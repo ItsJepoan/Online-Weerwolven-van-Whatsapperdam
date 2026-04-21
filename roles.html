@@ -28,15 +28,28 @@
   </nav>
 
   <main class="container page-content">
-    <section class="content-card">
+    <section class="content-card roles-intro-card">
       <h2>Alle rollen</h2>
       <p>Klik op een rol om de uitleg te bekijken.</p>
     </section>
 
     <section class="filters-section">
-      <h2>Filters</h2>
+      <div class="filters-header">
+        <h2>Zoeken en filters</h2>
+        <p>Zoek op naam en filter op alliantie of type.</p>
+      </div>
 
       <div class="filters-grid">
+        <div class="filter-group filter-group-search">
+          <label for="role-search">Zoeken</label>
+          <input
+            type="text"
+            id="role-search"
+            placeholder="Zoek een rol..."
+            autocomplete="off"
+          />
+        </div>
+
         <div class="filter-group">
           <label for="alliance-filter">Alliantie</label>
           <select id="alliance-filter">
@@ -60,7 +73,7 @@
     <div class="role-modal-backdrop"></div>
 
     <div class="role-modal-content">
-      <button id="role-modal-close" class="role-modal-close">&times;</button>
+      <button id="role-modal-close" class="role-modal-close" type="button" aria-label="Sluiten">&times;</button>
 
       <div class="role-modal-body">
         <img id="modal-role-image" class="role-modal-image" alt="">

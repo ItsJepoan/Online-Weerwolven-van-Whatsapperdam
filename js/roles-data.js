@@ -730,7 +730,9 @@ Wordt haar eigen huis door de weerwolven bezocht, dan is zij niet thuis en overl
     types: [],
     description: `Met zijn verleidelijke melodie verspreidt de fluitspeler zijn invloed door het dorp.
 
-Elke nacht betovert hij twee spelers. Alle betoverden weten van elkaar dat zij betoverd zijn, omdat zij samen in een aparte, stille groeps-app worden geplaatst waarin niet gesproken mag worden. Zij weten echter niet wie de fluitspeler is.
+Elke nacht, tussen 20:00 en 09:00, betovert hij via een direct bericht aan de GM een aantal spelers. Dit is minimaal 2, maar groeit mee met het dorp: hij mag elke nacht 10% van de levende spelers betoveren, afgerond. Bij grotere aantallen loopt dit dus op naar 3 of meer.
+
+Alle betoverden weten van elkaar dat zij betoverd zijn, omdat zij samen in een aparte, stille groeps-app worden geplaatst waarin niet gesproken mag worden. Zij weten echter niet wie de fluitspeler is. Betoverde spelers mogen wél delen dát ze betoverd zijn, maar niet wie of hoeveel anderen betoverd zijn.
 
 De fluitspeler kan zichzelf niet betoveren en geliefden worden apart geraakt. Hij zit zelf niet in de groeps-app, maar weet precies wie hij heeft betoverd.
 
@@ -744,13 +746,13 @@ Zodra alleen nog betoverde spelers in leven zijn, wint de fluitspeler onmiddelli
     image: "images/De Pyromaan.png",
     alliance: "Onafhankelijke",
     types: [],
-    description: `Het conflict tussen burgers en weerwolven interesseert de pyromaan weinig; hij droomt van vuur en chaos.
+    description: `Het conflict tussen burgers en weerwolven interesseert de pyromaan weinig; hij droomt van vuur en chaos. Zijn doel is simpel: het hele dorp afbranden en als enige overblijven.
 
-Elke nacht, tussen 20:00 en 09:00, maakt hij een bewuste keuze. Ofwel kiest hij één speler om heimelijk van top tot teen met benzine te overgieten, of – als hij vindt dat het moment is aangebroken – pakt hij de aansteker en steekt hij alle eerder overgoten spelers tegelijk in brand. In de nacht dat hij besluit het vuur te ontsteken, overgiet hij niemand meer; spelers die hem die nacht bezoeken, worden dan dus niet met benzine besprenkeld.
+Elke nacht, tussen 20:00 en 09:00, maakt hij een bewuste keuze. Ofwel kiest hij één speler om heimelijk van top tot teen met benzine te overgieten, of als hij vindt dat het moment is aangebroken, pakt hij de aansteker en steekt hij alle eerder overgoten spelers tegelijk in brand.
 
 Zodra de pyromaan het vuur ontsteekt, is de brand normaal gesproken onstuitbaar en worden alle overgoten spelers gedood. Een brandend slachtoffer kan echter wél gered worden door de genezer, mits deze op tijd bescherming heeft verleend.
 
-Daarnaast wordt iedere speler die hem ’s nachts bezoekt, in welke vorm dan ook, automatisch eveneens met benzine overgoten, tenzij hij die nacht kiest voor het aansteken. Het overgieten kan alleen mislukken wanneer het doelwit die nacht niet thuis is.`,
+Daarnaast wordt iedere speler die hem ’s nachts bezoekt, in welke vorm dan ook, automatisch eveneens met benzine overgoten. Het overgieten kan alleen mislukken wanneer het doelwit die nacht niet thuis is.`,
     isExpansionRole: false,
     expansionKey: null
   },
@@ -833,11 +835,13 @@ Dit overleg vindt plaats in een aparte WhatsApp-groep, uitsluitend voor de weerw
   image: "images/De Besmettelijke Raaf.png",
   alliance: "Onafhankelijke",
   types: [],
-  description: `Als een schaduw verspreidt de raaf zijn plaag door Whatsapperdam.
+  description: `Als een schaduw verspreidt de raaf zijn plaag door Whatsapperdam. Zijn doel is simpel: als enige overblijven.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via de GM één speler om te besmetten.
 
 Iedere besmette speler die iemand bezoekt, besmet die persoon ook. Daarnaast wordt iedereen die de Besmettelijke Raaf zelf bezoekt die nacht ook besmet. Spelers die door de Raaf besmet raken, kunnen pas vanaf de volgende nacht anderen besmetten wanneer zij iemand bezoeken.
+
+Kiest de Besmettelijke Raaf een speler die al besmet is (door hemzelf of via een ander), dan faalt zijn actie niet, maar mag hij die nacht een andere speler kiezen om alsnog te besmetten.
 
 De raaf kan zelf proberen bij te houden wie er allemaal besmet zijn, al is dat bijna ondoenlijk. Zodra het hele dorp besmet is, krijgt hij dit ’s nachts van de GM te horen. Vanaf dat moment mag hij elke nacht één speler naar keuze doden totdat niemand meer leeft. Dan wint hij het spel.
 
@@ -851,9 +855,9 @@ Na de dood van de Besmettelijke Raaf stopt de verspreiding niet; de besmetting b
   image: "images/De Twee Gescheiden Gezusters.png",
   alliance: "Onafhankelijke",
   types: [],
-  description: `Er gaan al jaren verhalen rond in Whatsapperdam over twee zussen die ooit uit elkaar zijn gehaald. Nu bewegen zij zich weer in hetzelfde dorp, zonder te weten dat de ander er ook is.
+  description: `De Twee Gescheiden Gezusters – Er gaan al jaren verhalen rond in Whatsapperdam over twee zussen die ooit uit elkaar zijn gehaald. Nu bewegen zij zich weer in hetzelfde dorp, zonder te weten dat de ander er ook is. Twee spelers ontvangen deze rol, maar kennen elkaars identiteit niet.
 
-Twee spelers ontvangen deze rol, maar kennen elkaars identiteit niet.
+De Gezusters kunnen geen deel uitmaken van een koppel.
 
 Elke nacht tussen 20:00 en 09:00 kiezen zij via een direct bericht aan de GM één speler. Kiezen zij in dezelfde nacht dezelfde speler, dan wordt dit slachtoffer de volgende ochtend dood aangetroffen.
 
@@ -862,6 +866,8 @@ De Gezusters mogen onder geen enkel beding duidelijk maken dat zij deze rol hebb
 Wanneer één van de Gezusters ’s nachts per toeval de ander bij naam kiest, krijgt alleen zij van de GM te horen dat zij haar zus heeft gevonden. De andere zus weet dit nog niet. Vanaf dat moment mag zij proberen subtiel te seinen dat zij haar heeft ontdekt, maar wees voorzichtig: als het dorp het eerder doorheeft dan haar zus, kan dat hun einde betekenen. De gebruikelijke regels over wat je wel en niet mag zeggen blijven gelden.
 
 Ook nadat één van de twee haar zus heeft gevonden, blijven beide Gezusters elke nacht een speler kiezen zoals normaal. Dit betekent dat zij nog steeds kunnen proberen dezelfde speler te kiezen om zo samen een slachtoffer te maken.
+
+Sterft één van de Gezusters, dan wordt de ander verteerd door verdriet. Zij krijgt op dat moment de keuze: zelf sterven… of verder leven als onderdeel van de burgers.
 
 De Twee Gescheiden Gezusters winnen wanneer zij elkaar hebben gevonden en beiden nog in leven zijn wanneer het spel eindigt.`,
   isExpansionRole: false,
@@ -1121,5 +1127,85 @@ Zolang Roodkapje leeft, beschermt zij Oma onbewust. Sterft Roodkapje, dan verand
 Wanneer Oma of De Grote Boze Wolf buiten zijn, beïnvloedt dit ook Roodkapje. De nacht wordt onstabiel, en acties hebben 50% kans om te falen.`,
   isExpansionRole: true,
   expansionKey: "de-sprookjesstrijd"
+},
+{
+  id: "de-burgemeester",
+  name: "De Burgemeester",
+  image: "images/De Burgemeester.png",
+  alliance: null,
+  types: ["Bijrol"],
+  description: "De burgemeester wordt gekozen via een speciale algemene stemming, direct vóór de eerste reguliere stemming. Burgers kunnen zich kandidaat stellen en een korte speech houden, waarna één winnaar overblijft. De burgemeesterkaart mag niet worden geweigerd—ook een weerwolf kan burgemeester zijn. Zolang de Zondebok leeft, telt de stem van de burgemeester als één. Is de Zondebok uit het spel, dan telt zijn stem bij een gelijke stand dubbel. Sterft de burgemeester, dan benoemt hij zelf een opvolger.",
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-geliefde",
+  name: "De Geliefde",
+  image: "images/De Geliefde.png",
+  alliance: null,
+  types: ["Bijrol"],
+  description: `Een geliefde maakt altijd deel uit van een koppel, al kan dat koppel uit 2 tot wel 4 of meer mensen bestaan. Een geliefde sterft aan liefdesverdriet als haar partner, of één van haar partners, sterft. Het koppel kan gevormd worden door verschillende rollen, waarvan Cupido de bekendste is.
+
+Wanneer het koppel bestaat uit dezelfde alliantie, zoals burger-burger of weerwolf-weerwolf, blijft hun doel ongewijzigd en is dit duidelijk.
+
+Wanneer er binnen een koppel een Romeo en Juliet ontstaat, namelijk een burger en een weerwolf, winnen zij alleen nog samen. Hun gezamenlijke doel wordt dan om de rest van de spelers te elimineren.
+
+Wanneer er een derde partij in het spel komt, een onafhankelijke… wordt het interessanter. Romeo, Juliet… en Dave. In dat geval kunnen zij meeliften met het doel van de onafhankelijke, en wordt het vaak verstandig om dat pad te volgen… als zij willen winnen.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-verlammer",
+  name: "De Verlammer",
+  image: "images/De Verlammer.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Verlammer – Controle. Stilte. Geen ontsnappen.
+
+Op de eerste dag, tussen 10:00 en 20:00, kiest de Verlammer via een direct bericht aan de GM drie spelers. Zodra de nacht begint, worden hun rollen direct geblokkeerd.
+
+Zij weten van elkaar wie ze zijn, maar niet elkaars rol.
+
+Hun krachten blijven geblokkeerd… tot één van hen zichzelf vrijwillig opoffert en direct sterft, of totdat de Verlammer zelf sterft. Pas dan krijgen zij hun rolacties terug.
+
+De Verlammer kan ook een medewolf selecteren. Voor de anderen lijkt het alsof ook deze speler geblokkeerd is, maar in werkelijkheid kan hij gewoon zijn vaardigheden blijven gebruiken.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-feestwolf",
+  name: "De Feestwolf",
+  image: "images/De Feestwolf.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Feestwolf – Een wolf die houdt van een feestje… en dat is te zien. En te horen.
+
+Eénmaal in het spel kan de Feestwolf, wanneer hij maar wil, via een direct bericht aan de GM iemand met een knal uitschakelen. Geen stille jacht, geen schaduwwerk… maar een overdreven, luid einde.
+
+Iedereen zal weten dat hij erachter zit.
+
+Deze actie kan niet gebruikt worden in de eerste dag of nacht.
+
+Daarna… is het altijd tijd voor een feestje.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-illusionist",
+  name: "De Illusionist",
+  image: "images/De Illusionist.png",
+  alliance: "Onafhankelijke",
+  types: ["Nieuw"],
+  description: `De Illusionist – Wat echt is… is maar een keuze. En hij kiest wat jij ziet.
+
+Elke nacht, tussen 20:00 en 09:00, kiest de Illusionist via een direct bericht aan de GM één van twee acties: hij vermomt één speler, of hij doodt alle spelers die op dat moment vermomd zijn.
+
+Kiest hij voor vermommen, dan wordt die speler die nacht én alle volgende nachten gezien als "De Illusionist" door alle zienende rollen, ongeacht zijn echte rol.
+
+Kiest hij voor doden, dan sterven alle op dat moment vermomde spelers. Deze worden aangekondigd als "De Illusionist".
+
+Zijn doel is simpel: het dorp uitroeien. Of dat nu gebeurt door zijn eigen hand… of doordat het dorp zichzelf vernietigt door wat hij hen laat zien.`,
+  isExpansionRole: false,
+  expansionKey: null
 },
 ];

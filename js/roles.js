@@ -1,6 +1,7 @@
 const rolesList = document.getElementById("roles-list");
 const allianceFilter = document.getElementById("alliance-filter");
 const typeFilter = document.getElementById("type-filter");
+const roleSearch = document.getElementById("role-search");
 
 const modal = document.getElementById("role-modal");
 const modalClose = document.getElementById("role-modal-close");
@@ -19,14 +20,14 @@ const standardRoles = roles.filter(
 );
 
 function getUniqueAlliances(roleList) {
-  return [...new Set(roleList.map((role) => role.alliance))].sort((a, b) => {
+  return [...new Set(roleList.map((role) => role.alliance).filter(Boolean))].sort((a, b) => {
     return allianceOrder.indexOf(a) - allianceOrder.indexOf(b);
   });
 }
 
 function getUniqueTypes(roleList) {
   return [...new Set(roleList.flatMap((role) => role.types))].sort((a, b) => {
-    const typeOrder = ["Basis", "Toevoegend", "Onzeker", "Verdoemde"];
+    const typeOrder = ["Basis", "Toevoegend", "Nieuw", "Onzeker", "Verdoemde", "Bijrol"];
 
     const indexA = typeOrder.indexOf(a);
     const indexB = typeOrder.indexOf(b);
@@ -73,7 +74,9 @@ function openModal(role) {
   modalName.textContent = role.name;
   modalImage.src = role.image;
   modalImage.alt = role.name;
-  modalAlliance.innerHTML = `<span class="badge">${role.alliance}</span>`;
+  modalAlliance.innerHTML = role.alliance
+    ? `<span class="badge">${role.alliance}</span>`
+    : `<span class="badge">Geen</span>`;
   modalTypes.innerHTML = createBadges(role.types);
   modalDescription.textContent = role.description;
 
@@ -127,7 +130,11 @@ function createRoleCard(role) {
           <div class="meta-block">
             <strong>Alliantie</strong>
             <div class="badges">
-              <span class="badge">${role.alliance}</span>
+              ${
+                role.alliance
+                  ? `<span class="badge">${role.alliance}</span>`
+                  : `<span class="badge">Geen</span>`
+              }
             </div>
           </div>
 
@@ -152,6 +159,7 @@ function createRoleCard(role) {
 function renderRoles() {
   const selectedAlliance = allianceFilter.value;
   const selectedType = typeFilter.value;
+  const searchQuery = roleSearch.value.trim().toLowerCase();
 
   const filteredRoles = standardRoles.filter((role) => {
     const allianceMatches =
@@ -160,7 +168,10 @@ function renderRoles() {
     const typeMatches =
       selectedType === "all" || role.types.includes(selectedType);
 
-    return allianceMatches && typeMatches;
+    const searchMatches =
+      searchQuery === "" || role.name.toLowerCase().includes(searchQuery);
+
+    return allianceMatches && typeMatches && searchMatches;
   });
 
   rolesList.innerHTML = "";
@@ -168,7 +179,7 @@ function renderRoles() {
   if (filteredRoles.length === 0) {
     rolesList.innerHTML = `
       <div class="empty-message">
-        Geen rollen gevonden met deze filters.
+        Geen rollen gevonden met deze filters of zoekopdracht.
       </div>
     `;
     return;
@@ -176,8 +187,11 @@ function renderRoles() {
 
   const sorted = sortRoles(filteredRoles);
 
+  // === NORMALE ALLIANTIES ===
   allianceOrder.forEach((alliance) => {
-    const rolesPerAlliance = sorted.filter((role) => role.alliance === alliance);
+    const rolesPerAlliance = sorted.filter(
+      (role) => role.alliance === alliance
+    );
 
     if (!rolesPerAlliance.length) return;
 
@@ -200,6 +214,30 @@ function renderRoles() {
 
     rolesList.appendChild(section);
   });
+
+  // === BIJROLLEN (GEEN ALLIANTIE) ===
+  const specialRoles = sorted.filter((role) => role.alliance === null);
+
+  if (specialRoles.length) {
+    const section = document.createElement("section");
+    section.className = "role-alliance-section";
+
+    const title = document.createElement("h2");
+    title.textContent = "Bijrollen";
+    title.className = "role-alliance-title";
+
+    const grid = document.createElement("div");
+    grid.className = "roles-grid";
+
+    specialRoles.forEach((role) => {
+      grid.appendChild(createRoleCard(role));
+    });
+
+    section.appendChild(title);
+    section.appendChild(grid);
+
+    rolesList.appendChild(section);
+  }
 }
 
 populateFilters();
@@ -207,6 +245,7 @@ renderRoles();
 
 allianceFilter.addEventListener("change", renderRoles);
 typeFilter.addEventListener("change", renderRoles);
+roleSearch.addEventListener("input", renderRoles);
 
 modalClose.onclick = closeModal;
 modalBackdrop.onclick = closeModal;
