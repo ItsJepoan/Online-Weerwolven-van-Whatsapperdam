@@ -1,0 +1,26 @@
+.appendices-intro {
+  margin-bottom: 1.5rem;
+}
+
+.appendices-intro p {
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+.appendices-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.appendix-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.appendix-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
