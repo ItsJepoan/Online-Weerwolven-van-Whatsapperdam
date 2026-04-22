@@ -1243,4 +1243,100 @@ Hij heeft dit al eerder meegemaakt. En hij komt er altijd weer doorheen.`,
   isExpansionRole: false,
   expansionKey: null
 },
+{
+  id: "de-wingman",
+  name: "De Wingman",
+  image: "images/De Wingman.png",
+  alliance: "Burger",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Wingman – Liefde voor een dag… meer heeft hij niet nodig. Als anderen het maar even voelen.
+
+Elke dag, tussen 10:00 en 20:00, kiest de Wingman via een direct bericht aan de GM twee spelers. Eén van deze twee mag hij zelf zijn.
+
+Aan het begin van de volgende nacht worden deze twee gekoppeld en komen ze samen in een aparte app. Tijdens die nacht delen zij hun lot: sterft één van hen, dan sterft de ander ook.
+
+Overleven ze de nacht… dan dooft het weer net zo snel. Aan het begin van de dag is de band verbroken, en gaan ze ieder weer hun eigen weg.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-onzekere-grenswachter",
+  name: "De Onzekere Grenswachter",
+  image: "images/De Onzekere Grenswachter.png",
+  alliance: "Onafhankelijke",
+  types: ["Nieuw"],
+  description: `De Onzekere Grenswachter – Altijd tussen werelden. Nooit echt ergens thuis. Tot het moment dat de grens wordt overschreden.
+
+Wanneer hij getroffen wordt door een dodelijke aanval, breekt er iets… of juist niet. Op dat moment kiest hij. Hij sterft niet.
+
+In plaats daarvan sluit hij zich aan bij de alliantie van degene die hem probeerde te doden. Was dit een weerwolf, burger of onafhankelijke… dan wordt dat vanaf dat moment zijn kant.
+
+Hij krijgt te weten wie hem probeerde te doden en tot welke alliantie diegene behoort.
+
+Vanaf dat moment deelt hij hun doel en wint hij met hen mee… zelfs als hij later alsnog sterft.
+
+Hij sluit zich niet aan bij eventuele groepsapps. Hij blijft op afstand.
+
+Op de grens… maar nooit meer neutraal.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-klier",
+  name: "De Klier",
+  image: "images/De Klier.png",
+  alliance: "Burger",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Klier – Altijd op zoek naar iemand om te raken. Eerst een tik… daarna pas de schade.
+
+Elke dag, tussen 10:00 en 20:00, kiest de Klier via een direct bericht aan de GM één speler en gooit een steen. Deze speler krijgt een hersenschudding en kan de volgende nacht zijn rol niet gebruiken.
+
+Raakt de Klier iemand die al eerder een hersenschudding heeft gehad, dan wordt de klap fataal en sterft deze speler direct.
+
+Op dat moment wordt de Klier ontmaskerd en wordt zijn rol bekendgemaakt aan het hele dorp.
+
+De Klier kan op deze manier maximaal twee spelers per spel doden.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-omroeper",
+  name: "De Omroeper",
+  image: "images/De Omroeper.png",
+  alliance: "Burger",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Omroeper – Waar hij komt, blijft het niet stil… zelfs niet na zijn dood.
+
+In de eerste nacht, tussen 20:00 en 09:00, kiest de Herrieschopper via een direct bericht aan de GM één speler.
+
+Wanneer de Herrieschopper sterft, wordt naast zijn eigen rol ook de rol van deze gekozen speler bekendgemaakt.
+
+Sterft deze speler eerder dan de Herrieschopper, dan mag hij direct een nieuwe speler kiezen.
+
+Iemand neemt hij altijd mee… al is het alleen in de waarheid.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-premiejager",
+  name: "De Premiejager",
+  image: "images/De Premiejager.png",
+  alliance: "Onafhankelijke",
+  types: [],
+  description: `De Premiejager – Niet hier voor het dorp. Niet hier voor de wolven. Alleen voor zijn lijst.
+
+Aan het begin van het spel krijgt de Premiejager drie willekeurige spelers toegewezen door de GM. In de eerste nacht, tussen 20:00 en 09:00, kiest hij zelf nog drie andere spelers.
+
+Dit zijn zijn doelwitten.
+
+Zijn doel is simpel: zorg dat deze zes spelers sterven. Hij jaagt niet alleen, en profiteert van de fouten van zowel burgers als wolven.
+
+Eénmaal in het spel kan de Premiejager, tussen 20:00 en 09:00 via een direct bericht aan de GM, één speler markeren. Deze speler kan die nacht niet beschermd of gered worden. Sterft deze speler die nacht, dan mag de Premiejager direct nog een extra slachtoffer kiezen.
+
+Mislukt deze actie, dan mag hij het later nog één keer proberen. Lukt het hem, dan is zijn kracht verbruikt.
+
+De Premiejager is gehard en overleeft één keer een weerwolfaanval.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
 ];
