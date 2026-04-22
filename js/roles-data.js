@@ -1339,4 +1339,36 @@ De Premiejager is gehard en overleeft één keer een weerwolfaanval.`,
   isExpansionRole: false,
   expansionKey: null
 },
+{
+  id: "de-vervloekte-wolf",
+  name: "De Vervloekte Wolf",
+  image: "images/De Vervloekte Wolf.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Vervloekte Wolf – Ooit gewoon deel van de roedel… tot de vloek zich vastzette. Wat hij achterlaat, sterft niet zomaar.
+
+De Vervloekte Wolf is een normale weerwolf en jaagt en stemt mee met de roedel.
+
+Wanneer de Vervloekte Wolf sterft, treedt zijn vloek in werking. De eerstvolgende wolvenaanval zal niet doden… maar veranderen. Het doelwit van de aanval wordt geen slachtoffer, maar een nieuwe weerwolf.
+
+Wordt dit doelwit beschermd, dan verdwijnt de vloek niet meteen, maar blijft hij nog één dag langer hangen, tot de eerstvolgende kans zich aandient.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-boze-wolf",
+  name: "De Boze Wolf",
+  image: "images/De Boze Wolf.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `De Boze Wolf – Groter. Sterker. Hongeriger. Hij jaagt met de roedel… maar speelt zijn eigen spel.
+
+De Boze Wolf hoort bij de weerwolven en overlegt met hen zoals normaal, maar waar de roedel samen één prooi kiest, neemt hij er nog één extra.
+
+Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM zijn eigen slachtoffer, bovenop de aanval van de wolven. Dit gaat door… tot het moment dat er een andere weerwolf of de Kleine Wilde sterft.
+
+Vanaf dat moment stopt zijn extra jacht, en blijft hij verder een normale weerwolf.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
 ];
