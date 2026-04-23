@@ -131,6 +131,11 @@ function openModal(role) {
 
   modal.classList.remove("hidden");
   document.body.classList.add("modal-open");
+
+  const scrollContainer = modal.querySelector(".role-modal-text");
+  if (scrollContainer) {
+    scrollContainer.scrollTop = 0;
+  }
 }
 
 function closeModal() {
