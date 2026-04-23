@@ -1,0 +1,144 @@
+.current-game-intro {
+  margin-bottom: 1.75rem;
+}
+
+.current-game-intro p {
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+.current-expansions-layout {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.current-expansion-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.current-expansion-title {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.current-expansion-description {
+  color: var(--text);
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.current-expansion-roles-title {
+  margin-top: 1.25rem;
+  margin-bottom: 0.9rem;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+#current-roles-list {
+  display: block;
+}
+
+.current-role-section {
+  margin-bottom: 3rem;
+}
+
+.current-role-section:first-child {
+  margin-top: 1.5rem;
+}
+
+.current-role-title {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.current-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.current-role-card {
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.current-role-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #d9d9e8;
+}
+
+.current-role-content {
+  padding: 0.8rem;
+}
+
+.current-role-name {
+  color: var(--primary);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: center;
+  word-break: break-word;
+}
+
+.current-empty-message {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  color: var(--muted);
+}
+
+@media (max-width: 1200px) {
+  .current-roles-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .current-roles-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .current-roles-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .current-roles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .current-role-title,
+  .current-expansion-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .current-roles-grid {
+    grid-template-columns: 1fr;
+  }
+}

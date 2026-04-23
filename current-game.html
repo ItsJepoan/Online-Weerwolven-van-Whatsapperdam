@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huidig Spel - Online Weerwolven van Whatsapperdam</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/current-game.css" />
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Online Weerwolven van Whatsapperdam</h1>
+      <p class="subtitle">Huidig spel</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-links">
+      <a href="index.html">Home</a>
+      <a href="current-game.html" class="active">Huidig spel</a>
+      <a href="rules.html">Regels</a>
+      <a href="roles.html">Rollen</a>
+      <a href="expansions.html">Uitbreidingen</a>
+      <a href="appendices.html">Appendices</a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <section class="content-card current-game-intro">
+      <h2>Rollen en uitbreidingen in het huidige spel</h2>
+      <p>
+        Hieronder zie je alle rollen en uitbreidingen die op dit moment in het spel zitten.
+        Rollen die hier niet staan, zitten niet in dit spel.
+      </p>
+    </section>
+
+    <section id="active-expansions-list" class="current-expansions-layout"></section>
+
+    <section id="current-roles-list"></section>
+  </main>
+
+  <script src="js/roles-data.js"></script>
+  <script src="js/expansions-data.js"></script>
+  <script src="js/current-game-data.js"></script>
+  <script src="js/current-game.js"></script>
+</body>
+</html>

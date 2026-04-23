@@ -1392,7 +1392,7 @@ Wat er die ochtend wordt aangekondigd, is niet de waarheid… maar wat hij heeft
     name: "De Charmante Dealer",
     image: "images/De Charmante Dealer.png",
     alliance: "Burger",
-    types: ["Nieuw", "Dodelijk", "Beschermer", "Upgrade", "Chaos", "Kans"],
+    types: ["Toevoegend", "Nieuw", "Dodelijk", "Beschermer", "Upgrade", "Chaos", "Kans"],
     description: `Aan de rand van het dorp staat hij. Met zijn kist. Met zijn glimlach. En deals… waar je beter twee keer over nadenkt.
 
 Elke dag, tussen 10:00 en 20:00, biedt de Charmante Dealer via de GM één speler een deal aan. De speler mag deze accepteren of weigeren. Het effect treedt de volgende nacht in.
@@ -1415,7 +1415,7 @@ maar soms is dat precies wat je niet verder helpt.`,
     name: "De Aasgier",
     image: "images/De Aasgier.png",
     alliance: "Burger",
-    types: ["Nieuw", "Liefde", "Aanhanger"],
+    types: ["Toevoegend", "Nieuw", "Liefde", "Aanhanger"],
     description: `Hoog boven Whatsapperdam cirkelt hij. Wachtend. Geduldig. Op het juiste moment.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Aasgier via een direct bericht aan de GM één speler om te onderzoeken. Hij blijft zoeken… tot hij een koppel vindt.
