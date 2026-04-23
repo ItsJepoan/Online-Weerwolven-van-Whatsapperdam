@@ -23,7 +23,6 @@ const currentGameRoleIds = [
   "de-wolf-in-winterslaap",
   "de-vriend",
   "de-dorpsgek",
-  "de-burgerlijke-burger",
   "de-alwetende-uil",
   "de-husselaar",
   "de-valse-erfgenaam",
