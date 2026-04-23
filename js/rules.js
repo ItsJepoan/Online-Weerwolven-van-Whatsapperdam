@@ -38,12 +38,33 @@ function createSubSections(subSections) {
     .join("");
 }
 
+function createTypeDefinitions(typeDefinitions) {
+  if (!typeDefinitions || typeDefinitions.length === 0) {
+    return "";
+  }
+
+  return `
+    <div class="type-definitions-grid">
+      ${typeDefinitions
+        .map(
+          (type) => `
+            <article class="type-definition-card">
+              <h3>${type.name}</h3>
+              <p>${type.description}</p>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 function renderRules() {
   rulesContent.innerHTML = "";
 
   rulesSections.forEach((section) => {
     const article = document.createElement("article");
-    article.className = "rules-section";
+    article.className = "rules-section content-card";
 
     article.innerHTML = `
       <h2>${section.title}</h2>
@@ -51,6 +72,7 @@ function renderRules() {
       ${createList(section.list)}
       ${createParagraphs(section.extraContent)}
       ${createSubSections(section.subSections)}
+      ${createTypeDefinitions(section.typeDefinitions)}
     `;
 
     rulesContent.appendChild(article);

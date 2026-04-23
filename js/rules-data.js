@@ -44,8 +44,7 @@ const rulesSections = [
       {
         title: "Toevoegende rollen",
         content: [
-          "Naast de basisrollen zijn er toevoegende rollen. Het totale aantal mogelijke toevoegende rollen ligt altijd hoger dan het aantal spelers. Het wordt niet bekendgemaakt welke en hoeveel van deze rollen daadwerkelijk in het spel zitten.",
-          "Dit creëert ruimte voor bluffen, misleiding en strategisch spel, voor zowel burgers als weerwolven.",
+          "Naast de basisrollen zijn er toevoegende rollen. Het totale aantal mogelijke toevoegende rollen ligt altijd hoger dan het aantal spelers. Het wordt niet bekendgemaakt welke en hoeveel van deze rollen daadwerkelijk in het spel zitten. Dit creëert ruimte voor bluffen, misleiding en strategisch spel, voor zowel burgers als weerwolven.",
           "Binnen de toevoegende rollen kunnen bij de burgers ook basisrollen voorkomen. Dit betekent dat sommige rollen dubbel in het spel aanwezig kunnen zijn."
         ]
       },
@@ -61,6 +60,44 @@ const rulesSections = [
           "In elk spel zitten altijd twee of drie Onafhankelijke rollen. Welke dit zijn, wordt niet bekendgemaakt. Deze rollen vormen een onvoorspelbare factor binnen het dorp en kunnen de balans sterk beïnvloeden."
         ]
       }
+    ]
+  },
+  {
+    title: "Types",
+    content: [
+      "Elke rol heeft één of meerdere types. Deze hebben geen directe invloed op de werking van de rol, maar helpen bij het begrijpen en indelen van de rollen."
+    ],
+    typeDefinitions: [
+      { name: "Basis", description: "Standaard in elk spel" },
+      { name: "Toevoegend", description: "Mogelijk in elk spel" },
+      { name: "Uitbreiding", description: "Alleen actief wanneer een uitbreiding wordt gebruikt" },
+      { name: "Bijrol", description: "Een rol bovenop je normale rol, zoals Geliefde of Burgemeester" },
+      { name: "Nieuw", description: "Recent toegevoegde rollen" },
+      { name: "Dubbel", description: "Kan meerdere keren in één spel voorkomen" },
+      { name: "Onzeker", description: "Er zit één of meerdere van in, afhankelijk van het aantal onzekere rollen" },
+      { name: "Invloedrijk", description: "Kan iemand of het dorp forceren iets te doen" },
+      { name: "Liefde", description: "Heeft te maken met koppels of kan deze vormen" },
+      { name: "Beschermer", description: "Kan iemand beschermen tegen de dood" },
+      { name: "Informatie", description: "Kan informatie verkrijgen" },
+      { name: "Dodelijk", description: "Kan spelers uitschakelen" },
+      { name: "Ongrijpbaar", description: "Moeilijk te bezoeken en/of te doden" },
+      { name: "Betrouwbaar", description: "Kan vertrouwen opbouwen" },
+      { name: "Transformatie", description: "Kan van rol of alliantie veranderen" },
+      { name: "Kans", description: "Bevat een kansmechaniek" },
+      { name: "Chaos", description: "Zorgt voor onrust in het spel" },
+      { name: "Spoed", description: "Heeft een actie buiten dag/nacht om" },
+      { name: "Aankondiging", description: "Zorgt voor een zichtbare aankondiging" },
+      { name: "Hiernamaals", description: "Heeft interactie met doden" },
+      { name: "Kopiëren", description: "Kan rollen of acties kopiëren" },
+      { name: "Alleskunner", description: "Heeft meerdere mogelijke uitkomsten" },
+      { name: "Gehard", description: "Kan een (wolven)aanval overleven" },
+      { name: "Upgrade", description: "Kan rollen of acties verbeteren" },
+      { name: "Misinformatie", description: "Geeft of ontvangt verkeerde informatie" },
+      { name: "Blokkade", description: "Kan acties of rollen blokkeren" },
+      { name: "Aanhanger", description: "Is gebonden aan een andere speler" },
+      { name: "Effect", description: "Heeft een langdurig effect op spelers" },
+      { name: "Dronken", description: "Bevat een 50% kans of verstoring" },
+      { name: "Titaan", description: "Staat buiten het dorp maar beïnvloedt het wel" }
     ]
   },
   {
