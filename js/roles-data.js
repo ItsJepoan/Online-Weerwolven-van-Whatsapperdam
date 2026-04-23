@@ -1414,7 +1414,7 @@ maar soms is dat precies wat je niet verder helpt.`,
     id: "de-aasgier",
     name: "De Aasgier",
     image: "images/De Aasgier.png",
-    alliance: "Onafhankelijke",
+    alliance: "Burger",
     types: ["Nieuw", "Liefde", "Aanhanger"],
     description: `Hoog boven Whatsapperdam cirkelt hij. Wachtend. Geduldig. Op het juiste moment.
 
