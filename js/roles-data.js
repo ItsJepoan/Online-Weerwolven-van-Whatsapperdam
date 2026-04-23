@@ -4,7 +4,7 @@ const roles = [
     name: "De Agent",
     image: "images/De Agent.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Invloedrijk"],
     description: `Orde in het dorp wordt gewaardeerd. Waar de Onderdrukker druk zet, grijpt de Agent in. Stilte afdwingen, rust bewaren… of juist de verkeerde het zwijgen opleggen.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Agent via een direct bericht aan de GM één speler die de volgende dag gearresteerd is, maar nooit twee nachten achter elkaar dezelfde persoon.
@@ -20,7 +20,7 @@ De Agent mag ook zichzelf kiezen… orde begint bij jezelf.`,
     name: "De Alwetende Uil",
     image: "images/De Alwetende Uil.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Transformatie", "Kans"],
     description: `In de stilte van de nacht ziet hij wat anderen missen. Niet wat er is… maar wat er ontbreekt.
 
 Eénmaal per spel mag hij, tussen 20:00 en 09:00, via een direct bericht aan de GM een burgerrol noemen waarvan hij denkt dat die niet in het spel zit.
@@ -38,7 +38,7 @@ Soms zit de waarheid niet in wat je ziet… maar in wat er ontbreekt.`,
     name: "De Bommenwerper",
     image: "images/De Bommenwerper.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Dodelijk", "Chaos"],
     description: `Hij loopt door het dorp alsof er niks aan de hand is… maar ergens tikt iets. Iets wat niemand ziet. Nog niet.
 
 In de eerste nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één speler en overhandigt diegene De Bom.
@@ -68,7 +68,7 @@ Met scherpe observaties en zijn stem in het burgerberaad probeert hij overdag he
     name: "De Burgerlijke Burger",
     image: "images/De Burgerlijke Burger.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Betrouwbaar"],
     description: `Uitstralend door het dorp loopt de Burgerlijke Burger, de burgerlijkste burger van heel Whatsapperdam. Open, zichtbaar en zonder geheimen… iemand die je bijna móét vertrouwen.
 
 Aan het begin van het spel wordt aangekondigd wie de Burgerlijke Burger is. Iedereen weet dus vanaf het eerste moment wie hij is. Dat kan hem veiligheid bieden… of hem juist een makkelijk doelwit maken voor de wolven.
@@ -82,7 +82,7 @@ Wat er ook gebeurt, één ding lijkt zeker: de Burgerlijke Burger is altijd te v
     name: "Cupido",
     image: "images/Cupido.png",
     alliance: "Burger",
-    types: ["Basis"],
+    types: ["Basis", "Liefde"],
     description: `Hoewel hij zelf geen liefde kent, verbindt Cupido twee dorpsgenoten tot een onafscheidelijk koppel.
 
 Zij winnen samen als zij als enigen overblijven, maar sterft één, dan volgt de ander direct aan liefdesverdriet.
@@ -96,7 +96,7 @@ Tussen 20:00 en 09:00 kiest Cupido in de eerste nacht zijn koppel via een persoo
     name: "De Dictator",
     image: "images/De Dictator.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Invloedrijk", "Spoed", "Aankondiging"],
     description: `Overtuigd dat zijn wil boven die van het dorp staat, mag de Dictator éénmaal per spel, zodra de eerste stem is uitgebracht, tussen 10:00 en 20:00 via een direct bericht aan de GM de stemming naar zijn hand zetten.
 
 Zijn keuze wordt publiek gemaakt en is onomkeerbaar: de aangewezen speler gaat naar de brandstapel.
@@ -110,7 +110,7 @@ Is de Dictator die dag onderdrukt, dan kan hij zijn macht niet gebruiken. Sterft
     name: "De Dodenbezweerder",
     image: "images/De Dodenbezweerder.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Dodelijk", "Hiernamaals"],
     description: `In de stilte van de nacht fluistert hij woorden die beter vergeten hadden kunnen blijven. Waar anderen afscheid nemen, probeert de Dodenbezweerder het onvermijdelijke terug te draaien.
 
 Eénmaal per spel kan hij een ritueel beginnen om een gestorven speler terug tot leven te wekken. Het ritueel start ’s nachts en duurt tot het begin van de volgende nacht. In deze periode mag de Dodenbezweerder door niemand worden bezocht of onderzocht; gebeurt dat wel, dan mislukt het ritueel. Hij mag het later opnieuw proberen zolang het nog niet gelukt is. Tijdens het ritueel mag hij in het burgerberaad op geen enkele manier aankondigen of hinten wat hij doet.
@@ -126,7 +126,7 @@ De speler die terugkeert is bovendien niet meer helemaal zoals voorheen. Hij kee
     name: "De Dokter",
     image: "images/De Dokter.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Dodelijk", "Beschermer"],
     description: `Balancerend tussen leven en dood beschikt de dokter over twee serums: één dat redt en één dat doodt.
 
 Elke nacht, tussen 20:00 en 09:00, krijgt hij van de GM te horen wie door de weerwolven is vermoord.
@@ -144,7 +144,7 @@ Van elk serum is er slechts één. Per nacht kan de dokter maximaal één serum 
     name: "De Dorpsgek",
     image: "images/De Dorpsgek.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Transformatie", "Betrouwbaar", "Gehard"],
     description: `Altijd lachend wanneer het niet hoort en zwijgend wanneer het moet, wordt de Dorpsgek zelden serieus genomen.
 
 Wordt hij of zij tijdens de ochtendstemming als weerwolf aangewezen, dan barst hij in lachen uit, maakt zich bekend en ontsnapt aan de dood.
@@ -158,7 +158,7 @@ De Dorpsgek blijft meespelen, maar verliest het recht om te stemmen en kan geen 
     name: "De Dorpsoudste",
     image: "images/De Dorpsoudste.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Gehard"],
     description: `Als oudste en wijste van het dorp heeft de dorpsoudste een sterkere levenswil dan ieder ander.
 
 De weerwolven moeten hem daarom twee keer aanwijzen om hem te doden. Het oordeel van het dorp, de heks of de kogel van de jager maakt echter wél direct een einde aan zijn leven.`,
@@ -170,7 +170,7 @@ De weerwolven moeten hem daarom twee keer aanwijzen om hem te doden. Het oordeel
     name: "De Genezer",
     image: "images/De Genezer.png",
     alliance: "Burger",
-    types: ["Basis"],
+    types: ["Basis", "Beschermer"],
     description: `Met oude kennis waakt de genezer over het dorp. Van 20:00 tot 09:00 kiest hij via een direct bericht aan de GM één speler die die nacht beschermd is tegen dodelijke invloeden. Hij mag zichzelf kiezen, maar nooit twee nachten achter elkaar dezelfde speler.
 
 Zijn bescherming werkt vooral tegen de meeste aanvallen van wolven, maar kan ook verschillende andere moordpogingen tegenhouden. Toch is zijn kracht niet onfeilbaar, en tegen sommige vormen van dood helpt zij niet.
@@ -184,7 +184,7 @@ In specifieke gevallen kan zijn bescherming ook voorkomen dat de Onderduiker ste
     name: "De Grafrover",
     image: "images/De Grafrover.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Kopiëren", "Hiernamaals", "Alleskunner"],
     description: `In het holst van de nacht schuimt de grafrover het kerkhof af, op zoek naar vergeten geheimen.
 
 Tussen 20:00 en 09:00 mag hij tweemaal in het spel een graf openen door te kiezen uit alle tot dan toe overleden spelers. Voor die nacht en de daaropvolgende dag eigent hij zich de krachten van die rol toe. Kiest hij een weerwolf of weerwolf-achtige rol, dan mag hij hun krachten gebruiken, maar niet meestemmen met de weerwolven.
@@ -200,7 +200,7 @@ Voor een duidelijk overzicht van welke krachten nog op te graven zijn en wat er 
     name: "De Husselaar",
     image: "images/De Husselaar.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Chaos", "Transformatie"],
     description: `Ergens aan de rand van het dorp woont hij. Niemand weet precies wat hij doet… alleen dat dingen na zijn bezoek nooit meer hetzelfde zijn.
 
 Eénmaal per spel kiest hij tussen 20:00 en 09:00 via een direct bericht aan de GM 3 tot 5 spelers. Die nacht vervormen hun lichamen… en hun krachten worden door elkaar gehusseld. Het effect treedt pas in bij de volgende dag om 09:00, vanaf dat moment krijgen de gekozen spelers ook hun nieuwe rol te horen.
@@ -222,7 +222,7 @@ De Husselaar zelf? Gewoon een burger. Toch… voelt dat nooit helemaal zo.`,
     name: "De Hypocriet",
     image: "images/De Hypocriet.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie"],
     description: `Bang en aarzelend sluipt de Hypocriet door het dorp. Wat hem nog meer angst aanjaagt dan de weerwolven, is het idee dat iemand hem in het duister benadert.
 
 Elke nacht krijgt hij te horen wie hem heeft bezocht. Zo weet hij precies welke schaduwen zich rondom hem bewegen, zelfs wanneer niemand hem overdag openlijk beschuldigt.`,
@@ -234,7 +234,7 @@ Elke nacht krijgt hij te horen wie hem heeft bezocht. Zo weet hij precies welke 
     name: "De Jager",
     image: "images/De Jager.png",
     alliance: "Burger",
-    types: ["Basis", "Dubbel"],
+    types: ["Basis", "Dubbel", "Dodelijk"],
     description: `Patrouillerend door het dorp doet de jager er alles aan om de burgers te beschermen tegen de weerwolven. Met slechts één kogel in zijn geweer blijft hij vastberaden.
 
 Komt de jager om het leven—door weerwolven, de brandstapel of zelfs liefdesverdriet—dan mag hij nog één keer toeslaan en een willekeurige, levende dorpsgenoot aanwijzen die zijn laatste kogel ontvangt.`,
@@ -246,7 +246,7 @@ Komt de jager om het leven—door weerwolven, de brandstapel of zelfs liefdesver
     name: "De Jaloerse Ex",
     image: "images/De Jaloerse Ex.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Liefde", "Dodelijk"],
     description: `Hij struimelt door Whatsapperdam… niet op zoek naar een huis, maar naar iets dat hij kwijt is. Liefde. Of beter gezegd… iemand anders zijn liefde.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Ex via een direct bericht aan de GM één speler. Zijn doelwit. Zijn droom.
@@ -266,7 +266,7 @@ Precies zoals hij het wil.`,
     name: "De Journalist",
     image: "images/De Journalist.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie", "Invloedrijk", "Aankondiging"],
     description: `Pen in de hand, ogen scherp. Waar het dorp schreeuwt, stelt hij de vragen die niemand durft te stellen.
 
 Om de dag kiest de Journalist, in de nacht tussen 20:00 en 09:00 via een direct bericht aan de GM, één speler om te interviewen. Dit interview vindt plaats in een aparte app.
@@ -284,7 +284,7 @@ Het verslag wordt naar de GM gestuurd, gecontroleerd en vervolgens geplaatst in 
     name: "De Leerling",
     image: "images/De Leerling.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Aanhanger", "Transformatie"],
     description: `Nog onervaren, maar leergierig. In de eerste nacht, tussen 20:00 en 09:00, kiest de Leerling via een direct bericht aan de GM één speler als zijn Meester.
 
 Zolang zijn Meester leeft, blijft de Leerling een gewone burger. Sterft zijn Meester, dan is de Leerling uitgeleerd en neemt hij voor het eerst de rol én alliantie van zijn Meester op zich, met alle bijbehorende krachten. Vanaf dat moment gaat hij verder onder een nieuwe naam: De <Rol>'s Leerling.
@@ -298,7 +298,7 @@ Sommige rollen zijn echter te uitgebreid om over te nemen. Mocht de Leerling zo�
     name: "De Onderduiker",
     image: "images/De Onderduiker.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Ongrijpbaar"],
     description: `Diep verscholen in zijn bunker komt de Onderduiker alleen overdag naar buiten.
 
 Zolang hij ondergedoken is, is hij beschermd tegen alle vormen van kwaad, zelfs als het Onschuldige Sletje ’s nachts zijn bunker betreedt. Wordt zijn rol echter bekeken door de Ziener of de Heks, dan slaat de paniek toe en sterft hij direct aan een fatale hartaanval.`,
@@ -310,7 +310,7 @@ Zolang hij ondergedoken is, is hij beschermd tegen alle vormen van kwaad, zelfs 
     name: "De Papegaai",
     image: "images/De Papegaai.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Kopiëren", "Alleskunner"],
     description: `Stil en oplettend zit de Papegaai op zijn tak, luisterend naar wat er in het donker gebeurt.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via een persoonlijk bericht aan de GM één speler om te volgen.
@@ -332,7 +332,7 @@ Voor een duidelijk overzicht van kopieerbare acties en hun werking kan de Papega
     name: "De Rebel",
     image: "images/De Rebel.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Dodelijk", "Aankondiging"],
     description: `Sommige mensen volgen de regels… anderen breken ze. De Rebel wacht. Kijkt. En slaat toe wanneer het hem uitkomt.
 
 Eénmaal in het spel kan de Rebel, tussen 20:00 en 09:00 via een direct bericht aan de GM, de huidige Burgemeester vermoorden.
@@ -348,7 +348,7 @@ Een nieuw gezicht. Een nieuwe stem. Of gewoon… dezelfde fout opnieuw.`,
     name: "De Ridder met het Roestige Zwaard",
     image: "images/De Ridder met het Roestige Zwaard.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Dodelijk"],
     description: `Gehuld in oude eer en versleten staal loopt hij door Whatsapperdam. Zijn zwaard… oud, roestig, vergeten door de tijd. Maar nog altijd scherp genoeg.
 
 Wanneer de weerwolven hem ’s nachts verslinden, lijkt het een makkelijke prooi.
@@ -368,7 +368,7 @@ Pas dus op, wolven… sommige prooien vechten nog, zelfs nadat ze gevallen zijn.
     name: "De Samurai",
     image: "images/De Samurai.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Spoed", "Dodelijk"],
     description: `Gedreven door eer strijdt de samurai tegen onrecht.
 
 Eénmaal per spel mag hij op elk moment, dag of nacht, zichzelf opofferen om samen met één gekozen speler te sterven door dit aan de GM door te geven. Deze daad is niet te stoppen.
@@ -382,7 +382,7 @@ Is zijn doelwit al tot de dood bestemd, dan krijgt hij dit te horen en moet hij 
     name: "De Siamese Tweeling",
     image: "images/De Siamese Tweeling.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Kopiëren", "Liefde", "Betrouwbaar"],
     description: `Buiten broeders en gezusters bestaan er in Whatsapperdam nog diepere banden. Twee lichamen… maar onlosmakelijk verbonden.
 
 De Siamese Tweeling telt als twee aparte dorpelingen, maar alles wat de één overkomt, overkomt automatisch ook de ander. Elke actie die op één van hen wordt uitgevoerd, werkt direct door op beide.
@@ -398,7 +398,7 @@ Overdag moeten zij altijd op dezelfde persoon stemmen. Ze mogen onderling overle
     name: "De Smid",
     image: "images/De Smid.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Upgrade"],
     description: `Met hamer en vuur vormt hij meer dan alleen staal. Soms… smeedt hij mensen.
 
 Overdag, tussen 10:00 en 20:00, kiest de Smid via een direct bericht aan de GM één speler wiens rol hij voor de aankomende nacht probeert te verbeteren. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Zichzelf kiezen mag… maar heeft geen effect.
@@ -416,7 +416,7 @@ Wat de Smid precies heeft gesmeed… blijft in het donker. Mogelijke verbetering
     name: "De Stalker",
     image: "images/De Stalker.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Liefde", "Kans"],
     description: `Zoals velen in dit dorp zoekt de Stalker naar liefde… maar waar anderen hopen, gaat hij er zelf achteraan.
 
 De eerste 5 nachten, tussen 20:00 en 09:00, mag de Stalker via een direct bericht aan de GM de naam noemen van zijn favoriete dorpsbewoner en een liefdesbericht sturen. Dit bericht wordt anoniem verstuurd, maar de Stalker mag er zelf voor kiezen het met een naam te signeren. Het bericht mag geen informatie bevatten buiten zijn liefdesverklaring.
@@ -434,7 +434,7 @@ Lukt het hem niet om binnen deze 5 nachten een koppel te vormen… dan sterft hi
     name: "De Stotterende Raadsheer",
     image: "images/De Stotterende Raadsheer.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Invloedrijk", "Aankondiging"],
     description: `Onzeker maar sluw fluistert de raadsheer zijn woorden door de gangen van het bestuur.
 
 Eénmaal per spel mag hij, tijdens de nacht tussen 20:00 en 09:00, via een persoonlijk bericht aan de GM beslissen dat er de volgende dag niet één, maar twee stemrondes plaatsvinden. Zijn aarzelende stem kan zo onverwacht grote gevolgen hebben voor het lot van het dorp.
@@ -448,7 +448,7 @@ Op die dag gelden aangepaste tijden: de eerste stemming eindigt om 18:00 en de t
     name: "De Toneelspeler",
     image: "images/De Toneelspeler.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Alleskunner", "Transformatie"],
     description: `Een meester van het podium die elke rol geloofwaardig weet te spelen. Aan het begin van het spel krijgt hij van de GM een pool van 3 tot 5 rollen die in dit spel niet voorkomen.
 
 Elke nacht tussen 20:00 en 09:00 mag hij één van deze rollen kiezen via een bericht aan de GM. Voor die nacht en de daaropvolgende dag neemt hij volledig die rol aan, inclusief eventuele nachtactie en alle gevolgen die daarbij horen. Daarna verdwijnt die rol uit zijn repertoire en kan hij die niet opnieuw spelen. Zit er een weerwolfrol tussen, dan mag hij wel de krachten gebruiken, maar niet meestemmen met de weerwolven.
@@ -464,7 +464,7 @@ Alle mogelijke Toneelspeler rollen zijn te vinden in Appendix C: Toneelspeler.`,
     name: "De Twijfelaar",
     image: "images/De Twijfelaar.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Invloedrijk", "Dodelijk"],
     description: `Altijd verscheurd door onzekerheid en wantrouwen weigert de Twijfelaar alleen ten onder te gaan.
 
 Wordt hij door de stemming op de brandstapel gezet, dan trekt hij in zijn laatste moment nog iemand met zich mee. De speler met het op één na hoogste aantal stemmen — de tweede plek van die dag — gaat eveneens het vuur in.
@@ -478,7 +478,7 @@ Is er sprake van een gelijke tweede plek, dan beslist de Twijfelaar zelf wie hem
     name: "De Valse Erfgenaam",
     image: "images/De Valse Erfgenaam.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Kans", "Transformatie"],
     description: `Waar anderen rouwen, kijkt hij toe.
 
 Elke nacht kiest hij één speler en geeft dit tussen 20:00 en 09:00 via een direct bericht aan de GM door.
@@ -496,7 +496,7 @@ Hij erft geen leven… hij neemt het.`,
     name: "De Verkenner",
     image: "images/De Verkenner.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie"],
     description: `Stil en ongezien beweegt de verkenner zich door Whatsapperdam. Altijd op de achtergrond, altijd oplettend… en zelden opgemerkt. Waar anderen slapen, dwaalt hij door het donker, op zoek naar sporen die anderen missen.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via een persoonlijk bericht aan de GM één speler om te volgen. Hij blijft op afstand, verscholen in de schaduwen, en ziet precies wie deze persoon die nacht heeft bezocht… of dat er niemand is geweest.
@@ -510,7 +510,7 @@ De verkenner ontvangt deze informatie rechtstreeks van de GM.`,
     name: "De Veteraan",
     image: "images/De Veteraan.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Gehard"],
     description: `Getekend door oorlog en achtervolgd door oude angsten leeft de veteraan in het arme dorp Whatsapperdam.
 
 Hij heeft de dood al eens in de ogen gekeken en weigert haar nogmaals direct te ontmoeten. Wordt hij door welke oorzaak dan ook dodelijk getroffen, dan blijft hij nog één volledige dag in leven voordat zijn lot zich voltrekt.`,
@@ -522,7 +522,7 @@ Hij heeft de dood al eens in de ogen gekeken en weigert haar nogmaals direct te 
     name: "De Verwarde Ziener",
     image: "images/De Verwarde Ziener.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie", "Misinformatie"],
     description: `Al te lang heeft hij zich verdiept in kruiden, dampen en vreemde brouwsels. Wat begon als zoektocht naar inzicht, is ontaard in een voortdurende waas.
 
 Aan het begin van het spel ontvangt hij de kaart en uitleg van de Ziener en gelooft hij oprecht dat hij deze gave bezit. Wat hij echter niet weet, is dat zijn visioenen vervormd en onbetrouwbaar zijn.
@@ -536,7 +536,7 @@ Zijn woorden klinken wijs, maar zijn net zo vaak gevaarlijke misleiding.`,
     name: "De Vos",
     image: "images/De Vos.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie", "Kans"],
     description: `Sluw en scherpzinnig sluipt de Vos door de schaduwen van Whatsapperdam, altijd speurend naar de geur van het beest.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM drie spelers om te onderzoeken. Zit er minstens één echte weerwolf tussen, dan krijgt de Vos dat te horen. Andere rollen met duistere bedoelingen tellen niet mee. Het kunnen dus drie burgers, drie weerwolven of een gemengde groep zijn.`,
@@ -548,7 +548,7 @@ Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM dr
     name: "De Vriend",
     image: "images/De Vriend.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Ongrijpbaar", "Kopiëren"],
     description: `Iedereen kent hem, iedereen mag hem.
 
 De Vriend logeert elke nacht bij iemand in het dorp en geeft tussen 20:00 en 09:00 via een direct bericht aan de GM door waar hij die nacht verblijft. Zijn gastheer krijgt te horen dat hij niet alleen is.
@@ -564,7 +564,7 @@ Bij dezelfde persoon kan hij niet nog een keer logeren. Soms kiest hij er gewoon
     name: "De Waakengel",
     image: "images/De Waakengel.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Aanhanger", "Beschermer"],
     description: `Aan het begin van het spel verbindt de Waakengel zich aan één dorpsgenoot naar keuze. Een stille belofte. Een onzichtbare band. Deze persoon moet zij met al haar kracht beschermen, wat er ook gebeurt, zelfs als diegene slechte bedoelingen heeft.
 
 Vanaf dat moment kent zij haar beschermeling… volledig. Zijn rol ligt open voor haar, een waarheid die zij met zich meedraagt.
@@ -582,7 +582,7 @@ Sterft haar beschermeling alsnog, dan verliest zij haar vleugels en heilige tite
     name: "De Wachter",
     image: "images/De Wachter.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Blokkade", "Dodelijk", "Beschermer", "Kans"],
     description: `Met de sleutels van het dorp op zak patrouilleert de Wachter door Whatsapperdam, altijd op zoek naar het kwaad dat zich verschuilt achter onschuldige gezichten.
 
 Elke dag, tussen 10:00 en 20:00, mag hij via een persoonlijk bericht aan de GM een speler aanwijzen om op te sluiten. Het is toegestaan om meerdere keuzes door te geven, voor het geval zijn doelwit die dag al sterft.
@@ -600,7 +600,7 @@ Mocht één van hen, of beiden, onderdrukt zijn, dan is alleen een zeer losse vo
     name: "De Wethouder",
     image: "images/De Wethouder.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Aanhanger", "Transformatie", "Alleskunner"],
     description: `Altijd aan de zijde van de macht. Geen leider, maar een volger tot in de kleinste details.
 
 De Wethouder vormt een samenwerking met de burgemeester. Dit betekent dat hij dezelfde rol én alliantie aanneemt als de burgemeester, maar zonder de kennis die daarbij hoort. Hij weet dus niet welke rol of alliantie hij heeft gekregen, en krijgt ook geen toegang tot bijvoorbeeld wolveninformatie of groepschats. Alleen door zijn eigen acties te gebruiken, kan hij proberen te achterhalen wat hij precies is.
@@ -620,7 +620,7 @@ Sommige rollen zijn niet aan te nemen door de Wethouder. Deze zijn te vinden in 
     name: "De Ziener",
     image: "images/De Ziener.png",
     alliance: "Burger",
-    types: ["Basis", "Dubbel"],
+    types: ["Basis", "Dubbel", "Informatie"],
     description: `Gezegend met heldere dromen en fluisterende visioenen draagt de ziener de zware last van kennis.
 
 Eens per nacht, tussen 20:00 en 09:00, richt zij haar spirituele krachten op één dorpsgenoot. Door de GM persoonlijk een bericht te sturen, onthult zich diens ware identiteit. Met deze waarheid in handen moet zij bepalen wie zij kan vertrouwen… en wie het dorp in het duister wil storten.`,
@@ -632,7 +632,7 @@ Eens per nacht, tussen 20:00 en 09:00, richt zij haar spirituele krachten op é�
     name: "De Zondebok",
     image: "images/De Zondebok.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Aankondiging", "Kans"],
     description: `Wanneer het dorp geen keuze durft te maken en de stemming eindigt in een gelijke stand, wordt de zondebok opgeofferd.
 
 In zijn laatste daad van wraak of rechtvaardigheid mag hij éénmalig bepalen wie er in de volgende ronde hun stem mogen laten horen. Wijst hij slechts één persoon aan en wordt die diezelfde nacht door de weerwolven gedood, dan blijft het dorp de volgende ochtend sprakeloos en vindt er geen stemming plaats.`,
@@ -644,7 +644,7 @@ In zijn laatste daad van wraak of rechtvaardigheid mag hij éénmalig bepalen wi
     name: "Het Toegewijde Dienstmeisje",
     image: "images/Het Toegewijde Dienstmeisje.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Spoed", "Transformatie"],
     description: `Altijd op de achtergrond, stil maar oplettend, beweegt het dienstmeisje zich door Whatsapperdam. Ze hoort meer dan ze laat blijken… en wacht geduldig op het juiste moment om haar lot te veranderen.
 
 Tijdens de stemming van het burgerberaad mag het dienstmeisje éénmaal per spel via een direct bericht aan de GM in het geheim van rol wisselen met de speler die naar de brandstapel gaat. De veroordeelde sterft alsnog, maar wordt aangekondigd als *Het Toegewijde Dienstmeisje* in plaats van zijn oorspronkelijke rol.
@@ -662,7 +662,7 @@ Wanneer het dienstmeisje later sterft, wordt haar nieuwe rol onthuld.`,
     name: "Het Zwarte Schaap",
     image: "images/Het Zwarte Schaap.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie", "Kans"],
     description: `Altijd een beetje buiten de kudde, nooit helemaal op zijn plek. Het Zwarte Schaap beweegt zich door Whatsapperdam met een stille nieuwsgierigheid… alsof het voelt dat er meer speelt dan het dorp laat zien.
 
 Tussen 10:00 en 20:00 kan hij éénmaal per spel via een direct bericht aan de GM zijn ogen openen naar het weerwolvenkamp. Deze keuze wordt diezelfde nacht uitgevoerd.
@@ -680,7 +680,7 @@ Zo kijkt het schaap even over de grens… maar ziet nooit het volledige plaatje.
     name: "Harige Harry",
     image: "images/Harige Harry.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Misinformatie"],
     description: `Bij Harry’s geboorte zat er al een grote pluk haar op zijn hoofd, en begonnen de baardharen al bijna door te komen. Zijn hele leven is hij bedekt geweest met een dikke bos haar over zijn hele lichaam… misschien door de afkomst van een van zijn ouders? Niemand weet het zeker.
 
 Maar Harry heeft daar wel een probleempje mee.
@@ -698,7 +698,7 @@ Tenzij hij betoverd is…`,
     name: "Het Medium",
     image: "images/Het Medium.png",
     alliance: "Burger",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Hiernamaals", "Informatie"],
     description: `Eens per nacht, tussen 20:00 en 09:00, gebruikt het medium zijn duistere krachten om met de doden te spreken.
 
 Hij stuurt één vraag persoonlijk naar de GM, waarop alle overleden spelers afzonderlijk met ja of nee antwoorden. Omdat elke geest zijn eigen mening behoudt, is het antwoord zelden eenduidig. In de eerste nacht blijft het stil, want dan zijn er nog geen doden.
@@ -712,7 +712,7 @@ Na zijn dood mag het medium éénmaal, tijdens een nacht, een visioen sturen naa
     name: "Het Onschuldige Sletje",
     image: "images/Het Onschuldige Sletje.png",
     alliance: "Burger",
-    types: ["Basis"],
+    types: ["Basis", "Ongrijpbaar"],
     description: `Tussen 20:00 en 09:00 kiest het sletje elke dag één dorpsgenoot bij wie zij de nacht doorbrengt, om uiteraard geheel onschuldige redenen.
 
 Zij gaat altijd naar het huis van haar gekozen persoon en blijft daar de hele nacht, ook als diegene om wat voor reden dan ook zelf niet thuis is. Ze kan er ook voor kiezen om een nacht thuis te blijven… maar wat is daar nou het leuke aan?
@@ -727,7 +727,7 @@ Wordt haar eigen huis door de weerwolven bezocht, dan is zij niet thuis en overl
     name: "De Fluitspeler",
     image: "images/De Fluitspeler.png",
     alliance: "Onafhankelijke",
-    types: [],
+    types: ["Effect"],
     description: `Met zijn verleidelijke melodie verspreidt de fluitspeler zijn invloed door het dorp.
 
 Elke nacht, tussen 20:00 en 09:00, betovert hij via een direct bericht aan de GM een aantal spelers. Dit is minimaal 2, maar groeit mee met het dorp: hij mag elke nacht 10% van de levende spelers betoveren, afgerond. Bij grotere aantallen loopt dit dus op naar 3 of meer.
@@ -745,7 +745,7 @@ Zodra alleen nog betoverde spelers in leven zijn, wint de fluitspeler onmiddelli
     name: "De Pyromaan",
     image: "images/De Pyromaan.png",
     alliance: "Onafhankelijke",
-    types: [],
+    types: ["Effect", "Dodelijk"],
     description: `Het conflict tussen burgers en weerwolven interesseert de pyromaan weinig; hij droomt van vuur en chaos. Zijn doel is simpel: het hele dorp afbranden en als enige overblijven.
 
 Elke nacht, tussen 20:00 en 09:00, maakt hij een bewuste keuze. Ofwel kiest hij één speler om heimelijk van top tot teen met benzine te overgieten, of als hij vindt dat het moment is aangebroken, pakt hij de aansteker en steekt hij alle eerder overgoten spelers tegelijk in brand.
@@ -761,7 +761,7 @@ Daarnaast wordt iedere speler die hem ’s nachts bezoekt, in welke vorm dan ook
     name: "De Verloren Ziel",
     image: "images/De Verloren Ziel.png",
     alliance: "Onafhankelijke",
-    types: [],
+    types: ["Kans"],
     description: `De weg naar de hemel is niet voor iedereen even duidelijk, maar voor de Verloren Ziel wel.
 
 Zijn enige doel is om in de eerste nacht of de eerste dag te sterven. Lukt hem dit, dan wint hij direct het spel. Overleeft hij deze periode, dan is hij voor eeuwig verdoemd en moet hij als straf loyaal en actief met de burgers meespelen.`,
@@ -774,7 +774,7 @@ Zijn enige doel is om in de eerste nacht of de eerste dag te sterven. Lukt hem d
     name: "De Heks",
     image: "images/De Heks.png",
     alliance: "Weerwolf",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Informatie"],
     description: `In dienst van het duister gebruikt de heks haar krachten tegen het dorp en ten gunste van de weerwolven.
 
 Eénmaal per nacht, tussen 20:00 en 09:00, mag zij via een persoonlijk bericht aan de GM de identiteit van één speler inzien.
@@ -788,7 +788,7 @@ De heks speelt mee met de weerwolven en mag ’s nachts ook meestemmen over hun 
     name: "De Kleine Wilde",
     image: "images/De Kleine Wilde.png",
     alliance: "Weerwolf",
-    types: ["Toevoegend", "Onzeker"],
+    types: ["Toevoegend", "Onzeker", "Aanhanger", "Transformatie"],
     description: `Als wilde jongen van het dorp kiest de Kleine Wilde bij de opening, of tijdens de eerste dag of nacht, één groot voorbeeld.
 
 Zolang dit voorbeeld leeft, blijft hij burger, zelfs als zijn grote voorbeeld een weerwolf is. Sterft het voorbeeld, dan wordt hij direct weerwolf. Hij mag zijn grote voorbeeld wantrouwen en tijdens het burgerberaad tegen hem stemmen.
@@ -802,7 +802,7 @@ De Kleine Wilde wint met de burgers zolang hij burger is, en met de weerwolven z
     name: "De Onderdrukker",
     image: "images/De Onderdrukker.png",
     alliance: "Weerwolf",
-    types: ["Toevoegend"],
+    types: ["Toevoegend", "Invloedrijk"],
     description: `Met harde hand houdt de Onderdrukker Whatsapperdam in zijn greep. Hij staat aan de kant van de weerwolven en gebruikt zijn macht om het dorp het zwijgen op te leggen.
 
 Eens per nacht, tussen 20:00 en 09:00, kiest hij één speler die de volgende dag volledig wordt onderdrukt, maar nooit twee nachten achter elkaar dezelfde persoon.
@@ -830,12 +830,12 @@ Dit overleg vindt plaats in een aparte WhatsApp-groep, uitsluitend voor de weerw
     expansionKey: null
   },
   {
-  id: "de-besmettelijke-raaf",
-  name: "De Besmettelijke Raaf",
-  image: "images/De Besmettelijke Raaf.png",
-  alliance: "Onafhankelijke",
-  types: [],
-  description: `Als een schaduw verspreidt de raaf zijn plaag door Whatsapperdam. Zijn doel is simpel: als enige overblijven.
+    id: "de-besmettelijke-raaf",
+    name: "De Besmettelijke Raaf",
+    image: "images/De Besmettelijke Raaf.png",
+    alliance: "Onafhankelijke",
+    types: ["Dodelijk", "Effect"],
+    description: `Als een schaduw verspreidt de raaf zijn plaag door Whatsapperdam. Zijn doel is simpel: als enige overblijven.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via de GM één speler om te besmetten.
 
@@ -846,16 +846,16 @@ Kiest de Besmettelijke Raaf een speler die al besmet is (door hemzelf of via een
 De raaf kan zelf proberen bij te houden wie er allemaal besmet zijn, al is dat bijna ondoenlijk. Zodra het hele dorp besmet is, krijgt hij dit ’s nachts van de GM te horen. Vanaf dat moment mag hij elke nacht één speler naar keuze doden totdat niemand meer leeft. Dan wint hij het spel.
 
 Na de dood van de Besmettelijke Raaf stopt de verspreiding niet; de besmetting blijft actief en kan zich verder verspreiden zoals voorheen.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-twee-gescheiden-gezusters",
-  name: "De Twee Gescheiden Gezusters",
-  image: "images/De Twee Gescheiden Gezusters.png",
-  alliance: "Onafhankelijke",
-  types: [],
-  description: `De Twee Gescheiden Gezusters – Er gaan al jaren verhalen rond in Whatsapperdam over twee zussen die ooit uit elkaar zijn gehaald. Nu bewegen zij zich weer in hetzelfde dorp, zonder te weten dat de ander er ook is. Twee spelers ontvangen deze rol, maar kennen elkaars identiteit niet.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-twee-gescheiden-gezusters",
+    name: "De Twee Gescheiden Gezusters",
+    image: "images/De Twee Gescheiden Gezusters.png",
+    alliance: "Onafhankelijke",
+    types: ["Kans", "Dodelijk"],
+    description: `De Twee Gescheiden Gezusters – Er gaan al jaren verhalen rond in Whatsapperdam over twee zussen die ooit uit elkaar zijn gehaald. Nu bewegen zij zich weer in hetzelfde dorp, zonder te weten dat de ander er ook is. Twee spelers ontvangen deze rol, maar kennen elkaars identiteit niet.
 
 De Gezusters kunnen geen deel uitmaken van een koppel.
 
@@ -870,16 +870,16 @@ Ook nadat één van de twee haar zus heeft gevonden, blijven beide Gezusters elk
 Sterft één van de Gezusters, dan wordt de ander verteerd door verdriet. Zij krijgt op dat moment de keuze: zelf sterven… of verder leven als onderdeel van de burgers.
 
 De Twee Gescheiden Gezusters winnen wanneer zij elkaar hebben gevonden en beiden nog in leven zijn wanneer het spel eindigt.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-witte-weerwolf",
-  name: "De Witte Weerwolf",
-  image: "images/De Witte Weerwolf.png",
-  alliance: "Onafhankelijke",
-  types: [],
-  description: `Tussen de roedel schuilt iets dat zelfs de wolven vrezen. De Witte Weerwolf is geen bondgenoot, maar een roofdier in wolfskleren. Hij hoort bij de weerwolven en neemt de plaats in van één van hen, maar speelt in werkelijkheid zijn eigen spel.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-witte-weerwolf",
+    name: "De Witte Weerwolf",
+    image: "images/De Witte Weerwolf.png",
+    alliance: "Onafhankelijke",
+    types: ["Misinformatie", "Dodelijk"],
+    description: `Tussen de roedel schuilt iets dat zelfs de wolven vrezen. De Witte Weerwolf is geen bondgenoot, maar een roofdier in wolfskleren. Hij hoort bij de weerwolven en neemt de plaats in van één van hen, maar speelt in werkelijkheid zijn eigen spel.
 
 De Witte Weerwolf wordt niet bovenop het aantal weerwolven toegevoegd, maar vervangt één van de toegevoegde wolven in het spel. Hierdoor kan hij zich geloofwaardig voordoen als een andere weerwolfrol.
 
@@ -888,206 +888,206 @@ Elke tweede nacht, tussen 20:00 en 09:00, mag hij ontwaken en in het geheim éé
 Blijft de Witte Weerwolf als enige over, dan wint hij het spel alleen. Hij is een onafhankelijke rol en heeft geen enkele loyaliteit aan de roedel.
 
 Omdat weerwolven onderling hun rollen delen, zal de Witte Weerwolf vertrouwen moeten winnen, informatie delen en meespelen alsof hij loyaal is — terwijl hij in werkelijkheid wacht op het juiste moment om toe te slaan.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-besmettelijke-oerwolf",
-  name: "De Besmettelijke Oerwolf",
-  image: "images/De Besmettelijke Oerwolf.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Oud, sluw en doordrenkt met een oeroude vloek beweegt deze wolf zich tussen de roedel. Voor de buitenwereld is hij gewoon een weerwolf: hij overlegt ’s nachts met de andere wolven en stemt mee over hun prooi.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-besmettelijke-oerwolf",
+    name: "De Besmettelijke Oerwolf",
+    image: "images/De Besmettelijke Oerwolf.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Transformatie"],
+    description: `Oud, sluw en doordrenkt met een oeroude vloek beweegt deze wolf zich tussen de roedel. Voor de buitenwereld is hij gewoon een weerwolf: hij overlegt ’s nachts met de andere wolven en stemt mee over hun prooi.
 
 Pas wanneer één van zijn medewolven het lootje heeft gelegd, mag de Besmettelijke Oerwolf zijn ware kracht gebruiken. Eénmaal per spel kan hij, nadat de weerwolven een burger hebben gekozen, in het geheim besluiten dat deze speler niet sterft maar wordt besmet. Het slachtoffer ontwaakt dan als nieuwe weerwolf en sluit zich bij de roedel aan. Had deze speler een speciale nachtelijke kracht, dan behoudt hij die.
 
 De Besmettelijke Oerwolf mag onder geen enkel beding laten merken dat hij deze rol heeft of dat er een nieuwe wolf is gecreëerd. Hij houdt de aandacht liever op de andere wolven en doet er zelfs goed aan zich voor te doen als een andere wolvenrol.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-concierge",
-  name: "De Conciërge",
-  image: "images/De Conciërge.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Bloedvlekken zijn hardnekkiger dan wijnvlekken, maar daar weet de conciërge wel raad mee. Als trouwe aanhanger van de weerwolven stemt hij ’s nachts met hen mee over hun prooi.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-concierge",
+    name: "De Conciërge",
+    image: "images/De Conciërge.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Misinformatie", "Aankondiging"],
+    description: `Bloedvlekken zijn hardnekkiger dan wijnvlekken, maar daar weet de conciërge wel raad mee. Als trouwe aanhanger van de weerwolven stemt hij ’s nachts met hen mee over hun prooi.
 
 Daarnaast mag hij twee keer in het spel, tussen 20:00 en 09:00, via een direct bericht aan de GM één speler aanwijzen. Overlijdt deze speler in die nacht of de daaropvolgende dag, dan wordt diens rol niet bekendgemaakt.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-glitterende-toverwolf",
-  name: "De Glitterende Toverwolf",
-  image: "images/De Glitterende Toverwolf.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `In het donker glinstert hij. Subtiel. Bijna betoverend. Maar wat hij achterlaat… klopt niet.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-glitterende-toverwolf",
+    name: "De Glitterende Toverwolf",
+    image: "images/De Glitterende Toverwolf.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Misinformatie"],
+    description: `In het donker glinstert hij. Subtiel. Bijna betoverend. Maar wat hij achterlaat… klopt niet.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één burger uit. Diegene krijgt die nacht een vreemd geurtje… iets magisch, iets dat niet thuishoort in het dorp.
 
 Wie hem die nacht onderzoekt, ziet maar één ding: een wolf, ongeacht zijn echte rol of alliantie. Alsof de waarheid zelf vervormd wordt.
 
 De speler zelf merkt hier niets van… maar voor de rest van het dorp is hij die nacht niets anders dan een WOLF.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-jachtwolf",
-  name: "De Jachtwolf",
-  image: "images/De Jachtwolf.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Gedreven door instinct en een ontembare drang tot vergelding zwerft de Jachtwolf door het dorp. Hij wacht geduldig op zijn moment, altijd klaar om toe te slaan.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-jachtwolf",
+    name: "De Jachtwolf",
+    image: "images/De Jachtwolf.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Dodelijk"],
+    description: `Gedreven door instinct en een ontembare drang tot vergelding zwerft de Jachtwolf door het dorp. Hij wacht geduldig op zijn moment, altijd klaar om toe te slaan.
 
 Wordt hij gedood, dan laat hij het daar niet bij. In zijn laatste adem grijpt hij één levende speler en sleurt die met zich mee de dood in. Eén naam. Eén slachtoffer. Geen ontsnappen.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-slager",
-  name: "De Slager",
-  image: "images/De Slager.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Een wolf met verfijnde smaak; de Slager verkiest voorbereiding boven haast.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-slager",
+    name: "De Slager",
+    image: "images/De Slager.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Effect", "Dodelijk"],
+    description: `Een wolf met verfijnde smaak; de Slager verkiest voorbereiding boven haast.
 
 Om de nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één burger om te marineren. Blijft deze speler die nacht én de daaropvolgende dag volledig onberoerd door welk bezoek dan ook, dan is de marinade geslaagd en wordt hij de volgende nacht als extra maal opgegeten, naast de normale prooi van de weerwolven. De nacht daarna mag de Slager weer een nieuwe speler marineren.
 
 Wordt de gekozen speler in de marineringsnacht of de dag erna wél bezocht, dan mislukt de marinade. In dat geval kan de Slager de eerstvolgende nacht opnieuw iemand kiezen om te marineren.
 
 Verder stemt de Slager gewoon mee met de weerwolven en speelt hij volledig aan hun zijde.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-verdoemde",
-  name: "De Verdoemde",
-  image: "images/De Verdoemde.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Onzeker"],
-  description: `Onopvallend leeft hij tussen de burgers van Whatsapperdam, ogenschijnlijk niet anders dan de rest. Maar diep vanbinnen draagt hij een lot dat al lang geleden is bezegeld. Hij weet het zelf niet… maar iets in hem wacht.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-verdoemde",
+    name: "De Verdoemde",
+    image: "images/De Verdoemde.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Onzeker", "Transformatie", "Misinformatie"],
+    description: `Onopvallend leeft hij tussen de burgers van Whatsapperdam, ogenschijnlijk niet anders dan de rest. Maar diep vanbinnen draagt hij een lot dat al lang geleden is bezegeld. Hij weet het zelf niet… maar iets in hem wacht.
 
 Wanneer de weerwolven hem ’s nachts bezoeken, sterft hij niet. In plaats daarvan ontwaakt zijn ware aard en sluit hij zich bij hen aan, alsof hij er altijd al bij hoorde.
 
 Wordt hij echter op een andere manier gedood, dan blijft zijn vloek ongebruikt en sterft hij zoals ieder ander.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-welp",
-  name: "De Welp",
-  image: "images/De Welp.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Jong. Onervaren. Maar hongerig.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-welp",
+    name: "De Welp",
+    image: "images/De Welp.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Dodelijk", "Kans"],
+    description: `Jong. Onervaren. Maar hongerig.
 
 Nog niet welkom bij de roedel, maar wel al deel van hen. Te wild om stil te zitten, te ongeduldig om te wachten. De Welp jaagt alleen.
 
 Elke nacht tussen 20:00 en 09:00 kiest hij via een direct bericht aan de GM één speler… en noemt de rol die hij denkt dat diegene heeft. Heeft hij gelijk, dan slaat hij toe en wordt zijn prooi de volgende nacht dood gevonden, mits diegene thuis was en niet beschermd. Zit hij fout, dan leeft zijn doelwit nog… maar weet diegene dat er iets op hem jaagt.
 
 De Welp groeit op. Nacht 0 tot en met 3 jaagt hij elke nacht, gretig en nieuwsgierig. In nacht 4 en 5 zit hij in zijn rebelse tienerfase en doet hij ’s avonds helemaal niks. In nacht 6 is hij volgroeid en sluit hij zich aan bij de roedel als een volwaardige weerwolf.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-wolf-in-schaapskleren",
-  name: "De Wolf in Schaapskleren",
-  image: "images/De Wolf in Schaapskleren.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Identiteitscrisis is geen grap, zeker niet voor deze wolf.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-wolf-in-schaapskleren",
+    name: "De Wolf in Schaapskleren",
+    image: "images/De Wolf in Schaapskleren.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Misinformatie"],
+    description: `Identiteitscrisis is geen grap, zeker niet voor deze wolf.
 
 Tussen 20:00 en 09:00 kiest hij via een persoonlijk bericht aan de GM één levende dorpsgenoot, maar nooit twee nachten achter elkaar dezelfde persoon. Voor die nacht en de volgende dag draagt hij de identiteit van zijn keuze, maar zonder diens krachten.
 
 Wordt zijn identiteit onderzocht, dan verschijnt altijd dit masker. Zelfs bij de brandstapel of een andere dood blijft het intact.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-wolf-in-winterslaap",
-  name: "De Wolf in Winterslaap",
-  image: "images/De Wolf in Winterslaap.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Diep in een verborgen grot, ver van het dorp, ligt hij. Stil. Onaangeroerd. Alsof de tijd hem vergeten is. Hij hoort bij het wolvenkamp, weet wie de andere wolven zijn en zij weten wie hij is, maar hij spreekt niet en mengt zich nergens in.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-wolf-in-winterslaap",
+    name: "De Wolf in Winterslaap",
+    image: "images/De Wolf in Winterslaap.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Dodelijk"],
+    description: `Diep in een verborgen grot, ver van het dorp, ligt hij. Stil. Onaangeroerd. Alsof de tijd hem vergeten is. Hij hoort bij het wolvenkamp, weet wie de andere wolven zijn en zij weten wie hij is, maar hij spreekt niet en mengt zich nergens in.
 
 Overdag dwaalt hij soms door het dorp voor camouflage, een schaduw tussen de rest. Maar zodra de avond valt, trekt hij zich terug in zijn grot en zakt hij weer weg in zijn diepe winterslaap.
 
 En wee degene die hem stoort… wordt hij ’s nachts bezocht, dan schrikt hij wakker. Verstoord. Woedend. In zijn eerste ademtocht grijpt hij één van zijn bezoekers en verslindt diegene zonder aarzeling. Vanaf dat moment is hij ontwaakt en neemt hij weer volledig deel aan het wolvenkamp, jagend en stemmend alsof hij er altijd al actief bij hoorde.
 
 Blijft hij ongestoord, dan slaapt hij door. Tot het moment komt dat hij nodig is. Wanneer alle andere wolven gestorven zijn, opent hij alsnog zijn ogen. Alleen. Hongerig. En vanaf dat moment jaagt hij verder als een normale weerwolf.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-wolvenmeester",
-  name: "De Wolvenmeester",
-  image: "images/De Wolvenmeester.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend"],
-  description: `Deze wolf is niet geboren om te volgen, maar om te leiden. Al van jongs af aan draagt hij de drang in zich om boven iedereen uit te stijgen en ooit het dorp naar zijn hand te zetten.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-wolvenmeester",
+    name: "De Wolvenmeester",
+    image: "images/De Wolvenmeester.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Gehard"],
+    description: `Deze wolf is niet geboren om te volgen, maar om te leiden. Al van jongs af aan draagt hij de drang in zich om boven iedereen uit te stijgen en ooit het dorp naar zijn hand te zetten.
 
 Zijn grote droom is om burgemeester te worden, al is hij niet verplicht zichzelf kandidaat te stellen. Bereikt hij die macht eenmaal, dan zal hij die met alles wat hij heeft proberen vast te houden.
 
 Alleen wanneer de Wolvenmeester burgemeester is, kan hij niet worden verbrand. Wordt hij in die positie op de brandstapel gegooid, dan weigert het vuur hem te nemen en overleeft hij de executie.
 
 De burgers zullen dus een andere manier moeten vinden om van hem af te komen...`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "barman-bob",
-  name: "Barman Bob",
-  image: "images/Barman Bob.png",
-  alliance: "Burger",
-  types: ["Uitbreiding"],
-  description: `In de Dorpsbrouwerij staat Bob achter de tap van de ochtendbar. Met een glimlach en een vriendelijk woord begint hij de dag, maar hij ziet precies wie nét iets te veel drinkt.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "barman-bob",
+    name: "Barman Bob",
+    image: "images/Barman Bob.png",
+    alliance: "Burger",
+    types: ["Uitbreiding"],
+    description: `In de Dorpsbrouwerij staat Bob achter de tap van de ochtendbar. Met een glimlach en een vriendelijk woord begint hij de dag, maar hij ziet precies wie nét iets te veel drinkt.
 
 Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.
 
 Bob staat aan de kant van de burgers en gebruikt zijn drankjes om het dorp subtiel te helpen. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bob is zelf immuun voor dronkenschap.
 
 Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.`,
-  isExpansionRole: true,
-  expansionKey: "de-dorpsbrouwerij"
-},
-{
-  id: "barman-bert",
-  name: "Barman Bert",
-  image: "images/Barman Bert.png",
-  alliance: "Weerwolf",
-  types: ["Uitbreiding"],
-  description: `In de Dorpsbrouwerij staat Bert achter de tap van de avondbar. In het schemerlicht schenkt hij zijn glazen met een stille, bijna onheilspellende blik. Hij ziet wie te lang blijft hangen… en wie daar de prijs voor zal betalen.
+    isExpansionRole: true,
+    expansionKey: "de-dorpsbrouwerij"
+  },
+  {
+    id: "barman-bert",
+    name: "Barman Bert",
+    image: "images/Barman Bert.png",
+    alliance: "Weerwolf",
+    types: ["Uitbreiding"],
+    description: `In de Dorpsbrouwerij staat Bert achter de tap van de avondbar. In het schemerlicht schenkt hij zijn glazen met een stille, bijna onheilspellende blik. Hij ziet wie te lang blijft hangen… en wie daar de prijs voor zal betalen.
 
 Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.
 
 Bert staat aan de kant van de weerwolven en gebruikt zijn drankjes om het dorp subtiel te beïnvloeden. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bert is zelf immuun voor dronkenschap.
 
 Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.`,
-  isExpansionRole: true,
-  expansionKey: "de-dorpsbrouwerij"
-},
-{
-  id: "de-waarzegster",
-  name: "De Waarzegster",
-  image: "images/De Waarzegster.png",
-  alliance: "Burger",
-  types: ["Uitbreiding"],
-  description: `In een klein huis aan de rand van Whatsapperdam woont de Waarzegster, zus van de Ziener. Waar haar zus in de nacht visioenen ontvangt over personen, leest de Waarzegster de tekens van het dorp zelf. Zij voelt wanneer het lot zich roert en begrijpt de betekenis achter de mysterieuze Dorpshoroscopen die elke ochtend verschijnen.
+    isExpansionRole: true,
+    expansionKey: "de-dorpsbrouwerij"
+  },
+  {
+    id: "de-waarzegster",
+    name: "De Waarzegster",
+    image: "images/De Waarzegster.png",
+    alliance: "Burger",
+    types: ["Uitbreiding", "Informatie"],
+    description: `In een klein huis aan de rand van Whatsapperdam woont de Waarzegster, zus van de Ziener. Waar haar zus in de nacht visioenen ontvangt over personen, leest de Waarzegster de tekens van het dorp zelf. Zij voelt wanneer het lot zich roert en begrijpt de betekenis achter de mysterieuze Dorpshoroscopen die elke ochtend verschijnen.
 Elke ochtend tussen 09:00 en 10:00 krijgt de Waarzegster van de GM een meer gedetailleerde uitleg over de Dorpshoroscoop van die dag. Zij hoort wat de voorspelling werkelijk betekent en kan, indien van toepassing, ook te weten komen welke spelers of rollen hierdoor worden geraakt.
 Eénmaal per spel mag de Waarzegster, in de ochtend nadat zij dit visioen heeft ontvangen, via een direct bericht aan de GM ervoor kiezen om haar kennis met het hele dorp te delen. Wanneer zij dit doet, maakt de GM de volledige uitleg van de Dorpshoroscoop bekend aan alle spelers. Daarna speelt de Waarzegster verder zonder deze kracht.`,
-  isExpansionRole: true,
-  expansionKey: "de-dorpshoroscoop"
-},
-{
-  id: "oma",
-  name: "Oma",
-  image: "images/Oma.png",
-  alliance: "Titaan",
-  types: ["Uitbreiding"],
-  description: `Oma leeft al sinds het begin der tijden. Een reus, groter dan het dorp zelf, maar soms loopt ze er gewoon tussen. Klein. Onopvallend. Kijkend.
+    isExpansionRole: true,
+    expansionKey: "de-dorpshoroscoop"
+  },
+  {
+    id: "oma",
+    name: "Oma",
+    image: "images/Oma.png",
+    alliance: "Titaan",
+    types: ["Uitbreiding", "Titaan", "Dodelijk", "Beschermer", "Dronken", "Informatie"],
+    description: `Oma leeft al sinds het begin der tijden. Een reus, groter dan het dorp zelf, maar soms loopt ze er gewoon tussen. Klein. Onopvallend. Kijkend.
 Oma heeft één doel: De Grote Boze Wolf verslaan.
 Ze is verbonden met één speler in het dorp. Roodkapje. De bron van haar kracht. Maar wie dat is… weet ze niet.
 Drie keer per spel mag Oma besluiten om ’s avonds naar buiten te komen. Deze keuze maakt ze overdag tussen 10:00 en 20:00. Komt ze naar buiten, dan beschermt ze twee spelers, zoals de Genezer, en kiest ze vier spelers. Zit Roodkapje ertussen, dan weet ze dat direct.
@@ -1095,16 +1095,16 @@ Komt Oma tegelijk met De Grote Boze Wolf naar buiten terwijl Roodkapje nog leeft
 Wanneer Oma buiten is, hebben alle acties die nacht 50% kans om te falen.
 Oma kan niet sterven door het dorp. Alleen als De Grote Boze Wolf haar kiest terwijl Roodkapje niet meer leeft.
 Oma weet wie De Grote Boze Wolf is.`,
-  isExpansionRole: true,
-  expansionKey: "de-sprookjesstrijd"
-},
-{
-  id: "de-grote-boze-wolf",
-  name: "De Grote Boze Wolf",
-  image: "images/De Grote Boze Wolf.png",
-  alliance: "Titaan",
-  types: ["Uitbreiding"],
-  description: `Ouder dan het bos en groter dan alles wat het dorp kent. Ver boven de gewone weerwolven. Hij jaagt alleen.
+    isExpansionRole: true,
+    expansionKey: "de-sprookjesstrijd"
+  },
+  {
+    id: "de-grote-boze-wolf",
+    name: "De Grote Boze Wolf",
+    image: "images/De Grote Boze Wolf.png",
+    alliance: "Titaan",
+    types: ["Uitbreiding", "Titaan", "Dodelijk", "Dronken", "Informatie"],
+    description: `Ouder dan het bos en groter dan alles wat het dorp kent. Ver boven de gewone weerwolven. Hij jaagt alleen.
 Zijn enige doel: Oma verslinden.
 Hij weet dat haar kracht bij Roodkapje ligt. Dus zoekt hij. Geduldig. Meedogenloos.
 Drie keer per spel mag hij besluiten om ’s avonds naar buiten te komen. Deze keuze maakt hij overdag tussen 10:00 en 20:00. Komt hij naar buiten, dan kiest hij één speler om te verslinden, zoals een normale wolvenaanval, en kiest hij vier spelers. Zit Roodkapje ertussen, dan weet hij dat direct.
@@ -1112,55 +1112,55 @@ Komt hij tegelijk met Oma naar buiten terwijl Roodkapje nog leeft, dan wordt hij
 Wanneer De Grote Boze Wolf buiten is, hebben alle acties die nacht 50% kans om te falen.
 De Grote Boze Wolf kan niet sterven door het dorp.
 De Grote Boze Wolf weet wie Oma is.`,
-  isExpansionRole: true,
-  expansionKey: "de-sprookjesstrijd"
-},
-{
-  id: "roodkapje",
-  name: "Roodkapje",
-  image: "images/Roodkapje.png",
-  alliance: "Onduidelijk",
-  types: ["Uitbreiding"],
-  description: `Eén speler in het dorp is Roodkapje. Geen aparte rol, maar een extra laag bovenop wat diegene al is. Roodkapje kan dus een burger, wolf of onafhankelijke zijn.
+    isExpansionRole: true,
+    expansionKey: "de-sprookjesstrijd"
+  },
+  {
+    id: "roodkapje",
+    name: "Roodkapje",
+    image: "images/Roodkapje.png",
+    alliance: "Onduidelijk",
+    types: ["Uitbreiding"],
+    description: `Eén speler in het dorp is Roodkapje. Geen aparte rol, maar een extra laag bovenop wat diegene al is. Roodkapje kan dus een burger, wolf of onafhankelijke zijn.
 Niemand weet wie Roodkapje is. Alleen Oma en De Grote Boze Wolf kunnen haar vinden.
 Zolang Roodkapje leeft, beschermt zij Oma onbewust. Sterft Roodkapje, dan verandert de hele strijd en krijgt De Grote Boze Wolf de overhand.
 Wanneer Oma of De Grote Boze Wolf buiten zijn, beïnvloedt dit ook Roodkapje. De nacht wordt onstabiel, en acties hebben 50% kans om te falen.`,
-  isExpansionRole: true,
-  expansionKey: "de-sprookjesstrijd"
-},
-{
-  id: "de-burgemeester",
-  name: "De Burgemeester",
-  image: "images/De Burgemeester.png",
-  alliance: null,
-  types: ["Bijrol"],
-  description: "De burgemeester wordt gekozen via een speciale algemene stemming, direct vóór de eerste reguliere stemming. Burgers kunnen zich kandidaat stellen en een korte speech houden, waarna één winnaar overblijft. De burgemeesterkaart mag niet worden geweigerd—ook een weerwolf kan burgemeester zijn. Zolang de Zondebok leeft, telt de stem van de burgemeester als één. Is de Zondebok uit het spel, dan telt zijn stem bij een gelijke stand dubbel. Sterft de burgemeester, dan benoemt hij zelf een opvolger.",
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-geliefde",
-  name: "De Geliefde",
-  image: "images/De Geliefde.png",
-  alliance: null,
-  types: ["Bijrol"],
-  description: `Een geliefde maakt altijd deel uit van een koppel, al kan dat koppel uit 2 tot wel 4 of meer mensen bestaan. Een geliefde sterft aan liefdesverdriet als haar partner, of één van haar partners, sterft. Het koppel kan gevormd worden door verschillende rollen, waarvan Cupido de bekendste is.
+    isExpansionRole: true,
+    expansionKey: "de-sprookjesstrijd"
+  },
+  {
+    id: "de-burgemeester",
+    name: "De Burgemeester",
+    image: "images/De Burgemeester.png",
+    alliance: null,
+    types: ["Bijrol", "Invloedrijk"],
+    description: `De burgemeester wordt gekozen via een speciale algemene stemming, direct vóór de eerste reguliere stemming. Burgers kunnen zich kandidaat stellen en een korte speech houden, waarna één winnaar overblijft. De burgemeesterkaart mag niet worden geweigerd—ook een weerwolf kan burgemeester zijn. Zolang de Zondebok leeft, telt de stem van de burgemeester als één. Is de Zondebok uit het spel, dan telt zijn stem bij een gelijke stand dubbel. Sterft de burgemeester, dan benoemt hij zelf een opvolger.`,
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-geliefde",
+    name: "De Geliefde",
+    image: "images/De Geliefde.png",
+    alliance: null,
+    types: ["Bijrol", "Liefde"],
+    description: `Een geliefde maakt altijd deel uit van een koppel, al kan dat koppel uit 2 tot wel 4 of meer mensen bestaan. Een geliefde sterft aan liefdesverdriet als haar partner, of één van haar partners, sterft. Het koppel kan gevormd worden door verschillende rollen, waarvan Cupido de bekendste is.
 
 Wanneer het koppel bestaat uit dezelfde alliantie, zoals burger-burger of weerwolf-weerwolf, blijft hun doel ongewijzigd en is dit duidelijk.
 
 Wanneer er binnen een koppel een Romeo en Juliet ontstaat, namelijk een burger en een weerwolf, winnen zij alleen nog samen. Hun gezamenlijke doel wordt dan om de rest van de spelers te elimineren.
 
 Wanneer er een derde partij in het spel komt, een onafhankelijke… wordt het interessanter. Romeo, Juliet… en Dave. In dat geval kunnen zij meeliften met het doel van de onafhankelijke, en wordt het vaak verstandig om dat pad te volgen… als zij willen winnen.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-verlammer",
-  name: "De Verlammer",
-  image: "images/De Verlammer.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Controle. Stilte. Geen ontsnappen.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-verlammer",
+    name: "De Verlammer",
+    image: "images/De Verlammer.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Effect", "Blokkade", "Dodelijk"],
+    description: `Controle. Stilte. Geen ontsnappen.
 
 Op de eerste dag, tussen 10:00 en 20:00, kiest de Verlammer via een direct bericht aan de GM drie spelers. Zodra de nacht begint, worden hun rollen direct geblokkeerd.
 
@@ -1169,16 +1169,16 @@ Zij weten van elkaar wie ze zijn, maar niet elkaars rol.
 Hun krachten blijven geblokkeerd… tot één van hen zichzelf vrijwillig opoffert en direct sterft, of totdat de Verlammer zelf sterft. Pas dan krijgen zij hun rolacties terug.
 
 De Verlammer kan ook een medewolf selecteren. Voor de anderen lijkt het alsof ook deze speler geblokkeerd is, maar in werkelijkheid kan hij gewoon zijn vaardigheden blijven gebruiken.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-feestwolf",
-  name: "De Feestwolf",
-  image: "images/De Feestwolf.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Een wolf die houdt van een feestje… en dat is te zien. En te horen.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-feestwolf",
+    name: "De Feestwolf",
+    image: "images/De Feestwolf.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Aankondiging", "Spoed", "Dodelijk"],
+    description: `Een wolf die houdt van een feestje… en dat is te zien. En te horen.
 
 Eénmaal in het spel kan de Feestwolf, wanneer hij maar wil, via een direct bericht aan de GM iemand met een knal uitschakelen. Geen stille jacht, geen schaduwwerk… maar een overdreven, luid einde.
 
@@ -1187,16 +1187,16 @@ Iedereen zal weten dat hij erachter zit.
 Deze actie kan niet gebruikt worden in de eerste dag of nacht.
 
 Daarna… is het altijd tijd voor een feestje.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-illusionist",
-  name: "De Illusionist",
-  image: "images/De Illusionist.png",
-  alliance: "Onafhankelijke",
-  types: ["Nieuw"],
-  description: `Wat echt is… is maar een keuze. En hij kiest wat jij ziet.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-illusionist",
+    name: "De Illusionist",
+    image: "images/De Illusionist.png",
+    alliance: "Onafhankelijke",
+    types: ["Nieuw"],
+    description: `Wat echt is… is maar een keuze. En hij kiest wat jij ziet.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Illusionist via een direct bericht aan de GM één van twee acties: hij vermomt één speler, of hij doodt alle spelers die op dat moment vermomd zijn.
 
@@ -1205,16 +1205,16 @@ Kiest hij voor vermommen, dan wordt die speler die nacht én alle volgende nacht
 Kiest hij voor doden, dan sterven alle op dat moment vermomde spelers. Deze worden aangekondigd als "De Illusionist".
 
 Zijn doel is simpel: het dorp uitroeien. Of dat nu gebeurt door zijn eigen hand… of doordat het dorp zichzelf vernietigt door wat hij hen laat zien.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "het-wolfsspook",
-  name: "Het Wolfsspook",
-  image: "images/Het Wolfsspook.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Een spook van zijn eigen leven. Bij leven is hij een normale weerwolf, deel van de roedel zoals ieder ander.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "het-wolfsspook",
+    name: "Het Wolfsspook",
+    image: "images/Het Wolfsspook.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Hiernamaals"],
+    description: `Een spook van zijn eigen leven. Bij leven is hij een normale weerwolf, deel van de roedel zoals ieder ander.
 
 Maar wanneer het Wolfsspook sterft… verdwijnt hij niet. Ongezien blijft hij aanwezig in het spel. Hij telt niet meer mee in het aantal spelers of wolven, maar zijn invloed blijft.
 
@@ -1224,48 +1224,48 @@ Ook in de nacht blijft hij bij de wolven. Hij kan nog steeds met hen communicere
 
 Doden is dus niet het einde.
 Pas op met wat je zegt… sommige stemmen komen van verder dan het graf.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-wolfsoudste",
-  name: "De Wolfsoudste",
-  image: "images/De Wolfsoudste.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Oud bloed. Oude littekens. Waar anderen vallen, blijft hij staan.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-wolfsoudste",
+    name: "De Wolfsoudste",
+    image: "images/De Wolfsoudste.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Gehard"],
+    description: `Oud bloed. Oude littekens. Waar anderen vallen, blijft hij staan.
 
 De Wolfsoudste is een normale weerwolf en jaagt en stemt mee met de roedel.
 
 Eénmaal in het spel weigert hij te sterven. Of het nu de brandstapel is of een andere vorm van geweld… hij overleeft.
 
 Hij heeft dit al eerder meegemaakt. En hij komt er altijd weer doorheen.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-wingman",
-  name: "De Wingman",
-  image: "images/De Wingman.png",
-  alliance: "Burger",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Liefde voor een dag… meer heeft hij niet nodig. Als anderen het maar even voelen.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-wingman",
+    name: "De Wingman",
+    image: "images/De Wingman.png",
+    alliance: "Burger",
+    types: ["Toevoegend", "Nieuw", "Liefde"],
+    description: `Liefde voor een dag… meer heeft hij niet nodig. Als anderen het maar even voelen.
 
 Elke dag, tussen 10:00 en 20:00, kiest de Wingman via een direct bericht aan de GM twee spelers. Eén van deze twee mag hij zelf zijn.
 
 Aan het begin van de volgende nacht worden deze twee gekoppeld en komen ze samen in een aparte app. Tijdens die nacht delen zij hun lot: sterft één van hen, dan sterft de ander ook.
 
 Overleven ze de nacht… dan dooft het weer net zo snel. Aan het begin van de dag is de band verbroken, en gaan ze ieder weer hun eigen weg.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-onzekere-grenswachter",
-  name: "De Onzekere Grenswachter",
-  image: "images/De Onzekere Grenswachter.png",
-  alliance: "Onafhankelijke",
-  types: ["Nieuw"],
-  description: `Altijd tussen werelden. Nooit echt ergens thuis. Tot het moment dat de grens wordt overschreden.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-onzekere-grenswachter",
+    name: "De Onzekere Grenswachter",
+    image: "images/De Onzekere Grenswachter.png",
+    alliance: "Onafhankelijke",
+    types: ["Nieuw", "Aanhanger", "Gehard"],
+    description: `Altijd tussen werelden. Nooit echt ergens thuis. Tot het moment dat de grens wordt overschreden.
 
 Wanneer hij getroffen wordt door een dodelijke aanval, breekt er iets… of juist niet. Op dat moment kiest hij. Hij sterft niet.
 
@@ -1278,16 +1278,16 @@ Vanaf dat moment deelt hij hun doel en wint hij met hen mee… zelfs als hij lat
 Hij sluit zich niet aan bij eventuele groepsapps. Hij blijft op afstand.
 
 Op de grens… maar nooit meer neutraal.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-klier",
-  name: "De Klier",
-  image: "images/De Klier.png",
-  alliance: "Burger",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Altijd op zoek naar iemand om te raken. Eerst een tik… daarna pas de schade.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-klier",
+    name: "De Klier",
+    image: "images/De Klier.png",
+    alliance: "Burger",
+    types: ["Toevoegend", "Nieuw", "Blokkade", "Dodelijk", "Aankondiging"],
+    description: `Altijd op zoek naar iemand om te raken. Eerst een tik… daarna pas de schade.
 
 Elke dag, tussen 10:00 en 20:00, kiest de Klier via een direct bericht aan de GM één speler en gooit een steen. Deze speler krijgt een hersenschudding en kan de volgende nacht zijn rol niet gebruiken.
 
@@ -1296,16 +1296,16 @@ Raakt de Klier iemand die al eerder een hersenschudding heeft gehad, dan wordt d
 Op dat moment wordt de Klier ontmaskerd en wordt zijn rol bekendgemaakt aan het hele dorp.
 
 De Klier kan op deze manier maximaal twee spelers per spel doden.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-omroeper",
-  name: "De Omroeper",
-  image: "images/De Omroeper.png",
-  alliance: "Burger",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Waar hij komt, blijft het niet stil… zelfs niet na zijn dood.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-omroeper",
+    name: "De Omroeper",
+    image: "images/De Omroeper.png",
+    alliance: "Burger",
+    types: ["Toevoegend", "Nieuw", "Aankondiging"],
+    description: `Waar hij komt, blijft het niet stil… zelfs niet na zijn dood.
 
 In de eerste nacht, tussen 20:00 en 09:00, kiest de Omroeper via een direct bericht aan de GM één speler.
 
@@ -1314,16 +1314,16 @@ Wanneer de Omroeper sterft, wordt naast zijn eigen rol ook de rol van deze gekoz
 Sterft deze speler eerder dan de Omroeper, dan mag hij direct een nieuwe speler kiezen.
 
 Iemand neemt hij altijd mee… al is het alleen in de waarheid.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-premiejager",
-  name: "De Premiejager",
-  image: "images/De Premiejager.png",
-  alliance: "Onafhankelijke",
-  types: [],
-  description: `Niet hier voor het dorp. Niet hier voor de wolven. Alleen voor zijn lijst.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-premiejager",
+    name: "De Premiejager",
+    image: "images/De Premiejager.png",
+    alliance: "Onafhankelijke",
+    types: ["Gehard", "Dodelijk"],
+    description: `Niet hier voor het dorp. Niet hier voor de wolven. Alleen voor zijn lijst.
 
 Aan het begin van het spel krijgt de Premiejager drie willekeurige spelers toegewezen door de GM. In de eerste nacht, tussen 20:00 en 09:00, kiest hij zelf nog drie andere spelers.
 
@@ -1336,64 +1336,64 @@ Eénmaal in het spel kan de Premiejager, tussen 20:00 en 09:00 via een direct be
 Mislukt deze actie, dan mag hij het later nog één keer proberen. Lukt het hem, dan is zijn kracht verbruikt.
 
 De Premiejager is gehard en overleeft één keer een weerwolfaanval.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-vervloekte-wolf",
-  name: "De Vervloekte Wolf",
-  image: "images/De Vervloekte Wolf.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Ooit gewoon deel van de roedel… tot de vloek zich vastzette. Wat hij achterlaat, sterft niet zomaar.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-vervloekte-wolf",
+    name: "De Vervloekte Wolf",
+    image: "images/De Vervloekte Wolf.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Transformatie"],
+    description: `Ooit gewoon deel van de roedel… tot de vloek zich vastzette. Wat hij achterlaat, sterft niet zomaar.
 
 De Vervloekte Wolf is een normale weerwolf en jaagt en stemt mee met de roedel.
 
 Wanneer de Vervloekte Wolf sterft, treedt zijn vloek in werking. De eerstvolgende wolvenaanval zal niet doden… maar veranderen. Het doelwit van de aanval wordt geen slachtoffer, maar een nieuwe weerwolf.
 
 Wordt dit doelwit beschermd, dan verdwijnt de vloek niet meteen, maar blijft hij nog één dag langer hangen, tot de eerstvolgende kans zich aandient.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-boze-wolf",
-  name: "De Boze Wolf",
-  image: "images/De Boze Wolf.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Groter. Sterker. Hongeriger. Hij jaagt met de roedel… maar speelt zijn eigen spel.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-boze-wolf",
+    name: "De Boze Wolf",
+    image: "images/De Boze Wolf.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Dodelijk"],
+    description: `Groter. Sterker. Hongeriger. Hij jaagt met de roedel… maar speelt zijn eigen spel.
 
 De Boze Wolf hoort bij de weerwolven en overlegt met hen zoals normaal, maar waar de roedel samen één prooi kiest, neemt hij er nog één extra.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM zijn eigen slachtoffer, bovenop de aanval van de wolven. Dit gaat door… tot het moment dat er een andere weerwolf of de Kleine Wilde sterft.
 
 Vanaf dat moment stopt zijn extra jacht, en blijft hij verder een normale weerwolf.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-wolfsschrijver",
-  name: "De Wolfsschrijver",
-  image: "images/De Wolfsschrijver.png",
-  alliance: "Weerwolf",
-  types: ["Toevoegend", "Nieuw"],
-  description: `Een meester met de typmachine. Inkt als wapen, woorden als waarheid. Deze wolf jaagt zoals de rest… maar schrijft het einde zelf.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-wolfsschrijver",
+    name: "De Wolfsschrijver",
+    image: "images/De Wolfsschrijver.png",
+    alliance: "Weerwolf",
+    types: ["Toevoegend", "Nieuw", "Misinformatie", "Aankondiging"],
+    description: `Een meester met de typmachine. Inkt als wapen, woorden als waarheid. Deze wolf jaagt zoals de rest… maar schrijft het einde zelf.
 
 Twee keer in het spel kan de Wolfsschrijver, tussen 20:00 en 09:00 via een direct bericht aan de GM, één speler kiezen. Mocht deze speler die nacht sterven, door welke oorzaak dan ook, dan herschrijft de Wolfsschrijver zijn einde.
 
 Hij bepaalt de doodsoorzaak… en verzint een bijpassende rol.
 
 Wat er die ochtend wordt aangekondigd, is niet de waarheid… maar wat hij heeft geschreven.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-charmante-dealer",
-  name: "De Charmante Dealer",
-  image: "images/De Charmante Dealer.png",
-  alliance: "Onafhankelijke",
-  types: ["Nieuw"],
-  description: `Aan de rand van het dorp staat hij. Met zijn kist. Met zijn glimlach. En deals… waar je beter twee keer over nadenkt.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-charmante-dealer",
+    name: "De Charmante Dealer",
+    image: "images/De Charmante Dealer.png",
+    alliance: "Onafhankelijke",
+    types: ["Nieuw", "Dodelijk", "Beschermer", "Upgrade", "Chaos", "Kans"],
+    description: `Aan de rand van het dorp staat hij. Met zijn kist. Met zijn glimlach. En deals… waar je beter twee keer over nadenkt.
 
 Elke dag, tussen 10:00 en 20:00, biedt de Charmante Dealer via de GM één speler een deal aan. De speler mag deze accepteren of weigeren. Het effect treedt de volgende nacht in.
 
@@ -1407,16 +1407,16 @@ Accepteert de speler de deal, dan bepaalt het lot wat hij krijgt:
 Weigeren is veilig…
 
 maar soms is dat precies wat je niet verder helpt.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
-{
-  id: "de-aasgier",
-  name: "De Aasgier",
-  image: "images/De Aasgier.png",
-  alliance: "Onafhankelijke",
-  types: ["Nieuw"],
-  description: `Hoog boven Whatsapperdam cirkelt hij. Wachtend. Geduldig. Op het juiste moment.
+    isExpansionRole: false,
+    expansionKey: null
+  },
+  {
+    id: "de-aasgier",
+    name: "De Aasgier",
+    image: "images/De Aasgier.png",
+    alliance: "Onafhankelijke",
+    types: ["Nieuw", "Liefde", "Aanhanger"],
+    description: `Hoog boven Whatsapperdam cirkelt hij. Wachtend. Geduldig. Op het juiste moment.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Aasgier via een direct bericht aan de GM één speler om te onderzoeken. Hij blijft zoeken… tot hij een koppel vindt.
 
@@ -1427,7 +1427,7 @@ Op dat moment slaat de Aasgier toe. Hij verdelgt het lichaam van de gestorven pa
 Hij neemt diens plaats in.
 
 Vanaf dat moment is de Aasgier volledig deel van het koppel… verbonden, en compleet in het leven.`,
-  isExpansionRole: false,
-  expansionKey: null
-},
+    isExpansionRole: false,
+    expansionKey: null
+  }
 ];

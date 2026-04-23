@@ -15,6 +15,39 @@ const modalDescription = document.getElementById("modal-role-description");
 
 const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 
+const typeOrder = [
+  "Basis",
+  "Toevoegend",
+  "Uitbreiding",
+  "Bijrol",
+  "Nieuw",
+  "Dubbel",
+  "Onzeker",
+  "Invloedrijk",
+  "Liefde",
+  "Beschermer",
+  "Informatie",
+  "Dodelijk",
+  "Ongrijpbaar",
+  "Betrouwbaar",
+  "Transformatie",
+  "Kans",
+  "Chaos",
+  "Spoed",
+  "Aankondiging",
+  "Hiernamaals",
+  "Kopiëren",
+  "Alleskunner",
+  "Gehard",
+  "Upgrade",
+  "Misinformatie",
+  "Blokkade",
+  "Aanhanger",
+  "Effect",
+  "Dronken",
+  "Titaan"
+];
+
 const standardRoles = roles.filter(
   (role) => !role.types.includes("Uitbreiding")
 );
@@ -27,8 +60,22 @@ function getUniqueAlliances(roleList) {
 
 function getUniqueTypes(roleList) {
   return [...new Set(roleList.flatMap((role) => role.types))].sort((a, b) => {
-    const typeOrder = ["Basis", "Toevoegend", "Nieuw", "Onzeker", "Verdoemde", "Bijrol"];
+    const indexA = typeOrder.indexOf(a);
+    const indexB = typeOrder.indexOf(b);
 
+    if (indexA !== -1 && indexB !== -1) {
+      return indexA - indexB;
+    }
+
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+
+    return a.localeCompare(b, "nl");
+  });
+}
+
+function sortTypes(items) {
+  return [...items].sort((a, b) => {
     const indexA = typeOrder.indexOf(a);
     const indexB = typeOrder.indexOf(b);
 
@@ -67,7 +114,9 @@ function createBadges(items) {
     return `<span class="badge">Geen</span>`;
   }
 
-  return items.map((item) => `<span class="badge">${item}</span>`).join("");
+  return sortTypes(items)
+    .map((item) => `<span class="badge">${item}</span>`)
+    .join("");
 }
 
 function openModal(role) {
@@ -91,8 +140,13 @@ function closeModal() {
 
 function sortRoles(roleList) {
   return [...roleList].sort((a, b) => {
-    const allianceCompare =
-      allianceOrder.indexOf(a.alliance) - allianceOrder.indexOf(b.alliance);
+    const aAllianceIndex = allianceOrder.indexOf(a.alliance);
+    const bAllianceIndex = allianceOrder.indexOf(b.alliance);
+
+    const safeAAllianceIndex = aAllianceIndex === -1 ? 999 : aAllianceIndex;
+    const safeBAllianceIndex = bAllianceIndex === -1 ? 999 : bAllianceIndex;
+
+    const allianceCompare = safeAAllianceIndex - safeBAllianceIndex;
 
     if (allianceCompare !== 0) {
       return allianceCompare;
@@ -187,7 +241,6 @@ function renderRoles() {
 
   const sorted = sortRoles(filteredRoles);
 
-  // === NORMALE ALLIANTIES ===
   allianceOrder.forEach((alliance) => {
     const rolesPerAlliance = sorted.filter(
       (role) => role.alliance === alliance
@@ -215,7 +268,6 @@ function renderRoles() {
     rolesList.appendChild(section);
   });
 
-  // === BIJROLLEN (GEEN ALLIANTIE) ===
   const specialRoles = sorted.filter((role) => role.alliance === null);
 
   if (specialRoles.length) {
