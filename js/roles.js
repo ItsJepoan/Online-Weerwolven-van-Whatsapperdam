@@ -16,41 +16,43 @@ const modalDescription = document.getElementById("modal-role-description");
 const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 
 const typeOrder = [
-    "Basis",
-    "Toevoegend",
-    "Uitbreiding",
-    "Bijrol",
-    "Nieuw",
-    "Dubbel",
-    "Onzeker",
-    "Invloedrijk",
-    "Liefde",
-    "Beschermer",
-    "Informatie",
-    "Dodelijk",
-    "Ongrijpbaar",
-    "Betrouwbaar",
-    "Transformatie",
-    "Kans",
-    "Chaos",
-    "Spoed",
-    "Aankondiging",
-    "Hiernamaals",
-    "Kopiëren",
-    "Alleskunner",
-    "Gehard",
-    "Upgrade",
-    "Misinformatie",
-    "Blokkade",
-    "Aanhanger",
-    "Effect",
-    "Dronken",
-    "Titaan"
+  "Basis",
+  "Toevoegend",
+  "Uitbreiding",
+  "Bijrol",
+  "Nieuw",
+  "Dubbel",
+  "Onzeker",
+  "Invloedrijk",
+  "Liefde",
+  "Beschermer",
+  "Informatie",
+  "Dodelijk",
+  "Ongrijpbaar",
+  "Betrouwbaar",
+  "Transformatie",
+  "Kans",
+  "Chaos",
+  "Spoed",
+  "Aankondiging",
+  "Hiernamaals",
+  "Kopiëren",
+  "Alleskunner",
+  "Gehard",
+  "Upgrade",
+  "Misinformatie",
+  "Blokkade",
+  "Aanhanger",
+  "Effect",
+  "Dronken",
+  "Titaan"
 ];
 
 const standardRoles = roles.filter(
   (role) => !role.types.includes("Uitbreiding")
 );
+
+let lockedScrollY = 0;
 
 function getUniqueAlliances(roleList) {
   return [...new Set(roleList.map((role) => role.alliance).filter(Boolean))].sort((a, b) => {
@@ -119,6 +121,19 @@ function createBadges(items) {
     .join("");
 }
 
+function lockPageScroll() {
+  lockedScrollY = window.scrollY || window.pageYOffset || 0;
+
+  document.body.classList.add("modal-open");
+  document.body.style.top = `-${lockedScrollY}px`;
+}
+
+function unlockPageScroll() {
+  document.body.classList.remove("modal-open");
+  document.body.style.top = "";
+  window.scrollTo(0, lockedScrollY);
+}
+
 function openModal(role) {
   modalName.textContent = role.name;
   modalImage.src = role.image;
@@ -130,7 +145,7 @@ function openModal(role) {
   modalDescription.textContent = role.description;
 
   modal.classList.remove("hidden");
-  document.body.classList.add("modal-open");
+  lockPageScroll();
 
   const scrollContainer = modal.querySelector(".role-modal-text");
   if (scrollContainer) {
@@ -140,7 +155,7 @@ function openModal(role) {
 
 function closeModal() {
   modal.classList.add("hidden");
-  document.body.classList.remove("modal-open");
+  unlockPageScroll();
 }
 
 function sortRoles(roleList) {
