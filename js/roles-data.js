@@ -479,13 +479,13 @@ Is er sprake van een gelijke tweede plek, dan beslist de Twijfelaar zelf wie hem
     image: "images/De Valse Erfgenaam.png",
     alliance: "Burger",
     types: ["Toevoegend", "Kans", "Transformatie"],
-    description: `Waar anderen rouwen, kijkt hij toe.
+    description: `Waar anderen rouwen, kijkt hij toe. Elke nacht kiest hij één speler en geeft dit tussen 20:00 en 09:00 via een direct bericht aan de GM door.
 
-Elke nacht kiest hij één speler en geeft dit tussen 20:00 en 09:00 via een direct bericht aan de GM door.
-
-Sterft deze speler die nacht, door welke oorzaak dan ook, dan grijpt de Valse Erfgenaam zijn kans. Hij neemt de rol volledig over, alsof die altijd al van hem was geweest. Alle gebruikte krachten worden hersteld en opnieuw beschikbaar.
+Sterft deze speler die nacht, door welke oorzaak dan ook, dan grijpt de Valse Erfgenaam zijn kans. Hij neemt de rol volledig over. Alle gebruikte krachten worden hersteld en opnieuw beschikbaar.
 
 Vanaf dat moment leeft hij verder onder een nieuwe naam: De Valse <rol>. Ook de alliantie verandert met hem mee — burger, wolf of onafhankelijke, hij wordt wat hij steelt.
+
+Sommige rollen zijn niet over te nemen door de Valse Erfgenaam. Probeert hij zo’n rol te erven, dan gebeurt er niets en blijft hij wie hij was. Deze rollen zijn te vinden in Appendix E: Niet aanneembare rollen.
 
 Hij erft geen leven… hij neemt het.`,
     isExpansionRole: false,
