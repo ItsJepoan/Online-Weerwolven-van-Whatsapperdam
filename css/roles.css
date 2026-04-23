@@ -2,6 +2,7 @@
   display: block;
 }
 
+/* ===== Intro ===== */
 .roles-intro-card {
   margin-bottom: 1.5rem;
 }
@@ -11,6 +12,7 @@
   color: var(--muted);
 }
 
+/* ===== Filters ===== */
 .filters-section {
   margin-bottom: 2.25rem;
 }
@@ -56,26 +58,15 @@
   border-radius: 12px;
   background: white;
   color: var(--text);
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.filter-group input:focus,
-.filter-group select:focus {
-  border-color: var(--primary-light);
-  box-shadow: 0 0 0 3px rgba(77, 77, 134, 0.12);
 }
 
 .filter-group-search {
   min-width: 0;
 }
 
+/* ===== Rollen grid ===== */
 .role-alliance-section {
   margin-bottom: 3rem;
-}
-
-.role-alliance-section:first-child {
-  margin-top: 2rem;
 }
 
 .role-alliance-title {
@@ -83,8 +74,6 @@
   color: var(--primary);
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  margin-top: 1rem;
-  padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--border);
 }
 
@@ -94,6 +83,7 @@
   gap: 1.4rem;
 }
 
+/* ===== Kaarten ===== */
 .role-card {
   background: var(--surface);
   border-radius: 16px;
@@ -123,56 +113,56 @@
 }
 
 .role-content {
-  padding: 1.1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.7rem;
 }
 
 .role-name {
   color: var(--primary);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.3;
 }
 
+/* Meta */
 .role-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .meta-block {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .meta-block strong {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  font-weight: 600;
 }
 
 .badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 
 .badge {
   background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 0.3rem 0.65rem;
-  font-size: 0.8rem;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.75rem;
 }
 
 .role-open-text {
-  margin-top: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
+/* ===== MODAL ===== */
 .role-modal {
   position: fixed;
   inset: 0;
@@ -198,13 +188,13 @@
   position: relative;
   background: white;
   border-radius: 16px;
-  width: min(800px, 90%);
+  width: min(800px, 95%);
   max-height: calc(100vh - 2rem);
   z-index: 1;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: 1.5rem;
 }
 
@@ -219,15 +209,14 @@
   z-index: 3;
 }
 
+/* BELANGRIJK: layout + scroll fix */
 .role-modal-body {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 1.25rem;
-  min-height: 0;
-  min-width: 0;
-  overflow: hidden;
   flex: 1;
-  margin-top: 0.5rem;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .role-modal-image {
@@ -237,6 +226,7 @@
   align-self: start;
 }
 
+/* 🔥 HIER zit de echte scroll fix */
 .role-modal-text {
   min-height: 0;
   min-width: 0;
@@ -255,28 +245,12 @@
 #modal-role-description {
   white-space: pre-line;
   line-height: 1.65;
-  margin-top: 1rem;
 }
 
-@media (max-width: 1000px) {
-  .filters-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .filter-group-search {
-    grid-column: 1 / -1;
-  }
-}
-
+/* ===== Tablet ===== */
 @media (max-width: 900px) {
   .roles-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .role-modal-content {
-    width: min(680px, 94%);
-    max-height: calc(100vh - 1.5rem);
-    padding: 1.1rem;
   }
 
   .role-modal-body {
@@ -284,24 +258,47 @@
   }
 
   .role-modal-image {
-    max-width: 280px;
+    max-width: 260px;
     margin: 0 auto;
   }
 }
 
-@media (max-width: 700px) {
-  .filters-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* ===== Mobile ===== */
 @media (max-width: 600px) {
   .roles-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
   }
 
+  .role-card {
+    border-radius: 12px;
+  }
+
+  .role-image {
+    height: 90px;
+  }
+
+  .role-content {
+    padding: 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .role-name {
+    font-size: 0.85rem;
+  }
+
+  /* 🔥 overzicht cleaner */
+  .role-meta {
+    display: none;
+  }
+
+  .role-open-text {
+    display: none;
+  }
+
+  /* Modal mobiel */
   .role-modal {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .role-modal-content {
@@ -316,21 +313,16 @@
   }
 
   .role-modal-text {
-    max-height: 100%;
-    padding-right: 0.15rem;
+    padding-right: 0.2rem;
   }
 
   .role-modal-close {
     top: 8px;
     right: 10px;
   }
-
-  .role-name,
-  #modal-role-name {
-    line-height: 1.3;
-  }
 }
 
+/* Scroll lock */
 body.modal-open {
   overflow: hidden;
 }
