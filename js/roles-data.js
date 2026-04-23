@@ -24,10 +24,10 @@ De Agent mag ook zichzelf kiezen… orde begint bij jezelf.`,
     description: `In de stilte van de nacht ziet hij wat anderen missen. Niet wat er is… maar wat er ontbreekt.
 
 Eénmaal per spel mag hij, tussen 20:00 en 09:00, via een direct bericht aan de GM een burgerrol noemen waarvan hij denkt dat die niet in het spel zit.
-
 Heeft hij gelijk, dan eigent hij zich deze rol toe en speelt hij vanaf dat moment verder met alle bijbehorende krachten.
-
 Zit de rol toch in het spel, dan gebeurt er niets. Zijn kans is verkeken.
+
+Sommige rollen zijn niet aan te nemen door de Alwetende Uil. Deze rollen zijn te vinden in Appendix E: Niet aanneembare rollen.
 
 Soms zit de waarheid niet in wat je ziet… maar in wat er ontbreekt.`,
     isExpansionRole: false,
@@ -289,7 +289,7 @@ Het verslag wordt naar de GM gestuurd, gecontroleerd en vervolgens geplaatst in 
 
 Zolang zijn Meester leeft, blijft de Leerling een gewone burger. Sterft zijn Meester, dan is de Leerling uitgeleerd en neemt hij voor het eerst de rol én alliantie van zijn Meester op zich, met alle bijbehorende krachten. Vanaf dat moment gaat hij verder onder een nieuwe naam: De <Rol>'s Leerling.
 
-Sommige rollen zijn echter te uitgebreid om over te nemen. Mocht de Leerling zo’n speler als Meester hebben gekozen, dan wordt hij bij diens dood gezien als "De Spijbelaar". Deze rollen zijn te vinden in Appendix X: De Leerling.`,
+Sommige rollen zijn echter te uitgebreid om over te nemen. Mocht de Leerling zo’n speler als Meester hebben gekozen, dan wordt hij bij diens dood gezien als "De Spijbelaar". Deze rollen zijn te vinden in Appendix E: Niet Aanneembare Rollen.`,
     isExpansionRole: false,
     expansionKey: null
   },
@@ -611,7 +611,7 @@ Wanneer er een nieuwe burgemeester komt, verandert de Wethouder direct mee en ne
 
 Wordt de Wethouder zelf burgemeester bij de allereerste verkiezing, dan mag hij in plaats daarvan een rol naar keuze aannemen. Gebeurt dit later in het spel, dan blijft hij simpelweg Wethouder zonder extra krachten.
 
-Sommige rollen zijn niet aan te nemen door de Wethouder. Deze zijn te vinden in Appendix X: De Wethouder.`,
+Sommige rollen zijn niet aan te nemen door de Wethouder. Heeft hij zo’n burgemeester, dan blijft hij simpelweg Wethouder zonder speciale actie. Deze rollen zijn te vinden in Appendix E: Niet aanneembare rollen.`,
     isExpansionRole: false,
     expansionKey: null
   },
@@ -653,7 +653,9 @@ Het dienstmeisje leeft verder onder de nieuwe rol en volgt vanaf dat moment dien
 
 Wordt het dienstmeisje zelf op de brandstapel gegooid, dan mag zij nog steeds van rol wisselen met zichzelf, al zal dit weinig veranderen… haar lot is dan al bezegeld.
 
-Wanneer het dienstmeisje later sterft, wordt haar nieuwe rol onthuld.`,
+Wanneer het dienstmeisje later sterft, wordt haar nieuwe rol onthuld.
+
+Sommige rollen zijn niet over te nemen door het Dienstmeisje. Mocht zij voor zo’n rol kiezen, dan wordt haar actie niet gebruikt. Deze rollen zijn te vinden in Appendix E: Niet Aanneembare Rollen.`,
     isExpansionRole: false,
     expansionKey: null
   },
