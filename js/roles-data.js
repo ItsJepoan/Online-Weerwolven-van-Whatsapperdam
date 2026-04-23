@@ -1160,7 +1160,7 @@ Wanneer er een derde partij in het spel komt, een onafhankelijke… wordt het in
   image: "images/De Verlammer.png",
   alliance: "Weerwolf",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Verlammer – Controle. Stilte. Geen ontsnappen.
+  description: `Controle. Stilte. Geen ontsnappen.
 
 Op de eerste dag, tussen 10:00 en 20:00, kiest de Verlammer via een direct bericht aan de GM drie spelers. Zodra de nacht begint, worden hun rollen direct geblokkeerd.
 
@@ -1178,7 +1178,7 @@ De Verlammer kan ook een medewolf selecteren. Voor de anderen lijkt het alsof oo
   image: "images/De Feestwolf.png",
   alliance: "Weerwolf",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Feestwolf – Een wolf die houdt van een feestje… en dat is te zien. En te horen.
+  description: `Een wolf die houdt van een feestje… en dat is te zien. En te horen.
 
 Eénmaal in het spel kan de Feestwolf, wanneer hij maar wil, via een direct bericht aan de GM iemand met een knal uitschakelen. Geen stille jacht, geen schaduwwerk… maar een overdreven, luid einde.
 
@@ -1196,7 +1196,7 @@ Daarna… is het altijd tijd voor een feestje.`,
   image: "images/De Illusionist.png",
   alliance: "Onafhankelijke",
   types: ["Nieuw"],
-  description: `De Illusionist – Wat echt is… is maar een keuze. En hij kiest wat jij ziet.
+  description: `Wat echt is… is maar een keuze. En hij kiest wat jij ziet.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Illusionist via een direct bericht aan de GM één van twee acties: hij vermomt één speler, of hij doodt alle spelers die op dat moment vermomd zijn.
 
@@ -1214,7 +1214,7 @@ Zijn doel is simpel: het dorp uitroeien. Of dat nu gebeurt door zijn eigen hand�
   image: "images/Het Wolfsspook.png",
   alliance: "Weerwolf",
   types: ["Toevoegend", "Nieuw"],
-  description: `Het Wolfsspook – Een spook van zijn eigen leven. Bij leven is hij een normale weerwolf, deel van de roedel zoals ieder ander.
+  description: `Een spook van zijn eigen leven. Bij leven is hij een normale weerwolf, deel van de roedel zoals ieder ander.
 
 Maar wanneer het Wolfsspook sterft… verdwijnt hij niet. Ongezien blijft hij aanwezig in het spel. Hij telt niet meer mee in het aantal spelers of wolven, maar zijn invloed blijft.
 
@@ -1233,7 +1233,7 @@ Pas op met wat je zegt… sommige stemmen komen van verder dan het graf.`,
   image: "images/De Wolfsoudste.png",
   alliance: "Weerwolf",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Wolfsoudste – Oud bloed. Oude littekens. Waar anderen vallen, blijft hij staan.
+  description: `Oud bloed. Oude littekens. Waar anderen vallen, blijft hij staan.
 
 De Wolfsoudste is een normale weerwolf en jaagt en stemt mee met de roedel.
 
@@ -1249,7 +1249,7 @@ Hij heeft dit al eerder meegemaakt. En hij komt er altijd weer doorheen.`,
   image: "images/De Wingman.png",
   alliance: "Burger",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Wingman – Liefde voor een dag… meer heeft hij niet nodig. Als anderen het maar even voelen.
+  description: `Liefde voor een dag… meer heeft hij niet nodig. Als anderen het maar even voelen.
 
 Elke dag, tussen 10:00 en 20:00, kiest de Wingman via een direct bericht aan de GM twee spelers. Eén van deze twee mag hij zelf zijn.
 
@@ -1265,7 +1265,7 @@ Overleven ze de nacht… dan dooft het weer net zo snel. Aan het begin van de da
   image: "images/De Onzekere Grenswachter.png",
   alliance: "Onafhankelijke",
   types: ["Nieuw"],
-  description: `De Onzekere Grenswachter – Altijd tussen werelden. Nooit echt ergens thuis. Tot het moment dat de grens wordt overschreden.
+  description: `Altijd tussen werelden. Nooit echt ergens thuis. Tot het moment dat de grens wordt overschreden.
 
 Wanneer hij getroffen wordt door een dodelijke aanval, breekt er iets… of juist niet. Op dat moment kiest hij. Hij sterft niet.
 
@@ -1287,7 +1287,7 @@ Op de grens… maar nooit meer neutraal.`,
   image: "images/De Klier.png",
   alliance: "Burger",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Klier – Altijd op zoek naar iemand om te raken. Eerst een tik… daarna pas de schade.
+  description: `Altijd op zoek naar iemand om te raken. Eerst een tik… daarna pas de schade.
 
 Elke dag, tussen 10:00 en 20:00, kiest de Klier via een direct bericht aan de GM één speler en gooit een steen. Deze speler krijgt een hersenschudding en kan de volgende nacht zijn rol niet gebruiken.
 
@@ -1305,13 +1305,13 @@ De Klier kan op deze manier maximaal twee spelers per spel doden.`,
   image: "images/De Omroeper.png",
   alliance: "Burger",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Omroeper – Waar hij komt, blijft het niet stil… zelfs niet na zijn dood.
+  description: `Waar hij komt, blijft het niet stil… zelfs niet na zijn dood.
 
-In de eerste nacht, tussen 20:00 en 09:00, kiest de Herrieschopper via een direct bericht aan de GM één speler.
+In de eerste nacht, tussen 20:00 en 09:00, kiest de Omroeper via een direct bericht aan de GM één speler.
 
-Wanneer de Herrieschopper sterft, wordt naast zijn eigen rol ook de rol van deze gekozen speler bekendgemaakt.
+Wanneer de Omroeper sterft, wordt naast zijn eigen rol ook de rol van deze gekozen speler bekendgemaakt.
 
-Sterft deze speler eerder dan de Herrieschopper, dan mag hij direct een nieuwe speler kiezen.
+Sterft deze speler eerder dan de Omroeper, dan mag hij direct een nieuwe speler kiezen.
 
 Iemand neemt hij altijd mee… al is het alleen in de waarheid.`,
   isExpansionRole: false,
@@ -1323,7 +1323,7 @@ Iemand neemt hij altijd mee… al is het alleen in de waarheid.`,
   image: "images/De Premiejager.png",
   alliance: "Onafhankelijke",
   types: [],
-  description: `De Premiejager – Niet hier voor het dorp. Niet hier voor de wolven. Alleen voor zijn lijst.
+  description: `Niet hier voor het dorp. Niet hier voor de wolven. Alleen voor zijn lijst.
 
 Aan het begin van het spel krijgt de Premiejager drie willekeurige spelers toegewezen door de GM. In de eerste nacht, tussen 20:00 en 09:00, kiest hij zelf nog drie andere spelers.
 
@@ -1345,7 +1345,7 @@ De Premiejager is gehard en overleeft één keer een weerwolfaanval.`,
   image: "images/De Vervloekte Wolf.png",
   alliance: "Weerwolf",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Vervloekte Wolf – Ooit gewoon deel van de roedel… tot de vloek zich vastzette. Wat hij achterlaat, sterft niet zomaar.
+  description: `Ooit gewoon deel van de roedel… tot de vloek zich vastzette. Wat hij achterlaat, sterft niet zomaar.
 
 De Vervloekte Wolf is een normale weerwolf en jaagt en stemt mee met de roedel.
 
@@ -1361,13 +1361,72 @@ Wordt dit doelwit beschermd, dan verdwijnt de vloek niet meteen, maar blijft hij
   image: "images/De Boze Wolf.png",
   alliance: "Weerwolf",
   types: ["Toevoegend", "Nieuw"],
-  description: `De Boze Wolf – Groter. Sterker. Hongeriger. Hij jaagt met de roedel… maar speelt zijn eigen spel.
+  description: `Groter. Sterker. Hongeriger. Hij jaagt met de roedel… maar speelt zijn eigen spel.
 
 De Boze Wolf hoort bij de weerwolven en overlegt met hen zoals normaal, maar waar de roedel samen één prooi kiest, neemt hij er nog één extra.
 
 Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM zijn eigen slachtoffer, bovenop de aanval van de wolven. Dit gaat door… tot het moment dat er een andere weerwolf of de Kleine Wilde sterft.
 
 Vanaf dat moment stopt zijn extra jacht, en blijft hij verder een normale weerwolf.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-wolfsschrijver",
+  name: "De Wolfsschrijver",
+  image: "images/De Wolfsschrijver.png",
+  alliance: "Weerwolf",
+  types: ["Toevoegend", "Nieuw"],
+  description: `Een meester met de typmachine. Inkt als wapen, woorden als waarheid. Deze wolf jaagt zoals de rest… maar schrijft het einde zelf.
+
+Twee keer in het spel kan de Wolfsschrijver, tussen 20:00 en 09:00 via een direct bericht aan de GM, één speler kiezen. Mocht deze speler die nacht sterven, door welke oorzaak dan ook, dan herschrijft de Wolfsschrijver zijn einde.
+
+Hij bepaalt de doodsoorzaak… en verzint een bijpassende rol.
+
+Wat er die ochtend wordt aangekondigd, is niet de waarheid… maar wat hij heeft geschreven.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-charmante-dealer",
+  name: "De Charmante Dealer",
+  image: "images/De Charmante Dealer.png",
+  alliance: "Onafhankelijke",
+  types: ["Nieuw"],
+  description: `Aan de rand van het dorp staat hij. Met zijn kist. Met zijn glimlach. En deals… waar je beter twee keer over nadenkt.
+
+Elke dag, tussen 10:00 en 20:00, biedt de Charmante Dealer via de GM één speler een deal aan. De speler mag deze accepteren of weigeren. Het effect treedt de volgende nacht in.
+
+Accepteert de speler de deal, dan bepaalt het lot wat hij krijgt:
+10% – Sterft direct
+30% – Bescherming van de Genezer
+20% – Krijgt een geweer met één kogel
+20% – Zijn rol wordt die nacht geblokkeerd
+20% – Er gebeurt niets
+
+Weigeren is veilig…
+
+maar soms is dat precies wat je niet verder helpt.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-aasgier",
+  name: "De Aasgier",
+  image: "images/De Aasgier.png",
+  alliance: "Onafhankelijke",
+  types: ["Nieuw"],
+  description: `Hoog boven Whatsapperdam cirkelt hij. Wachtend. Geduldig. Op het juiste moment.
+
+Elke nacht, tussen 20:00 en 09:00, kiest de Aasgier via een direct bericht aan de GM één speler om te onderzoeken. Hij blijft zoeken… tot hij een koppel vindt.
+
+Heeft hij een koppel gevonden, dan blijft hij erboven hangen. Kijkend. Wachtend. Tot één van hen sterft.
+
+Op dat moment slaat de Aasgier toe. Hij verdelgt het lichaam van de gestorven partner en voorkomt daarmee het liefdesverdriet.
+
+Hij neemt diens plaats in.
+
+Vanaf dat moment is de Aasgier volledig deel van het koppel… verbonden, en compleet in het leven.`,
   isExpansionRole: false,
   expansionKey: null
 },
