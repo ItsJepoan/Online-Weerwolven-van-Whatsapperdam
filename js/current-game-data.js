@@ -62,7 +62,6 @@ const currentGameRoleIds = [
   "de-illusionist",
   "de-onzekere-grenswachter",
   "de-premiejager",
-  "de-aasgier",
 
   "de-burgemeester",
   "de-geliefde"
