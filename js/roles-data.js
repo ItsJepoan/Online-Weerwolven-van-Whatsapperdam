@@ -996,7 +996,7 @@ De Welp groeit op. Nacht 0 tot en met 3 jaagt hij elke nacht, gretig en nieuwsgi
     name: "De Wolf in Schaapskleren",
     image: "images/De Wolf in Schaapskleren.png",
     alliance: "Weerwolf",
-    types: ["Toevoegend", "Misinformatie"],
+    types: ["Toevoegend", "Misinformatie", "Kopiëren"],
     description: `Identiteitscrisis is geen grap, zeker niet voor deze wolf.
 
 Tussen 20:00 en 09:00 kiest hij via een persoonlijk bericht aan de GM één levende dorpsgenoot, maar nooit twee nachten achter elkaar dezelfde persoon. Voor die nacht en de volgende dag draagt hij de identiteit van zijn keuze, maar zonder diens krachten.
@@ -1391,7 +1391,7 @@ Wat er die ochtend wordt aangekondigd, is niet de waarheid… maar wat hij heeft
     id: "de-charmante-dealer",
     name: "De Charmante Dealer",
     image: "images/De Charmante Dealer.png",
-    alliance: "Onafhankelijke",
+    alliance: "Burger",
     types: ["Nieuw", "Dodelijk", "Beschermer", "Upgrade", "Chaos", "Kans"],
     description: `Aan de rand van het dorp staat hij. Met zijn kist. Met zijn glimlach. En deals… waar je beter twee keer over nadenkt.
 
