@@ -1044,14 +1044,9 @@ De burgers zullen dus een andere manier moeten vinden om van hem af te komen...`
     name: "Barman Bob",
     image: "images/Barman Bob.png",
     alliance: "Burger",
-    types: ["Uitbreiding"],
-    description: `In de Dorpsbrouwerij staat Bob achter de tap van de ochtendbar. Met een glimlach en een vriendelijk woord begint hij de dag, maar hij ziet precies wie nét iets te veel drinkt.
-
-Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.
-
-Bob staat aan de kant van de burgers en gebruikt zijn drankjes om het dorp subtiel te helpen. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bob is zelf immuun voor dronkenschap.
-
-Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.`,
+    types: ["Uitbreiding", "Dronken"],
+    description: `"In de Dorpsbrouwerij staat Bob achter de tap van de ochtendbar. Met een glimlach en een vriendelijk woord begint hij de dag, maar hij ziet precies wie nét iets te veel drinkt. Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht en volgende dag dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.
+Bob staat aan de kant van de burgers en gebruikt zijn drankjes om het dorp subtiel te helpen. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bob is zelf immuun voor dronkenschap. Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.`,
     isExpansionRole: true,
     expansionKey: "de-dorpsbrouwerij"
   },
@@ -1060,14 +1055,9 @@ Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipe
     name: "Barman Bert",
     image: "images/Barman Bert.png",
     alliance: "Weerwolf",
-    types: ["Uitbreiding"],
-    description: `In de Dorpsbrouwerij staat Bert achter de tap van de avondbar. In het schemerlicht schenkt hij zijn glazen met een stille, bijna onheilspellende blik. Hij ziet wie te lang blijft hangen… en wie daar de prijs voor zal betalen.
-
-Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.
-
-Bert staat aan de kant van de weerwolven en gebruikt zijn drankjes om het dorp subtiel te beïnvloeden. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bert is zelf immuun voor dronkenschap.
-
-Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.`,
+    types: ["Uitbreiding", "Dronken"],
+    description: `In de Dorpsbrouwerij staat Bert achter de tap van de avondbar. In het schemerlicht schenkt hij zijn glazen met een stille, bijna onheilspellende blik. Hij ziet wie te lang blijft hangen… en wie daar de prijs voor zal betalen. Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht en volgende dag dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.
+Bert staat aan de kant van de weerwolven en gebruikt zijn drankjes om het dorp subtiel te beïnvloeden. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bert is zelf immuun voor dronkenschap. Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.`,
     isExpansionRole: true,
     expansionKey: "de-dorpsbrouwerij"
   },
