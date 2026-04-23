@@ -198,14 +198,14 @@
   position: relative;
   background: white;
   border-radius: 16px;
-  padding: 1.5rem;
   width: min(800px, 90%);
   max-height: calc(100vh - 2rem);
   z-index: 1;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  padding: 1.5rem;
 }
 
 .role-modal-close {
@@ -216,30 +216,46 @@
   border: none;
   background: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 
 .role-modal-body {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 1.25rem;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 0.35rem;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  flex: 1;
   margin-top: 0.5rem;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
 }
 
 .role-modal-image {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  align-self: start;
+}
+
+.role-modal-text {
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.35rem;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+#modal-role-name {
+  margin-bottom: 1rem;
+  color: var(--primary);
 }
 
 #modal-role-description {
   white-space: pre-line;
   line-height: 1.65;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1000px) {
@@ -286,7 +302,6 @@
 
   .role-modal {
     padding: 0.75rem;
-    align-items: center;
   }
 
   .role-modal-content {
@@ -298,6 +313,10 @@
 
   .role-modal-body {
     gap: 1rem;
+  }
+
+  .role-modal-text {
+    max-height: 100%;
     padding-right: 0.15rem;
   }
 
