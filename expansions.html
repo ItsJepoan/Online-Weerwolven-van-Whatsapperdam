@@ -32,6 +32,7 @@
     <section id="expansions-list"></section>
   </main>
 
+  <!-- MODAL -->
   <div id="role-modal" class="role-modal hidden">
     <div class="role-modal-backdrop"></div>
 
@@ -43,25 +44,21 @@
       <div class="role-modal-body">
         <img id="modal-role-image" class="role-modal-image" alt="">
 
+        <!-- 🔥 BELANGRIJK: deze wrapper maakt scroll mogelijk -->
         <div class="role-modal-text">
-          <h2 id="modal-role-name" class="role-modal-name"></h2>
+          <h2 id="modal-role-name"></h2>
 
-          <div class="role-modal-meta">
-            <div class="meta-block">
-              <strong>Alliantie</strong>
-              <div id="modal-role-alliance" class="badges"></div>
-            </div>
-
-            <div class="meta-block">
-              <strong>Type</strong>
-              <div id="modal-role-types" class="badges"></div>
-            </div>
+          <div class="meta-block">
+            <strong>Alliantie</strong>
+            <div id="modal-role-alliance" class="badges"></div>
           </div>
 
-          <div class="role-modal-description">
-            <strong>Uitleg</strong>
-            <p id="modal-role-description"></p>
+          <div class="meta-block">
+            <strong>Type</strong>
+            <div id="modal-role-types" class="badges"></div>
           </div>
+
+          <p id="modal-role-description"></p>
         </div>
       </div>
     </div>

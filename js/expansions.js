@@ -12,6 +12,26 @@ const modalDescription = document.getElementById("modal-role-description");
 
 const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 
+/* ======================
+   SCROLL LOCK FIX
+====================== */
+let lockedScrollY = 0;
+
+function lockPageScroll() {
+  lockedScrollY = window.scrollY || window.pageYOffset || 0;
+  document.body.classList.add("modal-open");
+  document.body.style.top = `-${lockedScrollY}px`;
+}
+
+function unlockPageScroll() {
+  document.body.classList.remove("modal-open");
+  document.body.style.top = "";
+  window.scrollTo(0, lockedScrollY);
+}
+
+/* ======================
+   HELPERS
+====================== */
 function createBadges(items) {
   if (!items.length) {
     return `<span class="badge">Geen</span>`;
@@ -20,23 +40,37 @@ function createBadges(items) {
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
+/* ======================
+   MODAL
+====================== */
 function openModal(role) {
   modalName.textContent = role.name;
   modalImage.src = role.image;
   modalImage.alt = role.name;
-  modalAlliance.innerHTML = `<span class="badge">${role.alliance}</span>`;
+
+  modalAlliance.innerHTML = role.alliance
+    ? `<span class="badge">${role.alliance}</span>`
+    : `<span class="badge">Geen</span>`;
+
   modalTypes.innerHTML = createBadges(role.types);
   modalDescription.textContent = role.description;
 
   modal.classList.remove("hidden");
-  document.body.classList.add("modal-open");
+  lockPageScroll();
+
+  // 🔥 reset scroll
+  const scrollContainer = modal.querySelector(".role-modal-text");
+  if (scrollContainer) scrollContainer.scrollTop = 0;
 }
 
 function closeModal() {
   modal.classList.add("hidden");
-  document.body.classList.remove("modal-open");
+  unlockPageScroll();
 }
 
+/* ======================
+   SORT
+====================== */
 function sortExpansionRoles(roleList) {
   return [...roleList].sort((a, b) => {
     const allianceCompare =
@@ -50,12 +84,15 @@ function sortExpansionRoles(roleList) {
   });
 }
 
+/* ======================
+   CARD
+====================== */
 function createRoleCard(role) {
   const card = document.createElement("div");
   card.className = "role-card";
 
   card.innerHTML = `
-    <button class="role-card-button" type="button" aria-label="Bekijk uitleg van ${role.name}">
+    <button class="role-card-button" type="button">
       <img src="${role.image}" class="role-image" alt="${role.name}">
       <div class="role-content">
         <h3 class="role-name">${role.name}</h3>
@@ -64,7 +101,11 @@ function createRoleCard(role) {
           <div class="meta-block">
             <strong>Alliantie</strong>
             <div class="badges">
-              <span class="badge">${role.alliance}</span>
+              ${
+                role.alliance
+                  ? `<span class="badge">${role.alliance}</span>`
+                  : `<span class="badge">Geen</span>`
+              }
             </div>
           </div>
 
@@ -86,6 +127,9 @@ function createRoleCard(role) {
   return card;
 }
 
+/* ======================
+   RENDER
+====================== */
 function renderExpansions() {
   expansionsList.innerHTML = "";
 
@@ -94,7 +138,11 @@ function renderExpansions() {
     section.className = "expansion-card";
 
     const expansionRoles = sortExpansionRoles(
-      roles.filter((role) => role.isExpansionRole && role.expansionKey === expansion.key)
+      roles.filter(
+        (role) =>
+          role.isExpansionRole &&
+          role.expansionKey === expansion.key
+      )
     );
 
     const title = document.createElement("h2");
@@ -122,7 +170,7 @@ function renderExpansions() {
     if (!expansionRoles.length) {
       const empty = document.createElement("div");
       empty.className = "empty-message";
-      empty.textContent = "Nog geen rollen toegevoegd aan deze uitbreiding.";
+      empty.textContent = "Nog geen rollen toegevoegd.";
       section.appendChild(empty);
     } else {
       const grid = document.createElement("div");
@@ -141,6 +189,9 @@ function renderExpansions() {
 
 renderExpansions();
 
+/* ======================
+   EVENTS
+====================== */
 modalClose.onclick = closeModal;
 modalBackdrop.onclick = closeModal;
 

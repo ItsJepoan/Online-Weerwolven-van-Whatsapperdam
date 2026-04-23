@@ -10,6 +10,26 @@ const modalAlliance = document.getElementById("modal-role-alliance");
 const modalTypes = document.getElementById("modal-role-types");
 const modalDescription = document.getElementById("modal-role-description");
 
+/* ======================
+   SCROLL LOCK FIX (iPhone)
+====================== */
+let lockedScrollY = 0;
+
+function lockPageScroll() {
+  lockedScrollY = window.scrollY || window.pageYOffset || 0;
+  document.body.classList.add("modal-open");
+  document.body.style.top = `-${lockedScrollY}px`;
+}
+
+function unlockPageScroll() {
+  document.body.classList.remove("modal-open");
+  document.body.style.top = "";
+  window.scrollTo(0, lockedScrollY);
+}
+
+/* ======================
+   UI HELPERS
+====================== */
 function createBadges(items) {
   if (!items.length) {
     return `<span class="badge">Geen</span>`;
@@ -17,6 +37,9 @@ function createBadges(items) {
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
+/* ======================
+   MODAL
+====================== */
 function openModal(role) {
   modalName.textContent = role.name;
   modalImage.src = role.image;
@@ -30,14 +53,21 @@ function openModal(role) {
   modalDescription.textContent = role.description;
 
   modal.classList.remove("hidden");
-  document.body.classList.add("modal-open");
+  lockPageScroll();
+
+  // 🔥 reset scroll binnen modal
+  const scrollContainer = modal.querySelector(".role-modal-text");
+  if (scrollContainer) scrollContainer.scrollTop = 0;
 }
 
 function closeModal() {
   modal.classList.add("hidden");
-  document.body.classList.remove("modal-open");
+  unlockPageScroll();
 }
 
+/* ======================
+   CARDS
+====================== */
 function createRoleCard(role) {
   const card = document.createElement("div");
   card.className = "role-card";
@@ -78,6 +108,9 @@ function createRoleCard(role) {
   return card;
 }
 
+/* ======================
+   RENDER
+====================== */
 function renderNewRoles() {
   const newRoles = roles.filter((role) =>
     role.types.includes("Nieuw")
@@ -99,6 +132,9 @@ function renderNewRoles() {
 
 renderNewRoles();
 
+/* ======================
+   EVENTS
+====================== */
 modalClose.onclick = closeModal;
 modalBackdrop.onclick = closeModal;
 

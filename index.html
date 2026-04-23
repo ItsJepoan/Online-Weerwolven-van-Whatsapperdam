@@ -48,17 +48,18 @@
     </section>
   </main>
 
-  <!-- MODAL (exact dezelfde als rollenpagina) -->
+  <!-- MODAL -->
   <div id="role-modal" class="role-modal hidden">
     <div class="role-modal-backdrop"></div>
 
     <div class="role-modal-content">
-      <button id="role-modal-close" class="role-modal-close">&times;</button>
+      <button id="role-modal-close" class="role-modal-close" type="button">&times;</button>
 
       <div class="role-modal-body">
         <img id="modal-role-image" class="role-modal-image" alt="">
 
-        <div>
+        <!-- 🔥 FIX: wrapper toegevoegd -->
+        <div class="role-modal-text">
           <h2 id="modal-role-name"></h2>
 
           <div class="meta-block">
