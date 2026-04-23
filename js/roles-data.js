@@ -1195,7 +1195,7 @@ Daarna… is het altijd tijd voor een feestje.`,
     name: "De Illusionist",
     image: "images/De Illusionist.png",
     alliance: "Onafhankelijke",
-    types: ["Nieuw"],
+    types: ["Nieuw", "Effect", "Misinformatie", "Dodelijk"],
     description: `Wat echt is… is maar een keuze. En hij kiest wat jij ziet.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Illusionist via een direct bericht aan de GM één van twee acties: hij vermomt één speler, of hij doodt alle spelers die op dat moment vermomd zijn.
