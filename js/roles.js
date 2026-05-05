@@ -13,7 +13,7 @@ const modalAlliance = document.getElementById("modal-role-alliance");
 const modalTypes = document.getElementById("modal-role-types");
 const modalDescription = document.getElementById("modal-role-description");
 
-const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
+const allianceOrder = ["Burger", "Moordenaar", "Onafhankelijke", "Weerwolf"];
 
 const typeOrder = [
   "Basis",
@@ -56,7 +56,14 @@ let lockedScrollY = 0;
 
 function getUniqueAlliances(roleList) {
   return [...new Set(roleList.map((role) => role.alliance).filter(Boolean))].sort((a, b) => {
-    return allianceOrder.indexOf(a) - allianceOrder.indexOf(b);
+    const indexA = allianceOrder.indexOf(a);
+    const indexB = allianceOrder.indexOf(b);
+
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+
+    return a.localeCompare(b, "nl");
   });
 }
 
@@ -65,10 +72,7 @@ function getUniqueTypes(roleList) {
     const indexA = typeOrder.indexOf(a);
     const indexB = typeOrder.indexOf(b);
 
-    if (indexA !== -1 && indexB !== -1) {
-      return indexA - indexB;
-    }
-
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
     if (indexA !== -1) return -1;
     if (indexB !== -1) return 1;
 
@@ -81,10 +85,7 @@ function sortTypes(items) {
     const indexA = typeOrder.indexOf(a);
     const indexB = typeOrder.indexOf(b);
 
-    if (indexA !== -1 && indexB !== -1) {
-      return indexA - indexB;
-    }
-
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
     if (indexA !== -1) return -1;
     if (indexB !== -1) return 1;
 
@@ -138,9 +139,11 @@ function openModal(role) {
   modalName.textContent = role.name;
   modalImage.src = role.image;
   modalImage.alt = role.name;
+
   modalAlliance.innerHTML = role.alliance
     ? `<span class="badge">${role.alliance}</span>`
     : `<span class="badge">Geen</span>`;
+
   modalTypes.innerHTML = createBadges(role.types);
   modalDescription.textContent = role.description;
 
@@ -185,6 +188,7 @@ function sortRoles(roleList) {
 
 function getAllianceTitle(alliance) {
   if (alliance === "Burger") return "Burgers";
+  if (alliance === "Moordenaar") return "Moordenaars";
   if (alliance === "Onafhankelijke") return "Onafhankelijken";
   if (alliance === "Weerwolf") return "Weerwolven";
   return alliance;

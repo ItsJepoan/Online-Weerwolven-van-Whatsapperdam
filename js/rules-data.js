@@ -24,9 +24,10 @@ const rulesSections = [
   {
     title: "Doel",
     list: [
-      "Burgers winnen als alle weerwolven dood zijn.",
-      "Weerwolven winnen als zij evenveel spelers zijn als de burgers of in de meerderheid komen.",
-      "Onafhankelijken hebben hun eigen winconditie en kunnen het spel op hun eigen manier winnen, los van burgers en weerwolven."
+      "Burgers winnen wanneer alle weerwolven zijn uitgeschakeld.",
+      "Weerwolven winnen zodra zij evenveel spelers zijn als de burgers, of in de meerderheid komen.",
+      "Onafhankelijken hebben ieder hun eigen winconditie en kunnen het spel op hun eigen manier winnen, los van burgers en weerwolven.",
+      "Moordenaars hebben geen vaste winconditie. Zolang zij nog kunnen moorden, doen zij precies waar zij voor gekomen zijn."
     ]
   },
   {
@@ -58,6 +59,12 @@ const rulesSections = [
         title: "Onafhankelijke rollen",
         content: [
           "In elk spel zitten altijd twee of drie Onafhankelijke rollen. Welke dit zijn, wordt niet bekendgemaakt. Deze rollen vormen een onvoorspelbare factor binnen het dorp en kunnen de balans sterk beïnvloeden."
+        ]
+      },
+      {
+        title: "Aantal Moordenaars",
+        content: [
+           "In elk spel kunnen geen, een of twee Moordenaars zitten. Welke dit zijn, wordt niet bekendgemaakt. Deze rollen zwerven buiten de gebruikelijke kampen en brengen vooral extra chaos, onzekerheid en bloedvergieten met zich mee."
         ]
       }
     ]

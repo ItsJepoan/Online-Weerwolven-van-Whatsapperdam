@@ -33,4 +33,26 @@ Ze kunnen niet door het dorp gedood worden, alleen door elkaar.
 
 Terwijl het dorp speelt… speelt er dus iets veel groters mee.`
   },
+  {
+  key: "het-stille-dorp",
+  name: "Het Stille Dorp",
+  description: `Dit spel sterft iedereen in stilte.
+
+Bij iedere dood wordt alleen aangekondigd wie er gestorven is. De rol van de overledene wordt niet bekendgemaakt.
+
+Geen bevestiging. Geen zekerheid. Geen opgeluchte zucht wanneer eindelijk een wolf valt.
+
+Elke dood laat alleen maar meer vragen achter.`
+},
+{
+  key: "de-tongtovenaar",
+  name: "De Tongtovenaar",
+  description: `Het dorp staat onder ijzeren grip van de Tongtovenaar, en niemand ontsnapt aan zijn natte staf 👅
+
+Geen dag zal hetzelfde verlopen. Iedere dag legt de Tongtovenaar nieuwe spreukregels op aan de chats en wordt jullie manier van praten vervormd, gelimiteerd, uitgebreid of compleet op zijn kop gezet.
+
+Er zullen zware dagen zijn. Er zullen breinkrakers tussen zitten.
+
+Maar bovenal zal het chaos, verwarring en vooral veel plezier brengen.`
+}
 ];
