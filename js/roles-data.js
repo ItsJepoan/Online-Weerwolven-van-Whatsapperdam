@@ -1427,12 +1427,18 @@ Vanaf dat moment is de Aasgier volledig deel van het koppel… verbonden, en com
   name: "De Sekteleider",
   image: "images/De Sekteleider.png",
   alliance: "Moordenaar",
-  types: ["Nieuw", "Dodelijk", "Invloedrijk"],
+  types: ["Nieuw", "Dodelijk", "Invloedrijk", "Chaos", "Effect"],
   description: `Woorden als gif, overtuiging als wapen. Langzaam groeit zijn invloed… tot het te laat is.
 
 Elke nacht, tussen 20:00 en 09:00, kan de Sekteleider via een direct bericht aan de GM één speler overtuigen om toe te treden tot zijn sekte. Deze speler behoudt zijn eigen rol, maar hoort vanaf dat moment bij de sekte.
 
-In plaats van iemand te overtuigen, kan de Sekteleider er ook voor kiezen om één van zijn sekteleden op te offeren om een speler naar keuze te vermoorden.
+In plaats van iemand te overtuigen, kan de Sekteleider er ook voor kiezen via de GM in berichtvorm één van zijn sekteleden opdracht te geven een moord te plegen op een speler naar keuze van de Sekteleider.
+
+Het gekozen sektelid mag deze opdracht accepteren of weigeren.
+
+Accepteert het sektelid de opdracht, dan vermoordt hij het aangewezen slachtoffer. Daarna mag het sektelid kiezen: trouw in de sekte blijven, of de sekte verlaten.
+
+Weigert het sektelid de opdracht, dan ligt zijn lot volledig in de handen van de Sekteleider. Verlaten kan hij de sekte op dat moment niet meer.
 
 Een sekte kan uit maximaal 5 leden bestaan.
 
@@ -1447,7 +1453,7 @@ Sterft de Sekteleider, dan valt de sekte uiteen en verdwijnen alle sekteleden.`,
   name: "De Kannibaal",
   image: "images/De Kannibaal.png",
   alliance: "Moordenaar",
-  types: ["Nieuw", "Dodelijk"],
+  types: ["Nieuw", "Dodelijk", "Chaos"],
   description: `Honger die nooit verdwijnt… alleen groeit. Elke keuze maakt het erger.
 
 Elke nacht, tussen 20:00 en 09:00, kiest de Kannibaal via een direct bericht aan de GM: hij eet één speler… of hij spaart zijn honger.
