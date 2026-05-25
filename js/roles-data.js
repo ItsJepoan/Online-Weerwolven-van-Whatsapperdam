@@ -1019,7 +1019,7 @@ Daarnaast mag hij twee keer in het spel, tussen 20:00 en 09:00, via een direct b
     types: ["Toevoegend", "Misinformatie"],
     description: `In het donker glinstert hij. Subtiel. Bijna betoverend. Maar wat hij achterlaat… klopt niet.
 
-Elke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één burger uit. Diegene krijgt die nacht een vreemd geurtje… iets magisch, iets dat niet thuishoort in het dorp.
+Elke dag, tussen 10:00 en 20:00, kiest hij via een direct bericht aan de GM één burger uit. Diegene krijgt die volgende nacht een vreemd geurtje… iets magisch, iets dat niet thuishoort in het dorp.
 
 Wie hem die nacht onderzoekt, ziet maar één ding: een wolf, ongeacht zijn echte rol of alliantie. Alsof de waarheid zelf vervormd wordt.
 
