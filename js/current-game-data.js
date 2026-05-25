@@ -1,6 +1,7 @@
 const currentGameRoleIds = [
   "de-agent",
   "de-alwetende-uil",
+  "de-betoverde",
   "de-bommenwerper",
   "de-burger",
   "de-burgerlijke-burger",
@@ -10,8 +11,10 @@ const currentGameRoleIds = [
   "de-dokter",
   "de-dorpsgek",
   "de-dorpsoudste",
+  "de-geliefde",
   "de-genezer",
   "de-grafrover",
+  "de-herrezene",
   "de-husselaar",
   "de-hypocriet",
   "de-jager",
@@ -19,6 +22,7 @@ const currentGameRoleIds = [
   "de-journalist",
   "de-klier",
   "de-leerling",
+  "de-onderdrukte",
   "de-onderduiker",
   "de-omroeper",
   "de-papegaai",
@@ -34,6 +38,8 @@ const currentGameRoleIds = [
   "de-twijfelaar",
   "de-valse-erfgenaam",
   "de-verkenner",
+  "de-verlamde",
+  "de-vermomde",
   "de-veteraan",
   "de-verwarde-ziener",
   "de-vos",
@@ -47,10 +53,9 @@ const currentGameRoleIds = [
   "harige-harry",
   "het-medium",
   "het-onschuldige-sletje",
+  "het-sektelid",
   "het-toegewijde-dienstmeisje",
   "het-zwarte-schaap",
-
-  "de-kannibaal",
 
   "de-aasgier",
   "de-besmettelijke-raaf",
@@ -90,9 +95,9 @@ const currentGameRoleIds = [
   "barman-bert",
 
   "de-burgemeester",
-  "de-geliefde"
 ];
 
 const activeExpansionKeys = [
-  "de-dorpsbrouwerij", "het-stille-dorp", "de-tongtovenaar"
+  "de-sprookjesstrijd",
+  "de-onspreekbare-stilte"
 ];

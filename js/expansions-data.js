@@ -54,5 +54,10 @@ Geen dag zal hetzelfde verlopen. Iedere dag legt de Tongtovenaar nieuwe spreukre
 Er zullen zware dagen zijn. Er zullen breinkrakers tussen zitten.
 
 Maar bovenal zal het chaos, verwarring en vooral veel plezier brengen.`
+},
+{
+  key: "de-onspreekbare-stilte",
+  name: "De Onspreekbare Stilte",
+  description: "Sommige uitbreidingen worden uitgelegd. Andere worden pas begrepen wanneer het al te laat is.\n\nWanneer Onspreekbare Stilte actief is in een spel, ontvangen spelers vooraf geen verdere uitleg over de werking ervan. De uitbreiding speelt zich verborgen af op de achtergrond van het spel.\n\nDe impact van Onspreekbare Stilte is niet bedoeld om direct een specifieke alliantie te bevoordelen, maar eerder om sfeer, verwarring en onzekerheid toe te voegen aan het dorp.\n\nSpelers worden geacht tijdens het spel zelf te ontdekken dat er iets niet klopt… al zal lang niet iedereen begrijpen wat precies.\n\nDe volledige uitleg en eventuele plottwists van Onspreekbare Stilte worden pas na afloop van het spel onthuld."
 }
 ];
