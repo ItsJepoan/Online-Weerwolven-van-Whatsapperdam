@@ -2,7 +2,7 @@ const talentsList = document.getElementById("talents-list");
 const talentSearch = document.getElementById("talent-search");
 const talentsCount = document.getElementById("talents-count");
 
-const categoryOrder = ["Bekende Talenten", "Nieuwe Talenten"];
+const categoryOrder = ["Bekend", "Nieuw"];
 
 function getCategories() {
   return [...new Set(talents.map((talent) => talent.category))].sort((a, b) => {
