@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talenten - Online Weerwolven van Whatsapperdam</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/talents.css" />
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Online Weerwolven van Whatsapperdam</h1>
+      <p class="subtitle">Talenten</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-links">
+      <a href="index.html">Home</a>
+      <a href="current-game.html">Huidig spel</a>
+      <a href="rules.html">Regels</a>
+      <a href="roles.html">Rollen</a>
+      <a href="expansions.html">Uitbreidingen</a>
+      <a href="appendices.html">Appendices</a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <section class="content-card talents-intro-card">
+      <h2>Alle talenten</h2>
+      <p>
+        Talenten zijn extra eigenschappen, krachten of condities bovenop een normale rol.
+        Een talent verandert je rol, alliantie en winvoorwaarde niet, tenzij dat expliciet vermeld staat.
+      </p>
+    </section>
+
+    <section class="filters-section talents-filters">
+      <div class="filters-header">
+        <div>
+          <h2>Zoeken</h2>
+          <p>Zoek op naam van het talent.</p>
+        </div>
+        <span id="talents-count" class="talents-count"></span>
+      </div>
+
+      <div class="talents-filters-grid">
+        <div class="filter-group filter-group-search">
+          <label for="talent-search">Zoeken</label>
+          <input
+            type="text"
+            id="talent-search"
+            placeholder="Zoek een talent..."
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="talents-list"></section>
+  </main>
+
+  <script src="js/talents-data.js"></script>
+  <script src="js/talents.js"></script>
+</body>
+</html>

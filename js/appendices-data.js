@@ -98,7 +98,7 @@ const appendices = [
       ["Waarzegster", "J"],
       ["Oma", "-"],
       ["Grote Boze Wolf", "-"],
-      ["Roodkapje", "-"]
+      ["Roodkapje", "-"],
       ["Tongtovenaar", "-"]
     ]
   },
@@ -403,8 +403,8 @@ const appendices = [
       ["Waarzegster", "*"],
       ["Oma", "Kan niet dronken worden"],
       ["Grote Boze Wolf", "Kan niet dronken worden"],
-      ["Roodkapje", "*"]
-      ["toLocaleString", "✔️, willekeurige spreuk"]
+      ["Roodkapje", "*"],
+      ["Tongtovenaar", "✔️, willekeurige spreuk"]
     ]
   },
   {

@@ -40,6 +40,37 @@ function createBadges(items) {
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatInlineText(value) {
+  return escapeHtml(value)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
+function createFormattedDescription(text) {
+  return text
+    .trim()
+    .split(/\n\s*\n/)
+    .map((block) => {
+      const trimmed = block.trim();
+
+      if (trimmed.startsWith("## ")) {
+        return `<h3>${formatInlineText(trimmed.slice(3))}</h3>`;
+      }
+
+      return `<p>${formatInlineText(trimmed)}</p>`;
+    })
+    .join("");
+}
+
 /* ======================
    MODAL
 ====================== */
@@ -82,6 +113,12 @@ function sortExpansionRoles(roleList) {
 
     return a.name.localeCompare(b.name, "nl");
   });
+}
+
+function sortExpansions(expansionList) {
+  return [...expansionList].sort((a, b) =>
+    a.name.localeCompare(b.name, "nl", { sensitivity: "base" })
+  );
 }
 
 /* ======================
@@ -133,7 +170,7 @@ function createRoleCard(role) {
 function renderExpansions() {
   expansionsList.innerHTML = "";
 
-  expansions.forEach((expansion) => {
+  sortExpansions(expansions).forEach((expansion) => {
     const section = document.createElement("section");
     section.className = "expansion-card";
 
@@ -154,12 +191,20 @@ function renderExpansions() {
 
     const description = document.createElement("div");
     description.className = "expansion-description";
-    description.textContent = expansion.description;
+    description.innerHTML = createFormattedDescription(expansion.description);
 
     descriptionBlock.appendChild(description);
 
     section.appendChild(title);
     section.appendChild(descriptionBlock);
+
+    if (expansion.talentsUrl) {
+      const talentsLink = document.createElement("a");
+      talentsLink.className = "expansion-action-link";
+      talentsLink.href = expansion.talentsUrl;
+      talentsLink.textContent = "Bekijk talenten";
+      section.appendChild(talentsLink);
+    }
 
     const rolesTitle = document.createElement("h3");
     rolesTitle.className = "expansion-roles-title";

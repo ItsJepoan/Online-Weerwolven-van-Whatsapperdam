@@ -56,6 +56,75 @@ Er zullen zware dagen zijn. Er zullen breinkrakers tussen zitten.
 Maar bovenal zal het chaos, verwarring en vooral veel plezier brengen.`
 },
 {
+  key: "de-talentvolle-burgers",
+  name: "De Talentvolle Burgers",
+  talentsUrl: "talents.html",
+  description: `In deze uitbreiding krijgt iedere speler naast zijn normale rol ook een **Talent**. Een Talent is een extra eigenschap, kracht of conditie die bovenop de gewone rol komt.
+
+Een Talent verandert je rol niet. Je behoudt altijd je normale rol, alliantie en winvoorwaarde, tenzij een Talent expliciet iets anders zegt.
+
+Deze uitbreiding bestaat uit twee afzonderlijke onderdelen die los van elkaar of tegelijk gespeeld kunnen worden. [Bekijk alle talenten](talents.html).
+
+## Bekende Talenten
+
+Wanneer dit onderdeel actief is, worden verschillende bestaande rollen omgezet naar Talenten. Deze rollen komen dan niet meer als normale rol in het spel voor. In plaats daarvan worden hun eigenschappen verdeeld als Talent onder andere spelers.
+
+## Nieuwe Talenten
+
+Wanneer dit onderdeel actief is, worden er volledig nieuwe Talenten toegevoegd die speciaal voor deze uitbreiding zijn ontworpen.
+
+## Het ontvangen van een Talent
+
+Aan het begin van het spel ontvangt iedere speler **een Talent**. In de meeste gevallen weet een speler direct welk Talent hij heeft ontvangen. Sommige Talenten kunnen echter als **Geheim Talent** worden uitgedeeld.
+
+## Geheime Talenten
+
+Een Geheim Talent wordt niet bekendgemaakt aan de speler die het bezit. De speler weet dan niet dat hij dit Talent heeft totdat het wordt geactiveerd, ontdekt of op een andere manier aan het licht komt.
+
+Hierdoor kunnen gebeurtenissen plaatsvinden waarvan spelers zelf niet eens wisten dat zij daartoe in staat waren.
+
+## De Ringmeester
+
+Wanneer de Ringmeester in het spel aanwezig is, mag hij iedere nacht het Talent van een speler bekijken. Hierbij ontdekt hij zowel normale als Geheime Talenten.
+
+Daardoor is de Ringmeester vaak een van de weinige spelers die inzicht heeft in de verborgen krachten die door het dorp verspreid zijn.
+
+## Talenten en de dood
+
+Wanneer een speler sterft, wordt zijn Talent normaal gesproken niet bekendgemaakt. Alleen wanneer een gebeurtenis direct verband houdt met een Talent, kan de GM ervoor kiezen dit openbaar te maken.
+
+Talenten blijven daardoor vaak verborgen tot ver in het spel.
+
+## Praten over Talenten
+
+Spelers mogen vrij praten over hun Talent. Je mag jouw Talent claimen, verbergen, ontkennen, overdrijven of volledig verzinnen.
+
+Net als bij rollen mag er over Talenten vrij worden gebluft. Of iemand de waarheid spreekt, blijft zoals altijd aan het dorp om uit te zoeken.`
+},
+{
+  key: "de-adelijke-raad",
+  name: "De Adelijke Raad",
+  description: `Oude families, verborgen macht en gefluister achter gesloten deuren. Terwijl het dorp slaapt, vergadert de adel in stilte.
+
+Aan het begin van het spel bestaan er vier Adellijken. Zij zijn allemaal burgerlijk wanneer het spel start. Iedere nacht, tussen 20:00 en 09:00, mag de Adellijke Raad met elkaar spreken in hun eigen geheime groepsapp. Het grootste voordeel van de Raad is simpel: zij weten van elkaar dat zij bij toetreding burgerlijk waren.
+
+Sterft een Adellijke, dan moet deze een opvolger aanwijzen die zijn plaats in de Raad overneemt. Dit mag iedere speler zijn behalve een huidige Adellijke. Zo blijft de Raad altijd uit vier leden bestaan. Slechts een heel klein aantal specifieke rollen kan geen deel uitmaken van de Raad.
+
+De Raad mag onder geen enkel beding bespreken wie hun opvolger wordt of suggesties doen voor mogelijke kandidaten. De keuze van een opvolger blijft volledig persoonlijk. Natuurlijk brengt dit risico's met zich mee: zodra nieuwe leden toetreden, kunnen ook weerwolven of onafhankelijken in de Raad belanden. Vanaf dat moment is vertrouwen niets meer dan een gok.
+
+Iedere nacht mag de Raad gezamenlijk een speler nomineren. Het doel van deze nominatie is het verzamelen van informatie. Sterft deze genomineerde speler tijdens dezelfde nacht of gedurende de daaropvolgende dag, dan ontvangt de Raad de volgende ochtend extra informatie over diens dood. Zij krijgen dan de doodsoorzaak en de rol te horen van degene die de moord heeft gepleegd.
+
+Overleeft de genomineerde speler die nacht en dag, dan verdwijnt de nominatie weer. Sommige rollen of effecten kunnen deze informatie verstoren of verbergen, al gebeurt dit zelden.
+
+Adellijken blijven ondanks hun positie gewone spelers. Zij mogen gewoon op elkaar stemmen, elkaar verdenken, liefhebben of haten zoals iedere andere speler in het dorp.
+
+Het bestaan van de Adellijke Raad is volledig geheim. Geen enkel raadslid mag de Raad benoemen of onthullen, in leven of dood. Slechts een uitzondering bestaat hierop: de Dorpsgek. Mocht hij zijn actie gebruiken, dan wordt hij direct uit de Raad gezet.
+
+Maar ja...
+
+Wie gelooft de verhalen van de Dorpsgek nou echt?`
+},
+{
   key: "de-onspreekbare-stilte",
   name: "De Onspreekbare Stilte",
   description: "Sommige uitbreidingen worden uitgelegd. Andere worden pas begrepen wanneer het al te laat is.\n\nWanneer Onspreekbare Stilte actief is in een spel, ontvangen spelers vooraf geen verdere uitleg over de werking ervan. De uitbreiding speelt zich verborgen af op de achtergrond van het spel.\n\nDe impact van Onspreekbare Stilte is niet bedoeld om direct een specifieke alliantie te bevoordelen, maar eerder om sfeer, verwarring en onzekerheid toe te voegen aan het dorp.\n\nSpelers worden geacht tijdens het spel zelf te ontdekken dat er iets niet klopt… al zal lang niet iedereen begrijpen wat precies.\n\nDe volledige uitleg en eventuele plottwists van Onspreekbare Stilte worden pas na afloop van het spel onthuld."

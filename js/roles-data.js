@@ -1674,4 +1674,18 @@ Een Sektelid mag deze opdracht accepteren of weigeren. Accepteert hij, dan voert
   expansionKey: "de-tongtovenaar",
   description: "Met natte staf en vervloekte tong heerst de Tongtovenaar over de woorden van Whatsapperdam 👅\n\nWaar hij verschijnt, verandert taal in chaos. Geen gesprek blijft veilig, geen zin blijft normaal. Het dorp buigt zich dagelijks onder nieuwe vreemde spreuken terwijl iedereen wanhopig probeert elkaar nog te begrijpen.\n\nDe Tongtovenaar hoort bij de burgers.\n\nTussen 10:00 en 09:00 mag hij via een direct bericht aan de GM één Tongspreuk kiezen die actief wordt over het dorp. Hij mag kiezen uit bestaande spreuken of zelf een nieuwe bedenken, zolang deze eerst door de GM wordt goedgekeurd.\n\nDeze spreuken veranderen de manier waarop spelers mogen praten. Soms worden berichten beperkt. Soms vervormd. Soms compleet op hun kop gezet.\n\nDe Tongtovenaar mag zijn krachten nooit gebruiken om bewust één alliantie te bevoordelen. Iedere spreuk moet eerlijk gelden voor het hele dorp: burgers, weerwolven en onafhankelijken.\n\nZelfs na zijn dood blijft zijn stem nog door Whatsapperdam galmen. Ook dan mag hij nieuwe spreuken blijven uitspreken."
 },
+{
+  id: "de-ringmeester",
+  name: "De Ringmeester",
+  image: "images/placeholder-expansion-role.jpg",
+  alliance: "Burger",
+  types: ["Uitbreiding", "Informatie"],
+  isExpansionRole: true,
+  expansionKey: "de-talentvolle-burgers",
+  description: `Wanneer de Ringmeester in het spel aanwezig is, mag hij iedere nacht het Talent van een speler bekijken.
+
+Hierbij ontdekt hij zowel normale als Geheime Talenten.
+
+Daardoor is de Ringmeester vaak een van de weinige spelers die inzicht heeft in de verborgen krachten die door het dorp verspreid zijn.`
+},
 ];

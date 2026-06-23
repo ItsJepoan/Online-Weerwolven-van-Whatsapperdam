@@ -33,7 +33,44 @@
 .current-expansion-description {
   color: var(--text);
   line-height: 1.7;
-  white-space: pre-line;
+}
+
+.current-expansion-description p {
+  margin-bottom: 0.9rem;
+}
+
+.current-expansion-description p:last-child {
+  margin-bottom: 0;
+}
+
+.current-expansion-description h3 {
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin: 1.25rem 0 0.45rem;
+}
+
+.current-expansion-description h3:first-child {
+  margin-top: 0;
+}
+
+.current-expansion-description a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.current-expansion-action-link {
+  display: inline-block;
+  margin-top: 1.1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.current-expansion-action-link:hover {
+  background: var(--primary-light);
 }
 
 .current-expansion-roles-title {

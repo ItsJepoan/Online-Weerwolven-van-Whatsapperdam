@@ -59,12 +59,49 @@ function sortRoles(roleList) {
   });
 }
 
+function sortExpansions(expansionList) {
+  return [...expansionList].sort((a, b) =>
+    a.name.localeCompare(b.name, "nl", { sensitivity: "base" })
+  );
+}
+
 function createBadges(items) {
   if (!items || !items.length) {
     return `<span class="badge">Geen</span>`;
   }
 
   return items.map((item) => `<span class="badge">${item}</span>`).join("");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatInlineText(value) {
+  return escapeHtml(value)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
+function createFormattedDescription(text) {
+  return text
+    .trim()
+    .split(/\n\s*\n/)
+    .map((block) => {
+      const trimmed = block.trim();
+
+      if (trimmed.startsWith("## ")) {
+        return `<h3>${formatInlineText(trimmed.slice(3))}</h3>`;
+      }
+
+      return `<p>${formatInlineText(trimmed)}</p>`;
+    })
+    .join("");
 }
 
 function lockPageScroll() {
@@ -177,8 +214,10 @@ function renderRoleSections() {
 function renderActiveExpansions() {
   activeExpansionsList.innerHTML = "";
 
-  const activeExpansions = expansions.filter((expansion) =>
-    activeExpansionKeys.includes(expansion.key)
+  const activeExpansions = sortExpansions(
+    expansions.filter((expansion) =>
+      activeExpansionKeys.includes(expansion.key)
+    )
   );
 
   if (!activeExpansions.length) {
@@ -213,8 +252,16 @@ function renderActiveExpansions() {
 
     card.innerHTML = `
       <h2 class="current-expansion-title">${expansion.name}</h2>
-      <p class="current-expansion-description">${expansion.description}</p>
+      <div class="current-expansion-description">${createFormattedDescription(expansion.description)}</div>
     `;
+
+    if (expansion.talentsUrl) {
+      const talentsLink = document.createElement("a");
+      talentsLink.className = "current-expansion-action-link";
+      talentsLink.href = expansion.talentsUrl;
+      talentsLink.textContent = "Bekijk talenten";
+      card.appendChild(talentsLink);
+    }
 
     card.appendChild(rolesContainer);
     activeExpansionsList.appendChild(card);

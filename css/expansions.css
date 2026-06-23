@@ -22,8 +22,30 @@
 }
 
 .expansion-description {
-  white-space: pre-line;
   color: var(--text);
+}
+
+.expansion-description p {
+  margin-bottom: 0.9rem;
+}
+
+.expansion-description p:last-child {
+  margin-bottom: 0;
+}
+
+.expansion-description h3 {
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin: 1.25rem 0 0.45rem;
+}
+
+.expansion-description h3:first-child {
+  margin-top: 0;
+}
+
+.expansion-description a {
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .expansion-description-block {
@@ -32,6 +54,21 @@
   border-radius: 14px;
   padding: 1.25rem;
   margin-bottom: 1.75rem;
+}
+
+.expansion-action-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.expansion-action-link:hover {
+  background: var(--primary-light);
 }
 
 .expansion-roles-title {
