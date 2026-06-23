@@ -1675,6 +1675,59 @@ Een Sektelid mag deze opdracht accepteren of weigeren. Accepteert hij, dan voert
   description: "Met natte staf en vervloekte tong heerst de Tongtovenaar over de woorden van Whatsapperdam 👅\n\nWaar hij verschijnt, verandert taal in chaos. Geen gesprek blijft veilig, geen zin blijft normaal. Het dorp buigt zich dagelijks onder nieuwe vreemde spreuken terwijl iedereen wanhopig probeert elkaar nog te begrijpen.\n\nDe Tongtovenaar hoort bij de burgers.\n\nTussen 10:00 en 09:00 mag hij via een direct bericht aan de GM één Tongspreuk kiezen die actief wordt over het dorp. Hij mag kiezen uit bestaande spreuken of zelf een nieuwe bedenken, zolang deze eerst door de GM wordt goedgekeurd.\n\nDeze spreuken veranderen de manier waarop spelers mogen praten. Soms worden berichten beperkt. Soms vervormd. Soms compleet op hun kop gezet.\n\nDe Tongtovenaar mag zijn krachten nooit gebruiken om bewust één alliantie te bevoordelen. Iedere spreuk moet eerlijk gelden voor het hele dorp: burgers, weerwolven en onafhankelijken.\n\nZelfs na zijn dood blijft zijn stem nog door Whatsapperdam galmen. Ook dan mag hij nieuwe spreuken blijven uitspreken."
 },
 {
+  id: "de-boer",
+  name: "De Boer",
+  image: "images/placeholder-expansion-role.jpg",
+  alliance: null,
+  types: ["Uitbreiding", "Bijrol"],
+  isExpansionRole: true,
+  expansionKey: "de-boeren",
+  description: `De Boer is geen normale rol, maar een bijrol die bovenop een bestaande rol kan worden uitgedeeld.
+
+Alle Boeren weten van elkaar wie de andere Boeren zijn.
+Zij kennen echter niet elkaars rol en weten alleen dat zij samen tot de Boeren behoren.
+
+De Boeren hebben een belangrijke taak: het aanwijzen van de burgemeester.
+
+Aan het begin van het spel kiezen de Boeren gezamenlijk en unaniem een van hun eigen leden als Boerenburgemeester.
+Hierdoor vinden er geen normale burgemeesterverkiezingen plaats.
+
+De gekozen Boerenburgemeester krijgt alle gebruikelijke bevoegdheden van een burgemeester.
+
+Wanneer de Boerenburgemeester sterft, wijst hij in zijn laatste moment een andere levende Boer aan als opvolger.
+Deze speler wordt direct de nieuwe burgemeester.
+
+Zolang er minstens een Boer in leven is, blijft het burgemeesterschap binnen de Boeren.
+
+Zijn er geen Boeren meer over, dan kan er geen nieuwe burgemeester meer worden aangewezen.`
+},
+{
+  id: "de-adelijke",
+  name: "De Adelijke",
+  image: "images/placeholder-expansion-role.jpg",
+  alliance: null,
+  types: ["Uitbreiding", "Bijrol"],
+  isExpansionRole: true,
+  expansionKey: "de-adelijke-raad",
+  description: `De Adelijke is geen normale rol, maar een geheime bijrol die bovenop een bestaande rol kan worden uitgedeeld.
+
+Aan het begin van het spel bestaan er vier Adelijken. Zij zijn allemaal burgerlijk wanneer het spel start.
+
+Iedere nacht, tussen 20:00 en 09:00, mogen de Adelijken met elkaar spreken in hun eigen geheime groepsapp.
+
+Sterft een Adelijke, dan wijst hij een opvolger aan die zijn plaats in de Raad overneemt.
+Dit mag iedere speler zijn behalve een huidige Adelijke.
+
+De Raad mag niet bespreken wie hun opvolger wordt of suggesties doen voor mogelijke kandidaten.
+De keuze blijft volledig persoonlijk.
+
+Iedere nacht mag de Raad gezamenlijk een speler nomineren.
+Sterft deze genomineerde speler tijdens dezelfde nacht of gedurende de daaropvolgende dag, dan ontvangt de Raad de volgende ochtend extra informatie over diens dood.
+
+Het bestaan van de Adellijke Raad is volledig geheim.
+Geen enkel raadslid mag de Raad benoemen of onthullen, in leven of dood.`
+},
+{
   id: "de-ringmeester",
   name: "De Ringmeester",
   image: "images/placeholder-expansion-role.jpg",

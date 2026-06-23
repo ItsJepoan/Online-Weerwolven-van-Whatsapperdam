@@ -56,6 +56,29 @@ Er zullen zware dagen zijn. Er zullen breinkrakers tussen zitten.
 Maar bovenal zal het chaos, verwarring en vooral veel plezier brengen.`
 },
 {
+  key: "de-boeren",
+  name: "De Boeren",
+  description: `Tussen alle burgers van Whatsapperdam bevinden zich een aantal **Boeren**. Dit is geen rol, maar een bijrol die bovenop een bestaande rol kan worden uitgedeeld.
+
+Alle Boeren weten van elkaar wie de andere Boeren zijn. Zij kennen echter niet elkaars rol en weten alleen dat zij samen tot de Boeren behoren.
+
+## De burgemeester aanwijzen
+
+De Boeren hebben een belangrijke taak: het aanwijzen van de burgemeester.
+
+Aan het begin van het spel kiezen de Boeren gezamenlijk en unaniem een van hun eigen leden als **Boerenburgemeester**. Hierdoor vinden er geen normale burgemeesterverkiezingen plaats.
+
+De gekozen Boerenburgemeester krijgt alle gebruikelijke bevoegdheden van een burgemeester.
+
+## Opvolging
+
+Wanneer de Boerenburgemeester sterft, wijst hij in zijn laatste moment een andere levende Boer aan als opvolger. Deze speler wordt direct de nieuwe burgemeester.
+
+Zolang er minstens een Boer in leven is, blijft het burgemeesterschap dus binnen de Boeren.
+
+Zijn er echter geen Boeren meer over, dan kan er geen nieuwe burgemeester meer worden aangewezen.`
+},
+{
   key: "de-talentvolle-burgers",
   name: "De Talentvolle Burgers",
   talentsUrl: "talents.html",
