@@ -1,5 +1,6 @@
 const currentRolesList = document.getElementById("current-roles-list");
 const activeExpansionsList = document.getElementById("active-expansions-list");
+const currentTalentsList = document.getElementById("current-talents-list");
 
 const modal = document.getElementById("role-modal");
 const modalClose = document.getElementById("role-modal-close");
@@ -18,7 +19,10 @@ const currentRoleIdSet = new Set(currentGameRoleIds);
 const activeExpansionRoleIds = roles
   .filter(
     (role) =>
-      role.expansionKey && activeExpansionKeys.includes(role.expansionKey)
+      role.expansionKey &&
+      activeExpansionKeys.includes(role.expansionKey) &&
+      !(typeof excludedActiveExpansionRoleIds !== "undefined" &&
+        excludedActiveExpansionRoleIds.includes(role.id))
   )
   .map((role) => role.id);
 
@@ -65,6 +69,27 @@ function sortExpansions(expansionList) {
   );
 }
 
+const talentCategoryOrder = ["Bekend", "Nieuw"];
+
+function sortTalents(talentList) {
+  return [...talentList].sort((a, b) =>
+    a.name.localeCompare(b.name, "nl", { sensitivity: "base" })
+  );
+}
+
+function sortTalentCategories(categories) {
+  return [...categories].sort((a, b) => {
+    const indexA = talentCategoryOrder.indexOf(a);
+    const indexB = talentCategoryOrder.indexOf(b);
+
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+
+    return a.localeCompare(b, "nl", { sensitivity: "base" });
+  });
+}
+
 function createBadges(items) {
   if (!items || !items.length) {
     return `<span class="badge">Geen</span>`;
@@ -86,6 +111,12 @@ function formatInlineText(value) {
   return escapeHtml(value)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
+function formatTalentText(value) {
+  return escapeHtml(value)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.+?)\*/g, "<em>$1</em>");
 }
 
 function createFormattedDescription(text) {
@@ -119,7 +150,11 @@ function unlockPageScroll() {
 
 function openModal(role) {
   modalName.textContent = role.name;
-  modalImage.src = role.image;
+  modalImage.onerror = () => {
+    modalImage.onerror = null;
+    modalImage.src = "images/placeholder.png";
+  };
+  modalImage.src = role.image || "images/placeholder.png";
   modalImage.alt = role.name;
 
   modalAlliance.innerHTML = role.alliance
@@ -144,7 +179,7 @@ function createRoleCard(role) {
   card.tabIndex = 0;
 
   card.innerHTML = `
-    <img src="${role.image}" alt="${role.name}" class="current-role-image">
+    <img src="${role.image || "images/placeholder.png"}" alt="${role.name}" class="current-role-image" onerror="this.onerror=null;this.src='images/placeholder.png';">
     <div class="current-role-content">
       <h3 class="current-role-name">${role.name}</h3>
     </div>
@@ -160,6 +195,103 @@ function createRoleCard(role) {
   });
 
   return card;
+}
+
+function createTalentCard(talent) {
+  const card = document.createElement("article");
+  card.className = "talent-card";
+
+  const metaParts = [];
+
+  if (talent.originalRole) {
+    metaParts.push(`
+      <div class="talent-meta-block">
+        <strong>Oorspronkelijke rol</strong>
+        <div class="badges">
+          <span class="badge">${talent.originalRole}</span>
+        </div>
+      </div>
+    `);
+  }
+
+  if (talent.note) {
+    metaParts.push(`
+      <div class="talent-meta-block talent-note">
+        <strong>Let op</strong>
+        <span>${talent.note}</span>
+      </div>
+    `);
+  }
+
+  card.innerHTML = `
+    <div class="talent-card-header">
+      <h3>${talent.name}</h3>
+      <span class="talent-category-badge">${talent.category}</span>
+    </div>
+    <p class="talent-description">${formatTalentText(talent.description)}</p>
+    ${metaParts.length ? `<div class="talent-meta">${metaParts.join("")}</div>` : ""}
+  `;
+
+  return card;
+}
+
+function renderCurrentTalents() {
+  if (!currentTalentsList) return;
+
+  const selectedTalentNames = new Set(currentGameTalentNames || []);
+  const selectedTalents = [
+    ...talents.filter((talent) => selectedTalentNames.has(talent.name)),
+    ...(typeof currentGameExtraTalents !== "undefined" ? currentGameExtraTalents : [])
+  ];
+
+  currentTalentsList.innerHTML = "";
+
+  if (!selectedTalents.length) {
+    return;
+  }
+
+  const section = document.createElement("section");
+  section.className = "current-talent-section";
+
+  const header = document.createElement("div");
+  header.className = "current-talent-header";
+  header.innerHTML = `
+    <div>
+      <h2 class="current-role-title">Talenten</h2>
+      <p>Alle actieve talenten in het huidige spel.</p>
+    </div>
+    <span class="talents-count">${selectedTalents.length} talenten</span>
+  `;
+
+  section.appendChild(header);
+
+  sortTalentCategories([...new Set(selectedTalents.map((talent) => talent.category))]).forEach((category) => {
+    const talentsInCategory = sortTalents(
+      selectedTalents.filter((talent) => talent.category === category)
+    );
+
+    if (!talentsInCategory.length) return;
+
+    const categorySection = document.createElement("section");
+    categorySection.className = "talent-section current-talent-category";
+
+    const title = document.createElement("h3");
+    title.className = "talent-section-title";
+    title.textContent = category;
+
+    const list = document.createElement("div");
+    list.className = "talent-list";
+
+    talentsInCategory.forEach((talent) => {
+      list.appendChild(createTalentCard(talent));
+    });
+
+    categorySection.appendChild(title);
+    categorySection.appendChild(list);
+    section.appendChild(categorySection);
+  });
+
+  currentTalentsList.appendChild(section);
 }
 
 function renderRoleSections() {
@@ -226,7 +358,11 @@ function renderActiveExpansions() {
 
   activeExpansions.forEach((expansion) => {
     const relatedRoles = sortRoles(
-      roles.filter((role) => role.expansionKey === expansion.key)
+      roles.filter((role) =>
+        role.expansionKey === expansion.key &&
+        !(typeof excludedActiveExpansionRoleIds !== "undefined" &&
+          excludedActiveExpansionRoleIds.includes(role.id))
+      )
     );
 
     const card = document.createElement("section");
@@ -251,7 +387,7 @@ function renderActiveExpansions() {
     }
 
     card.innerHTML = `
-      <h2 class="current-expansion-title">${expansion.name}</h2>
+      <h2 class="current-expansion-title">${expansion.name}${activeExpansionVariants && activeExpansionVariants[expansion.key] ? ` (${activeExpansionVariants[expansion.key]})` : ""}</h2>
       <div class="current-expansion-description">${createFormattedDescription(expansion.description)}</div>
     `;
 
@@ -269,6 +405,7 @@ function renderActiveExpansions() {
 }
 
 renderActiveExpansions();
+renderCurrentTalents();
 renderRoleSections();
 
 modalClose.onclick = closeModal;

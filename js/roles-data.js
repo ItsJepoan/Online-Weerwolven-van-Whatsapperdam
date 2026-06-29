@@ -1677,7 +1677,7 @@ Een Sektelid mag deze opdracht accepteren of weigeren. Accepteert hij, dan voert
 {
   id: "de-boer",
   name: "De Boer",
-  image: "images/placeholder-expansion-role.jpg",
+  image: "images/placeholder.png",
   alliance: null,
   types: ["Uitbreiding", "Bijrol"],
   isExpansionRole: true,
@@ -1704,7 +1704,7 @@ Zijn er geen Boeren meer over, dan kan er geen nieuwe burgemeester meer worden a
 {
   id: "de-adelijke",
   name: "De Adelijke",
-  image: "images/placeholder-expansion-role.jpg",
+  image: "images/placeholder.png",
   alliance: null,
   types: ["Uitbreiding", "Bijrol"],
   isExpansionRole: true,
@@ -1730,7 +1730,7 @@ Geen enkel raadslid mag de Raad benoemen of onthullen, in leven of dood.`
 {
   id: "de-ringmeester",
   name: "De Ringmeester",
-  image: "images/placeholder-expansion-role.jpg",
+  image: "images/placeholder.png",
   alliance: "Burger",
   types: ["Uitbreiding", "Informatie"],
   isExpansionRole: true,

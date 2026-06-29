@@ -84,6 +84,35 @@
   display: block;
 }
 
+#current-talents-list {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.current-talent-section {
+  margin-bottom: 3rem;
+}
+
+.current-talent-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.current-talent-header .current-role-title {
+  margin-bottom: 0.35rem;
+}
+
+.current-talent-header p {
+  color: var(--muted);
+}
+
+.current-talent-category {
+  margin-bottom: 2rem;
+}
+
 .current-role-section {
   margin-bottom: 3rem;
 }
@@ -164,6 +193,10 @@
 }
 
 @media (max-width: 560px) {
+  .current-talent-header {
+    flex-direction: column;
+  }
+
   .current-roles-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

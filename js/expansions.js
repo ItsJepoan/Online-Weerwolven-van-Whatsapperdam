@@ -76,7 +76,11 @@ function createFormattedDescription(text) {
 ====================== */
 function openModal(role) {
   modalName.textContent = role.name;
-  modalImage.src = role.image;
+  modalImage.onerror = () => {
+    modalImage.onerror = null;
+    modalImage.src = "images/placeholder.png";
+  };
+  modalImage.src = role.image || "images/placeholder.png";
   modalImage.alt = role.name;
 
   modalAlliance.innerHTML = role.alliance
@@ -130,7 +134,7 @@ function createRoleCard(role) {
 
   card.innerHTML = `
     <button class="role-card-button" type="button">
-      <img src="${role.image}" class="role-image" alt="${role.name}">
+      <img src="${role.image || "images/placeholder.png"}" class="role-image" alt="${role.name}" onerror="this.onerror=null;this.src='images/placeholder.png';">
       <div class="role-content">
         <h3 class="role-name">${role.name}</h3>
 
