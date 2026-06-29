@@ -451,7 +451,7 @@ Wat de Smid precies heeft gesmeed… blijft in het donker. Mogelijke verbetering
     image: "images/De Stalker.png",
     alliance: "Burger",
     types: ["Toevoegend", "Liefde", "Kans"],
-    description: `Zoals velen in dit dorp zoekt de Stalker naar liefde… maar waar anderen hopen, gaat hij er zelf achteraan.
+    description: `Zoals velen in dit dorp zoekt de Stalker naar liefde… maar waar anderen hopen, gaat hij er zelf achteraan. Voor hem is geen enkele band heilig als er een nieuw hart te veroveren valt.
 
 De eerste 5 nachten, tussen 20:00 en 09:00, mag de Stalker via een direct bericht aan de GM de naam noemen van zijn favoriete dorpsbewoner en een liefdesbericht sturen. Dit bericht wordt anoniem verstuurd, maar de Stalker mag er zelf voor kiezen het met een naam te signeren. Het bericht mag geen informatie bevatten buiten zijn liefdesverklaring.
 
@@ -459,7 +459,7 @@ De ontvanger van het bericht kan deze accepteren of afwijzen. Accepteert diegene
 
 Wordt het bericht afgewezen, dan blijft de Stalker achter met die afwijzing… maar hij geeft niet op. De volgende nacht mag hij het opnieuw proberen, bij dezelfde persoon of bij iemand anders.
 
-Lukt het hem niet om binnen deze 5 nachten een koppel te vormen… dan sterft hij aan eenzaamheid.`,
+Lukt het hem niet om binnen deze 5 nachten iemand voor zich te winnen… dan sterft hij aan eenzaamheid.`,
     isExpansionRole: false,
     expansionKey: null
   },
