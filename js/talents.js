@@ -2,7 +2,7 @@ const talentsList = document.getElementById("talents-list");
 const talentSearch = document.getElementById("talent-search");
 const talentsCount = document.getElementById("talents-count");
 
-const categoryOrder = ["Bekend", "Nieuw"];
+const categoryOrder = ["Basis", "Gevorderd", "Expert"];
 
 function getCategories() {
   return [...new Set(talents.map((talent) => talent.category))].sort((a, b) => {
@@ -50,6 +50,17 @@ function createTalentCard(talent) {
         <strong>Oorspronkelijke rol</strong>
         <div class="badges">
           <span class="badge">${talent.originalRole}</span>
+        </div>
+      </div>
+    `);
+  }
+
+  if (talent.canBeSecret) {
+    metaParts.push(`
+      <div class="talent-meta-block">
+        <strong>Geheim Talent</strong>
+        <div class="badges">
+          <span class="badge">Kan geheim zijn</span>
         </div>
       </div>
     `);

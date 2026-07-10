@@ -69,7 +69,7 @@ function sortExpansions(expansionList) {
   );
 }
 
-const talentCategoryOrder = ["Bekend", "Nieuw"];
+const talentCategoryOrder = ["Basis", "Gevorderd", "Expert"];
 
 function sortTalents(talentList) {
   return [...talentList].sort((a, b) =>
@@ -209,6 +209,17 @@ function createTalentCard(talent) {
         <strong>Oorspronkelijke rol</strong>
         <div class="badges">
           <span class="badge">${talent.originalRole}</span>
+        </div>
+      </div>
+    `);
+  }
+
+  if (talent.canBeSecret) {
+    metaParts.push(`
+      <div class="talent-meta-block">
+        <strong>Geheim Talent</strong>
+        <div class="badges">
+          <span class="badge">Kan geheim zijn</span>
         </div>
       </div>
     `);

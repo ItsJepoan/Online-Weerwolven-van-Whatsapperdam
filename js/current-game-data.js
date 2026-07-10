@@ -77,9 +77,7 @@ const activeExpansionKeys = [
   "de-talentvolle-burgers"
 ];
 
-const activeExpansionVariants = {
-  "de-talentvolle-burgers": "Bekend+"
-};
+const activeExpansionVariants = {};
 
 const excludedActiveExpansionRoleIds = [
   "de-tongtovenaar"
@@ -120,7 +118,7 @@ const currentGameTalentNames = [
 
 const currentGameExtraTalents = [
   {
-    category: "Nieuw",
+    category: "Expert",
     name: "Tongtovenaar",
     description: "Mag iedere dag een Tongspreuk kiezen die actief wordt over het dorp. Deze spreuken veranderen de manier waarop spelers mogen praten. De spreuk moet eerlijk gelden voor het hele dorp en mag niet bewust een alliantie bevoordelen.",
     originalRole: "De Tongtovenaar"

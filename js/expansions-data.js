@@ -86,41 +86,45 @@ Zijn er echter geen Boeren meer over, dan kan er geen nieuwe burgemeester meer w
 
 Een Talent verandert je rol niet. Je behoudt altijd je normale rol, alliantie en winvoorwaarde, tenzij een Talent expliciet iets anders zegt.
 
-Deze uitbreiding bestaat uit twee afzonderlijke onderdelen die los van elkaar of tegelijk gespeeld kunnen worden. [Bekijk alle talenten](talents.html).
+Deze uitbreiding bevat een groot aantal verschillende Talenten, waarvan per spel slechts een deel wordt gebruikt. [Bekijk alle Talenten](talents.html) om te zien welke er allemaal mogelijk zijn.
 
-## Bekende Talenten
+## Drie categorieen
 
-Wanneer dit onderdeel actief is, worden verschillende bestaande rollen omgezet naar Talenten. Deze rollen komen dan niet meer als normale rol in het spel voor. In plaats daarvan worden hun eigenschappen verdeeld als Talent onder andere spelers.
+De Talenten zijn verdeeld in drie categorieen: **Basis**, **Gevorderd** en **Expert**.
 
-## Nieuwe Talenten
+Hoe hoger de categorie, hoe kleiner de kans dat een Talent in een spel voorkomt. Dit komt doordat deze Talenten vaak ingewikkelder zijn of meer invloed hebben op het spelverloop.
 
-Wanneer dit onderdeel actief is, worden er volledig nieuwe Talenten toegevoegd die speciaal voor deze uitbreiding zijn ontworpen.
+Dit betekent niet dat alle Basis-Talenten automatisch in het spel zitten. Zij hebben simpelweg de grootste kans om gekozen te worden, gevolgd door de Gevorderde en vervolgens de Expert-Talenten.
 
 ## Het ontvangen van een Talent
 
-Aan het begin van het spel ontvangt iedere speler **een Talent**. In de meeste gevallen weet een speler direct welk Talent hij heeft ontvangen. Sommige Talenten kunnen echter als **Geheim Talent** worden uitgedeeld.
+Aan het begin van het spel ontvangt iedere speler een Talent.
+
+In de meeste gevallen weet een speler direct welk Talent hij heeft ontvangen. Sommige Talenten kunnen echter als **Geheim Talent** worden uitgedeeld.
 
 ## Geheime Talenten
 
-Een Geheim Talent wordt niet bekendgemaakt aan de speler die het bezit. De speler weet dan niet dat hij dit Talent heeft totdat het wordt geactiveerd, ontdekt of op een andere manier aan het licht komt.
+Een Geheim Talent wordt niet bekendgemaakt aan de speler die het bezit.
+
+De speler weet dan niet dat hij dit Talent heeft, totdat het wordt geactiveerd, ontdekt of op een andere manier aan het licht komt.
 
 Hierdoor kunnen gebeurtenissen plaatsvinden waarvan spelers zelf niet eens wisten dat zij daartoe in staat waren.
 
-## De Ringmeester
-
-Wanneer de Ringmeester in het spel aanwezig is, mag hij iedere nacht het Talent van een speler bekijken. Hierbij ontdekt hij zowel normale als Geheime Talenten.
-
-Daardoor is de Ringmeester vaak een van de weinige spelers die inzicht heeft in de verborgen krachten die door het dorp verspreid zijn.
+Bij ieder Talent staat aangegeven of het als Geheim Talent kan worden uitgedeeld.
 
 ## Talenten en de dood
 
-Wanneer een speler sterft, wordt zijn Talent normaal gesproken niet bekendgemaakt. Alleen wanneer een gebeurtenis direct verband houdt met een Talent, kan de GM ervoor kiezen dit openbaar te maken.
+Wanneer een speler sterft, wordt zijn Talent normaal gesproken niet bekendgemaakt.
+
+Alleen wanneer een gebeurtenis direct verband houdt met een Talent, kan de GM ervoor kiezen dit openbaar te maken.
 
 Talenten blijven daardoor vaak verborgen tot ver in het spel.
 
 ## Praten over Talenten
 
-Spelers mogen vrij praten over hun Talent. Je mag jouw Talent claimen, verbergen, ontkennen, overdrijven of volledig verzinnen.
+Spelers mogen vrij praten over hun Talent.
+
+Je mag jouw Talent claimen, verbergen, ontkennen, overdrijven of volledig verzinnen.
 
 Net als bij rollen mag er over Talenten vrij worden gebluft. Of iemand de waarheid spreekt, blijft zoals altijd aan het dorp om uit te zoeken.`
 },

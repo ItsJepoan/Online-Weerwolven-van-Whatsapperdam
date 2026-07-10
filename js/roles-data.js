@@ -400,14 +400,13 @@ Pas dus op, wolven… sommige prooien vechten nog, zelfs nadat ze gevallen zijn.
     image: "images/De Samurai.png",
     alliance: "Burger",
     types: ["Toevoegend", "Spoed", "Dodelijk"],
-    description: `Gedreven door eer en plicht leeft de Samurai volgens één waarheid: sommige offers zijn het waard om te sterven.
+    description: `Gedreven door eer en plicht leeft de Samurai volgens een waarheid: sommige offers zijn het waard om te sterven.
 
-Eénmaal per spel mag hij op elk moment, dag of nacht, via een direct bericht aan de GM zichzelf opofferen om samen met één gekozen speler te sterven.
+Eenmaal per leven mag hij op elk moment, dag of nacht, via een direct bericht aan de GM zichzelf opofferen om samen met een gekozen speler te sterven.
 
 Deze daad is absoluut en niet tegen te houden.
 
-Is zijn doelwit echter al voorbestemd om diezelfde nacht te sterven, dan krijgt de Samurai dit te horen en moet hij direct een ander slachtoffer kiezen. Dit kan alleen tijdens de nacht voorkomen.
-`,
+Is zijn doelwit echter al voorbestemd om diezelfde nacht te sterven, dan krijgt de Samurai dit te horen en moet hij direct een ander slachtoffer kiezen. Dit kan alleen tijdens de nacht voorkomen.`,
     isExpansionRole: false,
     expansionKey: null
   },
@@ -1677,7 +1676,7 @@ Een Sektelid mag deze opdracht accepteren of weigeren. Accepteert hij, dan voert
 {
   id: "de-boer",
   name: "De Boer",
-  image: "images/placeholder.png",
+  image: "images/De Boer.png",
   alliance: null,
   types: ["Uitbreiding", "Bijrol"],
   isExpansionRole: true,
@@ -1704,7 +1703,7 @@ Zijn er geen Boeren meer over, dan kan er geen nieuwe burgemeester meer worden a
 {
   id: "de-adelijke",
   name: "De Adelijke",
-  image: "images/placeholder.png",
+  image: "images/De Adelijke.png",
   alliance: null,
   types: ["Uitbreiding", "Bijrol"],
   isExpansionRole: true,
@@ -1730,15 +1729,19 @@ Geen enkel raadslid mag de Raad benoemen of onthullen, in leven of dood.`
 {
   id: "de-ringmeester",
   name: "De Ringmeester",
-  image: "images/placeholder.png",
+  image: "images/De Ringmeester.png",
   alliance: "Burger",
   types: ["Uitbreiding", "Informatie"],
   isExpansionRole: true,
   expansionKey: "de-talentvolle-burgers",
-  description: `Wanneer de Ringmeester in het spel aanwezig is, mag hij iedere nacht het Talent van een speler bekijken.
+  description: `De Ringmeester bewaart de oude ringen van Whatsapperdam. Geen gouden sieraden, maar oude erfstukken waarin de verborgen talenten van het dorp schuilgaan. Alleen hij weet welke krachten werkelijk door het dorp verspreid zijn.
+
+Wanneer de Ringmeester in het spel aanwezig is, mag hij iedere nacht het Talent van een speler bekijken.
 
 Hierbij ontdekt hij zowel normale als Geheime Talenten.
 
-Daardoor is de Ringmeester vaak een van de weinige spelers die inzicht heeft in de verborgen krachten die door het dorp verspreid zijn.`
+Ontdekt de Ringmeester een Geheim Talent, dan mag hij zelf kiezen of hij dit Talent direct aan die speler bekendmaakt of verborgen laat. De speler blijft zich dus mogelijk onbewust van zijn eigen gave.
+
+Daardoor is de Ringmeester vaak de enige speler die werkelijk inzicht heeft in de verborgen krachten die door Whatsapperdam verspreid zijn. Soms deelt hij die kennis... soms bewaart hij haar liever voor zichzelf.`
 },
 ];

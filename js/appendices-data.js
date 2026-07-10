@@ -794,4 +794,32 @@ const appendices = [
       ["Tongtovenaar", "*"]
     ]
   },
+  {
+    id: "appendix-j",
+    title: "Appendix J: Eenmalige Acties",
+    columns: ["Rol", "Info"],
+    rows: [
+      ["Cupido", ""],
+      ["De Alwetende Uil", ""],
+      ["De Dictator", ""],
+      ["De Dodenbezweerder", ""],
+      ["De Dokter", "Gif- en levensserum"],
+      ["De Dorpsgek", ""],
+      ["De Dorpsoudste", ""],
+      ["De Grafrover", ""],
+      ["De Husselaar", ""],
+      ["De Rebel", ""],
+      ["De Stotterende Raadsheer", ""],
+      ["De Twijfelaar", ""],
+      ["De Waakengel", ""],
+      ["Het Zwarte Schaap", ""],
+      ["De Premiejager", "Markering"],
+      ["De Besmettelijke Oerwolf", ""],
+      ["De Concierge", ""],
+      ["De Feestwolf", ""],
+      ["De Verlammer", ""],
+      ["De Wolf in Winterslaap", "Winterslaap"],
+      ["De Wolfsschrijver", ""]
+    ]
+  },
 ];
