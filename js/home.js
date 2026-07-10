@@ -1,4 +1,5 @@
 const newRolesList = document.getElementById("new-roles-list");
+const newExpansionsList = document.getElementById("new-expansions-list");
 
 const modal = document.getElementById("role-modal");
 const modalClose = document.getElementById("role-modal-close");
@@ -112,6 +113,19 @@ function createRoleCard(role) {
   return card;
 }
 
+function createExpansionCard(expansion) {
+  const card = document.createElement("article");
+  card.className = "home-expansion-card";
+
+  card.innerHTML = `
+    <h3>${expansion.name}</h3>
+    <p>${expansion.shortDescription || "Nieuwe uitbreiding voor Whatsapperdam."}</p>
+    <a href="expansions.html" class="home-expansion-link">Bekijk uitbreiding</a>
+  `;
+
+  return card;
+}
+
 /* ======================
    RENDER
 ====================== */
@@ -134,7 +148,30 @@ function renderNewRoles() {
   });
 }
 
+function renderNewExpansions() {
+  if (!newExpansionsList || typeof expansions === "undefined") return;
+
+  const newExpansionKeys = ["de-talentvolle-burgers", "de-boeren"];
+  const newExpansions = newExpansionKeys
+    .map((key) => expansions.find((expansion) => expansion.key === key))
+    .filter(Boolean);
+
+  newExpansionsList.innerHTML = "";
+
+  if (!newExpansions.length) {
+    newExpansionsList.innerHTML = `
+      <p class="empty-message">Geen nieuwe uitbreidingen.</p>
+    `;
+    return;
+  }
+
+  newExpansions.forEach((expansion) => {
+    newExpansionsList.appendChild(createExpansionCard(expansion));
+  });
+}
+
 renderNewRoles();
+renderNewExpansions();
 
 /* ======================
    EVENTS

@@ -5,22 +5,33 @@ const currentGameRoleIds = [
   "de-burger",
   "de-burgerlijke-burger",
   "cupido",
+  "de-dictator",
   "de-dodenbezweerder",
   "de-dokter",
+  "de-dorpsgek",
+  "de-dorpsoudste",
   "de-genezer",
   "de-grafrover",
   "de-husselaar",
+  "de-hypocriet",
+  "de-jager",
   "de-jaloerse-ex",
   "de-journalist",
   "de-leerling",
   "de-onderduiker",
   "de-papegaai",
+  "de-rebel",
+  "de-ridder-met-het-roestige-zwaard",
+  "de-samurai",
+  "de-siamese-tweeling",
   "de-smid",
   "de-stalker",
+  "de-stotterende-raadsheer",
   "de-toneelspeler",
   "de-twijfelaar",
   "de-valse-erfgenaam",
   "de-verkenner",
+  "de-veteraan",
   "de-verwarde-ziener",
   "de-vos",
   "de-vriend",
@@ -28,14 +39,17 @@ const currentGameRoleIds = [
   "de-wachter",
   "de-wethouder",
   "de-ziener",
+  "de-zondebok",
   "het-toegewijde-dienstmeisje",
   "het-zwarte-schaap",
+  "harige-harry",
   "het-medium",
   "het-onschuldige-sletje",
   "de-fluitspeler",
   "de-pyromaan",
   "de-verloren-ziel",
   "de-heks",
+  "de-kleine-wilde",
   "de-onderdrukker",
   "de-weerwolf",
   "de-besmettelijke-raaf",
@@ -44,7 +58,9 @@ const currentGameRoleIds = [
   "de-besmettelijke-oerwolf",
   "de-concierge",
   "de-glitterende-toverwolf",
+  "de-jachtwolf",
   "de-slager",
+  "de-verdoemde",
   "de-welp",
   "de-wolf-in-schaapskleren",
   "de-wolf-in-winterslaap",
@@ -55,10 +71,13 @@ const currentGameRoleIds = [
   "de-feestwolf",
   "de-illusionist",
   "het-wolfsspook",
+  "de-wolfsoudste",
   "de-wingman",
   "de-onzekere-grenswachter",
   "de-klier",
+  "de-omroeper",
   "de-premiejager",
+  "de-vervloekte-wolf",
   "de-boze-wolf",
   "de-wolfsschrijver",
   "de-charmante-dealer",
@@ -73,54 +92,14 @@ const currentGameRoleIds = [
 ];
 
 const activeExpansionKeys = [
-  "de-tongtovenaar",
-  "de-talentvolle-burgers"
+  "de-dorpsbrouwerij",
+  "de-adelijke-raad"
 ];
 
 const activeExpansionVariants = {};
 
-const excludedActiveExpansionRoleIds = [
-  "de-tongtovenaar"
-];
+const excludedActiveExpansionRoleIds = [];
 
-const currentGameTalentNames = [
-  "Jachtig",
-  "Overlever",
-  "Openbarend",
-  "Oudbloed",
-  "Wraakzwaard",
-  "Hypocritisch",
-  "Krankzinnig",
-  "Zondebok",
-  "Harig",
-  "Heerszuchtig",
-  "Eervol",
-  "Siamees",
-  "Stotterend",
-  "Rebels",
-  "Verdoemd",
-  "Wildbloed",
-  "Vervloekt",
-  "Eenogig",
-  "Broederschap",
-  "Zusterschap",
-  "Understudy",
-  "Herstellend",
-  "Invloedrijk",
-  "Logerend",
-  "Gifmenger",
-  "Naprater",
-  "Speurneus",
-  "Volksmenner",
-  "Volgeling",
-  "Koppigaard"
-];
+const currentGameTalentNames = [];
 
-const currentGameExtraTalents = [
-  {
-    category: "Expert",
-    name: "Tongtovenaar",
-    description: "Mag iedere dag een Tongspreuk kiezen die actief wordt over het dorp. Deze spreuken veranderen de manier waarop spelers mogen praten. De spreuk moet eerlijk gelden voor het hele dorp en mag niet bewust een alliantie bevoordelen.",
-    originalRole: "De Tongtovenaar"
-  }
-];
+const currentGameExtraTalents = [];

@@ -58,6 +58,7 @@ Maar bovenal zal het chaos, verwarring en vooral veel plezier brengen.`
 {
   key: "de-boeren",
   name: "De Boeren",
+  shortDescription: "Een bijrol-uitbreiding waarin Boeren samen bepalen wie burgemeester wordt.",
   description: `Tussen alle burgers van Whatsapperdam bevinden zich een aantal **Boeren**. Dit is geen rol, maar een bijrol die bovenop een bestaande rol kan worden uitgedeeld.
 
 Alle Boeren weten van elkaar wie de andere Boeren zijn. Zij kennen echter niet elkaars rol en weten alleen dat zij samen tot de Boeren behoren.
@@ -82,15 +83,16 @@ Zijn er echter geen Boeren meer over, dan kan er geen nieuwe burgemeester meer w
   key: "de-talentvolle-burgers",
   name: "De Talentvolle Burgers",
   talentsUrl: "talents.html",
+  shortDescription: "Iedere speler krijgt een extra Talent bovenop zijn normale rol.",
   description: `In deze uitbreiding krijgt iedere speler naast zijn normale rol ook een **Talent**. Een Talent is een extra eigenschap, kracht of conditie die bovenop de gewone rol komt.
 
 Een Talent verandert je rol niet. Je behoudt altijd je normale rol, alliantie en winvoorwaarde, tenzij een Talent expliciet iets anders zegt.
 
 Deze uitbreiding bevat een groot aantal verschillende Talenten, waarvan per spel slechts een deel wordt gebruikt. [Bekijk alle Talenten](talents.html) om te zien welke er allemaal mogelijk zijn.
 
-## Drie categorieen
+## Drie categorieën
 
-De Talenten zijn verdeeld in drie categorieen: **Basis**, **Gevorderd** en **Expert**.
+De Talenten zijn verdeeld in drie categorieën: **Basis**, **Gevorderd** en **Expert**.
 
 Hoe hoger de categorie, hoe kleiner de kans dat een Talent in een spel voorkomt. Dit komt doordat deze Talenten vaak ingewikkelder zijn of meer invloed hebben op het spelverloop.
 
@@ -98,7 +100,7 @@ Dit betekent niet dat alle Basis-Talenten automatisch in het spel zitten. Zij he
 
 ## Het ontvangen van een Talent
 
-Aan het begin van het spel ontvangt iedere speler een Talent.
+Aan het begin van het spel ontvangt iedere speler één Talent.
 
 In de meeste gevallen weet een speler direct welk Talent hij heeft ontvangen. Sommige Talenten kunnen echter als **Geheim Talent** worden uitgedeeld.
 
