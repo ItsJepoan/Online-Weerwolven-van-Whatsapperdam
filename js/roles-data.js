@@ -1664,6 +1664,60 @@ Een Sektelid mag deze opdracht accepteren of weigeren. Accepteert hij, dan voert
   expansionKey: null
 },
 {
+  id: "de-droomwever",
+  name: "De Droomwever",
+  image: "images/De Droomwever.png",
+  alliance: "Burger",
+  types: ["Nieuw", "Toevoegend", "Informatie", "Effect"],
+  description: `Terwijl het dorp slaapt, zit de Droomwever nog rustig aan het werk. Draad voor draad weeft hij een Dromenvanger, gevuld met de fluisteringen van de nacht.
+
+Elke nacht, tussen 20:00 en 09:00, maakt de Droomwever een Dromenvanger. Deze mag hij via een direct bericht aan de GM geven aan een speler naar keuze, ook aan zichzelf.
+
+De Dromenvanger vangt alles op wat zich die nacht rondom zijn drager afspeelt. De volgende ochtend krijgt deze speler te horen door wie hij die nacht is bezocht.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-fotograaf",
+  name: "De Fotograaf",
+  image: "images/De Fotograaf.png",
+  alliance: "Burger",
+  types: ["Nieuw", "Toevoegend", "Informatie", "Aankondiging"],
+  description: `Altijd op zoek naar het perfecte plaatje. Terwijl de rest van het dorp bezig is met overleven, probeert de Fotograaf de mooiste herinneringen van Whatsapperdam vast te leggen.
+
+Elke nacht, tussen 20:00 en 09:00, mag de Fotograaf via een direct bericht aan de GM een foto maken van een speler.
+
+Deze speler krijgt vervolgens tot 20:00 de tijd om een foto te bezorgen. Dit is natuurlijk niet verplicht een foto van henzelf; voor de mensen met cameraschuwheid of fotofobie mag dit van alles zijn. Voor de rest geeft het juist alle artistieke vrijheid. De foto wordt wel eerst gecontroleerd door de GM.
+
+Om 20:00, na de brandstapel, wordt met de tekst "De Fotograaf heeft vannacht een foto gemaakt van..." de foto aangekondigd.
+
+Verder heeft dit voor het dorp geen andere waarde dan een (hopelijk) mooie foto. De Fotograaf krijgt daarentegen, net als de Ziener maar dan een dag later, de rol van de gefotografeerde speler te horen.
+
+Daarna breekt de Dromenvanger, en gaat zijn magie voorgoed verloren.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
+  id: "de-verdwaalde-wolf",
+  name: "De Verdwaalde Wolf",
+  image: "images/De Verdwaalde Wolf.png",
+  alliance: "Weerwolf",
+  types: ["Nieuw", "Toevoegend", "Onzeker", "Transformatie"],
+  description: `Zijn roedel kwijt, ziels alleen, zoekend naar wat hij is verloren. Terwijl de andere wolven samen jagen, dwaalt hij door Whatsapperdam, hopend ooit zijn eigen soort terug te vinden.
+
+Elke nacht, tussen 20:00 en 09:00, mag de Verdwaalde Wolf via een direct bericht aan de GM een speler bezoeken.
+
+Bezoekt hij een weerwolf, dan voegt hij zich direct bij de roedel. Vanaf dat moment krijgt hij toegang tot de wolvenchat en stemt hij mee over de wolvenaanval.
+
+Tot die tijd weten de weerwolven niet wie de Verdwaalde Wolf is en weet hij zelf ook niet wie de weerwolven zijn. Wel behoort hij vanaf het begin tot de alliantie van de weerwolven en telt hij gewoon mee voor het aantal wolven in het spel.
+
+Bezoekt de Verdwaalde Wolf een weerwolf die diezelfde nacht zou sterven, dan voegt hij zich alsnog bij de roedel voordat deze overlijdt.
+
+Door de Ziener en de Vos wordt hij gezien als De Verdwaalde Wolf. Mocht hij de beslissende factor zijn bij een gelijke stand tussen burgers en weerwolven, dan winnen de weerwolven altijd.`,
+  isExpansionRole: false,
+  expansionKey: null
+},
+{
   id: "de-tongtovenaar",
   name: "De Tongtovenaar",
   image: "images/De Tongtovenaar.png",
@@ -1701,21 +1755,21 @@ Zolang er minstens een Boer in leven is, blijft het burgemeesterschap binnen de 
 Zijn er geen Boeren meer over, dan kan er geen nieuwe burgemeester meer worden aangewezen.`
 },
 {
-  id: "de-adelijke",
-  name: "De Adelijke",
-  image: "images/De Adelijke.png",
+  id: "de-adellijke",
+  name: "De Adellijke",
+  image: "images/De Adellijke.png",
   alliance: null,
   types: ["Uitbreiding", "Bijrol", "Nieuw"],
   isExpansionRole: true,
-  expansionKey: "de-adelijke-raad",
-  description: `De Adelijke is geen normale rol, maar een geheime bijrol die bovenop een bestaande rol kan worden uitgedeeld.
+  expansionKey: "de-adellijke-raad",
+  description: `De Adellijke is geen normale rol, maar een geheime bijrol die bovenop een bestaande rol kan worden uitgedeeld.
 
-Aan het begin van het spel bestaan er vier Adelijken. Zij zijn allemaal burgerlijk wanneer het spel start.
+Aan het begin van het spel bestaan er vier Adellijken. Zij zijn allemaal burgerlijk wanneer het spel start.
 
-Iedere nacht, tussen 20:00 en 09:00, mogen de Adelijken met elkaar spreken in hun eigen geheime groepsapp.
+Iedere nacht, tussen 20:00 en 09:00, mogen de Adellijken met elkaar spreken in hun eigen geheime groepsapp.
 
-Sterft een Adelijke, dan wijst hij een opvolger aan die zijn plaats in de Raad overneemt.
-Dit mag iedere speler zijn behalve een huidige Adelijke.
+Sterft een Adellijke, dan wijst hij een opvolger aan die zijn plaats in de Raad overneemt.
+Dit mag iedere speler zijn behalve een huidige Adellijke.
 
 De Raad mag niet bespreken wie hun opvolger wordt of suggesties doen voor mogelijke kandidaten.
 De keuze blijft volledig persoonlijk.

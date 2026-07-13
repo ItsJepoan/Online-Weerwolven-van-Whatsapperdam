@@ -7,7 +7,6 @@ const currentGameRoleIds = [
   "cupido",
   "de-dictator",
   "de-dodenbezweerder",
-  "de-dokter",
   "de-dorpsgek",
   "de-dorpsoudste",
   "de-genezer",
@@ -54,7 +53,6 @@ const currentGameRoleIds = [
   "de-weerwolf",
   "de-besmettelijke-raaf",
   "de-twee-gescheiden-gezusters",
-  "de-witte-weerwolf",
   "de-besmettelijke-oerwolf",
   "de-concierge",
   "de-glitterende-toverwolf",
@@ -73,7 +71,6 @@ const currentGameRoleIds = [
   "het-wolfsspook",
   "de-wolfsoudste",
   "de-wingman",
-  "de-onzekere-grenswachter",
   "de-klier",
   "de-omroeper",
   "de-premiejager",
@@ -88,12 +85,15 @@ const currentGameRoleIds = [
   "de-onderdrukte",
   "de-verlamde",
   "de-vermomde",
-  "het-sektelid"
+  "het-sektelid",
+  "de-droomwever",
+  "de-fotograaf",
+  "de-verdwaalde-wolf"
 ];
 
 const activeExpansionKeys = [
   "de-dorpsbrouwerij",
-  "de-adelijke-raad"
+  "de-adellijke-raad"
 ];
 
 const activeExpansionVariants = {};

@@ -131,8 +131,8 @@ Je mag jouw Talent claimen, verbergen, ontkennen, overdrijven of volledig verzin
 Net als bij rollen mag er over Talenten vrij worden gebluft. Of iemand de waarheid spreekt, blijft zoals altijd aan het dorp om uit te zoeken.`
 },
 {
-  key: "de-adelijke-raad",
-  name: "De Adelijke Raad",
+  key: "de-adellijke-raad",
+  name: "De Adellijke Raad",
   description: `Oude families, verborgen macht en gefluister achter gesloten deuren. Terwijl het dorp slaapt, vergadert de adel in stilte.
 
 Aan het begin van het spel bestaan er vier Adellijken. Zij zijn allemaal burgerlijk wanneer het spel start. Iedere nacht, tussen 20:00 en 09:00, mag de Adellijke Raad met elkaar spreken in hun eigen geheime groepsapp. Het grootste voordeel van de Raad is simpel: zij weten van elkaar dat zij bij toetreding burgerlijk waren.
