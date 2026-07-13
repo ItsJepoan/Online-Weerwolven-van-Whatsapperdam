@@ -16,7 +16,6 @@ const modalDescription = document.getElementById("modal-role-description");
 const allianceOrder = ["Burger", "Moordenaar", "Onafhankelijke", "Weerwolf"];
 
 const typeOrder = [
-  "Basis",
   "Toevoegend",
   "Uitbreiding",
   "Bijrol",
@@ -177,13 +176,6 @@ function sortRoles(roleList) {
 
     if (allianceCompare !== 0) {
       return allianceCompare;
-    }
-
-    const aIsBasis = a.types.includes("Basis");
-    const bIsBasis = b.types.includes("Basis");
-
-    if (aIsBasis !== bIsBasis) {
-      return aIsBasis ? -1 : 1;
     }
 
     return a.name.localeCompare(b.name, "nl");

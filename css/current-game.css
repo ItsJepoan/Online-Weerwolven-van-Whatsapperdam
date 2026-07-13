@@ -141,10 +141,15 @@
   border-radius: 14px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
+  box-sizing: border-box;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.current-role-card-basis {
+  border: 4px solid #000;
 }
 
 .current-role-image {

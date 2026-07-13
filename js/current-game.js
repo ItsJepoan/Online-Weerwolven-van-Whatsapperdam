@@ -37,6 +37,13 @@ const normalCurrentRoles = currentRoles.filter(
   (role) => !role.types.includes("Uitbreiding")
 );
 
+const currentGameBasisRoleIdSet = new Set([
+  ...(typeof currentGameBasisRoleIds !== "undefined" ? currentGameBasisRoleIds : []),
+  ...(typeof currentGameBasisWerewolfRoleId !== "undefined" && currentGameBasisWerewolfRoleId
+    ? [currentGameBasisWerewolfRoleId]
+    : [])
+]);
+
 const sectionOrder = [
   { key: "Burger", title: "Burgers" },
   { key: "Moordenaar", title: "Moordenaars" },
@@ -46,7 +53,7 @@ const sectionOrder = [
 ];
 
 function getRoleTypeRank(role) {
-  if (role.types.includes("Basis")) return 0;
+  if (currentGameBasisRoleIdSet.has(role.id)) return 0;
   if (role.types.includes("Toevoegend")) return 1;
   return 2;
 }
@@ -175,7 +182,7 @@ function closeModal() {
 
 function createRoleCard(role) {
   const card = document.createElement("article");
-  card.className = "current-role-card";
+  card.className = `current-role-card${currentGameBasisRoleIdSet.has(role.id) ? " current-role-card-basis" : ""}`;
   card.tabIndex = 0;
 
   card.innerHTML = `

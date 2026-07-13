@@ -100,6 +100,16 @@ const activeExpansionVariants = {};
 
 const excludedActiveExpansionRoleIds = [];
 
+const currentGameBasisRoleIds = [
+  "de-fotograaf",
+  "cupido",
+  "de-ridder-met-het-roestige-zwaard",
+  "de-smid",
+  "de-dorpsoudste"
+];
+
+const currentGameBasisWerewolfRoleId = "de-besmettelijke-oerwolf";
+
 const currentGameTalentNames = [];
 
 const currentGameExtraTalents = [];

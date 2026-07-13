@@ -33,20 +33,19 @@ const rulesSections = [
   {
     title: "Rolverdeling",
     content: [
-      "Binnen het spel zijn er voor burgers en weerwolven twee categorieën rollen: Basisrollen en Toevoegende rollen."
+      "Binnen een huidig spel kunnen een aantal rollen als basisrollen worden aangewezen. Deze rollen zijn gegarandeerd aanwezig en herkenbaar aan de zwarte rand om hun rolkaart."
     ],
     subSections: [
       {
         title: "Basisrollen",
         content: [
-          "De basisrollen zijn in ieder spel aanwezig. Deze vormen de vaste kern van zowel de burgers als de weerwolven."
+          "Basisrollen zijn niet langer altijd dezelfde rollen. Per spel kan worden gekozen welke vijf of zes burgerrollen gegarandeerd aanwezig zijn. Daarnaast kan één weerwolfrol als basisweerwolf worden aangewezen."
         ]
       },
       {
         title: "Toevoegende rollen",
         content: [
-          "Naast de basisrollen zijn er toevoegende rollen. Het totale aantal mogelijke toevoegende rollen ligt altijd hoger dan het aantal spelers. Het wordt niet bekendgemaakt welke en hoeveel van deze rollen daadwerkelijk in het spel zitten. Dit creëert ruimte voor bluffen, misleiding en strategisch spel, voor zowel burgers als weerwolven.",
-          "Binnen de toevoegende rollen kunnen bij de burgers ook basisrollen voorkomen. Dit betekent dat sommige rollen dubbel in het spel aanwezig kunnen zijn."
+          "Naast de basisrollen zijn er toevoegende rollen. Het totale aantal mogelijke toevoegende rollen ligt altijd hoger dan het aantal spelers. Het wordt niet bekendgemaakt welke en hoeveel van deze rollen daadwerkelijk in het spel zitten. Dit creëert ruimte voor bluffen, misleiding en strategisch spel, voor zowel burgers als weerwolven."
         ]
       },
       {
@@ -75,7 +74,6 @@ const rulesSections = [
       "Elke rol heeft één of meerdere types. Deze hebben geen directe invloed op de werking van de rol, maar helpen bij het begrijpen en indelen van de rollen."
     ],
     typeDefinitions: [
-      { name: "Basis", description: "Standaard in elk spel" },
       { name: "Toevoegend", description: "Mogelijk in elk spel" },
       { name: "Uitbreiding", description: "Alleen actief wanneer een uitbreiding wordt gebruikt" },
       { name: "Bijrol", description: "Een rol bovenop je normale rol, zoals Geliefde of Burgemeester" },
