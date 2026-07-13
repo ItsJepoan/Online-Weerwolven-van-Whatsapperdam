@@ -975,7 +975,7 @@ const roles = [
     image: "images/De Droomwever.png",
     alliance: "Burger",
     types: ["Nieuw", "Toevoegend", "Informatie", "Effect"],
-    description: "Terwijl het dorp slaapt, zit de Droomwever nog rustig aan het werk. Draad voor draad weeft hij een Dromenvanger, gevuld met de fluisteringen van de nacht.\n\nElke nacht, tussen 20:00 en 09:00, maakt de Droomwever een Dromenvanger. Deze mag hij via een direct bericht aan de GM geven aan een speler naar keuze, ook aan zichzelf.\n\nDe Dromenvanger vangt alles op wat zich die nacht rondom zijn drager afspeelt. De volgende ochtend krijgt deze speler te horen door wie hij die nacht is bezocht.",
+    description: "Terwijl het dorp slaapt, zit de Droomwever nog rustig aan het werk. Draad voor draad weeft hij een Dromenvanger, gevuld met de fluisteringen van de nacht.\n\nElke nacht, tussen 20:00 en 09:00, maakt de Droomwever een Dromenvanger. Deze mag hij via een direct bericht aan de GM geven aan een speler naar keuze, ook aan zichzelf.\n\nDe Dromenvanger vangt alles op wat zich die nacht rondom zijn drager afspeelt. De volgende ochtend krijgt deze speler te horen door wie hij die nacht is bezocht.\n\nDaarna breekt de Dromenvanger, en gaat zijn magie voorgoed verloren.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -985,7 +985,7 @@ const roles = [
     image: "images/De Fotograaf.png",
     alliance: "Burger",
     types: ["Nieuw", "Toevoegend", "Informatie", "Aankondiging"],
-    description: "Altijd op zoek naar het perfecte plaatje. Terwijl de rest van het dorp bezig is met overleven, probeert de Fotograaf de mooiste herinneringen van Whatsapperdam vast te leggen.\n\nElke nacht, tussen 20:00 en 09:00, mag de Fotograaf via een direct bericht aan de GM een foto maken van een speler.\n\nDeze speler krijgt vervolgens tot 20:00 de tijd om een foto te bezorgen. Dit is natuurlijk niet verplicht een foto van henzelf; voor de mensen met cameraschuwheid of fotofobie mag dit van alles zijn. Voor de rest geeft het juist alle artistieke vrijheid. De foto wordt wel eerst gecontroleerd door de GM.\n\nOm 20:00, na de brandstapel, wordt met de tekst \"De Fotograaf heeft vannacht een foto gemaakt van...\" de foto aangekondigd.\n\nVerder heeft dit voor het dorp geen andere waarde dan een (hopelijk) mooie foto. De Fotograaf krijgt daarentegen, net als de Ziener maar dan een dag later, de rol van de gefotografeerde speler te horen.\n\nDaarna breekt de Dromenvanger, en gaat zijn magie voorgoed verloren.",
+    description: "Altijd op zoek naar het perfecte plaatje. Terwijl de rest van het dorp bezig is met overleven, probeert de Fotograaf de mooiste herinneringen van Whatsapperdam vast te leggen.\n\nElke nacht, tussen 20:00 en 09:00, mag de Fotograaf via een direct bericht aan de GM een foto maken van een speler.\n\nDeze speler krijgt vervolgens tot 20:00 de tijd om een foto te bezorgen. Dit is natuurlijk niet verplicht een foto van henzelf; voor de mensen met cameraschuwheid of fotofobie mag dit van alles zijn. Voor de rest geeft het juist alle artistieke vrijheid. De foto wordt wel eerst gecontroleerd door de GM.\n\nOm 20:00, na de brandstapel, wordt met de tekst \"De Fotograaf heeft vannacht een foto gemaakt van...\" de foto aangekondigd.\n\nVerder heeft dit voor het dorp geen andere waarde dan een (hopelijk) mooie foto. De Fotograaf krijgt daarentegen, net als de Ziener maar dan een dag later, de rol van de gefotografeerde speler te horen.",
     isExpansionRole: false,
     expansionKey: null
   },
