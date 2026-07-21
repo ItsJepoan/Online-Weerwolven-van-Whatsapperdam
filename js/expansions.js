@@ -7,6 +7,7 @@ const modalBackdrop = document.querySelector(".role-modal-backdrop");
 const modalName = document.getElementById("modal-role-name");
 const modalImage = document.getElementById("modal-role-image");
 const modalAlliance = document.getElementById("modal-role-alliance");
+const modalOrigin = document.getElementById("modal-role-origin");
 const modalTypes = document.getElementById("modal-role-types");
 const modalDescription = document.getElementById("modal-role-description");
 
@@ -87,6 +88,8 @@ function openModal(role) {
     ? `<span class="badge">${role.alliance}</span>`
     : `<span class="badge">Geen</span>`;
 
+  modalOrigin.innerHTML = `<span class="badge">${role.origin || "Onbekend"}</span>`;
+
   modalTypes.innerHTML = createBadges(role.types);
   modalDescription.textContent = role.description;
 
@@ -139,14 +142,23 @@ function createRoleCard(role) {
         <h3 class="role-name">${role.name}</h3>
 
         <div class="role-meta">
-          <div class="meta-block">
-            <strong>Alliantie</strong>
-            <div class="badges">
-              ${
-                role.alliance
-                  ? `<span class="badge">${role.alliance}</span>`
-                  : `<span class="badge">Geen</span>`
-              }
+          <div class="role-primary-meta">
+            <div class="meta-block">
+              <strong>Alliantie</strong>
+              <div class="badges">
+                ${
+                  role.alliance
+                    ? `<span class="badge">${role.alliance}</span>`
+                    : `<span class="badge">Geen</span>`
+                }
+              </div>
+            </div>
+
+            <div class="meta-block">
+              <strong>Afkomst</strong>
+              <div class="badges">
+                <span class="badge">${role.origin || "Onbekend"}</span>
+              </div>
             </div>
           </div>
 

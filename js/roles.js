@@ -6,14 +6,24 @@ const roleSearch = document.getElementById("role-search");
 const modal = document.getElementById("role-modal");
 const modalClose = document.getElementById("role-modal-close");
 const modalBackdrop = document.querySelector(".role-modal-backdrop");
+const modalPrevious = document.getElementById("role-modal-previous");
+const modalNext = document.getElementById("role-modal-next");
 
 const modalName = document.getElementById("modal-role-name");
 const modalImage = document.getElementById("modal-role-image");
 const modalAlliance = document.getElementById("modal-role-alliance");
+const modalOrigin = document.getElementById("modal-role-origin");
 const modalTypes = document.getElementById("modal-role-types");
 const modalDescription = document.getElementById("modal-role-description");
 
-const allianceOrder = ["Burger", "Moordenaar", "Onafhankelijke", "Weerwolf"];
+const allianceOrder = [
+  "Burger",
+  "Moordenaar",
+  "Onafhankelijke",
+  "Weerwolf",
+  "Titaan",
+  "Onduidelijk"
+];
 
 const typeOrder = [
   "Toevoegend",
@@ -47,11 +57,11 @@ const typeOrder = [
   "Titaan"
 ];
 
-const standardRoles = roles.filter(
-  (role) => !role.types.includes("Uitbreiding")
-);
+const standardRoles = roles;
 
 let lockedScrollY = 0;
+let visibleRoleSequence = [];
+let activeRoleIndex = -1;
 
 function getUniqueAlliances(roleList) {
   return [...new Set(roleList.map((role) => role.alliance).filter(Boolean))].sort((a, b) => {
@@ -135,6 +145,11 @@ function unlockPageScroll() {
 }
 
 function openModal(role) {
+  const isOpening = modal.classList.contains("hidden");
+  activeRoleIndex = visibleRoleSequence.findIndex(
+    (visibleRole) => visibleRole.id === role.id
+  );
+
   modalName.textContent = role.name;
   modalImage.onerror = () => {
     modalImage.onerror = null;
@@ -147,11 +162,19 @@ function openModal(role) {
     ? `<span class="badge">${role.alliance}</span>`
     : `<span class="badge">Geen</span>`;
 
+  modalOrigin.innerHTML = `<span class="badge">${role.origin || "Onbekend"}</span>`;
+
   modalTypes.innerHTML = createBadges(role.types);
   modalDescription.textContent = role.description;
 
+  modalPrevious.hidden = activeRoleIndex <= 0;
+  modalNext.hidden =
+    activeRoleIndex === -1 || activeRoleIndex >= visibleRoleSequence.length - 1;
+
   modal.classList.remove("hidden");
-  lockPageScroll();
+  if (isOpening) {
+    lockPageScroll();
+  }
 
   const scrollContainer = modal.querySelector(".role-modal-text");
   if (scrollContainer) {
@@ -161,7 +184,18 @@ function openModal(role) {
 
 function closeModal() {
   modal.classList.add("hidden");
+  activeRoleIndex = -1;
   unlockPageScroll();
+}
+
+function showAdjacentRole(direction) {
+  const nextIndex = activeRoleIndex + direction;
+
+  if (nextIndex < 0 || nextIndex >= visibleRoleSequence.length) {
+    return;
+  }
+
+  openModal(visibleRoleSequence[nextIndex]);
 }
 
 function sortRoles(roleList) {
@@ -187,6 +221,8 @@ function getAllianceTitle(alliance) {
   if (alliance === "Moordenaar") return "Moordenaars";
   if (alliance === "Onafhankelijke") return "Onafhankelijken";
   if (alliance === "Weerwolf") return "Weerwolven";
+  if (alliance === "Titaan") return "Titanen";
+  if (alliance === "Onduidelijk") return "Onduidelijke alliantie";
   return alliance;
 }
 
@@ -201,14 +237,23 @@ function createRoleCard(role) {
         <h3 class="role-name">${role.name}</h3>
 
         <div class="role-meta">
-          <div class="meta-block">
-            <strong>Alliantie</strong>
-            <div class="badges">
-              ${
-                role.alliance
-                  ? `<span class="badge">${role.alliance}</span>`
-                  : `<span class="badge">Geen</span>`
-              }
+          <div class="role-primary-meta">
+            <div class="meta-block">
+              <strong>Alliantie</strong>
+              <div class="badges">
+                ${
+                  role.alliance
+                    ? `<span class="badge">${role.alliance}</span>`
+                    : `<span class="badge">Geen</span>`
+                }
+              </div>
+            </div>
+
+            <div class="meta-block">
+              <strong>Afkomst</strong>
+              <div class="badges">
+                <span class="badge">${role.origin || "Onbekend"}</span>
+              </div>
             </div>
           </div>
 
@@ -251,6 +296,7 @@ function renderRoles() {
   rolesList.innerHTML = "";
 
   if (filteredRoles.length === 0) {
+    visibleRoleSequence = [];
     rolesList.innerHTML = `
       <div class="empty-message">
         Geen rollen gevonden met deze filters of zoekopdracht.
@@ -260,6 +306,7 @@ function renderRoles() {
   }
 
   const sorted = sortRoles(filteredRoles);
+  visibleRoleSequence = sorted;
 
   allianceOrder.forEach((alliance) => {
     const rolesPerAlliance = sorted.filter(
@@ -321,9 +368,23 @@ roleSearch.addEventListener("input", renderRoles);
 
 modalClose.onclick = closeModal;
 modalBackdrop.onclick = closeModal;
+modalPrevious.onclick = () => showAdjacentRole(-1);
+modalNext.onclick = () => showAdjacentRole(1);
 
 document.addEventListener("keydown", (event) => {
+  if (modal.classList.contains("hidden")) return;
+
   if (event.key === "Escape") {
     closeModal();
+  }
+
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    showAdjacentRole(-1);
+  }
+
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    showAdjacentRole(1);
   }
 });

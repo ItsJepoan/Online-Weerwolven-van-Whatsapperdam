@@ -130,6 +130,27 @@
   gap: 0.75rem;
 }
 
+.role-primary-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.role-primary-meta .meta-block + .meta-block {
+  border-left: 1px solid var(--border);
+  padding-left: 0.75rem;
+}
+
+.role-meta > .meta-block {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.role-modal-text > .meta-block + .meta-block {
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+}
+
 .meta-block {
   display: flex;
   flex-direction: column;

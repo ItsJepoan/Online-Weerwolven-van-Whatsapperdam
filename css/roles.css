@@ -149,6 +149,27 @@
   gap: 0.6rem;
 }
 
+.role-primary-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.role-primary-meta .meta-block + .meta-block {
+  border-left: 1px solid var(--border);
+  padding-left: 0.6rem;
+}
+
+.role-meta > .meta-block {
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+}
+
+.role-modal-text > .meta-block + .meta-block {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
 .meta-block {
   display: flex;
   flex-direction: column;
@@ -223,6 +244,40 @@
   background: none;
   cursor: pointer;
   z-index: 3;
+}
+
+.role-modal-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+  font-size: 1.25rem;
+  z-index: 3;
+}
+
+.role-modal-navigation:hover {
+  background: var(--surface-alt);
+}
+
+.role-modal-navigation[hidden] {
+  display: none;
+}
+
+.role-modal-previous {
+  left: 0.75rem;
+}
+
+.role-modal-next {
+  right: 0.75rem;
 }
 
 .role-modal-body {
@@ -353,6 +408,20 @@
   .role-modal-close {
     top: 8px;
     right: 10px;
+  }
+
+  .role-modal-navigation {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1rem;
+  }
+
+  .role-modal-previous {
+    left: 0.35rem;
+  }
+
+  .role-modal-next {
+    right: 0.35rem;
   }
 }
 
