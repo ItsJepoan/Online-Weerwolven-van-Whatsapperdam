@@ -171,7 +171,46 @@ In de **Back to Basics: Whatsapperdam Editie** worden alleen de rollen gebruikt 
 
 Geen moderne uitbreidingen, geen ingewikkelde combinaties. Gewoon de rollen waarmee het allemaal begon.
 
-Perfect voor een nostalgisch potje, of om te ervaren hoe de eerste spellen van Whatsapperdam eruitzagen.`
+Perfect voor een nostalgisch potje, of om te ervaren hoe de eerste spellen van Whatsapperdam eruitzagen.`,
+  activeRoleIds: [
+    "de-ziener",
+    "cupido",
+    "de-jager",
+    "het-onschuldige-sletje",
+    "de-dorpsgek",
+    "de-dorpsoudste",
+    "de-zondebok",
+    "de-genezer",
+    "het-medium",
+    "de-grafrover",
+    "de-burger",
+    "de-burgemeester",
+    "de-kleine-wilde",
+    "de-weerwolf",
+    "de-verdoemde",
+    "de-dokter",
+    "de-dictator",
+    "de-hypocriet",
+    "de-onderduiker",
+    "de-samurai",
+    "de-stotterende-raadsheer",
+    "de-veteraan",
+    "de-verwarde-ziener",
+    "de-vos",
+    "de-waakengel",
+    "de-wachter",
+    "het-toegewijde-dienstmeisje",
+    "de-fluitspeler",
+    "de-verloren-ziel",
+    "de-besmettelijke-raaf",
+    "de-heks",
+    "de-concierge",
+    "de-jachtwolf",
+    "de-onderdrukker",
+    "de-slager",
+    "de-wolf-in-schaapskleren",
+    "de-verkenner"
+  ]
 },
 {
   key: "back-to-basics-wakkerdam-editie",
@@ -191,6 +230,40 @@ Verwacht een nostalgisch spel waarin bekende rollen en oude spelmechanieken weer
 * Het burgemeesterschap overdragen in goed of slecht vertrouwen.
 * De cirkelzitting met je linker- en rechterbuurman.
 
-En misschien zelfs een aantal bekende rollen die wij opnieuw hebben vormgegeven voor de online versie.`
+En misschien zelfs een aantal bekende rollen die wij opnieuw hebben vormgegeven voor de online versie.`,
+  activeRoleIds: [
+    "de-burger",
+    "de-weerwolf",
+    "de-ziener",
+    "het-onschuldige-meisje-wakkerdam",
+    "de-jager",
+    "cupido",
+    "de-heks-wakkerdam",
+    "de-burgemeester-wakkerdam",
+    "de-dief-wakkerdam",
+    "de-dorpsgek",
+    "de-dorpsoudste",
+    "de-zondebok",
+    "de-genezer",
+    "de-fluitspeler",
+    "de-burgerlijke-burger",
+    "de-twee-gezusters-wakkerdam",
+    "de-drie-gebroeders-wakkerdam",
+    "de-engel-wakkerdam",
+    "de-stotterende-raadsheer",
+    "de-ridder-met-het-roestige-zwaard",
+    "de-toneelspeler",
+    "het-toegewijde-dienstmeisje",
+    "de-vos-wakkerdam",
+    "titus-en-zijn-dansende-beer-wakkerdam",
+    "de-verschrikkelijke-sektarier-wakkerdam",
+    "de-kleine-wilde",
+    "de-wolfshond-wakkerdam",
+    "de-witte-weerwolf",
+    "de-grote-boze-wolf-wakkerdam",
+    "de-besmettelijke-oerwolf",
+    "de-zigeunerin-wakkerdam",
+    "de-omroeper-wakkerdam"
+  ]
 }
 ];

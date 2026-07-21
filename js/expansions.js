@@ -209,11 +209,13 @@ function renderExpansions() {
     const section = document.createElement("section");
     section.className = "expansion-card";
 
+    const configuredRoleIds = new Set(expansion.roleIds || []);
+
     const expansionRoles = sortExpansionRoles(
       roles.filter(
         (role) =>
-          role.isExpansionRole &&
-          role.expansionKey === expansion.key
+          configuredRoleIds.has(role.id) ||
+          (role.isExpansionRole && role.expansionKey === expansion.key)
       )
     );
 

@@ -17,11 +17,31 @@ let lockedScrollY = 0;
 
 const currentRoleIdSet = new Set(currentGameRoleIds);
 
+const configuredActiveExpansionRoleIds = new Set(
+  expansions
+    .filter((expansion) => activeExpansionKeys.includes(expansion.key))
+    .flatMap((expansion) => [
+      ...(expansion.roleIds || []),
+      ...(expansion.activeRoleIds || [])
+    ])
+);
+
+const activeExpansionKeysWithAutomaticRoles = new Set(
+  expansions
+    .filter(
+      (expansion) =>
+        activeExpansionKeys.includes(expansion.key) &&
+        !Array.isArray(expansion.activeRoleIds)
+    )
+    .map((expansion) => expansion.key)
+);
+
 const activeExpansionRoleIds = roles
   .filter(
     (role) =>
-      role.expansionKey &&
-      activeExpansionKeys.includes(role.expansionKey) &&
+      ((role.expansionKey &&
+        activeExpansionKeysWithAutomaticRoles.has(role.expansionKey)) ||
+        configuredActiveExpansionRoleIds.has(role.id)) &&
       !(typeof excludedActiveExpansionRoleIds !== "undefined" &&
         excludedActiveExpansionRoleIds.includes(role.id))
   )
@@ -35,7 +55,9 @@ const allActiveRoleIds = new Set([
 const currentRoles = roles.filter((role) => allActiveRoleIds.has(role.id));
 
 const normalCurrentRoles = currentRoles.filter(
-  (role) => !role.types.includes("Uitbreiding")
+  (role) =>
+    !role.types.includes("Uitbreiding") ||
+    configuredActiveExpansionRoleIds.has(role.id)
 );
 
 const currentGameBasisRoleIdSet = new Set([
@@ -50,6 +72,8 @@ const sectionOrder = [
   { key: "Moordenaar", title: "Moordenaars" },
   { key: "Onafhankelijke", title: "Onafhankelijken" },
   { key: "Weerwolf", title: "Weerwolven" },
+  { key: "Titaan", title: "Titanen" },
+  { key: "Onduidelijk", title: "Onduidelijke alliantie" },
   { key: "Bijrol", title: "Bijrollen" }
 ];
 
@@ -342,6 +366,8 @@ function renderRoleSections() {
     Moordenaar: normalCurrentRoles.filter((role) => role.alliance === "Moordenaar"),
     Onafhankelijke: normalCurrentRoles.filter((role) => role.alliance === "Onafhankelijke"),
     Weerwolf: normalCurrentRoles.filter((role) => role.alliance === "Weerwolf"),
+    Titaan: normalCurrentRoles.filter((role) => role.alliance === "Titaan"),
+    Onduidelijk: normalCurrentRoles.filter((role) => role.alliance === "Onduidelijk"),
     Bijrol: normalCurrentRoles.filter((role) => role.alliance === null)
   };
 
@@ -397,13 +423,16 @@ function renderActiveExpansions() {
   }
 
   activeExpansions.forEach((expansion) => {
-    const relatedRoles = sortRoles(
-      roles.filter((role) =>
-        role.expansionKey === expansion.key &&
-        !(typeof excludedActiveExpansionRoleIds !== "undefined" &&
-          excludedActiveExpansionRoleIds.includes(role.id))
-      )
-    );
+    const relatedRoles = Array.isArray(expansion.activeRoleIds)
+      ? []
+      : sortRoles(
+          roles.filter((role) =>
+            ((role.expansionKey === expansion.key) ||
+              (expansion.roleIds || []).includes(role.id)) &&
+            !(typeof excludedActiveExpansionRoleIds !== "undefined" &&
+              excludedActiveExpansionRoleIds.includes(role.id))
+          )
+        );
 
     const card = document.createElement("section");
     card.className = "current-expansion-card";

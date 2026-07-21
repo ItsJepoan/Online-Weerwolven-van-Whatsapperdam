@@ -1191,7 +1191,7 @@ const roles = [
     id: "de-omroeper-wakkerdam",
     name: "De Omroeper Wakkerdam",
     image: "images/De Omroeper Wakkerdam.png",
-    alliance: "Burger",
+    alliance: null,
     origin: "Wakkerdam",
     types: ["Nieuw", "Bijrol", "Aankondiging"],
     description: "Uitleg volgt.",

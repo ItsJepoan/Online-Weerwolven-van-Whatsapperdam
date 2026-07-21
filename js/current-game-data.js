@@ -1,114 +1,16 @@
-const currentGameRoleIds = [
-  "de-agent",
-  "de-alwetende-uil",
-  "de-bommenwerper",
-  "de-burger",
-  "de-burgerlijke-burger",
-  "cupido",
-  "de-dictator",
-  "de-dodenbezweerder",
-  "de-dorpsgek",
-  "de-dorpsoudste",
-  "de-genezer",
-  "de-grafrover",
-  "de-husselaar",
-  "de-hypocriet",
-  "de-jager",
-  "de-jaloerse-ex",
-  "de-journalist",
-  "de-leerling",
-  "de-onderduiker",
-  "de-papegaai",
-  "de-rebel",
-  "de-ridder-met-het-roestige-zwaard",
-  "de-samurai",
-  "de-siamese-tweeling",
-  "de-smid",
-  "de-stalker",
-  "de-stotterende-raadsheer",
-  "de-toneelspeler",
-  "de-twijfelaar",
-  "de-valse-erfgenaam",
-  "de-verkenner",
-  "de-veteraan",
-  "de-verwarde-ziener",
-  "de-vos",
-  "de-vriend",
-  "de-waakengel",
-  "de-wachter",
-  "de-wethouder",
-  "de-ziener",
-  "de-zondebok",
-  "het-toegewijde-dienstmeisje",
-  "het-zwarte-schaap",
-  "harige-harry",
-  "het-medium",
-  "het-onschuldige-sletje",
-  "de-fluitspeler",
-  "de-pyromaan",
-  "de-verloren-ziel",
-  "de-heks",
-  "de-kleine-wilde",
-  "de-onderdrukker",
-  "de-weerwolf",
-  "de-besmettelijke-raaf",
-  "de-twee-gescheiden-gezusters",
-  "de-besmettelijke-oerwolf",
-  "de-concierge",
-  "de-glitterende-toverwolf",
-  "de-jachtwolf",
-  "de-slager",
-  "de-verdoemde",
-  "de-welp",
-  "de-wolf-in-schaapskleren",
-  "de-wolf-in-winterslaap",
-  "de-wolvenmeester",
-  "de-burgemeester",
-  "de-geliefde",
-  "de-verlammer",
-  "de-feestwolf",
-  "de-illusionist",
-  "het-wolfsspook",
-  "de-wolfsoudste",
-  "de-wingman",
-  "de-klier",
-  "de-omroeper",
-  "de-premiejager",
-  "de-vervloekte-wolf",
-  "de-boze-wolf",
-  "de-wolfsschrijver",
-  "de-charmante-dealer",
-  "de-aasgier",
-  "de-sekteleider",
-  "de-betoverde",
-  "de-herrezene",
-  "de-onderdrukte",
-  "de-verlamde",
-  "de-vermomde",
-  "het-sektelid",
-  "de-droomwever",
-  "de-fotograaf",
-  "de-verdwaalde-wolf"
-];
+const currentGameRoleIds = [];
 
 const activeExpansionKeys = [
-  "de-dorpsbrouwerij",
-  "de-adellijke-raad"
+  "back-to-basics-whatsapperdam-editie"
 ];
 
 const activeExpansionVariants = {};
 
 const excludedActiveExpansionRoleIds = [];
 
-const currentGameBasisRoleIds = [
-  "de-fotograaf",
-  "cupido",
-  "de-ridder-met-het-roestige-zwaard",
-  "de-smid",
-  "de-dorpsoudste"
-];
+const currentGameBasisRoleIds = [];
 
-const currentGameBasisWerewolfRoleId = "de-besmettelijke-oerwolf";
+const currentGameBasisWerewolfRoleId = null;
 
 const currentGameTalentNames = [];
 
