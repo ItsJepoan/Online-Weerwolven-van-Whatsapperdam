@@ -479,7 +479,7 @@ const roles = [
     alliance: "Burger",
     origin: "Whatsapperdam",
     types: ["Toevoegend", "Misinformatie"],
-    description: "Bij Harry’s geboorte zat er al een grote pluk haar op zijn hoofd, en begonnen de baardharen al bijna door te komen. Zijn hele leven is hij bedekt geweest met een dikke bos haar over zijn hele lichaam… misschien door de afkomst van een van zijn ouders? Niemand weet het zeker.\n\nMaar Harry heeft daar wel een probleempje mee.\n\nZijn status in het dorp is… gecompliceerd.\n\nSommige rollen raken volledig in de war van die enorme berg haar van hem. Iedereen zal hem dan ook zien als wolf. Altijd. Ongeacht wat hij werkelijk is.\n\nTenzij hij betoverd is…",
+    description: "Bij Harry’s geboorte zat er al een grote pluk haar op zijn hoofd, en begonnen de baardharen al bijna door te komen. Zijn hele leven is hij bedekt geweest met een dikke bos haar over zijn hele lichaam… misschien door de afkomst van een van zijn ouders? Niemand weet het zeker.\n\nMaar Harry heeft daar wel een probleempje mee.\n\nZijn status in het dorp is… gecompliceerd.\n\nSommige rollen raken volledig in de war van die enorme berg haar van hem. Iedereen zal hem dan ook zien als wolf. Altijd. Ongeacht wat hij werkelijk is.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -622,7 +622,7 @@ const roles = [
     alliance: "Weerwolf",
     origin: "Wakkerdam",
     types: ["Toevoegend", "Transformatie"],
-    description: "Oud, sluw en doordrenkt met een oeroude vloek beweegt deze wolf zich tussen de roedel. Voor de buitenwereld is hij gewoon een weerwolf: hij overlegt ’s nachts met de andere wolven en stemt mee over hun prooi.\n\nPas wanneer één van zijn medewolven het lootje heeft gelegd, mag de Besmettelijke Oerwolf zijn ware kracht gebruiken. Eénmaal per spel kan hij, nadat de weerwolven een burger hebben gekozen, in het geheim besluiten dat deze speler niet sterft maar wordt besmet. Het slachtoffer ontwaakt dan als nieuwe weerwolf en sluit zich bij de roedel aan. Had deze speler een speciale nachtelijke kracht, dan behoudt hij die.\n\nDe Besmettelijke Oerwolf mag onder geen enkel beding laten merken dat hij deze rol heeft of dat er een nieuwe wolf is gecreëerd. Hij houdt de aandacht liever op de andere wolven en doet er zelfs goed aan zich voor te doen als een andere wolvenrol.",
+    description: "Oud, sluw en doordrenkt met een oeroude vloek beweegt deze wolf zich tussen de roedel. Voor de buitenwereld is hij gewoon een weerwolf: hij overlegt ’s nachts met de andere wolven en stemt mee over hun prooi.\n\nPas wanneer één van zijn medewolven het lootje heeft gelegd, mag de Besmettelijke Oerwolf zijn ware kracht gebruiken. Eénmaal per spel kan hij, nadat de weerwolven een burger hebben gekozen, in het geheim besluiten dat deze speler niet sterft maar wordt besmet. Het slachtoffer ontwaakt dan als nieuwe weerwolf en sluit zich bij de roedel aan. Had deze speler een speciale nachtelijke kracht, dan behoudt hij die. **Zijn rolnaam verandert daarbij naar** ***Wolvige <Rol>***.\n\nDe Besmettelijke Oerwolf mag onder geen enkel beding laten merken dat hij deze rol heeft of dat er een nieuwe wolf is gecreëerd. Hij houdt de aandacht liever op de andere wolven en doet er zelfs goed aan zich voor te doen als een andere wolvenrol.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -732,7 +732,7 @@ const roles = [
     alliance: "Burger",
     origin: "Whatsapperdam",
     types: ["Uitbreiding", "Dronken"],
-    description: "\"In de Dorpsbrouwerij staat Bob achter de tap van de ochtendbar. Met een glimlach en een vriendelijk woord begint hij de dag, maar hij ziet precies wie nét iets te veel drinkt. Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht en volgende dag dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.\nBob staat aan de kant van de burgers en gebruikt zijn drankjes om het dorp subtiel te helpen. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bob is zelf immuun voor dronkenschap. Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.",
+    description: "\In de Dorpsbrouwerij staat Bob achter de tap van de ochtendbar. Met een glimlach en een vriendelijk woord begint hij de dag, maar hij ziet precies wie nét iets te veel drinkt. Elke dag tussen 10:00 en 20:00 kiest hij één speler die die nacht en volgende dag dronken naar huis gaat. Een dronken speler kan verkeerde keuzes maken of vervormde informatie krijgen, zonder dat hij zelf merkt dat er iets mis is.\nBob staat aan de kant van de burgers en gebruikt zijn drankjes om het dorp subtiel te helpen. Hij mag niet twee dagen achter elkaar dezelfde speler kiezen. Bob is zelf immuun voor dronkenschap. Als Bob en Bert in dezelfde dag dezelfde speler kiezen, wordt deze tot comazuipen gebracht en zal die persoon die nacht sterven.",
     isExpansionRole: true,
     expansionKey: "de-dorpsbrouwerij"
   },
@@ -985,7 +985,7 @@ const roles = [
     alliance: "Onafhankelijke",
     origin: "Whatsapperdam",
     types: ["Dodelijk", "Invloedrijk", "Chaos", "Effect"],
-    description: "Woorden als gif, overtuiging als wapen. Langzaam groeit zijn invloed… tot het te laat is.\n\nDe Sekteleider is een onafhankelijke rol. Zijn doel is om als enige over te blijven, of samen met zijn overgebleven sekteleden.\n\nElke nacht, tussen 20:00 en 09:00, kan de Sekteleider via een direct bericht aan de GM één speler overtuigen om toe te treden tot zijn sekte. Deze speler behoudt zijn eigen rol, maar hoort vanaf dat moment bij de sekte.\n\nIn plaats van iemand te overtuigen, kan de Sekteleider er ook voor kiezen om één van zijn sekteleden op te offeren om een speler naar keuze te vermoorden.\n\nEen sekte kan uit maximaal 5 leden bestaan, exclusief de Sekteleider zelf.\n\nOverdag mag de Sekteleider, via de GM, privéberichten sturen naar zijn sekteleden.\n\nSterft de Sekteleider, dan valt de sekte uiteen en verdwijnen alle sekteleden.",
+    description: "Woorden als gif, overtuiging als wapen. Langzaam groeit zijn invloed… tot het te laat is.\n\nElke nacht, tussen 20:00 en 09:00, kan de Sekteleider via een direct bericht aan de GM één speler overtuigen om toe te treden tot zijn sekte. Deze speler behoudt zijn eigen rol, maar hoort vanaf dat moment bij de sekte.\n\nIn plaats van iemand te overtuigen, kan de Sekteleider er ook voor kiezen via de GM in berichtvorm één van zijn sekteleden opdracht te geven een moord te plegen op een speler naar keuze van de Sekteleider.\n\nHet gekozen sektelid mag deze opdracht accepteren of weigeren.\n\nAccepteert het sektelid de opdracht, dan vermoordt hij het aangewezen slachtoffer. Daarna mag het sektelid kiezen: trouw in de sekte blijven, of de sekte verlaten.\n\nWeigert het sektelid de opdracht, dan ligt zijn lot volledig in de handen van de Sekteleider. Verlaten kan hij de sekte op dat moment niet meer.\n\nEen sekte kan uit maximaal 5 leden bestaan.\n\nOverdag mag de Sekteleider, via de GM, privéberichten sturen naar zijn sekteleden.\n\nSterft de Sekteleider, dan valt de sekte uiteen en verdwijnen alle sekteleden.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -1073,7 +1073,7 @@ const roles = [
     alliance: "Burger",
     origin: "Whatsapperdam",
     types: ["Toevoegend", "Informatie", "Effect"],
-    description: "Terwijl het dorp slaapt, zit de Droomwever nog rustig aan het werk. Draad voor draad weeft hij een Dromenvanger, gevuld met de fluisteringen van de nacht.\n\nElke nacht, tussen 20:00 en 09:00, maakt de Droomwever een Dromenvanger. Deze mag hij via een direct bericht aan de GM geven aan een speler naar keuze, ook aan zichzelf.\n\nDe Dromenvanger vangt alles op wat zich die nacht rondom zijn drager afspeelt. De volgende ochtend krijgt deze speler te horen door wie hij die nacht is bezocht.\n\nDaarna breekt de Dromenvanger, en gaat zijn magie voorgoed verloren.",
+    description: "Terwijl het dorp slaapt, zit de Droomwever nog rustig aan het werk. Draad voor draad weeft hij een Dromenvanger, gevuld met de fluisteringen van de nacht.\n\nElke nacht, tussen 20:00 en 09:00, maakt de Droomwever een Dromenvanger. Deze mag hij via een direct bericht aan de GM geven aan een speler naar keuze, ook aan zichzelf.\n\nDe Dromenvanger vangt alles op wat zich die nacht rondom zijn drager afspeelt. De volgende ochtend krijgt deze speler te horen door wie hij die nacht is bezocht.\n\n**De Droomwever zelf blijft echter verborgen. Wanneer hij een Dromenvanger bezorgt, wordt hij niet als bezoeker gezien.**\n\nDaarna breekt de Dromenvanger, en gaat zijn magie voorgoed verloren.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -1095,7 +1095,7 @@ const roles = [
     alliance: "Weerwolf",
     origin: "Whatsapperdam",
     types: ["Toevoegend", "Onzeker", "Transformatie"],
-    description: "Zijn roedel kwijt, ziels alleen, zoekend naar wat hij is verloren. Terwijl de andere wolven samen jagen, dwaalt hij door Whatsapperdam, hopend ooit zijn eigen soort terug te vinden.\n\nElke nacht, tussen 20:00 en 09:00, mag de Verdwaalde Wolf via een direct bericht aan de GM een speler bezoeken.\n\nBezoekt hij een weerwolf, dan voegt hij zich direct bij de roedel. Vanaf dat moment krijgt hij toegang tot de wolvenchat en stemt hij mee over de wolvenaanval.\n\nTot die tijd weten de weerwolven niet wie de Verdwaalde Wolf is en weet hij zelf ook niet wie de weerwolven zijn. Wel behoort hij vanaf het begin tot de alliantie van de weerwolven en telt hij gewoon mee voor het aantal wolven in het spel.\n\nBezoekt de Verdwaalde Wolf een weerwolf die diezelfde nacht zou sterven, dan voegt hij zich alsnog bij de roedel voordat deze overlijdt.\n\nDoor de Ziener en de Vos wordt hij gezien als De Verdwaalde Wolf. Mocht hij de beslissende factor zijn bij een gelijke stand tussen burgers en weerwolven, dan winnen de weerwolven altijd.",
+    description: "Zijn roedel kwijt, ziels alleen, zoekend naar wat hij is verloren. Terwijl de andere wolven samen jagen, dwaalt hij door Whatsapperdam, hopend ooit zijn eigen soort terug te vinden.\n\nElke nacht, tussen 20:00 en 09:00, mag de Verdwaalde Wolf via een direct bericht aan de GM een speler bezoeken.\n\nBezoekt hij een weerwolf, dan voegt hij zich direct bij de roedel. Vanaf dat moment krijgt hij toegang tot de wolvenchat en stemt hij mee over de wolvenaanval.\n\nTot die tijd weten de weerwolven niet wie de Verdwaalde Wolf is en weet hij zelf ook niet wie de weerwolven zijn. **Hij behoort vanaf het begin tot de alliantie van de weerwolven en wordt door de Ziener en de Vos gezien als De Verdwaalde Wolf. Zolang hij nog niet bij de roedel is aangesloten, telt hij niet mee voor het aantal levende weerwolven.**\n\n**Mocht de Verdwaalde Wolf als enige overgebleven lid van de alliantie van de weerwolven zijn, dan vormt hij vanaf dat moment alleen de volledige wolvenroedel en is hij de laatste vijand van het dorp.**\n\nBezoekt de Verdwaalde Wolf een weerwolf die diezelfde nacht zou sterven, dan voegt hij zich alsnog bij de roedel voordat deze overlijdt.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -1105,7 +1105,7 @@ const roles = [
     image: "images/De Tongtovenaar.png",
     alliance: "Burger",
     origin: "Whatsapperdam",
-    types: ["Invloedrijk", "Chaos"],
+    types: ["Uitbreiding", "Invloedrijk", "Chaos"],
     description: "Met natte staf en vervloekte tong heerst de Tongtovenaar over de woorden van Whatsapperdam 👅\n\nWaar hij verschijnt, verandert taal in chaos. Geen gesprek blijft veilig, geen zin blijft normaal. Het dorp buigt zich dagelijks onder nieuwe vreemde spreuken terwijl iedereen wanhopig probeert elkaar nog te begrijpen.\n\nDe Tongtovenaar hoort bij de burgers.\n\nTussen 10:00 en 09:00 mag hij via een direct bericht aan de GM één Tongspreuk kiezen die actief wordt over het dorp. Hij mag kiezen uit bestaande spreuken of zelf een nieuwe bedenken, zolang deze eerst door de GM wordt goedgekeurd.\n\nDeze spreuken veranderen de manier waarop spelers mogen praten. Soms worden berichten beperkt. Soms vervormd. Soms compleet op hun kop gezet.\n\nDe Tongtovenaar mag zijn krachten nooit gebruiken om bewust één alliantie te bevoordelen. Iedere spreuk moet eerlijk gelden voor het hele dorp: burgers, weerwolven en onafhankelijken.\n\nZelfs na zijn dood blijft zijn stem nog door Whatsapperdam galmen. Ook dan mag hij nieuwe spreuken blijven uitspreken.",
     isExpansionRole: true,
     expansionKey: "de-tongtovenaar"
@@ -1146,68 +1146,155 @@ const roles = [
   {
     id: "de-vos-wakkerdam",
     name: "De Vos - Wakkerdam",
-    image: "images/De Vos.png",
+    image: "images/De Vos Wakkerdam.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Informatie", "Kans"],
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Informatie", "Kans"],
     description: "Uitleg volgt.",
-    isExpansionRole: false,
-    expansionKey: null
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
     id: "de-engel-wakkerdam",
-    name: "De Engel - Wakkerdam",
-    image: "images/placeholder.png",
+    name: "De Engel Wakkerdam",
+    image: "images/De Engel.png",
     alliance: "Onafhankelijke",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend"],
+    types: ["Nieuw", "Uitbreiding", "Kans"],
     description: "Uitleg volgt.",
-    isExpansionRole: false,
-    expansionKey: null
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
     id: "de-heks-wakkerdam",
-    name: "De Heks - Wakkerdam",
-    image: "images/De Heks.png",
+    name: "De Heks Wakkerdam",
+    image: "images/De Heks Wakkerdam.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Beschermer", "Dodelijk"],
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Beschermer", "Dodelijk"],
     description: "Uitleg volgt.",
-    isExpansionRole: false,
-    expansionKey: null
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
     id: "de-burgemeester-wakkerdam",
-    name: "De Burgemeester - Wakkerdam",
-    image: "images/De Burgemeester.png",
+    name: "De Burgemeester Wakkerdam",
+    image: "images/De Burgemeester Wakkerdam.png",
     alliance: null,
     origin: "Wakkerdam",
     types: ["Nieuw", "Bijrol", "Invloedrijk"],
     description: "Uitleg volgt.",
-    isExpansionRole: false,
-    expansionKey: null
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
     id: "de-omroeper-wakkerdam",
-    name: "De Omroeper - Wakkerdam",
-    image: "images/De Omroeper.png",
+    name: "De Omroeper Wakkerdam",
+    image: "images/De Omroeper Wakkerdam.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Aankondiging"],
+    types: ["Nieuw", "Bijrol", "Aankondiging"],
     description: "Uitleg volgt.",
-    isExpansionRole: false,
-    expansionKey: null
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
     id: "de-grote-boze-wolf-wakkerdam",
-    name: "De Grote Boze Wolf - Wakkerdam",
-    image: "images/De Grote Boze Wolf.png",
+    name: "De Grote Boze Wolf Wakkerdam",
+    image: "images/De Grote Boze Wolf Wakkerdam.png",
     alliance: "Weerwolf",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Dodelijk"],
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Dodelijk"],
     description: "Uitleg volgt.",
-    isExpansionRole: false,
-    expansionKey: null
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-dief-wakkerdam",
+    name: "De Dief",
+    image: "images/De Dief.png",
+    alliance: "Onduidelijk",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Transformatie", "Informatie"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "het-onschuldige-meisje-wakkerdam",
+    name: "Het Onschuldige Meisje",
+    image: "images/Het Onschuldige Meisje.png",
+    alliance: "Burger",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Informatie", "Kans"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-twee-gezusters-wakkerdam",
+    name: "De Twee Gezusters",
+    image: "images/De Twee Gezusters.png",
+    alliance: "Burger",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Betrouwbaar"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-drie-gebroeders-wakkerdam",
+    name: "De Drie Gebroeders",
+    image: "images/De Drie Gebroeders.png",
+    alliance: "Burger",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Betrouwbaar"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-wolfshond-wakkerdam",
+    name: "De Wolfshond",
+    image: "images/De Wolfshond.png",
+    alliance: "Onduidelijk",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Transformatie"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "titus-en-zijn-dansende-beer-wakkerdam",
+    name: "Titus en zijn Dansende Beer",
+    image: "images/Titus en zijn Dansende Beer.png",
+    alliance: "Burger",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Informatie"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-verschrikkelijke-sektarier-wakkerdam",
+    name: "De Verschrikkelijke Sektariër",
+    image: "images/De Verschrikkelijke Sektariër.png",
+    alliance: "Onafhankelijke",
+    origin: "Wakkerdam",
+    types: ["Uitbreiding", "Dodelijk", "Chaos", "Effect"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-zigeunerin-wakkerdam",
+    name: "De Zigeunerin",
+    image: "images/De Zigeunerin.png",
+    alliance: "Burger",
+    origin: "Wakkerdam",
+    types: ["Uitbreiding", "Informatie"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
   }
-
 ];

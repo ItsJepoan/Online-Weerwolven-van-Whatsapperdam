@@ -18,6 +18,15 @@ const allianceOrder = ["Burger", "Onafhankelijke", "Weerwolf"];
 ====================== */
 let lockedScrollY = 0;
 
+function formatRoleDescription(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replace(/\*\*\*([\s\S]+?)\*\*\*/g, "<strong><em>$1</em></strong>")
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+}
+
 function lockPageScroll() {
   lockedScrollY = window.scrollY || window.pageYOffset || 0;
   document.body.classList.add("modal-open");
@@ -63,6 +72,16 @@ function createFormattedDescription(text) {
     .map((block) => {
       const trimmed = block.trim();
 
+      const listItems = trimmed
+        .split("\n")
+        .filter((line) => line.startsWith("* "));
+
+      if (listItems.length && listItems.length === trimmed.split("\n").length) {
+        return `<ul>${listItems
+          .map((line) => `<li>${formatInlineText(line.slice(2))}</li>`)
+          .join("")}</ul>`;
+      }
+
       if (trimmed.startsWith("## ")) {
         return `<h3>${formatInlineText(trimmed.slice(3))}</h3>`;
       }
@@ -91,7 +110,7 @@ function openModal(role) {
   modalOrigin.innerHTML = `<span class="badge">${role.origin || "Onbekend"}</span>`;
 
   modalTypes.innerHTML = createBadges(role.types);
-  modalDescription.textContent = role.description;
+  modalDescription.innerHTML = formatRoleDescription(role.description);
 
   modal.classList.remove("hidden");
   lockPageScroll();

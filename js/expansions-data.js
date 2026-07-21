@@ -157,5 +157,40 @@ Wie gelooft de verhalen van de Dorpsgek nou echt?`
   key: "de-onspreekbare-stilte",
   name: "De Onspreekbare Stilte",
   description: "Sommige uitbreidingen worden uitgelegd. Andere worden pas begrepen wanneer het al te laat is.\n\nWanneer Onspreekbare Stilte actief is in een spel, ontvangen spelers vooraf geen verdere uitleg over de werking ervan. De uitbreiding speelt zich verborgen af op de achtergrond van het spel.\n\nDe impact van Onspreekbare Stilte is niet bedoeld om direct een specifieke alliantie te bevoordelen, maar eerder om sfeer, verwarring en onzekerheid toe te voegen aan het dorp.\n\nSpelers worden geacht tijdens het spel zelf te ontdekken dat er iets niet klopt… al zal lang niet iedereen begrijpen wat precies.\n\nDe volledige uitleg en eventuele plottwists van Onspreekbare Stilte worden pas na afloop van het spel onthuld."
+},
+{
+  key: "back-to-basics-whatsapperdam-editie",
+  name: "Back to Basics – Whatsapperdam Editie",
+  description: `Heeft u altijd al eens niet te veel willen nadenken bij een potje Online Weerwolven?
+
+Dan is deze uitbreiding voor u!
+
+Deze uitbreiding limiteert de rollenpool tot een geselecteerd aantal rollen en brengt jullie terug naar de beginjaren van Whatsapperdam.
+
+In de **Back to Basics: Whatsapperdam Editie** worden alleen de rollen gebruikt uit **spel 1 en spel 2 van Online Weerwolven van Whatsapperdam**.
+
+Geen moderne uitbreidingen, geen ingewikkelde combinaties. Gewoon de rollen waarmee het allemaal begon.
+
+Perfect voor een nostalgisch potje, of om te ervaren hoe de eerste spellen van Whatsapperdam eruitzagen.`
+},
+{
+  key: "back-to-basics-wakkerdam-editie",
+  name: "Back to Basics – Wakkerdam Editie",
+  description: `Heeft u altijd al eens niet te veel willen nadenken bij een potje Online Weerwolven?
+
+Dan is deze uitbreiding voor u!
+
+Deze uitbreiding limiteert de rollenpool tot een geselecteerd aantal rollen en brengt jullie terug naar de klassiekers.
+
+In de **Back to Basics: Wakkerdam Editie** worden alleen de rollen gebruikt die voorkomen in ieders bekende **Weerwolven van Wakkerdam**. Voor zover wij die natuurlijk hebben.
+
+Zo beleef je een potje dat zo dicht mogelijk in de buurt komt van het klassieke Wakkerdam, maar dan volledig in de stijl van Online Weerwolven.
+
+Verwacht een nostalgisch spel waarin bekende rollen en oude spelmechanieken weer centraal staan, zoals:
+
+* Het burgemeesterschap overdragen in goed of slecht vertrouwen.
+* De cirkelzitting met je linker- en rechterbuurman.
+
+En misschien zelfs een aantal bekende rollen die wij opnieuw hebben vormgegeven voor de online versie.`
 }
 ];

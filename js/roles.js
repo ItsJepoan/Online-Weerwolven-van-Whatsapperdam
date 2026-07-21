@@ -131,6 +131,15 @@ function createBadges(items) {
     .join("");
 }
 
+function formatRoleDescription(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replace(/\*\*\*([\s\S]+?)\*\*\*/g, "<strong><em>$1</em></strong>")
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+}
+
 function lockPageScroll() {
   lockedScrollY = window.scrollY || window.pageYOffset || 0;
 
@@ -165,7 +174,7 @@ function openModal(role) {
   modalOrigin.innerHTML = `<span class="badge">${role.origin || "Onbekend"}</span>`;
 
   modalTypes.innerHTML = createBadges(role.types);
-  modalDescription.textContent = role.description;
+  modalDescription.innerHTML = formatRoleDescription(role.description);
 
   modalPrevious.hidden = activeRoleIndex <= 0;
   modalNext.hidden =
@@ -199,32 +208,28 @@ function showAdjacentRole(direction) {
 }
 
 function sortRoles(roleList) {
-  return [...roleList].sort((a, b) => {
-    const aAllianceIndex = allianceOrder.indexOf(a.alliance);
-    const bAllianceIndex = allianceOrder.indexOf(b.alliance);
-
-    const safeAAllianceIndex = aAllianceIndex === -1 ? 999 : aAllianceIndex;
-    const safeBAllianceIndex = bAllianceIndex === -1 ? 999 : bAllianceIndex;
-
-    const allianceCompare = safeAAllianceIndex - safeBAllianceIndex;
-
-    if (allianceCompare !== 0) {
-      return allianceCompare;
-    }
-
-    return a.name.localeCompare(b.name, "nl");
-  });
+  return [...roleList].sort((a, b) =>
+    a.name.localeCompare(b.name, "nl", { sensitivity: "base" })
+  );
 }
 
-function getAllianceTitle(alliance) {
-  if (alliance === "Burger") return "Burgers";
-  if (alliance === "Moordenaar") return "Moordenaars";
-  if (alliance === "Onafhankelijke") return "Onafhankelijken";
-  if (alliance === "Weerwolf") return "Weerwolven";
-  if (alliance === "Titaan") return "Titanen";
-  if (alliance === "Onduidelijk") return "Onduidelijke alliantie";
-  return alliance;
+function getRoleSection(role) {
+  if (role.types.includes("Bijrol")) return "Bijrollen";
+  if (role.types.includes("Uitbreiding")) return "Uitbreidingen";
+  if (role.alliance === "Weerwolf") return "Weerwolven";
+  if (role.alliance === "Moordenaar") return "Moordenaars";
+  if (role.alliance === "Onafhankelijke") return "Onafhankelijken";
+  return "Burgers";
 }
+
+const roleSectionOrder = [
+  "Burgers",
+  "Onafhankelijken",
+  "Moordenaars",
+  "Weerwolven",
+  "Uitbreidingen",
+  "Bijrollen"
+];
 
 function createRoleCard(role) {
   const card = document.createElement("div");
@@ -305,27 +310,29 @@ function renderRoles() {
     return;
   }
 
-  const sorted = sortRoles(filteredRoles);
-  visibleRoleSequence = sorted;
+  const rolesPerSection = roleSectionOrder.map((sectionName) => ({
+    sectionName,
+    roles: sortRoles(
+      filteredRoles.filter((role) => getRoleSection(role) === sectionName)
+    )
+  }));
 
-  allianceOrder.forEach((alliance) => {
-    const rolesPerAlliance = sorted.filter(
-      (role) => role.alliance === alliance
-    );
+  visibleRoleSequence = rolesPerSection.flatMap((section) => section.roles);
 
-    if (!rolesPerAlliance.length) return;
+  rolesPerSection.forEach(({ sectionName, roles: sectionRoles }) => {
+    if (!sectionRoles.length) return;
 
     const section = document.createElement("section");
     section.className = "role-alliance-section";
 
     const title = document.createElement("h2");
-    title.textContent = getAllianceTitle(alliance);
+    title.textContent = sectionName;
     title.className = "role-alliance-title";
 
     const grid = document.createElement("div");
     grid.className = "roles-grid";
 
-    rolesPerAlliance.forEach((role) => {
+    sectionRoles.forEach((role) => {
       grid.appendChild(createRoleCard(role));
     });
 
@@ -334,29 +341,6 @@ function renderRoles() {
 
     rolesList.appendChild(section);
   });
-
-  const specialRoles = sorted.filter((role) => role.alliance === null);
-
-  if (specialRoles.length) {
-    const section = document.createElement("section");
-    section.className = "role-alliance-section";
-
-    const title = document.createElement("h2");
-    title.textContent = "Bijrollen";
-    title.className = "role-alliance-title";
-
-    const grid = document.createElement("div");
-    grid.className = "roles-grid";
-
-    specialRoles.forEach((role) => {
-      grid.appendChild(createRoleCard(role));
-    });
-
-    section.appendChild(title);
-    section.appendChild(grid);
-
-    rolesList.appendChild(section);
-  }
 }
 
 populateFilters();
