@@ -209,7 +209,8 @@ Perfect voor een nostalgisch potje, of om te ervaren hoe de eerste spellen van W
     "de-onderdrukker",
     "de-slager",
     "de-wolf-in-schaapskleren",
-    "de-verkenner"
+    "de-verkenner",
+    "de-pyromaan"
   ]
 },
 {
