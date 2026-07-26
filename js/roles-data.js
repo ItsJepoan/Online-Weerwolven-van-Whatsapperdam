@@ -347,7 +347,7 @@ const roles = [
     alliance: "Burger",
     origin: "Whatsapperdam",
     types: ["Toevoegend", "Informatie"],
-    description: "Stil en ongezien beweegt de Verkenner zich door Whatsapperdam. Altijd op de achtergrond, altijd oplettend… en zelden opgemerkt. Waar anderen slapen, dwaalt hij door het donker, op zoek naar sporen die anderen missen.\n\nElke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één speler om te volgen. Verborgen in de schaduwen ziet hij precies wie deze speler die nacht heeft bezocht… of dat er niemand is geweest.\n\nZelf blijft de Verkenner buiten beeld. Hij volgt, kijkt en verdwijnt weer in het donker voordat iemand merkt dat hij er überhaupt was.\n",
+    description: "Stil en ongezien beweegt de Verkenner zich door Whatsapperdam. Altijd op de achtergrond, altijd oplettend… en zelden opgemerkt. Waar anderen slapen, dwaalt hij door het donker, op zoek naar sporen die anderen missen.\n\nElke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM één speler om te volgen. De volgende ochtend krijgt hij te horen door welke spelers deze speler die nacht is bezocht. Is de speler door niemand bezocht, dan krijgt hij dat ook te horen.\n\nZelf blijft de Verkenner buiten beeld. Hij volgt, kijkt en verdwijnt weer in het donker voordat iemand merkt dat hij er überhaupt was.",
     isExpansionRole: false,
     expansionKey: null
   },
