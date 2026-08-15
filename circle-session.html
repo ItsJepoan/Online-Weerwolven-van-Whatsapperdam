@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cirkel Zitting - Online Weerwolven van Whatsapperdam</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/circle-session.css" />
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Online Weerwolven van Whatsapperdam</h1>
+      <p class="subtitle">Cirkel Zitting</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-links">
+      <a href="index.html">Home</a>
+      <a href="current-game.html">Huidig spel</a>
+      <a href="rules.html">Regels</a>
+      <a href="roles.html">Rollen</a>
+      <a href="expansions.html">Uitbreidingen</a>
+      <a href="appendices.html">Appendices</a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <section id="circle-session-locked" class="content-card circle-message hidden">
+      <h2>Cirkel Zitting niet actief</h2>
+      <p>Deze pagina is alleen beschikbaar wanneer Back to Basics - Wakkerdam Editie actief is.</p>
+    </section>
+
+    <section id="circle-session-content" class="circle-session-layout hidden">
+      <section class="content-card circle-intro">
+        <h2>Cirkel Zitting</h2>
+        <p>Iedere speler staat op een vaste plek in de cirkel. Gebruik dit overzicht om snel te zien wie iemands linker- en rechterbuur zijn.</p>
+      </section>
+
+      <section class="content-card circle-board-card">
+        <div id="circle-board" class="circle-board" aria-label="Cirkel zitting"></div>
+      </section>
+
+      <section class="content-card">
+        <h2>Buren zoeken</h2>
+        <div class="neighbor-search">
+          <label class="neighbor-field">
+            <span>Naam typen</span>
+            <input id="neighbor-search-input" type="search" placeholder="Naam" autocomplete="off">
+          </label>
+
+          <label class="neighbor-field">
+            <span>Of kies een speler</span>
+            <select id="neighbor-select">
+              <option value="">Kies een speler</option>
+            </select>
+          </label>
+
+          <button id="neighbor-search-button" class="neighbor-search-button" type="button">Buren</button>
+        </div>
+
+        <div id="neighbor-result" class="neighbor-result"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/current-game-data.js"></script>
+  <script src="js/circle-session.js"></script>
+</body>
+</html>

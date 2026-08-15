@@ -42,6 +42,32 @@
       </div>
     </section>
 
+    <section class="content-card home-current-game-section">
+      <div class="home-current-game-header">
+        <div>
+          <h2 class="role-alliance-title">
+            Huidig spel
+            <span id="current-game-number" class="home-game-number"></span>
+            <span id="current-game-master" class="home-game-master"></span>
+          </h2>
+          <p>Actuele spelers, status en aankondigingen.</p>
+        </div>
+        <a id="circle-session-link" class="home-expansion-link hidden" href="circle-session.html">Cirkel Zitting</a>
+      </div>
+
+      <div class="home-current-game-grid">
+        <section class="home-status-panel">
+          <h3>Speler lijst</h3>
+          <div id="current-player-list" class="home-player-list"></div>
+        </section>
+
+        <section class="home-status-panel">
+          <h3>Aankondigingen</h3>
+          <div id="current-announcements-list" class="home-announcements-list"></div>
+        </section>
+      </div>
+    </section>
+
     <section class="content-card">
       <h2 class="role-alliance-title">Nieuw</h2>
       <div id="new-roles-list" class="roles-grid"></div>
@@ -90,6 +116,7 @@
 
   <script src="js/roles-data.js"></script>
   <script src="js/expansions-data.js"></script>
+  <script src="js/current-game-data.js"></script>
   <script src="js/home.js"></script>
 </body>
 </html>

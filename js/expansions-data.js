@@ -252,7 +252,7 @@ En misschien zelfs een aantal bekende rollen die wij opnieuw hebben vormgegeven 
     "de-drie-gebroeders-wakkerdam",
     "de-engel-wakkerdam",
     "de-stotterende-raadsheer",
-    "de-ridder-met-het-roestige-zwaard",
+    "de-ridder-met-het-roestige-zwaard-wakkerdam",
     "de-toneelspeler",
     "het-toegewijde-dienstmeisje",
     "de-vos-wakkerdam",

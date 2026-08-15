@@ -1156,7 +1156,7 @@ const roles = [
   },
   {
     id: "de-engel-wakkerdam",
-    name: "De Engel Wakkerdam",
+    name: "De Engel - Wakkerdam",
     image: "images/De Engel.png",
     alliance: "Onafhankelijke",
     origin: "Wakkerdam",
@@ -1167,11 +1167,22 @@ const roles = [
   },
   {
     id: "de-heks-wakkerdam",
-    name: "De Heks Wakkerdam",
-    image: "images/De Heks Wakkerdam.png",
+    name: "De Heks - Wakkerdam",
+    image: "images/De Heks - Wakkerdam.png",
     alliance: "Burger",
     origin: "Wakkerdam",
     types: ["Nieuw", "Toevoegend", "Uitbreiding", "Beschermer", "Dodelijk"],
+    description: "Uitleg volgt.",
+    isExpansionRole: true,
+    expansionKey: "back-to-basics-wakkerdam-editie"
+  },
+  {
+    id: "de-ridder-met-het-roestige-zwaard-wakkerdam",
+    name: "De Ridder met het Roestige Zwaard - Wakkerdam",
+    image: "images/De Ridder met het Roestige Zwaard.png",
+    alliance: "Burger",
+    origin: "Wakkerdam",
+    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Dodelijk"],
     description: "Uitleg volgt.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"

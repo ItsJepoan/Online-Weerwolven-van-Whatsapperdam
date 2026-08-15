@@ -1,5 +1,10 @@
 const newRolesList = document.getElementById("new-roles-list");
 const newExpansionsList = document.getElementById("new-expansions-list");
+const currentPlayerList = document.getElementById("current-player-list");
+const currentAnnouncementsList = document.getElementById("current-announcements-list");
+const circleSessionLink = document.getElementById("circle-session-link");
+const currentGameNumberElement = document.getElementById("current-game-number");
+const currentGameMasterElement = document.getElementById("current-game-master");
 
 const modal = document.getElementById("role-modal");
 const modalClose = document.getElementById("role-modal-close");
@@ -24,6 +29,19 @@ function formatRoleDescription(value) {
     .replaceAll(">", "&gt;")
     .replace(/\*\*\*([\s\S]+?)\*\*\*/g, "<strong><em>$1</em></strong>")
     .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatAnnouncementText(value) {
+  return escapeHtml(value).replace(/\*([^*]+)\*/g, "<em>$1</em>");
 }
 
 function lockPageScroll() {
@@ -147,6 +165,113 @@ function createExpansionCard(expansion) {
   return card;
 }
 
+function isWakkerdamActive() {
+  return (
+    typeof activeExpansionKeys !== "undefined" &&
+    activeExpansionKeys.includes("back-to-basics-wakkerdam-editie")
+  );
+}
+
+function isPlayerAlive(player) {
+  if (typeof player.alive === "boolean") return player.alive;
+  return String(player.status || "levend").toLowerCase() !== "dood";
+}
+
+function renderCurrentPlayers() {
+  if (!currentPlayerList) return;
+
+  const players =
+    typeof currentGamePlayers !== "undefined" ? currentGamePlayers : [];
+
+  currentPlayerList.innerHTML = "";
+
+  if (!players.length) {
+    currentPlayerList.innerHTML = `<p class="home-empty-message">Nog geen spelers ingevuld.</p>`;
+    return;
+  }
+
+  [...players]
+    .sort((a, b) => {
+      const aliveCompare = Number(isPlayerAlive(b)) - Number(isPlayerAlive(a));
+      if (aliveCompare !== 0) return aliveCompare;
+      return a.name.localeCompare(b.name, "nl", { sensitivity: "base" });
+    })
+    .forEach((player) => {
+      const alive = isPlayerAlive(player);
+      const row = document.createElement("div");
+      row.className = `home-player-row ${alive ? "alive" : "dead"}`;
+      row.innerHTML = `
+        <span class="home-player-name">${escapeHtml(player.name)}</span>
+        <span class="home-player-status">${alive ? "Levend" : "Dood"}</span>
+      `;
+      currentPlayerList.appendChild(row);
+    });
+}
+
+function renderCurrentAnnouncements() {
+  if (!currentAnnouncementsList) return;
+
+  const announcements =
+    typeof currentGameAnnouncements !== "undefined" ? currentGameAnnouncements : [];
+
+  currentAnnouncementsList.innerHTML = "";
+
+  if (!announcements.length) {
+    currentAnnouncementsList.innerHTML = `<p class="home-empty-message">Nog geen aankondigingen.</p>`;
+    return;
+  }
+
+  [...announcements]
+    .sort((a, b) => String(b.datetime || "").localeCompare(String(a.datetime || "")))
+    .forEach((announcement) => {
+      const row = document.createElement("article");
+      row.className = "home-announcement-row";
+      row.innerHTML = `
+        <time class="home-announcement-time">${escapeHtml(announcement.label || announcement.datetime || "")}</time>
+        <div class="home-announcement-message">${formatAnnouncementText(announcement.message || "")}</div>
+      `;
+      currentAnnouncementsList.appendChild(row);
+    });
+}
+
+function renderCircleSessionLink() {
+  if (!circleSessionLink) return;
+  circleSessionLink.classList.toggle("hidden", !isWakkerdamActive());
+}
+
+function renderCurrentGameNumber() {
+  if (!currentGameNumberElement) return;
+
+  if (typeof currentGameNumber === "undefined" || currentGameNumber === null) {
+    currentGameNumberElement.textContent = "";
+    currentGameNumberElement.classList.add("hidden");
+    return;
+  }
+
+  currentGameNumberElement.textContent = `#${currentGameNumber}`;
+  currentGameNumberElement.classList.remove("hidden");
+}
+
+function renderCurrentGameMaster() {
+  if (!currentGameMasterElement) return;
+
+  const gameMasters =
+    typeof currentGameMasters !== "undefined"
+      ? currentGameMasters
+      : typeof currentGameMaster !== "undefined" && currentGameMaster
+        ? [currentGameMaster]
+        : [];
+
+  if (!gameMasters.length) {
+    currentGameMasterElement.textContent = "";
+    currentGameMasterElement.classList.add("hidden");
+    return;
+  }
+
+  currentGameMasterElement.textContent = `${gameMasters.length === 1 ? "GameMaster" : "GameMasters"}: ${gameMasters.join(", ")}`;
+  currentGameMasterElement.classList.remove("hidden");
+}
+
 /* ======================
    RENDER
 ====================== */
@@ -193,6 +318,11 @@ function renderNewExpansions() {
 
 renderNewRoles();
 renderNewExpansions();
+renderCurrentPlayers();
+renderCurrentAnnouncements();
+renderCircleSessionLink();
+renderCurrentGameNumber();
+renderCurrentGameMaster();
 
 /* ======================
    EVENTS
