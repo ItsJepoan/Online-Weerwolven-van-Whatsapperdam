@@ -95,7 +95,10 @@ function findPlayerBySearch(players) {
 
   if (!searchValue) return null;
 
-  return players.find((player) => normalizeSearch(player.name) === searchValue);
+  return (
+    players.find((player) => normalizeSearch(player.name) === searchValue) ||
+    players.find((player) => normalizeSearch(player.name).startsWith(searchValue))
+  );
 }
 
 function findLivingNeighbor(players, startIndex, direction) {
@@ -166,23 +169,20 @@ function setCircleZoom(value) {
 }
 
 function enablePinchZoom() {
-  const boardCard = circleBoard.closest(".circle-board-card");
-  if (!boardCard) return;
-
-  boardCard.addEventListener("touchstart", (event) => {
+  circleBoard.addEventListener("touchstart", (event) => {
     if (event.touches.length !== 2) return;
     pinchStartDistance = getTouchDistance(event.touches);
     pinchStartScale = circleScale;
   }, { passive: true });
 
-  boardCard.addEventListener("touchmove", (event) => {
+  circleBoard.addEventListener("touchmove", (event) => {
     if (event.touches.length !== 2 || !pinchStartDistance) return;
     event.preventDefault();
     const nextDistance = getTouchDistance(event.touches);
     setCircleZoom(pinchStartScale * (nextDistance / pinchStartDistance));
   }, { passive: false });
 
-  boardCard.addEventListener("touchend", (event) => {
+  circleBoard.addEventListener("touchend", (event) => {
     if (event.touches.length < 2) {
       pinchStartDistance = 0;
     }
