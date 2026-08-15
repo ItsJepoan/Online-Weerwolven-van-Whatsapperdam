@@ -5,6 +5,7 @@ const neighborSearchInput = document.getElementById("neighbor-search-input");
 const neighborSelect = document.getElementById("neighbor-select");
 const neighborSearchButton = document.getElementById("neighbor-search-button");
 const neighborResult = document.getElementById("neighbor-result");
+const circleZoom = document.getElementById("circle-zoom");
 
 function escapeHtml(value) {
   return String(value)
@@ -146,14 +147,21 @@ function renderNeighborResult(players) {
   `;
 }
 
+function updateCircleZoom() {
+  if (!circleZoom || !circleBoard) return;
+  circleBoard.style.setProperty("--circle-zoom", String(Number(circleZoom.value) / 100));
+}
+
 if (!isWakkerdamActive()) {
   circleSessionLocked.classList.remove("hidden");
 } else {
   circleSessionContent.classList.remove("hidden");
   const players = getCirclePlayers();
+  updateCircleZoom();
   renderCircle(players);
   populateNeighborSelect(players);
 
+  circleZoom.addEventListener("input", updateCircleZoom);
   neighborSearchButton.addEventListener("click", () => renderNeighborResult(players));
   neighborSearchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
