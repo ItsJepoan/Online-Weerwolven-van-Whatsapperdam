@@ -5,7 +5,6 @@ const neighborSearchInput = document.getElementById("neighbor-search-input");
 const neighborSelect = document.getElementById("neighbor-select");
 const neighborSearchButton = document.getElementById("neighbor-search-button");
 const neighborResult = document.getElementById("neighbor-result");
-const circleZoom = document.getElementById("circle-zoom");
 
 function escapeHtml(value) {
   return String(value)
@@ -147,9 +146,47 @@ function renderNeighborResult(players) {
   `;
 }
 
-function updateCircleZoom() {
-  if (!circleZoom || !circleBoard) return;
-  circleBoard.style.setProperty("--circle-zoom", String(Number(circleZoom.value) / 100));
+let circleScale = 1;
+let pinchStartDistance = 0;
+let pinchStartScale = 1;
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function getTouchDistance(touches) {
+  const dx = touches[0].clientX - touches[1].clientX;
+  const dy = touches[0].clientY - touches[1].clientY;
+  return Math.hypot(dx, dy);
+}
+
+function setCircleZoom(value) {
+  circleScale = clamp(value, 0.55, 1.35);
+  circleBoard.style.setProperty("--circle-zoom", String(circleScale));
+}
+
+function enablePinchZoom() {
+  const boardCard = circleBoard.closest(".circle-board-card");
+  if (!boardCard) return;
+
+  boardCard.addEventListener("touchstart", (event) => {
+    if (event.touches.length !== 2) return;
+    pinchStartDistance = getTouchDistance(event.touches);
+    pinchStartScale = circleScale;
+  }, { passive: true });
+
+  boardCard.addEventListener("touchmove", (event) => {
+    if (event.touches.length !== 2 || !pinchStartDistance) return;
+    event.preventDefault();
+    const nextDistance = getTouchDistance(event.touches);
+    setCircleZoom(pinchStartScale * (nextDistance / pinchStartDistance));
+  }, { passive: false });
+
+  boardCard.addEventListener("touchend", (event) => {
+    if (event.touches.length < 2) {
+      pinchStartDistance = 0;
+    }
+  }, { passive: true });
 }
 
 if (!isWakkerdamActive()) {
@@ -157,11 +194,11 @@ if (!isWakkerdamActive()) {
 } else {
   circleSessionContent.classList.remove("hidden");
   const players = getCirclePlayers();
-  updateCircleZoom();
+  setCircleZoom(1);
   renderCircle(players);
   populateNeighborSelect(players);
+  enablePinchZoom();
 
-  circleZoom.addEventListener("input", updateCircleZoom);
   neighborSearchButton.addEventListener("click", () => renderNeighborResult(players));
   neighborSearchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
