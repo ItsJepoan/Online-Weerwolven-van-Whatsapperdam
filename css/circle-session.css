@@ -14,12 +14,15 @@
 }
 
 .circle-board-card {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .circle-board {
   position: relative;
   width: min(1080px, 100%);
+  min-width: 860px;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
   border-radius: 50%;
@@ -185,19 +188,26 @@
 
 @media (max-width: 900px) {
   .circle-board {
-    width: min(820px, 100%);
+    width: 900px;
+    min-width: 900px;
   }
 
   .circle-player {
-    width: clamp(62px, 11.5%, 96px);
+    width: 92px;
     min-height: 38px;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 }
 
 @media (max-width: 650px) {
+  .circle-board-card {
+    padding: 1rem 0.75rem 1.25rem;
+  }
+
   .circle-board {
-    aspect-ratio: 4 / 3;
+    width: 920px;
+    min-width: 920px;
+    aspect-ratio: 16 / 9;
     border-width: 2px;
   }
 
@@ -206,10 +216,10 @@
   }
 
   .circle-player {
-    width: clamp(52px, 13%, 78px);
-    min-height: 34px;
-    font-size: 0.68rem;
-    padding: 0.28rem 0.35rem;
+    width: 86px;
+    min-height: 36px;
+    font-size: 0.72rem;
+    padding: 0.3rem 0.4rem;
   }
 
   .neighbor-search,
