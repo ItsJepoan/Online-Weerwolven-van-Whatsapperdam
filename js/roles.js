@@ -18,11 +18,11 @@ const modalDescription = document.getElementById("modal-role-description");
 
 const allianceOrder = [
   "Burger",
+  "Twijfelachtig",
   "Moordenaar",
   "Onafhankelijke",
   "Weerwolf",
-  "Titaan",
-  "Onduidelijk"
+  "Titaan"
 ];
 
 const typeOrder = [

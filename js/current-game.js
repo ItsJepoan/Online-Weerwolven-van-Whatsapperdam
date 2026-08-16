@@ -69,11 +69,11 @@ const currentGameBasisRoleIdSet = new Set([
 
 const sectionOrder = [
   { key: "Burger", title: "Burgers" },
+  { key: "Twijfelachtig", title: "Twijfelachtig" },
   { key: "Moordenaar", title: "Moordenaars" },
   { key: "Onafhankelijke", title: "Onafhankelijken" },
   { key: "Weerwolf", title: "Weerwolven" },
   { key: "Titaan", title: "Titanen" },
-  { key: "Onduidelijk", title: "Onduidelijke alliantie" },
   { key: "Bijrol", title: "Bijrollen" }
 ];
 
@@ -367,7 +367,7 @@ function renderRoleSections() {
     Onafhankelijke: normalCurrentRoles.filter((role) => role.alliance === "Onafhankelijke"),
     Weerwolf: normalCurrentRoles.filter((role) => role.alliance === "Weerwolf"),
     Titaan: normalCurrentRoles.filter((role) => role.alliance === "Titaan"),
-    Onduidelijk: normalCurrentRoles.filter((role) => role.alliance === "Onduidelijk"),
+    Twijfelachtig: normalCurrentRoles.filter((role) => role.alliance === "Twijfelachtig"),
     Bijrol: normalCurrentRoles.filter((role) => role.alliance === null)
   };
 
