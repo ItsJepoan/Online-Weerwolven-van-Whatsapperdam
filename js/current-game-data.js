@@ -21,7 +21,7 @@ const currentGameBasisWerewolfRoleId = null;
 const currentGamePlayers = [
   {
     "name": "Julian",
-    "alive": true,
+    "alive": false,
     "circleOrder": 15
   },
   {
@@ -191,6 +191,11 @@ const currentGameAnnouncements = [
     "datetime": "2026-08-18T09:00:05",
     "label": "18 augustus 09:00",
     "message": "Maik werd dodelijk geraakt door een kogel en was *De Zondebok*."
+  },
+  {
+    "datetime": "2026-08-18T20:00",
+    "label": "18 augustus 20:00",
+    "message": "Julian is op de brandstapel gegooid en was *Cupido*."
   }
 ];
 
