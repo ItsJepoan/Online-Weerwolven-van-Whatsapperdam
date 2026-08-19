@@ -106,7 +106,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Fajjaaz",
-    "alive": true,
+    "alive": false,
     "circleOrder": 14
   },
   {
@@ -196,6 +196,11 @@ const currentGameAnnouncements = [
     "datetime": "2026-08-18T20:00",
     "label": "18 augustus 20:00",
     "message": "Julian is op de brandstapel gegooid en was *Cupido*."
+  },
+  {
+    "datetime": "2026-08-19T09:00",
+    "label": "19 augustus 09:00",
+    "message": "Fajjaaz is vannacht gestorven en was *De Wakkerdamse Grote Boze Wolf*."
   }
 ];
 
