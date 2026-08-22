@@ -31,12 +31,12 @@ const currentGamePlayers = [
   },
   {
     "name": "Ilse",
-    "alive": true,
+    "alive": false,
     "circleOrder": 13
   },
   {
     "name": "Ruben",
-    "alive": true,
+    "alive": false,
     "circleOrder": 28
   },
   {
@@ -46,7 +46,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Nick",
-    "alive": true,
+    "alive": false,
     "circleOrder": 22
   },
   {
@@ -56,7 +56,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Per",
-    "alive": true,
+    "alive": false,
     "circleOrder": 17
   },
   {
@@ -116,7 +116,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Benji",
-    "alive": true,
+    "alive": false,
     "circleOrder": 23
   },
   {
@@ -126,7 +126,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Donovan",
-    "alive": true,
+    "alive": false,
     "circleOrder": 19
   },
   {
@@ -201,6 +201,36 @@ const currentGameAnnouncements = [
     "datetime": "2026-08-19T09:00",
     "label": "19 augustus 09:00",
     "message": "Fajjaaz is vannacht gestorven en was *De Wakkerdamse Grote Boze Wolf*."
+  },
+  {
+    "datetime": "2026-08-19T20:00",
+    "label": "19 augustus 20:00",
+    "message": "Benji is op de brandstapel gegooid en was *De Weerwolf*."
+  },
+  {
+    "datetime": "2026-08-20T20:00",
+    "label": "20 augustus 20:00",
+    "message": "Donovan is op de brandstapel gegooid en was *De Burger*."
+  },
+  {
+    "datetime": "2026-08-21T09:00",
+    "label": "21 augustus 09:00",
+    "message": "Nick is verslonden door de weerwolven en was *De Ziener*."
+  },
+  {
+    "datetime": "2026-08-21T20:00",
+    "label": "21 augustus 20:00",
+    "message": "Ilse is op de brandstapel gegooid en was *De Verschrikkelijke Sektariër*."
+  },
+  {
+    "datetime": "2026-08-22T09:00",
+    "label": "22 augustus 09:00",
+    "message": "Per is verslonden door de weerwolven en was *Het Toegewijde Dienstmeisje*."
+  },
+  {
+    "datetime": "2026-08-22T20:00",
+    "label": "22 augustus 20:00",
+    "message": "Ruben is op de brandstapel gegooid en was *De Wolvige (een van) De Drie Gebroeders*."
   }
 ];
 
