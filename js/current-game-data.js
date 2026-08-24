@@ -61,7 +61,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Micha",
-    "alive": true,
+    "alive": false,
     "circleOrder": 9
   },
   {
@@ -121,7 +121,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Thomas",
-    "alive": true,
+    "alive": false,
     "circleOrder": 11
   },
   {
@@ -231,6 +231,16 @@ const currentGameAnnouncements = [
     "datetime": "2026-08-22T20:00",
     "label": "22 augustus 20:00",
     "message": "Ruben is op de brandstapel gegooid en was *De Wolvige (een van) De Drie Gebroeders*."
+  },
+  {
+    "datetime": "2026-08-23T20:00",
+    "label": "23 augustus 20:00",
+    "message": "Micha is op de brandstapel gegooid en was *De Weerwolf*."
+  },
+  {
+    "datetime": "2026-08-24T09:00",
+    "label": "24 augustus 09:00",
+    "message": "Thomas is verslonden door de weerwolven en was *Het Onschuldige Meisje*."
   }
 ];
 
