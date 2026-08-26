@@ -1,4 +1,5 @@
 const navDropdowns = [...document.querySelectorAll(".nav-dropdown")];
+const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
 function closeOtherDropdowns(activeDropdown = null) {
   navDropdowns.forEach((dropdown) => {
@@ -12,7 +13,14 @@ navDropdowns.forEach((dropdown) => {
   const toggle = dropdown.querySelector(".nav-dropdown-toggle");
 
   dropdown.addEventListener("mouseenter", () => {
+    if (!canHover) return;
     closeOtherDropdowns(dropdown);
+    dropdown.classList.add("is-open");
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    if (!canHover) return;
+    dropdown.classList.remove("is-open");
   });
 
   toggle?.addEventListener("click", (event) => {
