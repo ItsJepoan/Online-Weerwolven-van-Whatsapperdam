@@ -217,6 +217,7 @@ function getRoleSection(role) {
   if (role.types.includes("Bijrol")) return "Bijrollen";
   if (role.types.includes("Uitbreiding")) return "Uitbreidingen";
   if (role.alliance === "Weerwolf") return "Weerwolven";
+  if (role.alliance === "Twijfelachtig") return "Twijfelachtig";
   if (role.alliance === "Moordenaar") return "Moordenaars";
   if (role.alliance === "Onafhankelijke") return "Onafhankelijken";
   return "Burgers";
@@ -224,6 +225,7 @@ function getRoleSection(role) {
 
 const roleSectionOrder = [
   "Burgers",
+  "Twijfelachtig",
   "Onafhankelijken",
   "Moordenaars",
   "Weerwolven",

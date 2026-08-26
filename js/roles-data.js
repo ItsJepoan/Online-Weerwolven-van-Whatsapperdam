@@ -1138,7 +1138,7 @@ const roles = [
     image: "images/De Ringmeester.png",
     alliance: "Burger",
     origin: "Whatsapperdam",
-    types: ["Uitbreiding", "Informatie", "Nieuw"],
+    types: ["Uitbreiding", "Informatie"],
     description: "De Ringmeester bewaart de oude ringen van Whatsapperdam. Geen gouden sieraden, maar oude erfstukken waarin de verborgen talenten van het dorp schuilgaan. Alleen hij weet welke krachten werkelijk door het dorp verspreid zijn.\n\nWanneer de Ringmeester in het spel aanwezig is, mag hij iedere nacht het Talent van een speler bekijken.\n\nHierbij ontdekt hij zowel normale als Geheime Talenten.\n\nOntdekt de Ringmeester een Geheim Talent, dan mag hij zelf kiezen of hij dit Talent direct aan die speler bekendmaakt of verborgen laat. De speler blijft zich dus mogelijk onbewust van zijn eigen gave.\n\nDaardoor is de Ringmeester vaak de enige speler die werkelijk inzicht heeft in de verborgen krachten die door Whatsapperdam verspreid zijn. Soms deelt hij die kennis... soms bewaart hij haar liever voor zichzelf.",
     isExpansionRole: true,
     expansionKey: "de-talentvolle-burgers"
@@ -1149,7 +1149,7 @@ const roles = [
     image: "images/De Wakkerdamse Vos.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Informatie", "Kans"],
+    types: ["Toevoegend", "Uitbreiding", "Informatie", "Kans"],
     description: "Al is de Wakkerdamse Vos net zo sluw en scherpzinnig als zijn broeder uit Whatsapperdam, hij is net iets kieskeuriger. Terwijl anderen slapen, speurt hij naar de geur van het beest, maar houdt hij zijn zoektocht dicht bij huis.\n\nElke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM een speler om te onderzoeken, samen met diens linker- en rechterbuurman in de cirkelzitting.\n\nBevindt zich minstens een echte weerwolf tussen deze drie spelers, dan krijgt de Vos dat te horen.\n\nAndere rollen met duistere bedoelingen tellen hierbij niet mee. Het kunnen dus drie burgers zijn, drie weerwolven... of een gevaarlijke mix van beide.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1160,7 +1160,7 @@ const roles = [
     image: "images/De Engel.png",
     alliance: "Onafhankelijke",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Uitbreiding", "Kans"],
+    types: ["Uitbreiding", "Kans"],
     description: "De weg naar de hemel is voor niemand zeker... behalve misschien voor de Engel. Hij voelt dat zijn tijd gekomen is en verlangt ernaar zijn plaats boven het dorp in te nemen.\n\nHet enige doel van de Engel is om tijdens de eerste nacht of de eerste dag te sterven. Lukt hem dit, dan wint hij direct het spel.\n\nOverleeft hij deze periode, dan blijkt zijn tijd toch nog niet gekomen. Vanaf dat moment laat hij zijn hemelse verlangen achter zich en speelt hij de rest van het spel loyaal en actief met de burgers mee.\n\nHij heeft vanaf dat moment geen verborgen winconditie meer. Zijn kans om op te stijgen was kort... en is nu voorbij.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1171,7 +1171,7 @@ const roles = [
     image: "images/De Wakkerdamse Heks.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Beschermer", "Dodelijk"],
+    types: ["Toevoegend", "Uitbreiding", "Beschermer", "Dodelijk"],
     description: "Haar Wakkerdamse afkomst onderscheidt haar toch wat van haar Whatsapperdamse zus. Deze Heks staat aan de kant van de burgers en beschikt over twee magische drankjes: een voor het leven en een voor de dood.\n\nElke nacht, tussen 20:00 en 09:00, krijgt de Heks van de GM te horen wie zal sterven door de aanval van de weerwolven. Ze mag haar levensdrankje gebruiken om deze speler te redden.\n\nDaarnaast mag ze haar doodsdrankje gebruiken om een speler naar keuze te doden, ongeacht of ze die nacht haar levensdrankje heeft gebruikt.\n\nVan beide drankjes heeft de Heks slechts een exemplaar. Zodra een drankje is gebruikt, is het verdwenen.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1182,7 +1182,7 @@ const roles = [
     image: "images/De Wakkerdamse Ridder met het Roestige Zwaard.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Dodelijk"],
+    types: ["Toevoegend", "Uitbreiding", "Dodelijk"],
     description: "Net als zijn Whatsapperdamse broeder loopt de Wakkerdamse Ridder gehuld in oude eer en versleten staal door het dorp. Zijn zwaard is oud, roestig en vergeten door de tijd... maar nog altijd scherp genoeg.\n\nWanneer de weerwolven hem ’s nachts verslinden, lijkt hij een makkelijke prooi.\n\nMaar iets blijft achter.\n\nEen wond. Vies. Diep. Giftig.\n\nDe eerste levende weerwolf links van de Ridder in de cirkelzitting wordt geraakt door het roestige staal en sterft een dag na de aanval alsnog aan zijn verwondingen.\n\nPas dus op, wolven... sommige prooien vechten nog, zelfs nadat ze gevallen zijn.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1193,7 +1193,7 @@ const roles = [
     image: "images/De Wakkerdamse Burgemeester.png",
     alliance: null,
     origin: "Wakkerdam",
-    types: ["Nieuw", "Bijrol", "Invloedrijk"],
+    types: ["Bijrol", "Invloedrijk"],
     description: "Ook in Wakkerdam heeft het dorp iemand nodig die de leiding neemt. Met een mooie speech, genoeg vertrouwen en misschien wat loze beloftes wordt een inwoner verkozen tot Burgemeester.\n\nDe Wakkerdamse Burgemeester wordt via een speciale algemene stemming gekozen. Zijn stem telt tijdens iedere stemming als twee stemmen. Bij een gelijke stemming heeft hij daarnaast de beslissende stem en bepaalt hij wie er wordt verbrand.\n\nSterft de Burgemeester, dan draagt hij zijn burgemeesterschap over in goed of slecht vertrouwen en kiest hij zelf een levende speler als zijn opvolger.\n\nZo blijft Wakkerdam altijd onder leiding... of die leiding ook te vertrouwen is, is een ander verhaal.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1204,7 +1204,7 @@ const roles = [
     image: "images/De Wakkerdamse Omroeper.png",
     alliance: null,
     origin: "Wakkerdam",
-    types: ["Nieuw", "Bijrol", "Aankondiging"],
+    types: ["Bijrol", "Aankondiging"],
     description: "Waar hij komt, blijft het niet stil... zelfs niet na zijn dood. Net als zijn Whatsapperdamse broeder zorgt de Wakkerdamse Omroeper ervoor dat de waarheid uiteindelijk boven tafel komt.\n\nIn de eerste nacht, tussen 20:00 en 09:00, kiest de Omroeper via een direct bericht aan de GM een speler.\n\nWanneer de Omroeper sterft, wordt naast zijn eigen rol ook de rol van deze gekozen speler bekendgemaakt. Sterft deze speler eerder dan de Omroeper, dan mag hij direct een nieuwe speler kiezen.\n\nIemand neemt hij altijd mee... al is het alleen in de waarheid.\n\nIn de toekomst zal de Wakkerdamse Omroeper waarschijnlijk nog wat meer te maken krijgen met de Burgemeester. Voor nu blijft zijn taak echter hierbij.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1215,21 +1215,21 @@ const roles = [
     image: "images/De Wakkerdamse Grote Boze Wolf.png",
     alliance: "Weerwolf",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Dodelijk"],
+    types: ["Toevoegend", "Uitbreiding", "Dodelijk"],
     description: "Groter. Sterker. Hongeriger. De Wakkerdamse Grote Boze Wolf is net wat groter dan zijn Whatsapperdamse broeder. Hij jaagt met de roedel... maar speelt zijn eigen spel.\n\nDe Grote Boze Wolf hoort bij de weerwolven en overlegt met hen zoals normaal, maar waar de roedel samen een prooi kiest, neemt hij er nog een extra.\n\nElke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM zijn eigen slachtoffer, bovenop de aanval van de wolven.\n\nDit gaat door... tot het moment dat er een andere weerwolf of de Kleine Wilde sterft.\n\nVanaf dat moment stopt zijn extra jacht en blijft hij verder een normale weerwolf.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
-    id: "de-dief-wakkerdam",
+    id: "de-dief",
     name: "De Dief",
     image: "images/De Dief.png",
     alliance: "Twijfelachtig",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Transformatie", "Informatie"],
+    types: ["Nieuw", "Toevoegend", "Transformatie", "Informatie"],
     description: "Niemand weet precies wie hij werkelijk is. De Dief steelt geen goud of bezittingen, maar iets veel waardevollers... de identiteit van een ander.\n\nMet twee extra burgers in het spel krijgt de Dief aan het begin van het spel de keuze tussen twee extra rollen. Dit kunnen bijna alle rollen zijn.\n\nHij kiest een van deze twee rollen en neemt deze identiteit volledig over. De andere rol verdwijnt uit het spel en wordt verder niet gebruikt.\n\nVanaf dat moment laat de Dief zijn oude identiteit achter zich en gaat hij verder door het dorp als zijn gekozen rol.",
-    isExpansionRole: true,
-    expansionKey: "back-to-basics-wakkerdam-editie"
+    isExpansionRole: false,
+    expansionKey: null
   },
   {
     id: "het-onschuldige-meisje-wakkerdam",
@@ -1237,32 +1237,32 @@ const roles = [
     image: "images/Het Onschuldige Meisje.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Informatie", "Kans"],
+    types: ["Toevoegend", "Uitbreiding", "Informatie", "Kans"],
     description: "Nieuwsgierig, oplettend en misschien iets te geïnteresseerd in wat er ’s nachts gebeurt. Terwijl het dorp slaapt, waagt het Onschuldige Meisje het om stiekem naar de weerwolven te gluren.\n\nTussen 10:00 en 20:00 kan ze eenmaal per spel via een direct bericht aan de GM besluiten die nacht te spieken.\n\nDe weerwolven merken dat ze bespied worden en krijgen twee namen: die van het Onschuldige Meisje en die van een willekeurige burger. Ze weten dus dat een van deze twee het meisje is.\n\nHet Onschuldige Meisje krijgt zelf ook twee namen: die van een willekeurige weerwolf en die van een willekeurige burger.\n\nZo vangt ze een glimp op van de waarheid... maar weet ze nooit helemaal zeker wat ze heeft gezien.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
   },
   {
-    id: "de-twee-gezusters-wakkerdam",
+    id: "de-twee-gezusters",
     name: "De Twee Gezusters",
     image: "images/De Twee Gezusters.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Betrouwbaar"],
+    types: ["Nieuw", "Toevoegend", "Betrouwbaar"],
     description: "Al vanaf hun geboorte zijn deze twee burgers onafscheidelijk. Ze doen alles samen en weten dat ze altijd op elkaar kunnen vertrouwen.\n\nAan het begin van het spel krijgt elke Gezuster te horen wie haar andere zuster is. Deze informatie mag gedeeld worden, maar biedt uiteindelijk vooral vertrouwen tussen de twee Gezusters.\n\nOp de vierde nacht van het spel komen de Gezusters samen. Van 20:00 tot 09:00 mogen zij in hun eigen aparte groepsapp met elkaar praten en eventuele plannen, verdenkingen en informatie uitwisselen.\n\nNa deze nacht valt de groep weer stil.",
-    isExpansionRole: true,
-    expansionKey: "back-to-basics-wakkerdam-editie"
+    isExpansionRole: false,
+    expansionKey: null
   },
   {
-    id: "de-drie-gebroeders-wakkerdam",
+    id: "de-drie-gebroeders",
     name: "De Drie Gebroeders",
     image: "images/De Drie Gebroeders.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Betrouwbaar"],
+    types: ["Nieuw", "Toevoegend", "Betrouwbaar"],
     description: "Al vanaf hun geboorte zijn deze drie burgers onafscheidelijk. Ze doen alles samen en weten dat ze altijd op hun broeders kunnen vertrouwen.\n\nAan het begin van het spel krijgt iedere Gebroeder te horen wie zijn twee broeders zijn. Deze informatie mag gedeeld worden, maar biedt uiteindelijk vooral vertrouwen tussen de drie Gebroeders.\n\nOp de vierde nacht van het spel komen de Gebroeders samen. Van 20:00 tot 09:00 mogen zij in hun eigen aparte groepsapp met elkaar praten en eventuele plannen, verdenkingen en informatie uitwisselen.\n\nNa deze nacht valt de groep weer stil.",
-    isExpansionRole: true,
-    expansionKey: "back-to-basics-wakkerdam-editie"
+    isExpansionRole: false,
+    expansionKey: null
   },
   {
     id: "de-wolfshond-wakkerdam",
@@ -1270,7 +1270,7 @@ const roles = [
     image: "images/De Wolfshond.png",
     alliance: "Weerwolf",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Transformatie"],
+    types: ["Toevoegend", "Uitbreiding", "Transformatie"],
     description: "Een trouwe viervoeter? Misschien voor het oog van het dorp. Maar onder die vacht schuilt zonder twijfel een echte weerwolf. De Wolfshond behoort tot de roedel, jaagt met de andere weerwolven en wint samen met hen.\n\nElke nacht, tussen 20:00 en 09:00, kiest hij via een direct bericht aan de GM een levende dorpsgenoot, maar nooit twee nachten achter elkaar dezelfde persoon. Voor die nacht en de volgende dag draagt hij de identiteit van zijn keuze, maar zonder diens krachten.\n\nWordt de Wolfshond onderzocht, dan wordt altijd de rol van deze gekozen speler gezien. Zelfs bij de brandstapel of een andere dood houdt hij zijn vermomming vast.\n\nOnder welke identiteit hij zich ook verschuilt... daaronder blijft altijd een wolf zitten.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1281,7 +1281,7 @@ const roles = [
     image: "images/Titus en zijn Dansende Beer.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Informatie"],
+    types: ["Toevoegend", "Uitbreiding", "Informatie"],
     description: "Wakkerdam staat bekend om zijn grote circus, waar de Ringmeester zeer trots is op een van zijn hardst werkende medewerkers: Titus en zijn Dansende Beer!\n\nMaar buiten dansen heeft deze beer nog een andere gave. Zeer beschermend tegenover zijn baasje Titus kan hij namelijk als geen ander het spoor van wolven ruiken.\n\nBevindt zich een weerwolf als linker- of rechterbuurman van Titus, dan zal zijn beer rond 09:00 via een aankondiging van de GM beginnen te grommen. Zo weet Titus dat minstens een van zijn buren een weerwolf is.\n\nIs een buurman op dat moment nog geen weerwolf, of bevindt deze zich in een vermomming, dan ruikt de beer het gevaar pas zodra diegene daadwerkelijk een wolvige aura heeft.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1303,7 +1303,7 @@ const roles = [
     image: "images/De Wakkerdamse Toneelspeler.png",
     alliance: "Burger",
     origin: "Wakkerdam",
-    types: ["Nieuw", "Toevoegend", "Uitbreiding", "Alleskunner", "Transformatie"],
+    types: ["Toevoegend", "Uitbreiding", "Alleskunner", "Transformatie"],
     description: "Ook in Wakkerdam staat een meester op het podium die iedere rol overtuigend weet te spelen. Zijn repertoire is kleiner dan dat van zijn Whatsapperdamse broeder, maar daarom niet minder indrukwekkend.\n\nAan het begin van het spel krijgt hij van de GM 3 rollen. Normaal zijn dit rollen die niet in het spel voorkomen, maar bij een groot dorp kunnen hier ook rollen tussen zitten die al door een andere speler worden gespeeld.\n\nElke nacht, tussen 20:00 en 09:00, mag hij een van deze rollen kiezen. Voor die nacht en de volgende dag neemt hij deze rol volledig aan, inclusief eventuele krachten en gevolgen. Daarna verdwijnt de rol uit zijn repertoire.\n\nEr kan een weerwolfrol tussen zitten, maar alleen wanneer deze niet-agressieve krachten heeft. De Toneelspeler gebruikt dan alleen de kracht van deze rol en wordt zelf geen onderdeel van de roedel.\n\nZijn mogelijke rollen blijven geheim. Een deel van zijn repertoire is terug te vinden in Appendix C: Toneelspeler.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"

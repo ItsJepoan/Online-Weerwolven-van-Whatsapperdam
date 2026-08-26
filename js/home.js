@@ -297,7 +297,7 @@ function renderNewRoles() {
 function renderNewExpansions() {
   if (!newExpansionsList || typeof expansions === "undefined") return;
 
-  const newExpansionKeys = ["de-talentvolle-burgers", "de-boeren"];
+  const newExpansionKeys = ["de-cirkelzitting"];
   const newExpansions = newExpansionKeys
     .map((key) => expansions.find((expansion) => expansion.key === key))
     .filter(Boolean);

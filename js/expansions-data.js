@@ -20,6 +20,12 @@ const expansions = [
     description: "Dit spel sterft iedereen in stilte.\n\nBij iedere dood wordt alleen aangekondigd wie er gestorven is. De rol van de overledene wordt niet bekendgemaakt.\n\nGeen bevestiging. Geen zekerheid. Geen opgeluchte zucht wanneer eindelijk een wolf valt.\n\nElke dood laat alleen maar meer vragen achter."
   },
   {
+    key: "de-cirkelzitting",
+    name: "De Cirkelzitting",
+    shortDescription: "Een uitbreiding rond vaste buren in de cirkel.",
+    description: "Uitleg volgt."
+  },
+  {
     key: "de-tongtovenaar",
     name: "De Tongtovenaar",
     description: "Het dorp staat onder ijzeren grip van de Tongtovenaar, en niemand ontsnapt aan zijn natte staf 👅\n\nGeen dag zal hetzelfde verlopen. Iedere dag legt de Tongtovenaar nieuwe spreukregels op aan de chats en wordt jullie manier van praten vervormd, gelimiteerd, uitgebreid of compleet op zijn kop gezet.\n\nEr zullen zware dagen zijn. Er zullen breinkrakers tussen zitten.\n\nMaar bovenal zal het chaos, verwarring en vooral veel plezier brengen."
@@ -107,15 +113,15 @@ const expansions = [
       "cupido",
       "de-heks-wakkerdam",
       "de-burgemeester-wakkerdam",
-      "de-dief-wakkerdam",
+      "de-dief",
       "de-dorpsgek",
       "de-dorpsoudste",
       "de-zondebok",
       "de-genezer",
       "de-fluitspeler",
       "de-burgerlijke-burger",
-      "de-twee-gezusters-wakkerdam",
-      "de-drie-gebroeders-wakkerdam",
+      "de-twee-gezusters",
+      "de-drie-gebroeders",
       "de-engel-wakkerdam",
       "de-stotterende-raadsheer",
       "de-ridder-met-het-roestige-zwaard-wakkerdam",
