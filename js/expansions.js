@@ -219,9 +219,25 @@ function renderExpansions() {
       )
     );
 
-    const title = document.createElement("h2");
-    title.className = "expansion-title";
-    title.textContent = expansion.name;
+    const titleId = `expansion-title-${expansion.key}`;
+    const panelId = `expansion-panel-${expansion.key}`;
+
+    const toggle = document.createElement("button");
+    toggle.className = "expansion-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", panelId);
+    toggle.innerHTML = `
+      <span id="${titleId}" class="expansion-title">${expansion.name}</span>
+      <span class="expansion-toggle-icon" aria-hidden="true">+</span>
+    `;
+
+    const panel = document.createElement("div");
+    panel.id = panelId;
+    panel.className = "expansion-panel";
+    panel.setAttribute("role", "region");
+    panel.setAttribute("aria-labelledby", titleId);
+    panel.hidden = true;
 
     const descriptionBlock = document.createElement("div");
     descriptionBlock.className = "expansion-description-block";
@@ -232,28 +248,27 @@ function renderExpansions() {
 
     descriptionBlock.appendChild(description);
 
-    section.appendChild(title);
-    section.appendChild(descriptionBlock);
+    panel.appendChild(descriptionBlock);
 
     if (expansion.talentsUrl) {
       const talentsLink = document.createElement("a");
       talentsLink.className = "expansion-action-link";
       talentsLink.href = expansion.talentsUrl;
       talentsLink.textContent = "Bekijk talenten";
-      section.appendChild(talentsLink);
+      panel.appendChild(talentsLink);
     }
 
     const rolesTitle = document.createElement("h3");
     rolesTitle.className = "expansion-roles-title";
     rolesTitle.textContent = "Rollen in deze uitbreiding";
 
-    section.appendChild(rolesTitle);
+    panel.appendChild(rolesTitle);
 
     if (!expansionRoles.length) {
       const empty = document.createElement("div");
       empty.className = "empty-message";
       empty.textContent = "Nog geen rollen toegevoegd.";
-      section.appendChild(empty);
+      panel.appendChild(empty);
     } else {
       const grid = document.createElement("div");
       grid.className = "roles-grid";
@@ -262,9 +277,19 @@ function renderExpansions() {
         grid.appendChild(createRoleCard(role));
       });
 
-      section.appendChild(grid);
+      panel.appendChild(grid);
     }
 
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      panel.hidden = isOpen;
+      section.classList.toggle("is-open", !isOpen);
+    });
+
+    section.appendChild(toggle);
+    section.appendChild(panel);
     expansionsList.appendChild(section);
   });
 }
