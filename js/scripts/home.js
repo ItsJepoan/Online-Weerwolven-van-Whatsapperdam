@@ -155,11 +155,15 @@ function createRoleCard(role) {
 function createExpansionCard(expansion) {
   const card = document.createElement("article");
   card.className = "home-expansion-card";
+  const href =
+    (expansion.category || "uitbreiding") === "speloptie"
+      ? "spelopties.html"
+      : "uitbreidingen.html";
 
   card.innerHTML = `
     <h3>${expansion.name}</h3>
-    <p>${expansion.shortDescription || "Nieuwe uitbreiding voor Whatsapperdam."}</p>
-    <a href="expansions.html" class="home-expansion-link">Bekijk uitbreiding</a>
+    <p>${expansion.shortDescription || "Nieuwe module voor Whatsapperdam."}</p>
+    <a href="${href}" class="home-expansion-link">Bekijk module</a>
   `;
 
   return card;
@@ -297,16 +301,13 @@ function renderNewRoles() {
 function renderNewExpansions() {
   if (!newExpansionsList || typeof expansions === "undefined") return;
 
-  const newExpansionKeys = ["de-cirkelzitting"];
-  const newExpansions = newExpansionKeys
-    .map((key) => expansions.find((expansion) => expansion.key === key))
-    .filter(Boolean);
+  const newExpansions = expansions.filter((expansion) => expansion.isNew);
 
   newExpansionsList.innerHTML = "";
 
   if (!newExpansions.length) {
     newExpansionsList.innerHTML = `
-      <p class="empty-message">Geen nieuwe uitbreidingen.</p>
+      <p class="empty-message">Geen nieuwe modules.</p>
     `;
     return;
   }

@@ -19,12 +19,24 @@
 
   <nav class="main-nav">
     <div class="container nav-links">
-      <a href="index.html">Home</a>
-      <a href="current-game.html">Huidig spel</a>
-      <a href="rules.html">Regels</a>
-      <a href="roles.html" class="active">Rollen</a>
-      <a href="expansions.html">Uitbreidingen</a>
-      <a href="appendices.html">Appendices</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="spelverloop.html" class="nav-link">Spelverloop</a>
+      <a href="regels.html" class="nav-link">Regels</a>
+      <div class="nav-dropdown active">
+        <button class="nav-dropdown-toggle" type="button">Rollen &amp; Talenten</button>
+        <div class="nav-dropdown-menu">
+          <a href="rollen.html">Rollen</a>
+          <a href="talenten.html">Talenten</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">Modules</button>
+        <div class="nav-dropdown-menu">
+          <a href="spelopties.html">Spelopties</a>
+          <a href="uitbreidingen.html">Uitbreidingen</a>
+        </div>
+      </div>
+      <a href="appendices.html" class="nav-link">Appendices</a>
     </div>
   </nav>
 
@@ -40,7 +52,6 @@
           <h2>Zoeken en filters</h2>
           <p>Zoek op naam en filter op alliantie of type.</p>
         </div>
-        <a href="talents.html" class="roles-talent-link">Bekijk talenten</a>
       </div>
 
       <div class="filters-grid">
@@ -108,7 +119,8 @@
     </div>
   </div>
 
-  <script src="js/roles-data.js"></script>
-  <script src="js/roles.js"></script>
+  <script src="js/data/roles-data.js"></script>
+  <script src="js/scripts/roles.js"></script>
+  <script src="js/scripts/navigation.js"></script>
 </body>
 </html>

@@ -19,12 +19,24 @@
 
   <nav class="main-nav">
     <div class="container nav-links">
-      <a href="index.html">Home</a>
-      <a href="current-game.html">Huidig spel</a>
-      <a href="rules.html" class="active">Regels</a>
-      <a href="roles.html">Rollen</a>
-      <a href="expansions.html">Uitbreidingen</a>
-      <a href="appendices.html">Appendices</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="spelverloop.html" class="nav-link">Spelverloop</a>
+      <a href="regels.html" class="nav-link active">Regels</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">Rollen &amp; Talenten</button>
+        <div class="nav-dropdown-menu">
+          <a href="rollen.html">Rollen</a>
+          <a href="talenten.html">Talenten</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">Modules</button>
+        <div class="nav-dropdown-menu">
+          <a href="spelopties.html">Spelopties</a>
+          <a href="uitbreidingen.html">Uitbreidingen</a>
+        </div>
+      </div>
+      <a href="appendices.html" class="nav-link">Appendices</a>
     </div>
   </nav>
 
@@ -40,7 +52,8 @@
     <section id="rules-content" class="rules-layout"></section>
   </main>
 
-  <script src="js/rules-data.js"></script>
-  <script src="js/rules.js"></script>
+  <script src="js/data/rules-data.js"></script>
+  <script src="js/scripts/rules.js"></script>
+  <script src="js/scripts/navigation.js"></script>
 </body>
 </html>

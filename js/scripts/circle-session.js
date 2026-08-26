@@ -18,7 +18,8 @@ function escapeHtml(value) {
 function isWakkerdamActive() {
   return (
     typeof activeExpansionKeys !== "undefined" &&
-    activeExpansionKeys.includes("back-to-basics-wakkerdam-editie")
+    (activeExpansionKeys.includes("de-cirkelzitting") ||
+      activeExpansionKeys.includes("back-to-basics-wakkerdam-editie"))
   );
 }
 

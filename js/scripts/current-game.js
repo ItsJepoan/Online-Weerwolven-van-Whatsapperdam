@@ -1,6 +1,11 @@
 const currentRolesList = document.getElementById("current-roles-list");
 const activeExpansionsList = document.getElementById("active-expansions-list");
 const currentTalentsList = document.getElementById("current-talents-list");
+const currentPlayerList = document.getElementById("current-player-list");
+const currentAnnouncementsList = document.getElementById("current-announcements-list");
+const circleSessionLink = document.getElementById("circle-session-link");
+const currentGameNumberElement = document.getElementById("current-game-number");
+const currentGameMasterElement = document.getElementById("current-game-master");
 
 const modal = document.getElementById("role-modal");
 const modalClose = document.getElementById("role-modal-close");
@@ -145,6 +150,10 @@ function formatInlineText(value) {
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
+function formatAnnouncementText(value) {
+  return escapeHtml(value).replace(/\*([^*]+)\*/g, "<em>$1</em>");
+}
+
 function formatTalentText(value) {
   return escapeHtml(value)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -248,6 +257,114 @@ function createRoleCard(role) {
   });
 
   return card;
+}
+
+function isPlayerAlive(player) {
+  if (typeof player.alive === "boolean") return player.alive;
+  return String(player.status || "levend").toLowerCase() !== "dood";
+}
+
+function renderCurrentPlayers() {
+  if (!currentPlayerList) return;
+
+  const players =
+    typeof currentGamePlayers !== "undefined" ? currentGamePlayers : [];
+
+  currentPlayerList.innerHTML = "";
+
+  if (!players.length) {
+    currentPlayerList.innerHTML = `<p class="current-empty-message">Nog geen spelers ingevuld.</p>`;
+    return;
+  }
+
+  [...players]
+    .sort((a, b) => {
+      const aliveCompare = Number(isPlayerAlive(b)) - Number(isPlayerAlive(a));
+      if (aliveCompare !== 0) return aliveCompare;
+      return a.name.localeCompare(b.name, "nl", { sensitivity: "base" });
+    })
+    .forEach((player) => {
+      const alive = isPlayerAlive(player);
+      const row = document.createElement("div");
+      row.className = `current-player-row ${alive ? "alive" : "dead"}`;
+      row.innerHTML = `
+        <span class="current-player-name">${escapeHtml(player.name)}</span>
+        <span class="current-player-status">${alive ? "Levend" : "Dood"}</span>
+      `;
+      currentPlayerList.appendChild(row);
+    });
+}
+
+function renderCurrentAnnouncements() {
+  if (!currentAnnouncementsList) return;
+
+  const announcements =
+    typeof currentGameAnnouncements !== "undefined" ? currentGameAnnouncements : [];
+
+  currentAnnouncementsList.innerHTML = "";
+
+  if (!announcements.length) {
+    currentAnnouncementsList.innerHTML = `<p class="current-empty-message">Nog geen aankondigingen.</p>`;
+    return;
+  }
+
+  [...announcements]
+    .sort((a, b) => String(b.datetime || "").localeCompare(String(a.datetime || "")))
+    .forEach((announcement) => {
+      const row = document.createElement("article");
+      row.className = "current-announcement-row";
+      row.innerHTML = `
+        <time class="current-announcement-time">${escapeHtml(announcement.label || announcement.datetime || "")}</time>
+        <div class="current-announcement-message">${formatAnnouncementText(announcement.message || "")}</div>
+      `;
+      currentAnnouncementsList.appendChild(row);
+    });
+}
+
+function isCircleSessionActive() {
+  return (
+    typeof activeExpansionKeys !== "undefined" &&
+    (activeExpansionKeys.includes("de-cirkelzitting") ||
+      activeExpansionKeys.includes("back-to-basics-wakkerdam-editie"))
+  );
+}
+
+function renderCircleSessionLink() {
+  if (!circleSessionLink) return;
+  circleSessionLink.classList.toggle("hidden", !isCircleSessionActive());
+}
+
+function renderCurrentGameNumber() {
+  if (!currentGameNumberElement) return;
+
+  if (typeof currentGameNumber === "undefined" || currentGameNumber === null) {
+    currentGameNumberElement.textContent = "";
+    currentGameNumberElement.classList.add("hidden");
+    return;
+  }
+
+  currentGameNumberElement.textContent = `#${currentGameNumber}`;
+  currentGameNumberElement.classList.remove("hidden");
+}
+
+function renderCurrentGameMaster() {
+  if (!currentGameMasterElement) return;
+
+  const gameMasters =
+    typeof currentGameMasters !== "undefined"
+      ? currentGameMasters
+      : typeof currentGameMaster !== "undefined" && currentGameMaster
+        ? [currentGameMaster]
+        : [];
+
+  if (!gameMasters.length) {
+    currentGameMasterElement.textContent = "";
+    currentGameMasterElement.classList.add("hidden");
+    return;
+  }
+
+  currentGameMasterElement.textContent = `${gameMasters.length === 1 ? "GameMaster" : "GameMasters"}: ${gameMasters.join(", ")}`;
+  currentGameMasterElement.classList.remove("hidden");
 }
 
 function createTalentCard(talent) {
@@ -423,7 +540,7 @@ function renderActiveExpansions() {
   }
 
   activeExpansions.forEach((expansion) => {
-    const relatedRoles = Array.isArray(expansion.activeRoleIds)
+    const relatedRoles = expansion.hideRoles || Array.isArray(expansion.activeRoleIds)
       ? []
       : sortRoles(
           roles.filter((role) =>
@@ -437,12 +554,39 @@ function renderActiveExpansions() {
     const card = document.createElement("section");
     card.className = "current-expansion-card";
 
-    const rolesContainer = document.createElement("div");
+    const titleId = `current-expansion-title-${expansion.key}`;
+    const panelId = `current-expansion-panel-${expansion.key}`;
+    const displayName = `${expansion.name}${activeExpansionVariants && activeExpansionVariants[expansion.key] ? ` (${activeExpansionVariants[expansion.key]})` : ""}`;
+
+    const toggle = document.createElement("button");
+    toggle.className = "current-expansion-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", panelId);
+    toggle.innerHTML = `
+      <span id="${titleId}" class="current-expansion-title">${displayName}</span>
+      <span class="current-expansion-toggle-icon" aria-hidden="true">+</span>
+    `;
+
+    const panel = document.createElement("div");
+    panel.id = panelId;
+    panel.className = "current-expansion-panel";
+    panel.setAttribute("role", "region");
+    panel.setAttribute("aria-labelledby", titleId);
+    panel.hidden = true;
+
+    const description = document.createElement("div");
+    description.className = "current-expansion-description";
+    description.innerHTML = createFormattedDescription(expansion.description);
+    panel.appendChild(description);
 
     if (relatedRoles.length) {
       const rolesTitle = document.createElement("h3");
       rolesTitle.className = "current-expansion-roles-title";
-      rolesTitle.textContent = "Rollen in deze uitbreiding";
+      rolesTitle.textContent =
+        (expansion.category || "uitbreiding") === "speloptie"
+          ? "Rollen bij deze speloptie"
+          : "Rollen in deze uitbreiding";
 
       const grid = document.createElement("div");
       grid.className = "current-roles-grid";
@@ -451,28 +595,37 @@ function renderActiveExpansions() {
         grid.appendChild(createRoleCard(role));
       });
 
-      rolesContainer.appendChild(rolesTitle);
-      rolesContainer.appendChild(grid);
+      panel.appendChild(rolesTitle);
+      panel.appendChild(grid);
     }
-
-    card.innerHTML = `
-      <h2 class="current-expansion-title">${expansion.name}${activeExpansionVariants && activeExpansionVariants[expansion.key] ? ` (${activeExpansionVariants[expansion.key]})` : ""}</h2>
-      <div class="current-expansion-description">${createFormattedDescription(expansion.description)}</div>
-    `;
 
     if (expansion.talentsUrl) {
       const talentsLink = document.createElement("a");
       talentsLink.className = "current-expansion-action-link";
       talentsLink.href = expansion.talentsUrl;
       talentsLink.textContent = "Bekijk talenten";
-      card.appendChild(talentsLink);
+      panel.appendChild(talentsLink);
     }
 
-    card.appendChild(rolesContainer);
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      panel.hidden = isOpen;
+      card.classList.toggle("is-open", !isOpen);
+    });
+
+    card.appendChild(toggle);
+    card.appendChild(panel);
     activeExpansionsList.appendChild(card);
   });
 }
 
+renderCurrentPlayers();
+renderCurrentAnnouncements();
+renderCircleSessionLink();
+renderCurrentGameNumber();
+renderCurrentGameMaster();
 renderActiveExpansions();
 renderCurrentTalents();
 renderRoleSections();

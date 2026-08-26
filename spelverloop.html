@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spelverloop - Online Weerwolven van Whatsapperdam</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/current-game.css" />
+  <link rel="stylesheet" href="css/talents.css" />
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/roles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Online Weerwolven van Whatsapperdam</h1>
+      <p class="subtitle">Spelverloop</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="spelverloop.html" class="nav-link active">Spelverloop</a>
+      <a href="regels.html" class="nav-link">Regels</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">Rollen &amp; Talenten</button>
+        <div class="nav-dropdown-menu">
+          <a href="rollen.html">Rollen</a>
+          <a href="talenten.html">Talenten</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">Modules</button>
+        <div class="nav-dropdown-menu">
+          <a href="spelopties.html">Spelopties</a>
+          <a href="uitbreidingen.html">Uitbreidingen</a>
+        </div>
+      </div>
+      <a href="appendices.html" class="nav-link">Appendices</a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <section class="content-card current-game-intro current-game-status-section">
+      <div class="current-game-status-header">
+        <div>
+          <h2>
+            Spelverloop
+            <span id="current-game-number" class="current-game-number"></span>
+            <span id="current-game-master" class="current-game-master"></span>
+          </h2>
+          <p>Actuele spelers, status en aankondigingen.</p>
+        </div>
+        <a id="circle-session-link" class="current-expansion-action-link hidden" href="cirkelzitting.html">Cirkel Zitting</a>
+      </div>
+
+      <div class="current-status-grid">
+        <section class="current-status-panel">
+          <h3>Speler lijst</h3>
+          <div id="current-player-list" class="current-player-list"></div>
+        </section>
+
+        <section class="current-status-panel">
+          <h3>Aankondigingen</h3>
+          <div id="current-announcements-list" class="current-announcements-list"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="active-expansions-list" class="current-expansions-layout"></section>
+
+    <section id="current-talents-list"></section>
+
+    <section id="current-roles-list"></section>
+  </main>
+
+  <div id="role-modal" class="role-modal hidden">
+  <div class="role-modal-backdrop"></div>
+
+  <div class="role-modal-content">
+    <button id="role-modal-close" class="role-modal-close" type="button" aria-label="Sluiten">
+      &times;
+    </button>
+
+    <div class="role-modal-body">
+      <img id="modal-role-image" class="role-modal-image" alt="">
+
+      <div class="role-modal-text">
+        <h2 id="modal-role-name"></h2>
+
+        <div class="meta-block">
+          <strong>Alliantie</strong>
+          <div id="modal-role-alliance" class="badges"></div>
+        </div>
+
+        <div class="meta-block">
+          <strong>Afkomst</strong>
+          <div id="modal-role-origin" class="badges"></div>
+        </div>
+
+        <div class="meta-block">
+          <strong>Type</strong>
+          <div id="modal-role-types" class="badges"></div>
+        </div>
+
+        <p id="modal-role-description"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/data/roles-data.js"></script>
+  <script src="js/data/expansions-data.js"></script>
+  <script src="js/data/talents-data.js"></script>
+  <script src="js/data/current-game-data.js"></script>
+  <script src="js/scripts/current-game.js"></script>
+  <script src="js/scripts/navigation.js"></script>
+</body>
+</html>

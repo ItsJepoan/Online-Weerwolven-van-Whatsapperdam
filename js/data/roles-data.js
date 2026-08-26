@@ -1193,7 +1193,7 @@ const roles = [
     image: "images/De Wakkerdamse Burgemeester.png",
     alliance: null,
     origin: "Wakkerdam",
-    types: ["Bijrol", "Invloedrijk"],
+    types: ["Uitbreiding", "Bijrol", "Invloedrijk"],
     description: "Ook in Wakkerdam heeft het dorp iemand nodig die de leiding neemt. Met een mooie speech, genoeg vertrouwen en misschien wat loze beloftes wordt een inwoner verkozen tot Burgemeester.\n\nDe Wakkerdamse Burgemeester wordt via een speciale algemene stemming gekozen. Zijn stem telt tijdens iedere stemming als twee stemmen. Bij een gelijke stemming heeft hij daarnaast de beslissende stem en bepaalt hij wie er wordt verbrand.\n\nSterft de Burgemeester, dan draagt hij zijn burgemeesterschap over in goed of slecht vertrouwen en kiest hij zelf een levende speler als zijn opvolger.\n\nZo blijft Wakkerdam altijd onder leiding... of die leiding ook te vertrouwen is, is een ander verhaal.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"
@@ -1204,7 +1204,7 @@ const roles = [
     image: "images/De Wakkerdamse Omroeper.png",
     alliance: null,
     origin: "Wakkerdam",
-    types: ["Bijrol", "Aankondiging"],
+    types: ["Uitbreiding", "Bijrol", "Aankondiging"],
     description: "Waar hij komt, blijft het niet stil... zelfs niet na zijn dood. Net als zijn Whatsapperdamse broeder zorgt de Wakkerdamse Omroeper ervoor dat de waarheid uiteindelijk boven tafel komt.\n\nIn de eerste nacht, tussen 20:00 en 09:00, kiest de Omroeper via een direct bericht aan de GM een speler.\n\nWanneer de Omroeper sterft, wordt naast zijn eigen rol ook de rol van deze gekozen speler bekendgemaakt. Sterft deze speler eerder dan de Omroeper, dan mag hij direct een nieuwe speler kiezen.\n\nIemand neemt hij altijd mee... al is het alleen in de waarheid.\n\nIn de toekomst zal de Wakkerdamse Omroeper waarschijnlijk nog wat meer te maken krijgen met de Burgemeester. Voor nu blijft zijn taak echter hierbij.",
     isExpansionRole: true,
     expansionKey: "back-to-basics-wakkerdam-editie"

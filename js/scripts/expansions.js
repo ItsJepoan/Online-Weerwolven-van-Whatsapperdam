@@ -204,20 +204,27 @@ function createRoleCard(role) {
 ====================== */
 function renderExpansions() {
   expansionsList.innerHTML = "";
+  const selectedCategory = expansionsList.dataset.category || "uitbreiding";
 
-  sortExpansions(expansions).forEach((expansion) => {
+  sortExpansions(
+    expansions.filter((expansion) =>
+      (expansion.category || "uitbreiding") === selectedCategory
+    )
+  ).forEach((expansion) => {
     const section = document.createElement("section");
     section.className = "expansion-card";
 
     const configuredRoleIds = new Set(expansion.roleIds || []);
 
-    const expansionRoles = sortExpansionRoles(
-      roles.filter(
-        (role) =>
-          configuredRoleIds.has(role.id) ||
-          (role.isExpansionRole && role.expansionKey === expansion.key)
-      )
-    );
+    const expansionRoles = expansion.hideRoles
+      ? []
+      : sortExpansionRoles(
+          roles.filter(
+            (role) =>
+              configuredRoleIds.has(role.id) ||
+              (role.isExpansionRole && role.expansionKey === expansion.key)
+          )
+        );
 
     const titleId = `expansion-title-${expansion.key}`;
     const panelId = `expansion-panel-${expansion.key}`;
@@ -260,16 +267,21 @@ function renderExpansions() {
 
     const rolesTitle = document.createElement("h3");
     rolesTitle.className = "expansion-roles-title";
-    rolesTitle.textContent = "Rollen in deze uitbreiding";
+    rolesTitle.textContent =
+      selectedCategory === "speloptie"
+        ? "Rollen bij deze speloptie"
+        : "Rollen in deze uitbreiding";
 
-    panel.appendChild(rolesTitle);
+    if (!expansion.hideRoles) {
+      panel.appendChild(rolesTitle);
+    }
 
-    if (!expansionRoles.length) {
+    if (!expansion.hideRoles && !expansionRoles.length) {
       const empty = document.createElement("div");
       empty.className = "empty-message";
       empty.textContent = "Nog geen rollen toegevoegd.";
       panel.appendChild(empty);
-    } else {
+    } else if (!expansion.hideRoles) {
       const grid = document.createElement("div");
       grid.className = "roles-grid";
 

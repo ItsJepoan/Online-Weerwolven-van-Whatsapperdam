@@ -3,24 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Weerwolven van Whatsapperdam</title>
+  <title>Spelopties - Online Weerwolven van Whatsapperdam</title>
 
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/roles.css" />
-  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/expansions.css" />
   <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1>Online Weerwolven van Whatsapperdam</h1>
-      <p class="subtitle">Welkom in Whatsapperdam</p>
+      <p class="subtitle">Spelopties</p>
     </div>
   </header>
 
   <nav class="main-nav">
     <div class="container nav-links">
-      <a href="index.html" class="nav-link active">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
       <a href="spelverloop.html" class="nav-link">Spelverloop</a>
       <a href="regels.html" class="nav-link">Regels</a>
       <div class="nav-dropdown">
@@ -30,7 +29,7 @@
           <a href="talenten.html">Talenten</a>
         </div>
       </div>
-      <div class="nav-dropdown">
+      <div class="nav-dropdown active">
         <button class="nav-dropdown-toggle" type="button">Modules</button>
         <div class="nav-dropdown-menu">
           <a href="spelopties.html">Spelopties</a>
@@ -42,30 +41,7 @@
   </nav>
 
   <main class="container page-content">
-    <section class="home-hero">
-      <div class="home-hero-card">
-        <h2>Welkom in Whatsapperdam</h2>
-        <p>
-          Online Weerwolven van Whatsapperdam is het dorp waar iedereen praat,
-          niemand volledig te vertrouwen is en één nacht genoeg kan zijn om alles
-          op zijn kop te zetten.
-        </p>
-        <p>
-          Hier vind je de rollen, regels, modules en nieuwe toevoegingen die het
-          spel steeds weer net even anders maken.
-        </p>
-      </div>
-    </section>
-
-    <section class="content-card">
-      <h2 class="role-alliance-title">Nieuwe rollen</h2>
-      <div id="new-roles-list" class="roles-grid"></div>
-    </section>
-
-    <section class="content-card home-new-expansions-section">
-      <h2 class="role-alliance-title">Nieuwe modules</h2>
-      <div id="new-expansions-list" class="home-expansions-grid"></div>
-    </section>
+    <section id="expansions-list" data-category="speloptie"></section>
   </main>
 
   <!-- MODAL -->
@@ -73,12 +49,14 @@
     <div class="role-modal-backdrop"></div>
 
     <div class="role-modal-content">
-      <button id="role-modal-close" class="role-modal-close" type="button">&times;</button>
+      <button id="role-modal-close" class="role-modal-close" type="button" aria-label="Sluiten">
+        &times;
+      </button>
 
       <div class="role-modal-body">
         <img id="modal-role-image" class="role-modal-image" alt="">
 
-        <!-- 🔥 FIX: wrapper toegevoegd -->
+        <!-- 🔥 BELANGRIJK: deze wrapper maakt scroll mogelijk -->
         <div class="role-modal-text">
           <h2 id="modal-role-name"></h2>
 
@@ -105,7 +83,7 @@
 
   <script src="js/data/roles-data.js"></script>
   <script src="js/data/expansions-data.js"></script>
-  <script src="js/scripts/home.js"></script>
+  <script src="js/scripts/expansions.js"></script>
   <script src="js/scripts/navigation.js"></script>
 </body>
 </html>

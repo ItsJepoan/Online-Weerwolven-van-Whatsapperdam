@@ -2,32 +2,215 @@
   margin-bottom: 1.75rem;
 }
 
-.current-game-intro p {
-  margin-top: 0.75rem;
+.current-game-status-section {
+  margin-bottom: 2rem;
+}
+
+.current-game-status-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.current-game-status-header p {
   color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.current-game-number,
+.current-game-master {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.95rem;
+  margin-left: 0.45rem;
+  padding: 0.18rem 0.6rem;
+  vertical-align: middle;
+}
+
+.current-game-master {
+  background: var(--surface-alt);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.current-status-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+}
+
+.current-status-panel {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.current-status-panel h3 {
+  color: var(--primary);
+  margin-bottom: 0.85rem;
+}
+
+.current-player-list,
+.current-announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.current-player-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.current-player-row,
+.current-announcement-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+}
+
+.current-player-row.dead {
+  background: #eeeeee;
+  color: var(--muted);
+  opacity: 0.78;
+}
+
+.current-player-name {
+  font-weight: 700;
+}
+
+.current-player-status {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.current-player-row.alive .current-player-status {
+  color: #0d5c2f;
+  background: #dff4e8;
+}
+
+.current-player-row.dead .current-player-status {
+  color: #6c1f1f;
+  background: #f2dddd;
+}
+
+.current-announcement-row {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.current-announcement-time {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.current-announcement-message {
+  line-height: 1.45;
+}
+
+.current-announcement-message em {
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 700;
 }
 
 .current-expansions-layout {
-  display: grid;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
   margin-bottom: 2.5rem;
 }
 
 .current-expansion-card {
   background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
   border: 1px solid var(--border);
-  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.current-expansion-toggle {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.15rem;
+  background: var(--surface);
+  transition: background 0.18s ease;
+}
+
+.current-expansion-toggle:hover {
+  background: var(--surface-alt);
+}
+
+.current-expansion-toggle:focus-visible {
+  outline: 3px solid rgba(92, 68, 140, 0.28);
+  outline-offset: -3px;
 }
 
 .current-expansion-title {
-  text-align: center;
   color: var(--primary);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.current-expansion-toggle-icon {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.current-expansion-card.is-open .current-expansion-toggle {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+
+.current-expansion-card.is-open .current-expansion-toggle-icon {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  font-size: 0;
+}
+
+.current-expansion-card.is-open .current-expansion-toggle-icon::before {
+  content: "";
+  width: 0.8rem;
+  height: 2px;
+  background: currentColor;
+}
+
+.current-expansion-panel {
+  padding: 1.15rem;
 }
 
 .current-expansion-description {
@@ -192,18 +375,30 @@
 }
 
 @media (max-width: 760px) {
+  .current-status-grid {
+    grid-template-columns: 1fr;
+  }
+
   .current-roles-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 560px) {
+  .current-game-status-header {
+    flex-direction: column;
+  }
+
   .current-talent-header {
     flex-direction: column;
   }
 
   .current-roles-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .current-player-list {
+    grid-template-columns: 1fr;
   }
 
   .current-role-title,
