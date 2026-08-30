@@ -27,7 +27,15 @@ const expansions = [
     "description": "Uitleg volgt.",
     "category": "speloptie",
     "isNew": true,
-    "hideRoles": true
+    "roleIds": [
+      "de-ridder-met-het-roestige-zwaard-wakkerdam",
+      "de-vos-wakkerdam",
+      "titus-en-zijn-dansende-beer-wakkerdam"
+    ],
+    "replaceRoleIds": [
+      "de-ridder-met-het-roestige-zwaard",
+      "de-vos"
+    ]
   },
   {
     "key": "tongspreuken",

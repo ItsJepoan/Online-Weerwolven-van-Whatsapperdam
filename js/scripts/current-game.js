@@ -52,8 +52,14 @@ const activeExpansionRoleIds = roles
   )
   .map((role) => role.id);
 
+const replacedActiveRoleIds = new Set(
+  expansions
+    .filter((expansion) => activeExpansionKeys.includes(expansion.key))
+    .flatMap((expansion) => expansion.replaceRoleIds || [])
+);
+
 const allActiveRoleIds = new Set([
-  ...currentGameRoleIds,
+  ...currentGameRoleIds.filter((roleId) => !replacedActiveRoleIds.has(roleId)),
   ...activeExpansionRoleIds
 ]);
 const activeExpansionRoleIdSet = new Set(activeExpansionRoleIds);
