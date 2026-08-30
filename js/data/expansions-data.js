@@ -156,6 +156,13 @@ const expansions = [
     "category": "uitbreiding"
   },
   {
+    "key": "de-dorpsbrouwerij",
+    "name": "De Dorpsbrouwerij",
+    "shortDescription": "Een uitbreiding met twee Barmannen en heel wat twijfelachtige drankjes.",
+    "description": "In sommige spellen opent in Whatsapperdam de **Dorpsbrouwerij**. De lokale kroeg zorgt voor gezelligheid, maar ook voor een klein probleem: sommige dorpsbewoners drinken net iets te veel.\n\nWanneer een speler boven het chatlimiet van 20 berichten uitkomt, zonder dat dit verdediging of direct wederwoord is, heeft die speler 50% kans om die nacht en de volgende dag dronken te worden.\n\nEen dronken speler merkt hier zelf niets van, maar zijn acties kunnen anders uitpakken dan verwacht. De GM kan bijvoorbeeld bepalen dat een speler het verkeerde doelwit bezoekt, verkeerde informatie ontvangt of dat een actie op een andere speler terechtkomt.\n\nRollen die personen kiezen, zoals de Genezer, het Sletje, de Onderdrukker, de Papegaai of Grafrover, kunnen hierdoor iemand anders raken. Rollen die informatie krijgen, zoals de Ziener, Vos of Heks, kunnen verkeerde informatie ontvangen. Zelfs een Weerwolf kan per ongeluk bij het verkeerde huis eindigen.\n\nAlle rollen en hun dronken acties zijn te vinden in **Appendix D: Dronken**.\n\nBij deze uitbreiding horen ook twee speciale rollen:",
+    "category": "uitbreiding"
+  },
+  {
     "key": "de-dorpshoroscoop",
     "name": "De Dorpshoroscoop",
     "description": "Elke ochtend tussen 09:00 en 10.00 verschijnt er in Whatsapperdam een dorpshoroscoop in de aankondigingen. Dit is een mysterieuze voorspelling die die dag, en soms ook de daaropvolgende nacht, invloed heeft op het dorp.\n\nDe horoscoop verschijnt als een korte, sfeervolle tekst die een hint geeft naar wat er gaat gebeuren. Soms lijkt het vuur van de brandstapel zich anders te gedragen, soms wordt de nacht onrustig, blijven geheimen verborgen of voelen dorpsgenoten plots een vreemde verbondenheid. Wat de tekst precies betekent en hoe groot de invloed werkelijk is, weet alleen de GM.\n\nEen dorpshoroscoop kan verschillende delen van het spel beïnvloeden, zoals stemmen, nachtacties, het burgerberaad, informatie in de aankondigingen, chaos in het dorp of het vertrouwen tussen spelers. Meestal blijft een horoscoop één dag en één nacht actief, tenzij anders vermeld.",

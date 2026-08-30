@@ -103,6 +103,15 @@
   background: #dff4e8;
 }
 
+.current-player-row.game-master {
+  border-color: var(--primary);
+}
+
+.current-player-row.game-master .current-player-status {
+  color: white;
+  background: var(--primary);
+}
+
 .current-player-row.dead .current-player-status {
   color: #6c1f1f;
   background: #f2dddd;

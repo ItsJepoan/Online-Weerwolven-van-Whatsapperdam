@@ -28,6 +28,14 @@ function isPlayerAlive(player) {
   return String(player.status || "levend").toLowerCase() !== "dood";
 }
 
+function getGameMasters() {
+  if (typeof currentGameMasters !== "undefined") return currentGameMasters;
+  if (typeof currentGameMaster !== "undefined" && currentGameMaster) {
+    return [currentGameMaster];
+  }
+  return [];
+}
+
 function normalizeSearch(value) {
   return String(value)
     .normalize("NFD")
@@ -39,8 +47,9 @@ function normalizeSearch(value) {
 function getCirclePlayers() {
   const players =
     typeof currentGamePlayers !== "undefined" ? currentGamePlayers : [];
+  const gameMasterNames = new Set(getGameMasters().map(normalizeSearch));
 
-  return [...players].sort((a, b) => {
+  return [...players].filter((player) => !gameMasterNames.has(normalizeSearch(player.name))).sort((a, b) => {
     const orderA = Number.isFinite(a.circleOrder) ? a.circleOrder : null;
     const orderB = Number.isFinite(b.circleOrder) ? b.circleOrder : null;
 
@@ -56,7 +65,11 @@ function getCirclePlayers() {
 }
 
 function renderCircle(players) {
-  circleBoard.innerHTML = `<div class="circle-center-label">Cirkel<br>Zitting</div>`;
+  const gameMasters = getGameMasters();
+  const gameMasterLabel = gameMasters.length
+    ? `<span>${gameMasters.length === 1 ? "GameMaster" : "GameMasters"}</span>${escapeHtml(gameMasters.join(", "))}`
+    : "Cirkel<br>Zitting";
+  circleBoard.innerHTML = `<div class="circle-center-label">${gameMasterLabel}</div>`;
 
   if (!players.length) {
     circleBoard.innerHTML += `<div class="circle-empty">Nog geen spelers ingevuld.</div>`;
@@ -102,6 +115,38 @@ function findPlayerBySearch(players) {
   );
 }
 
+function findGameMasterBySearch(players) {
+  const selectedName = neighborSelect.value;
+  const typedName = neighborSearchInput.value;
+  const searchValue = normalizeSearch(typedName || selectedName);
+
+  if (!searchValue) return null;
+
+  const playerNames = new Set(players.map((player) => normalizeSearch(player.name)));
+  return getGameMasters().find((gameMaster) => {
+    const normalizedGameMaster = normalizeSearch(gameMaster);
+    return (
+      !playerNames.has(normalizedGameMaster) &&
+      (normalizedGameMaster === searchValue ||
+        normalizedGameMaster.startsWith(searchValue))
+    );
+  });
+}
+
+function getGameMasterSearchMessage(gameMaster) {
+  const normalizedGameMaster = normalizeSearch(gameMaster);
+
+  if (normalizedGameMaster === "rick") {
+    return "Zure linkse homo vegetariër";
+  }
+
+  if (normalizedGameMaster === "jeron") {
+    return "Jerom";
+  }
+
+  return null;
+}
+
 function findLivingNeighbor(players, startIndex, direction) {
   if (players.length <= 1) return null;
 
@@ -121,6 +166,23 @@ function renderNeighborResult(players) {
   const player = findPlayerBySearch(players);
 
   if (!player) {
+    const gameMaster = findGameMasterBySearch(players);
+    if (gameMaster) {
+      const gameMasterMessage = getGameMasterSearchMessage(gameMaster);
+
+      neighborResult.innerHTML = `
+        <article class="neighbor-result-card">
+          <div class="neighbor-result-name">${escapeHtml(gameMaster)}</div>
+          <div class="neighbor-result-grid single">
+            <div class="neighbor-result-item">
+              <span class="neighbor-result-value">${escapeHtml(gameMasterMessage || "Deze GameMaster zit niet in de cirkel.")}</span>
+            </div>
+          </div>
+        </article>
+      `;
+      return;
+    }
+
     neighborResult.innerHTML = `<div class="neighbor-result-empty">Geen speler gevonden.</div>`;
     return;
   }

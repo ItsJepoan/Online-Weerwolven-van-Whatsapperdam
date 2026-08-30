@@ -56,13 +56,15 @@ const allActiveRoleIds = new Set([
   ...currentGameRoleIds,
   ...activeExpansionRoleIds
 ]);
+const activeExpansionRoleIdSet = new Set(activeExpansionRoleIds);
 
 const currentRoles = roles.filter((role) => allActiveRoleIds.has(role.id));
 
 const normalCurrentRoles = currentRoles.filter(
   (role) =>
     !role.types.includes("Uitbreiding") ||
-    configuredActiveExpansionRoleIds.has(role.id)
+    configuredActiveExpansionRoleIds.has(role.id) ||
+    activeExpansionRoleIdSet.has(role.id)
 );
 
 const currentGameBasisRoleIdSet = new Set([
@@ -142,6 +144,14 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function normalizeSearch(value) {
+  return String(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
 }
 
 function formatInlineText(value) {
@@ -264,6 +274,21 @@ function isPlayerAlive(player) {
   return String(player.status || "levend").toLowerCase() !== "dood";
 }
 
+function getCurrentGameMasters() {
+  if (typeof currentGameMasters !== "undefined") return currentGameMasters;
+  if (typeof currentGameMaster !== "undefined" && currentGameMaster) {
+    return [currentGameMaster];
+  }
+  return [];
+}
+
+function isCurrentGameMasterName(name) {
+  const normalizedName = normalizeSearch(name);
+  return getCurrentGameMasters().some(
+    (gameMaster) => normalizeSearch(gameMaster) === normalizedName
+  );
+}
+
 function renderCurrentPlayers() {
   if (!currentPlayerList) return;
 
@@ -285,11 +310,12 @@ function renderCurrentPlayers() {
     })
     .forEach((player) => {
       const alive = isPlayerAlive(player);
+      const gameMaster = isCurrentGameMasterName(player.name);
       const row = document.createElement("div");
-      row.className = `current-player-row ${alive ? "alive" : "dead"}`;
+      row.className = `current-player-row ${alive ? "alive" : "dead"}${gameMaster ? " game-master" : ""}`;
       row.innerHTML = `
         <span class="current-player-name">${escapeHtml(player.name)}</span>
-        <span class="current-player-status">${alive ? "Levend" : "Dood"}</span>
+        <span class="current-player-status">${gameMaster ? "GM" : alive ? "Levend" : "Dood"}</span>
       `;
       currentPlayerList.appendChild(row);
     });
@@ -350,12 +376,7 @@ function renderCurrentGameNumber() {
 function renderCurrentGameMaster() {
   if (!currentGameMasterElement) return;
 
-  const gameMasters =
-    typeof currentGameMasters !== "undefined"
-      ? currentGameMasters
-      : typeof currentGameMaster !== "undefined" && currentGameMaster
-        ? [currentGameMaster]
-        : [];
+  const gameMasters = getCurrentGameMasters();
 
   if (!gameMasters.length) {
     currentGameMasterElement.textContent = "";
