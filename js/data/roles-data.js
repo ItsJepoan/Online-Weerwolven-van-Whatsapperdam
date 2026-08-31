@@ -1249,7 +1249,7 @@ const roles = [
     alliance: "Burger",
     origin: "Wakkerdam",
     types: ["Nieuw", "Toevoegend", "Betrouwbaar"],
-    description: "Al vanaf hun geboorte zijn deze twee burgers onafscheidelijk. Ze doen alles samen en weten dat ze altijd op elkaar kunnen vertrouwen.\n\nAan het begin van het spel krijgt elke Gezuster te horen wie haar andere zuster is. Deze informatie mag gedeeld worden, maar biedt uiteindelijk vooral vertrouwen tussen de twee Gezusters.\n\nOp de vierde nacht van het spel komen de Gezusters samen. Van 20:00 tot 09:00 mogen zij in hun eigen aparte groepsapp met elkaar praten en eventuele plannen, verdenkingen en informatie uitwisselen.\n\nNa deze nacht valt de groep weer stil.",
+    description: "Al vanaf hun geboorte zijn deze twee burgers onafscheidelijk. Ze doen alles samen en weten dat ze altijd op elkaar kunnen vertrouwen.\n\nAan het begin van het spel krijgt elke Gezuster te horen wie haar andere zuster is. Deze informatie mag gedeeld worden, maar biedt uiteindelijk vooral vertrouwen tussen de twee Gezusters.\n\nIn nacht 3 komen de Gezusters samen. Van 20:00 tot 09:00 mogen zij in hun eigen aparte groepsapp met elkaar praten en eventuele plannen, verdenkingen en informatie uitwisselen.\n\nNa deze nacht valt de groep weer stil.",
     isExpansionRole: false,
     expansionKey: null
   },
@@ -1260,7 +1260,7 @@ const roles = [
     alliance: "Burger",
     origin: "Wakkerdam",
     types: ["Nieuw", "Toevoegend", "Betrouwbaar"],
-    description: "Al vanaf hun geboorte zijn deze drie burgers onafscheidelijk. Ze doen alles samen en weten dat ze altijd op hun broeders kunnen vertrouwen.\n\nAan het begin van het spel krijgt iedere Gebroeder te horen wie zijn twee broeders zijn. Deze informatie mag gedeeld worden, maar biedt uiteindelijk vooral vertrouwen tussen de drie Gebroeders.\n\nOp de vierde nacht van het spel komen de Gebroeders samen. Van 20:00 tot 09:00 mogen zij in hun eigen aparte groepsapp met elkaar praten en eventuele plannen, verdenkingen en informatie uitwisselen.\n\nNa deze nacht valt de groep weer stil.",
+    description: "Al vanaf hun geboorte zijn deze drie burgers onafscheidelijk. Ze doen alles samen en weten dat ze altijd op hun broeders kunnen vertrouwen.\n\nAan het begin van het spel krijgt iedere Gebroeder te horen wie zijn twee broeders zijn. Deze informatie mag gedeeld worden, maar biedt uiteindelijk vooral vertrouwen tussen de drie Gebroeders.\n\nIn nacht 3 komen de Gebroeders samen. Van 20:00 tot 09:00 mogen zij in hun eigen aparte groepsapp met elkaar praten en eventuele plannen, verdenkingen en informatie uitwisselen.\n\nNa deze nacht valt de groep weer stil.",
     isExpansionRole: false,
     expansionKey: null
   },

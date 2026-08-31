@@ -131,11 +131,6 @@ const currentGamePlayers = [
     "circleOrder": 24
   },
   {
-    "name": "Lucas",
-    "alive": true,
-    "circleOrder": 12
-  },
-  {
     "name": "Julian",
     "alive": true,
     "circleOrder": 3
@@ -252,22 +247,42 @@ const currentGamePlayers = [
   },
   {
     "name": "Niels",
-    "alive": false,
+    "alive": true,
     "circleOrder": 28
   },
   {
-    "name": "Lotte",
-    "alive": false,
+    "name": "Ivar",
+    "alive": true,
     "circleOrder": 17
   },
   {
     "name": "Shannon",
-    "alive": false,
+    "alive": true,
     "circleOrder": 4
   }
 ];
 
 const currentGameAnnouncements = [
+  {
+    "datetime": "2026-08-31T14:00:04",
+    "label": "31 augustus 14:00",
+    "message": "Lucas heeft toch het dorp verlaten."
+  },
+  {
+    "datetime": "2026-08-31T14:00:01",
+    "label": "31 augustus 14:00",
+    "message": "Lotte heeft het dorp verlaten."
+  },
+  {
+    "datetime": "2026-08-31T14:00:02",
+    "label": "31 augustus 14:00",
+    "message": "Niels koos voor het dorp en is herrezen."
+  },
+  {
+    "datetime": "2026-08-31T14:00:03",
+    "label": "31 augustus 14:00",
+    "message": "Shannon koos voor het dorp en is herrezen."
+  },
   {
     "datetime": "2026-08-30T21:00:01",
     "label": "30 augustus 21:00",
