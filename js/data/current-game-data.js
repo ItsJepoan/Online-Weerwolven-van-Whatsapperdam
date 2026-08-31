@@ -115,7 +115,14 @@ const activeExpansionVariants = {};
 
 const excludedActiveExpansionRoleIds = [];
 
-const currentGameBasisRoleIds = [];
+const currentGameBasisRoleIds = [
+  "cupido",
+  "de-genezer",
+  "de-fotograaf",
+  "de-vriend",
+  "de-jager",
+  "de-burger"
+];
 
 const currentGameBasisWerewolfRoleId = null;
 
