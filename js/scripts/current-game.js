@@ -204,11 +204,17 @@ function createFormattedDescription(text) {
 
 function formatRoleDescription(value) {
   return String(value)
+    .trim()
+    .split(/\n\s*\n/)
+    .map((block) => `<p>${block
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;")
     .replace(/\*\*\*([\s\S]+?)\*\*\*/g, "<strong><em>$1</em></strong>")
-    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")}</p>`)
+    .join("");
 }
 
 function lockPageScroll() {
@@ -344,7 +350,7 @@ function renderCurrentAnnouncements() {
     .sort((a, b) => String(b.datetime || "").localeCompare(String(a.datetime || "")))
     .forEach((announcement) => {
       const row = document.createElement("article");
-      row.className = "current-announcement-row";
+      row.className = `current-announcement-row${announcement.kind ? ` ${announcement.kind}` : ""}`;
       row.innerHTML = `
         <time class="current-announcement-time">${escapeHtml(announcement.label || announcement.datetime || "")}</time>
         <div class="current-announcement-message">${formatAnnouncementText(announcement.message || "")}</div>

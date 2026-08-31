@@ -20,11 +20,17 @@ let lockedScrollY = 0;
 
 function formatRoleDescription(value) {
   return String(value)
+    .trim()
+    .split(/\n\s*\n/)
+    .map((block) => `<p>${block
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;")
     .replace(/\*\*\*([\s\S]+?)\*\*\*/g, "<strong><em>$1</em></strong>")
-    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")}</p>`)
+    .join("");
 }
 
 function lockPageScroll() {
@@ -91,6 +97,22 @@ function createFormattedDescription(text) {
     .join("");
 }
 
+function isCircleSessionActive() {
+  return (
+    typeof activeExpansionKeys !== "undefined" &&
+    (activeExpansionKeys.includes("de-cirkelzitting") ||
+      activeExpansionKeys.includes("back-to-basics-wakkerdam-editie"))
+  );
+}
+
+function getRoleDescription(role) {
+  if (isCircleSessionActive() && role.circleSessionDescription) {
+    return role.circleSessionDescription;
+  }
+
+  return role.description;
+}
+
 /* ======================
    MODAL
 ====================== */
@@ -110,7 +132,7 @@ function openModal(role) {
   modalOrigin.innerHTML = `<span class="badge">${role.origin || "Onbekend"}</span>`;
 
   modalTypes.innerHTML = createBadges(role.types);
-  modalDescription.innerHTML = formatRoleDescription(role.description);
+  modalDescription.innerHTML = formatRoleDescription(getRoleDescription(role));
 
   modal.classList.remove("hidden");
   lockPageScroll();

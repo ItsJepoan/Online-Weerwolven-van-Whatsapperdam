@@ -295,8 +295,15 @@
 }
 
 #modal-role-description {
-  white-space: pre-line;
   line-height: 1.65;
+}
+
+#modal-role-description p {
+  margin-bottom: 0.9rem;
+}
+
+#modal-role-description p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1000px) {

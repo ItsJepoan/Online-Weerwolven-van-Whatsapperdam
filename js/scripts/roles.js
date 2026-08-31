@@ -133,11 +133,17 @@ function createBadges(items) {
 
 function formatRoleDescription(value) {
   return String(value)
+    .trim()
+    .split(/\n\s*\n/)
+    .map((block) => `<p>${block
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;")
     .replace(/\*\*\*([\s\S]+?)\*\*\*/g, "<strong><em>$1</em></strong>")
-    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+    .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")}</p>`)
+    .join("");
 }
 
 function lockPageScroll() {

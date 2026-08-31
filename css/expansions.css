@@ -350,9 +350,19 @@
   color: var(--primary);
 }
 
+#modal-role-description {
+  line-height: 1.65;
+}
+
+#modal-role-description p,
 .role-modal-description p {
   color: #444;
-  white-space: pre-line;
+  margin-bottom: 0.9rem;
+}
+
+#modal-role-description p:last-child,
+.role-modal-description p:last-child {
+  margin-bottom: 0;
 }
 
 body.modal-open {

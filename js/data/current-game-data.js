@@ -274,6 +274,12 @@ const currentGamePlayers = [
 
 const currentGameAnnouncements = [
   {
+    "datetime": "2026-08-31T20:00:00",
+    "label": "31 augustus 20:00",
+    "message": "Spel 16 is gestart!",
+    "kind": "game-start"
+  },
+  {
     "datetime": "2026-08-31T14:00:04",
     "label": "31 augustus 14:00",
     "message": "Lucas heeft toch het dorp verlaten."

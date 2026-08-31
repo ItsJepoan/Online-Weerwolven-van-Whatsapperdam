@@ -123,6 +123,18 @@
   flex-direction: column;
 }
 
+.current-announcement-row.game-start {
+  border: 3px solid var(--primary);
+  background: var(--surface);
+  box-shadow: 0 6px 0 rgba(44, 44, 84, 0.14);
+  margin-bottom: 0.35rem;
+}
+
+.current-announcement-row.game-start .current-announcement-message {
+  color: var(--primary);
+  font-weight: 900;
+}
+
 .current-announcement-time {
   color: var(--muted);
   font-size: 0.82rem;
