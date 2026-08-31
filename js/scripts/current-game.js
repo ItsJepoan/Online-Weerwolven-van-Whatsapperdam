@@ -240,7 +240,7 @@ function openModal(role) {
   modalOrigin.innerHTML = `<span class="badge">${role.origin || "Onbekend"}</span>`;
 
   modalTypes.innerHTML = createBadges(role.types);
-  modalDescription.innerHTML = formatRoleDescription(role.description);
+  modalDescription.innerHTML = formatRoleDescription(getCurrentRoleDescription(role));
 
   modal.classList.remove("hidden");
   lockPageScroll();
@@ -359,6 +359,14 @@ function isCircleSessionActive() {
     (activeExpansionKeys.includes("de-cirkelzitting") ||
       activeExpansionKeys.includes("back-to-basics-wakkerdam-editie"))
   );
+}
+
+function getCurrentRoleDescription(role) {
+  if (isCircleSessionActive() && role.circleSessionDescription) {
+    return role.circleSessionDescription;
+  }
+
+  return role.description;
 }
 
 function renderCircleSessionLink() {

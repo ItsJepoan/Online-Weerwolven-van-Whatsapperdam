@@ -14,7 +14,7 @@ const expansions = [
   {
     "key": "dronkenschap",
     "name": "Dronkenschap",
-    "description": "Uitleg volgt.",
+    "description": "Sommige dorpsbewoners weten simpelweg niet wanneer ze genoeg hebben gehad.\n\nWanneer een speler boven het chatlimiet van 20 berichten uitkomt, heeft die speler 50% kans om die nacht en de volgende dag dronken te worden.\n\nEen dronken speler merkt hier zelf niets van, maar kan verkeerde doelwitten bezoeken, acties verkeerd uitvoeren of onjuiste informatie ontvangen.\n\nAlle dronken acties zijn te vinden in [Appendix D: Dronken](appendices.html#appendix-d).",
     "category": "speloptie",
     "shortDescription": "Een speloptie waarbij spelers door te veel praten dronken kunnen worden.",
     "isNew": true,
@@ -24,12 +24,14 @@ const expansions = [
     "key": "de-cirkelzitting",
     "name": "De Cirkelzitting",
     "shortDescription": "Een speloptie rond vaste buren in een cirkel.",
-    "description": "Uitleg volgt.",
+    "description": "Aan het begin van het spel voelt men een verschuiving in het dorp. Wat voorheen een wirwar aan huizen was, heeft zich nu hervormd tot een prachtige cirkel.\n\nElke speler heeft een linker- en rechterbuurman. Mocht een van je buren gedurende het spel overlijden? Geen stress, de eerstvolgende levende speler aan die kant wordt automatisch je nieuwe buur.\n\nSommige rollen veranderen mee met deze nieuwe indeling. Denk aan de Vos, de Ridder met het Roestige Zwaard, de Wingman en de Dodenbezweerder, en spoedig nog andere rollen. Ook kan Titus met zijn Dansende Beer hierdoor zijn intrede doen in het dorp!\n\nDe volledige Cirkelzitting is altijd te bekijken via de website, zodat iedere speler gemakkelijk zijn linker- en rechterbuurman kan vinden.\n\n[Bekijk de Cirkelzitting](cirkelzitting.html)",
     "category": "speloptie",
     "isNew": true,
     "roleIds": [
+      "de-dodenbezweerder",
       "de-ridder-met-het-roestige-zwaard-wakkerdam",
       "de-vos-wakkerdam",
+      "de-wingman",
       "titus-en-zijn-dansende-beer-wakkerdam"
     ],
     "replaceRoleIds": [
@@ -59,7 +61,7 @@ const expansions = [
     "key": "basis-rollen",
     "name": "Basis Rollen",
     "shortDescription": "Een speloptie voor gegarandeerde basisrollen in het spel.",
-    "description": "Uitleg volgt.",
+    "description": "Sommige gezichten zijn simpelweg niet weg te denken uit het dorp. Nog voordat het spel begint, staat voor een aantal rollen al vast dat zij hun intrede zullen maken.\n\nAan het begin van het spel wordt een selectie rollen, van welke categorie dan ook, aangewezen als Basis Rollen. Deze rollen zullen met 100% zekerheid in de rolverdeling voorkomen.\n\nBasis Rollen zijn op de website te herkennen aan de dikke zwarte rand rondom de rol.\n\nDe overige plekken worden zoals normaal gevuld.",
     "category": "speloptie",
     "isNew": true,
     "hideRoles": true
@@ -160,7 +162,7 @@ const expansions = [
     "key": "de-boeren",
     "name": "De Boeren",
     "shortDescription": "Een bijrol-uitbreiding waarin Boeren samen bepalen wie burgemeester wordt.",
-    "description": "Tussen alle burgers van Whatsapperdam bevinden zich een aantal **Boeren**. Dit is geen rol, maar een bijrol die bovenop een bestaande rol kan worden uitgedeeld.\n\nAlle Boeren weten van elkaar wie de andere Boeren zijn. Zij kennen echter niet elkaars rol en weten alleen dat zij samen tot de Boeren behoren.\n\n## De burgemeester aanwijzen\n\nDe Boeren hebben een belangrijke taak: het aanwijzen van de burgemeester.\n\nAan het begin van het spel kiezen de Boeren gezamenlijk en unaniem een van hun eigen leden als **Boerenburgemeester**. Hierdoor vinden er geen normale burgemeesterverkiezingen plaats.\n\nDe gekozen Boerenburgemeester krijgt alle gebruikelijke bevoegdheden van een burgemeester.\n\n## Opvolging\n\nWanneer de Boerenburgemeester sterft, wijst hij in zijn laatste moment een andere levende Boer aan als opvolger. Deze speler wordt direct de nieuwe burgemeester.\n\nZolang er minstens een Boer in leven is, blijft het burgemeesterschap dus binnen de Boeren.\n\nZijn er echter geen Boeren meer over, dan kan er geen nieuwe burgemeester meer worden aangewezen.",
+    "description": "Tussen alle inwoners van Whatsapperdam bevinden zich een aantal Boeren. Dit is geen rol, maar een bijrol die bovenop een bestaande rol kan worden uitgedeeld.\n\nIedereen kan een Boer zijn, ongeacht diens rol of aard. De Boeren weten dus van elkaar dat ze Boer zijn, maar niet of ze daadwerkelijk aan dezelfde kant staan.\n\n## De Boerenchat\n\nAan het begin van het spel komen alle Boeren samen in een eigen groepsapp. Gedurende de eerste dag hebben zij één belangrijke taak: unaniem één van hun eigen leden aanwijzen als Boerenburgemeester.\n\nIn deze chat mogen speeches worden gehouden en mag alleen over de keuze voor de Boerenburgemeester worden gesproken. Andere gespreksonderwerpen zijn niet toegestaan.\n\nZodra de Boerenburgemeester is gekozen, sluit de groepsapp voor verdere gesprekken.\n\n## De Boerenburgemeester\n\nDe gekozen Boerenburgemeester krijgt alle gebruikelijke bevoegdheden van een burgemeester. Hierdoor vinden er geen normale burgemeestersverkiezingen plaats.\n\n## Opvolging\n\nSterft de Boerenburgemeester, dan wijst hij een andere levende Boer aan als opvolger. Zolang er minstens één Boer leeft, blijft het burgemeesterschap binnen de Boeren.\n\nZijn er geen Boeren meer over, dan kan er geen nieuwe burgemeester worden aangewezen.\n\nEen Boer zijn geeft verder geen extra privileges, krachten of spelvoordelen.",
     "category": "uitbreiding"
   },
   {

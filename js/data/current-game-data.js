@@ -121,7 +121,10 @@ const currentGameBasisRoleIds = [
   "de-fotograaf",
   "de-vriend",
   "de-jager",
-  "de-burger"
+  "de-burger",
+  "barman-bob",
+  "barman-bert",
+  "de-dief"
 ];
 
 const currentGameBasisWerewolfRoleId = null;
