@@ -301,6 +301,18 @@ function isCurrentGameMasterName(name) {
   );
 }
 
+function getPlayerSpecialStatusLabel(player) {
+  if (player.specialStatus === "boeren-burgemeester") {
+    return "Burgemeester";
+  }
+
+  return "";
+}
+
+function getPlayerSpecialStatusClass(player) {
+  return player.specialStatus ? ` ${player.specialStatus}` : "";
+}
+
 function renderCurrentPlayers() {
   if (!currentPlayerList) return;
 
@@ -323,11 +335,12 @@ function renderCurrentPlayers() {
     .forEach((player) => {
       const alive = isPlayerAlive(player);
       const gameMaster = isCurrentGameMasterName(player.name);
+      const specialStatusLabel = getPlayerSpecialStatusLabel(player);
       const row = document.createElement("div");
-      row.className = `current-player-row ${alive ? "alive" : "dead"}${gameMaster ? " game-master" : ""}`;
+      row.className = `current-player-row ${alive ? "alive" : "dead"}${gameMaster ? " game-master" : ""}${getPlayerSpecialStatusClass(player)}`;
       row.innerHTML = `
         <span class="current-player-name">${escapeHtml(player.name)}</span>
-        <span class="current-player-status">${gameMaster ? "GM" : alive ? "Levend" : "Dood"}</span>
+        <span class="current-player-status">${gameMaster ? "GM" : specialStatusLabel || (alive ? "Levend" : "Dood")}</span>
       `;
       currentPlayerList.appendChild(row);
     });

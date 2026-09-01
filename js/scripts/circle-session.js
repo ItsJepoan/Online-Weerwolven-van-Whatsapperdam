@@ -28,6 +28,10 @@ function isPlayerAlive(player) {
   return String(player.status || "levend").toLowerCase() !== "dood";
 }
 
+function getPlayerSpecialStatusClass(player) {
+  return player.specialStatus ? ` ${player.specialStatus}` : "";
+}
+
 function getGameMasters() {
   if (typeof currentGameMasters !== "undefined") return currentGameMasters;
   if (typeof currentGameMaster !== "undefined" && currentGameMaster) {
@@ -81,7 +85,7 @@ function renderCircle(players) {
     const x = 50 + Math.cos(angle) * 44;
     const y = 50 + Math.sin(angle) * 36;
     const item = document.createElement("div");
-    item.className = `circle-player ${isPlayerAlive(player) ? "alive" : "dead"}`;
+    item.className = `circle-player ${isPlayerAlive(player) ? "alive" : "dead"}${getPlayerSpecialStatusClass(player)}`;
     item.style.setProperty("--x", `${x}%`);
     item.style.setProperty("--y", `${y}%`);
     item.textContent = player.name;

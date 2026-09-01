@@ -163,6 +163,7 @@ const currentGamePlayers = [
   {
     "name": "Ruben",
     "alive": true,
+    "specialStatus": "boeren-burgemeester",
     "circleOrder": 22
   },
   {
@@ -253,6 +254,11 @@ const currentGamePlayers = [
 ];
 
 const currentGameAnnouncements = [
+  {
+    "datetime": "2026-09-01T11:46:00",
+    "label": "1 september 11:46",
+    "message": "Ruben is Burgemeester geworden!"
+  },
   {
     "datetime": "2026-09-01T11:45:00",
     "label": "1 september 11:45",

@@ -112,6 +112,22 @@
   background: var(--primary);
 }
 
+.current-player-row.boeren-burgemeester {
+  border: 2px solid #9a6a05;
+  background: #fff8dc;
+  box-shadow: 0 4px 0 rgba(154, 106, 5, 0.16);
+}
+
+.current-player-row.boeren-burgemeester .current-player-name {
+  color: #5f3d00;
+  font-weight: 900;
+}
+
+.current-player-row.boeren-burgemeester .current-player-status {
+  color: #4c3100;
+  background: #f3cf61;
+}
+
 .current-player-row.dead .current-player-status {
   color: #6c1f1f;
   background: #f2dddd;
