@@ -255,13 +255,13 @@ const currentGamePlayers = [
 
 const currentGameAnnouncements = [
   {
-    "datetime": "2026-09-01T11:46:00",
-    "label": "1 september 11:46",
+    "datetime": "2026-09-01T11:34:00",
+    "label": "1 september 11:34",
     "message": "Ruben is Burgemeester geworden!"
   },
   {
-    "datetime": "2026-09-01T11:45:00",
-    "label": "1 september 11:45",
+    "datetime": "2026-09-01T09:00:00",
+    "label": "1 september 09:00",
     "message": "Michel is opgegeten door de wolven en was *De Pyromaan*."
   },
   {
