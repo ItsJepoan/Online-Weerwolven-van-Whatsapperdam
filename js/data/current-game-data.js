@@ -212,7 +212,7 @@ const currentGamePlayers = [
   },
   {
     "name": "Michel",
-    "alive": true,
+    "alive": false,
     "circleOrder": 20
   },
   {
@@ -253,6 +253,11 @@ const currentGamePlayers = [
 ];
 
 const currentGameAnnouncements = [
+  {
+    "datetime": "2026-09-01T11:45:00",
+    "label": "1 september 11:45",
+    "message": "Michel is opgegeten door de wolven en was *De Pyromaan*."
+  },
   {
     "datetime": "2026-08-31T20:00:00",
     "label": "31 augustus 20:00",
