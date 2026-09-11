@@ -93,6 +93,13 @@
   box-shadow: 0 0 0 4px rgba(243, 207, 97, 0.55), var(--shadow);
 }
 
+.circle-player.twijfelt {
+  border-color: #7b4f9d;
+  background: #f6efff;
+  color: #4f2d66;
+  box-shadow: 0 0 0 4px rgba(234, 216, 255, 0.7), var(--shadow);
+}
+
 .neighbor-search {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;

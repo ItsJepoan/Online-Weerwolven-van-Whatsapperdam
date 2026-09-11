@@ -128,6 +128,22 @@
   background: #f3cf61;
 }
 
+.current-player-row.twijfelt {
+  border: 2px solid #7b4f9d;
+  background: #f6efff;
+  box-shadow: 0 4px 0 rgba(123, 79, 157, 0.14);
+}
+
+.current-player-row.twijfelt .current-player-name {
+  color: #4f2d66;
+  font-weight: 900;
+}
+
+.current-player-row.twijfelt .current-player-status {
+  color: #4f2d66;
+  background: #ead8ff;
+}
+
 .current-player-row.dead .current-player-status {
   color: #6c1f1f;
   background: #f2dddd;
