@@ -116,34 +116,32 @@ const currentGamePlayers = [
     "circleOrder": 4
   },
   {
-    "name": "Fajjaaz",
-    "alive": true,
-    "specialStatus": "twijfelt",
-    "circleOrder": 5
-  },
-  {
     "name": "Ilse",
     "alive": true,
-    "circleOrder": 6
+    "circleOrder": 5
   },
   {
     "name": "Jeron",
     "alive": true,
-    "circleOrder": 7
+    "circleOrder": 6
   },
   {
     "name": "Jolly",
     "alive": true,
+    "circleOrder": 7
+  },
+  {
+    "name": "Lara",
+    "alive": true,
     "circleOrder": 8
   },
   {
-    "name": "Julian",
+    "name": "Lotte",
     "alive": true,
-    "specialStatus": "twijfelt",
     "circleOrder": 9
   },
   {
-    "name": "Lotte",
+    "name": "Lucas",
     "alive": true,
     "circleOrder": 10
   },
@@ -180,7 +178,6 @@ const currentGamePlayers = [
   {
     "name": "Nick",
     "alive": true,
-    "specialStatus": "twijfelt",
     "circleOrder": 17
   },
   {
@@ -206,28 +203,38 @@ const currentGamePlayers = [
   {
     "name": "Ruben",
     "alive": true,
-    "specialStatus": "twijfelt",
     "circleOrder": 22
+  },
+  {
+    "name": "Rick",
+    "alive": true,
+    "circleOrder": 23
   },
   {
     "name": "Shannon",
     "alive": true,
-    "specialStatus": "twijfelt",
-    "circleOrder": 23
+    "circleOrder": 24
   },
   {
     "name": "Solène",
     "alive": true,
-    "circleOrder": 24
+    "circleOrder": 25
   },
   {
     "name": "Tijs",
     "alive": true,
-    "circleOrder": 25
+    "circleOrder": 26
   }
 ];
 
-const currentGameAnnouncements = [];
+const currentGameAnnouncements = [
+  {
+    "datetime": "2026-09-12T10:00:00",
+    "label": "12 september 10:00",
+    "message": "Spel 17 is gestart!",
+    "kind": "game-start"
+  }
+];
 
 const currentGameTalentNames = [];
 
